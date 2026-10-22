@@ -1,0 +1,482 @@
+rank_v3,rank_step5b,places_moved_up,company_name,site_address,score_v3,score_step5b,main_cause,what_changed
+16,40,24,Lemon Powers Inc,1925 S Rosemary St Unit H,72.0,63.0,fit rule gives a different class,fit 6 to 15
+35,49,14,Unattached address (no company attached),2323 W Mulberry PL,65.0,59.0,repeat-month points (now counted for every row of 12 or more),Denver concept and site plans repeat points 0 to 6
+43,171,128,Unattached address (no company attached),18309 E 65th AVE,63.0,36.5,was named after a project or possible occupier and scored at half; now an address row at full points,Denver commercial construction permits 12.5 to 25; State water permits 2 to 1; recency 0 to 15
+50,94,44,Unattached address (no company attached),3480 S Poplar ST,59.0,46.0,signal points differ,Denver commercial construction permits 12 to 25
+54,72,18,Unattached address (no company attached),3490 Park AVE,58.0,52.0,fit rule gives a different class,fit 0 to 6
+55,179,124,Unattached address (possible occupier: Perpetual First LLC),3625 E 48th AVE,57.0,36.0,was named after a project or possible occupier and scored at half; now an address row at full points,Colorado UCC filings 0 to 2; Denver commercial construction permits 3 to 6; Denver concept and site plans 6 to 12; Denver concept and site plans repeat points 0 to 3; State water permits 2 to 1; sources 6 to 14
+56,80,24,Unattached address (no company attached),3875 Walnut ST,56.5,49.0,was named after a project or possible occupier and scored at half; now an address row at full points,Denver commercial construction permits 12.5 to 25; Denver concept and site plans 3 to 6; State water permits 2 to 1; sources 6 to 14; fit 0 to -15
+64,106,42,"Unattached address (possible occupier: Finish Line Colorado, LLC)",1160 S Colorado BLVD,55.5,45.0,signal points differ,Colorado business registrations 0 to 1.5; Denver commercial construction permits 12 to 18; sources 0 to 3
+65,92,27,Unattached address (no company attached),1485 40th ST,54.0,46.5,was named after a project or possible occupier and scored at half; now an address row at full points,Denver commercial construction permits 12.5 to 25; Denver commercial construction permits repeat points 0 to 3; Denver concept and site plans 3 to 6; State water permits 2 to 1; sources 6 to 11; fit 0 to -15
+73,149,76,DBTL Capital Corp,2518 S Delaware St,53.0,39.0,now named from a state permit or equipment filing at the address; address rows score half,Denver commercial construction permits 12 to 6; State water permits 0 to 2; sources 0 to 3; fit 0 to 15
+77,123,46,Unattached address (no company attached),5440 N Roslyn ST,52.0,40.5,was named after a project or possible occupier and scored at half; now an address row at full points,Denver commercial construction permits 12.5 to 25; State water permits 2 to 1
+79,169,90,Atlas Metal and Iron Denver,1100 Umatilla St,52.0,37.0,recency points differ,Colorado UCC filings 0 to 4; sources 3 to 6; recency 0 to 8
+80,205,125,Primo Brands,11700 E 47th Ave,51.5,32.0,now named from a state permit or equipment filing at the address; address rows score half,Denver commercial construction permits 12 to 6; Mile High CRE 0 to 2.5; State water permits 0 to 2; sources 0 to 6; fit 0 to 15
+81,95,14,Unattached address (no company attached),3869 N Steele ST 1258,51.0,45.0,repeat-month points (now counted for every row of 12 or more),Denver commercial construction permits repeat points 0 to 6
+88,51,-37,Colorado Supply Chain Center,10252 E 51 Ave,49.0,57.0,now named from a state permit or equipment filing at the address; address rows score half,Denver commercial construction permits 12 to 6; Denver commercial construction permits repeat points 3 to 0; State water permits 0 to 2; sources 0 to 3; stage 12 to 8
+90,104,14,Unattached address (no company attached),4001 N Monroe ST,48.0,45.0,repeat-month points (now counted for every row of 12 or more),Denver concept and site plans repeat points 0 to 3
+96,122,26,Unattached address (no company attached),2000 N Broadway,47.0,41.0,fit rule gives a different class,fit 0 to 6
+99,158,59,Unattached address (possible occupier: MILE HIGH EQUIPMENT LLC),11100 E 45th AVE,46.0,38.0,repeat-month points (now counted for every row of 12 or more),Colorado UCC filings 0 to 2; Denver commercial construction permits repeat points 0 to 3; sources 0 to 3
+100,126,26,Unattached address (possible occupier: Otherwise Systems Inc.),3930 Blake St 140 Ste,45.5,39.5,was named after a project or possible occupier and scored at half; now an address row at full points,Colorado business registrations 6 to 3; Denver commercial construction permits 6 to 12; Denver concept and site plans 3 to 6; recency 15 to 0; fit -15 to 0
+109,124,15,Unattached address (possible occupier: DENVER MODERN LLC),9300 E 46th PL,45.0,40.0,source bonus differs (support rows found or lost),Colorado UCC filings 0 to 2; sources 8 to 11
+110,121,11,Unattached address (possible occupier: Friends of Denver Animal Shelter),1241 W Bayaud AVE,44.5,41.5,repeat-month points (now counted for every row of 12 or more),Denver concept and site plans repeat points 0 to 3
+115,136,21,"Unattached address (possible occupier: Press & Pour Consulting, LLC)",3530 Chestnut PL,44.0,39.0,source bonus differs (support rows found or lost),Colorado UCC filings 0 to 2; sources 0 to 3
+116,90,-26,Unattached address (no company attached),4665 N Paris St 212,44.0,47.5,source bonus differs (support rows found or lost),Colorado UCC filings 2 to 0; Colorado business registrations 1.5 to 0; Denver commercial construction permits repeat points 0 to 6; sources 6 to 0
+117,168,51,Unattached address (no company attached),6171 E Evans AVE,44.0,38.0,signal points differ,Denver commercial construction permits 12 to 18
+118,147,29,Unattached address (possible occupier: Tomarco Contractor Specialties Inc),2710 Walnut ST,43.5,39.0,source bonus differs (support rows found or lost),Colorado business registrations 0 to 1.5; sources 0 to 3
+119,146,27,"Unattached address (possible occupier: KW INTERNATIONAL (CO), INC.)",11600 E 53rd AVE,43.5,39.0,source bonus differs (support rows found or lost),Colorado business registrations 0 to 1.5; sources 0 to 3
+127,157,30,Unattached address (no company attached),4600 E 48th AVE,41.0,38.0,repeat-month points (now counted for every row of 12 or more),Denver commercial construction permits repeat points 0 to 3
+128,175,47,Stars and Stripes Scrap Metal Recycling,5101 York St,40.0,36.0,source bonus differs (support rows found or lost),State water permits 0 to 1; sources 0 to 3
+130,153,23,Unattached address (no company attached),3900 Blake ST,39.0,39.0,score unchanged; other rows moved around it,
+132,151,19,Unattached address (no company attached),5175 N Joliet ST,39.0,39.0,score unchanged; other rows moved around it,
+133,152,19,Unattached address (no company attached),11275 E 40th AVE,39.0,39.0,score unchanged; other rows moved around it,
+135,150,15,Unattached address (no company attached),4624 N Central Park BLVD 102,39.0,39.0,score unchanged; other rows moved around it,
+136,148,12,Unattached address (no company attached),10200 E 40th AVE,39.0,39.0,score unchanged; other rows moved around it,
+141,128,-13,Unattached address (no company attached),2800 Walnut ST 100,39.0,39.0,score unchanged; other rows moved around it,
+143,82,-61,Unattached address (possible occupier: MONARCH BUILDING CORPORATION),4895 N Peoria St,39.0,49.0,fit rule gives a different class,Colorado UCC filings 0 to 2; sources 8 to 11; fit 0 to -15
+145,134,-11,Unattached address (no company attached),3863 N Steele ST 1171,39.0,39.0,score unchanged; other rows moved around it,
+147,132,-15,Unattached address (no company attached),1409 W 38th AVE,39.0,39.0,score unchanged; other rows moved around it,
+149,137,-12,Unattached address (no company attached),1007 N York ST,39.0,39.0,score unchanged; other rows moved around it,
+150,131,-19,Unattached address (no company attached),11100 E 51st AVE,39.0,39.0,score unchanged; other rows moved around it,
+151,135,-16,Unattached address (no company attached),1150 W Custer PL 101,39.0,39.0,score unchanged; other rows moved around it,
+152,130,-22,Unattached address (no company attached),6611 E Evans AVE,39.0,39.0,score unchanged; other rows moved around it,
+153,196,43,"Unattached address (possible occupier: UNITED STATES WELDING, INC.)",600 S Santa Fe DR,39.0,34.0,source bonus differs (support rows found or lost),Colorado UCC filings 0 to 2; sources 0 to 3
+154,191,37,Unattached address (possible occupier: DALCO INDUSTRIES INC),3730 N Salem ST,39.0,34.0,source bonus differs (support rows found or lost),Colorado UCC filings 0 to 2; sources 0 to 3
+155,192,37,Unattached address (possible occupier: Autowash High Pointe Real Estate LLC),7005 E 46th Avenue DR B,39.0,34.0,source bonus differs (support rows found or lost),Colorado UCC filings 0 to 2; sources 0 to 3
+156,129,-27,Unattached address (no company attached),65 N Yuma ST,39.0,39.0,score unchanged; other rows moved around it,
+165,197,32,"Unattached address (possible occupier: Good Bread, Inc.)",5105 N Cook St,38.0,33.0,source bonus differs (support rows found or lost),Colorado UCC filings 0 to 2; sources 0 to 3
+167,117,-50,Unattached address (no company attached),1661 W 3rd AVE,38.0,42.5,source bonus differs (support rows found or lost),Colorado business registrations 1.5 to 0; sources 3 to 0
+168,61,-107,Unattached address (possible occupier: KT8 Industries Inc),845 N Navajo ST,38.0,55.0,was named after a project or possible occupier and scored at half; now an address row at full points,Colorado business registrations 6 to 3; Denver commercial construction permits 6 to 12; sources 8 to 3; fit 15 to 0
+170,190,20,Unattached address (possible occupier: RIDENOW LLC),1780 W 6th Ave,37.5,34.5,repeat-month points (now counted for every row of 12 or more),Denver commercial construction permits repeat points 0 to 3
+172,73,-99,Unattached address (no company attached),3463 Walnut ST 2,36.5,51.5,fit rule gives a different class,fit 0 to -15
+173,225,52,Elemental Bakery and Coffeehouse LLC,"3875 N STEELE ST., SUITE 1143",36.5,31.0,source bonus differs (support rows found or lost),Mile High CRE 0 to 2.5; sources 0 to 3
+176,358,182,"SHEFA Innovation Foundry, Inc",withheld (not confirmed as a business premises; see source record),36.0,21.0,fit rule gives a different class,fit 0 to 15
+181,236,55,Unattached address (no company attached),6901 E Hampden AVE,36.0,30.0,signal points differ,Denver commercial construction permits 12 to 18
+183,108,-75,Unattached address (possible occupier: IN WOO CORPORATION),9111 E 40TH AVE,35.5,44.5,fit rule gives a different class,Colorado UCC filings 0 to 2; State water permits 0 to 1; sources 11 to 14; fit 0 to -15
+185,231,46,Unattached address (possible occupier: AIRGUARD CLEANERS LLC),6565 E Evans AVE,35.5,31.0,source bonus differs (support rows found or lost),Colorado business registrations 0 to 1.5; sources 0 to 3
+190,307,117,"Unattached address (possible occupier: 2715 W 8th Ave, LLC.)",2715 W 8th AVE,35.0,25.0,source bonus differs (support rows found or lost),Colorado business registrations 0 to 1.5; Mile High CRE 0 to 2.5; sources 0 to 6
+193,208,15,Unattached address (no company attached),1205 W Evans AVE,34.0,31.0,repeat-month points (now counted for every row of 12 or more),Denver concept and site plans repeat points 0 to 3
+194,210,16,Unattached address (no company attached),4950 N York ST,34.0,31.0,repeat-month points (now counted for every row of 12 or more),Denver concept and site plans repeat points 0 to 3
+196,332,136,Unattached address (no company attached),7355 E 56th AVE,34.0,24.0,was named after a project or possible occupier and scored at half; now an address row at full points,Denver commercial construction permits 11 to 22; State water permits 2 to 1
+197,213,16,Unattached address (no company attached),5125 N National Western Drive,34.0,31.0,repeat-month points (now counted for every row of 12 or more),Denver concept and site plans repeat points 0 to 3
+198,214,16,Unattached address (no company attached),12225 E 39th AVE,34.0,31.0,repeat-month points (now counted for every row of 12 or more),Denver concept and site plans repeat points 0 to 3
+199,155,-44,Unattached address (no company attached),5000 N Vasquez BLVD,34.0,38.5,source bonus differs (support rows found or lost),Colorado business registrations 1.5 to 0; sources 3 to 0
+200,250,50,Unattached address (no company attached),7581 E Academy BLVD 101,34.0,28.0,signal points differ,Denver commercial construction permits 12 to 18
+203,364,161,Unattached address (no company attached),3850 Blake ST,33.5,20.5,was named after a project or possible occupier and scored at half; now an address row at full points,Denver commercial construction permits 3 to 6; Denver concept and site plans 3 to 6; State water permits 2 to 1; sources 6 to 14; recency 0 to 15; fit 0 to -15
+204,328,124,Unattached address (possible occupier: Grass Routes LLC),5000 N Osage ST 700,33.5,25.0,source bonus differs (support rows found or lost),Colorado business registrations 0 to 1.5; State water permits 0 to 1; sources 0 to 6
+205,249,44,Unattached address (no company attached),3800 E 48th AVE,33.5,28.0,source bonus differs (support rows found or lost),Mile High CRE 0 to 2.5; sources 0 to 3
+206,247,41,Unattached address (no company attached),4180 Wynkoop ST 260,33.5,28.0,source bonus differs (support rows found or lost),Mile High CRE 0 to 2.5; sources 0 to 3
+207,235,28,Unattached address (no company attached),1271 W Bayaud AVE,33.0,30.0,repeat-month points (now counted for every row of 12 or more),Denver concept and site plans repeat points 0 to 3
+208,252,44,"Unattached address (possible occupier: HOSPITAL COOPERATIVE LAUNDRY, INC.)",6225 E 38th AVE,33.0,28.0,source bonus differs (support rows found or lost),Colorado UCC filings 0 to 2; sources 0 to 3
+209,259,50,Unattached address (possible occupier: WILSON & WILSON SERVICES LLC),1240 N Speer Blvd,32.5,28.0,source bonus differs (support rows found or lost),Colorado business registrations 0 to 1.5; sources 0 to 3
+210,246,36,"Unattached address (possible occupier: PLR Properties, LLC)",1330 S Cherokee ST A,32.5,28.0,source bonus differs (support rows found or lost),Colorado business registrations 0 to 1.5; sources 0 to 3
+211,88,-123,"Unattached address (possible occupier: Northwest Confections Colorado, LLC)",2670 S Delaware ST,32.0,48.0,was named after a project or possible occupier and scored at half; now an address row at full points,Colorado UCC filings 8 to 4; Denver commercial construction permits 3 to 6; fit 15 to 0
+213,172,-41,Unattached address (no company attached),500 N Kalamath ST,32.0,36.5,source bonus differs (support rows found or lost),Colorado business registrations 1.5 to 0; sources 11 to 8
+215,245,30,Unattached address (no company attached),8888 E 46th PL,32.0,28.0,source bonus differs (support rows found or lost),State water permits 0 to 1; sources 0 to 3
+216,203,-13,Unattached address (no company attached),837 N Santa Fe DR,32.0,32.0,score unchanged; other rows moved around it,
+217,202,-15,Unattached address (no company attached),75 S Cherokee ST,32.0,32.0,score unchanged; other rows moved around it,
+218,201,-17,Unattached address (no company attached),4740 N Lima,32.0,32.0,score unchanged; other rows moved around it,
+219,200,-19,Unattached address (no company attached),15200 E 53rd AVE,32.0,32.0,score unchanged; other rows moved around it,
+220,279,59,"Nationwide Milling CO, LLC","730 17th Street, Ste. 600",31.5,26.0,source bonus differs (support rows found or lost),Mile High CRE 0 to 2.5; sources 3 to 6
+221,207,-14,Unattached address (no company attached),4500 N Dahlia ST,31.0,31.0,score unchanged; other rows moved around it,
+222,209,-13,Unattached address (no company attached),4780 N Vasquez BLVD,31.0,31.0,score unchanged; other rows moved around it,
+223,211,-12,Unattached address (no company attached),5495 N Oswego ST,31.0,31.0,score unchanged; other rows moved around it,
+224,212,-12,Unattached address (no company attached),2390 S Kalamath ST,31.0,31.0,score unchanged; other rows moved around it,
+227,215,-12,Unattached address (no company attached),10431 E 51st Ave,31.0,31.0,score unchanged; other rows moved around it,
+228,216,-12,Unattached address (no company attached),4930 N Colorado Blvd BLVD,31.0,31.0,score unchanged; other rows moved around it,
+229,217,-12,Unattached address (no company attached),2340 E 40th Ave,31.0,31.0,score unchanged; other rows moved around it,
+230,218,-12,Unattached address (no company attached),4045 N Fox St,31.0,31.0,score unchanged; other rows moved around it,
+231,219,-12,Unattached address (no company attached),5151 N Fox ST,31.0,31.0,score unchanged; other rows moved around it,
+234,222,-12,Moon Raccoon Baking LLC,withheld (not confirmed as a business premises; see source record),31.0,31.0,score unchanged; other rows moved around it,
+235,220,-15,TOOL COUNTRY LLC,withheld (not confirmed as a business premises; see source record),31.0,31.0,score unchanged; other rows moved around it,
+237,221,-16,The Block Distilling Company LLC,withheld (not confirmed as a business premises; see source record),31.0,31.0,score unchanged; other rows moved around it,
+238,226,-12,Ideal Foods Company,withheld (not confirmed as a business premises; see source record),31.0,31.0,score unchanged; other rows moved around it,
+239,223,-16,CITY BREWERY LIMITED,"5050 S. Syracuse St, Suite 800",31.0,31.0,score unchanged; other rows moved around it,
+240,224,-16,THE BREWERY ON CHISWELL STREET LIMITED,"5050 S. Syracuse St, Suite 800",31.0,31.0,score unchanged; other rows moved around it,
+241,184,-57,Unattached address (no company attached),1305 N Osage ST,31.0,35.0,stage rule gives a different stage,stage 12 to 8
+242,285,43,Unattached address (possible occupier: Mile High Automotive LLC),8080 E Mississippi AVE,30.5,26.0,source bonus differs (support rows found or lost),Colorado business registrations 0 to 1.5; sources 0 to 3
+243,330,87,"Unattached address (possible occupier: Bayaud Enterprises, Inc)",333 W Bayaud AVE,30.0,25.0,source bonus differs (support rows found or lost),Colorado UCC filings 0 to 2; sources 0 to 3
+244,290,46,Unattached address (possible occupier: I CAREY TOOLS LLC),3929 N Niagara ST,30.0,25.0,source bonus differs (support rows found or lost),Colorado UCC filings 0 to 2; sources 0 to 3
+245,323,78,"Unattached address (possible occupier: Wabrew, LLC)",1030 W Ellsworth AVE,30.0,25.0,source bonus differs (support rows found or lost),Colorado UCC filings 0 to 2; sources 0 to 3
+246,629,383,Unattached address (possible occupier: Secret Garden Manufacturing LLC),5475 N Peoria ST 1 BLDG,30.0,5.0,recency points differ,Colorado business registrations 0 to 1.5; Mile High CRE 0 to 2.5; sources 0 to 6; recency 0 to 15
+247,341,94,Unattached address (no company attached),1019 N York ST,30.0,24.0,signal points differ,Denver commercial construction permits 12 to 18
+248,327,79,Unattached address (possible occupier: AE TRADING LLC),728 N Lipan ST,29.5,25.0,source bonus differs (support rows found or lost),Colorado business registrations 0 to 1.5; sources 0 to 3
+249,319,70,Unattached address (possible occupier: AFA Security Group LLC),2901 Larimer ST,29.5,25.0,source bonus differs (support rows found or lost),Colorado business registrations 0 to 1.5; sources 0 to 3
+250,305,55,Unattached address (possible occupier: Great Bakes Denver LLC),1594 S Acoma ST,29.5,25.0,source bonus differs (support rows found or lost),Colorado business registrations 0 to 1.5; sources 0 to 3
+251,302,51,Unattached address (possible occupier: High Class Honey LLC),2901 Walnut ST,29.5,25.0,source bonus differs (support rows found or lost),Colorado business registrations 0 to 1.5; sources 0 to 3
+252,346,94,"Unattached address (possible occupier: PORTABLE COMPUTER SYSTEMS, INC.)",1200 W Mississippi AVE,29.0,24.0,source bonus differs (support rows found or lost),Colorado UCC filings 0 to 2; sources 0 to 3
+253,523,270,Unattached address (no company attached),2495 W 13th,29.0,15.0,was named after a project or possible occupier and scored at half; now an address row at full points,Denver concept and site plans 3 to 6; State water permits 2 to 1; sources 6 to 3; recency 0 to 15
+254,238,-16,"Radio Fabrication, LLC",withheld (not confirmed as a business premises; see source record),29.0,29.0,score unchanged; other rows moved around it,
+255,334,79,Unattached address (possible occupier: Corridor 70 LLC),695 N Bryant ST,29.0,24.0,source bonus differs (support rows found or lost),Colorado UCC filings 0 to 2; sources 0 to 3
+256,240,-16,"Tripp Brewery, LLC",withheld (not confirmed as a business premises; see source record),29.0,29.0,score unchanged; other rows moved around it,
+257,241,-16,Ausfine Foods USA LLC,"370 17th Street, Suite 3050",29.0,29.0,score unchanged; other rows moved around it,
+258,242,-16,"V2 Industries, Inc.",1777 Chestnut Pl.,29.0,29.0,score unchanged; other rows moved around it,
+259,527,268,"PB - Innovasun Robotics, Inc.",1550 Larimer St. Suite 243,29.0,14.0,fit rule gives a different class,fit 0 to 15
+260,282,22,Unattached address (no company attached),9575 E 40th AVE 100,29.0,26.0,repeat-month points (now counted for every row of 12 or more),Denver commercial construction permits repeat points 0 to 3
+261,338,77,Unattached address (possible occupier: KAISER FOUNDATION HEALTH PLAN OF COLORADO),11000 E 45th AVE,29.0,24.0,source bonus differs (support rows found or lost),Colorado UCC filings 0 to 2; sources 0 to 3
+262,345,83,Unattached address (possible occupier: MAMA LLC),3739 Wynkoop St,28.5,24.0,source bonus differs (support rows found or lost),Colorado business registrations 0 to 1.5; sources 0 to 3
+263,244,-19,Unattached address (possible occupier: Lewis Luxuries LLC),2115 S Jason ST,28.5,28.5,score unchanged; other rows moved around it,
+269,256,-13,Unattached address (no company attached),1301 S Cherokee ST,28.0,28.0,score unchanged; other rows moved around it,
+270,255,-15,Unattached address (no company attached),4321 N Broadway,28.0,28.0,score unchanged; other rows moved around it,
+271,254,-17,Unattached address (no company attached),2641 Walnut ST,28.0,28.0,score unchanged; other rows moved around it,
+272,394,122,Unattached address (no company attached),1901 S Navajo ST,28.0,18.0,was named after a project or possible occupier and scored at half; now an address row at full points,Denver concept and site plans 3 to 6; State water permits 2 to 1; recency 0 to 8
+273,253,-20,Unattached address (no company attached),1450 N Grove,28.0,28.0,score unchanged; other rows moved around it,
+274,251,-23,Unattached address (no company attached),445 N Bryant ST,28.0,28.0,score unchanged; other rows moved around it,
+275,199,-76,Unattached address (no company attached),10200 E Smith Rd,28.0,32.0,stage rule gives a different stage,stage 12 to 8
+276,248,-28,Unattached address (no company attached),2609 Walnut ST,28.0,28.0,score unchanged; other rows moved around it,
+277,264,-13,"Sicilia Pasta Denver, LLC.",1140 Bannock Street Suite 110,27.5,27.5,score unchanged; other rows moved around it,
+278,263,-15,"IRON MOUNTAIN DATA CENTERS, LLC",4300 BRIGHTON BOULEVARD,27.5,27.5,score unchanged; other rows moved around it,
+279,265,-14,Amtrak Fueling station at Denver Union Stn,1900 31 St,27.5,27.5,score unchanged; other rows moved around it,
+281,553,272,Deline Box Company,3700 Lima St,27.0,10.0,now named from a state permit or equipment filing at the address; address rows score half,Denver commercial construction permits 6 to 3; State water permits 0 to 2; sources 0 to 3; fit 0 to 15
+282,357,75,"Leading Biosciences, Inc","4600 South Syracuse Street, Suite 900",26.5,21.0,source bonus differs (support rows found or lost),Mile High CRE 0 to 2.5; sources 0 to 3
+286,363,77,Unattached address (possible occupier: Autowash High Point Operating Company LLC),6552 N Tower RD,25.5,21.0,source bonus differs (support rows found or lost),Colorado business registrations 0 to 1.5; sources 3 to 6
+290,331,41,Unattached address (no company attached),3801 N Havana ST,25.0,25.0,score unchanged; other rows moved around it,
+291,311,20,Unattached address (no company attached),1245 N Elati ST,25.0,25.0,score unchanged; other rows moved around it,
+292,329,37,Unattached address (no company attached),2501 Blake ST,25.0,25.0,score unchanged; other rows moved around it,
+295,326,31,Unattached address (no company attached),4837 Washington ST 102,25.0,25.0,score unchanged; other rows moved around it,
+296,325,29,Unattached address (no company attached),3415 W Alameda AVE,25.0,25.0,score unchanged; other rows moved around it,
+297,324,27,Unattached address (no company attached),3680 E 52nd AVE,25.0,25.0,score unchanged; other rows moved around it,
+298,316,18,Unattached address (no company attached),2323 Delgany St,25.0,25.0,score unchanged; other rows moved around it,
+299,618,319,"PureWest Energy, LLC","3250 E 2nd Ave, Suite 250",25.0,6.0,source bonus differs (support rows found or lost),Denver commercial construction permits 0 to 6; Denver concept and site plans 0 to 2; sources 0 to 11
+300,321,21,Unattached address (no company attached),2601 W 7th Ave,25.0,25.0,score unchanged; other rows moved around it,
+302,320,18,Unattached address (no company attached),3857 N Steele ST 1287,25.0,25.0,score unchanged; other rows moved around it,
+303,317,14,Unattached address (no company attached),3795 N Paris ST A UNIT,25.0,25.0,score unchanged; other rows moved around it,
+304,243,-61,Unattached address (no company attached),3680 N Brighton BLVD,25.0,29.0,stage rule gives a different stage,stage 12 to 8
+305,293,-12,Unattached address (no company attached),9590 E Northfield Blvd,25.0,25.0,score unchanged; other rows moved around it,
+307,294,-13,Unattached address (no company attached),4235 N Jason ST,25.0,25.0,score unchanged; other rows moved around it,
+311,295,-16,Unattached address (no company attached),3518 Larimer ST,25.0,25.0,score unchanged; other rows moved around it,
+313,296,-17,Unattached address (no company attached),3800 Blake ST,25.0,25.0,score unchanged; other rows moved around it,
+315,297,-18,Unattached address (no company attached),2823 Blake ST,25.0,25.0,score unchanged; other rows moved around it,
+316,298,-18,Unattached address (no company attached),1801 W 13th AVE,25.0,25.0,score unchanged; other rows moved around it,
+317,299,-18,Unattached address (no company attached),2535 E 40th AVE,25.0,25.0,score unchanged; other rows moved around it,
+319,300,-19,Unattached address (no company attached),3979 Central Park,25.0,25.0,score unchanged; other rows moved around it,
+320,308,-12,Unattached address (no company attached),2340 W 2nd AVE 100,25.0,25.0,score unchanged; other rows moved around it,
+321,301,-20,Unattached address (no company attached),4000 N Quebec ST,25.0,25.0,score unchanged; other rows moved around it,
+322,371,49,"Unattached address (possible occupier: Sarisa Fitness, LLC)",2000 S Dahlia ST 120 SUITE,25.0,20.0,source bonus differs (support rows found or lost),Colorado UCC filings 0 to 2; sources 0 to 3
+323,377,54,Unattached address (possible occupier: OKC- LOGISTICS PARK LLC),4280 N Kearney ST,24.5,20.0,source bonus differs (support rows found or lost),Colorado business registrations 0 to 1.5; sources 0 to 3
+324,382,58,Unattached address (possible occupier: North Canosa LLC),750 N Canosa CT,24.5,20.0,source bonus differs (support rows found or lost),Colorado business registrations 0 to 1.5; sources 0 to 3
+325,381,56,Unattached address (possible occupier: THE FUD TRAILER COMPANY DENVER LLC),2560 W Barberry PL,24.5,20.0,source bonus differs (support rows found or lost),Colorado business registrations 0 to 1.5; sources 0 to 3
+326,376,50,"Unattached address (possible occupier: Making a Difference Everyday, LLC)",1271 S Bannock ST,24.5,20.0,source bonus differs (support rows found or lost),Colorado business registrations 0 to 1.5; sources 0 to 3
+327,112,-215,Unattached address (no company attached),3820 N Holly ST,24.0,43.5,fit rule gives a different class,Colorado business registrations 1.5 to 0; sources 11 to 8; fit 0 to -15
+328,344,16,Unattached address (no company attached),5303 E Pacific PL,24.0,24.0,score unchanged; other rows moved around it,
+336,489,153,Unattached address (no company attached),2734 Walnut ST,23.5,18.0,source bonus differs (support rows found or lost),Mile High CRE 0 to 2.5; sources 0 to 3
+337,475,138,Unattached address (no company attached),3083 Walnut ST,23.5,18.0,source bonus differs (support rows found or lost),Mile High CRE 0 to 2.5; sources 0 to 3
+338,352,14,Unattached address (no company attached),2001 Blake ST,23.0,23.0,score unchanged; other rows moved around it,
+339,351,12,Unattached address (no company attached),2425 S Colorado BLVD,23.0,23.0,score unchanged; other rows moved around it,
+343,286,-57,Denver Reel and Pallet Co,4600 Monaco St,22.5,25.5,source bonus differs (support rows found or lost),sources 6 to 3
+344,506,162,Unattached address (possible occupier: SONT LLC),1342 W Cedar AVE,22.5,18.0,source bonus differs (support rows found or lost),Colorado business registrations 0 to 1.5; sources 0 to 3
+345,502,157,Unattached address (possible occupier: Caribe Natural Inc),5805 E 42nd AVE,22.5,18.0,source bonus differs (support rows found or lost),Colorado business registrations 0 to 1.5; sources 0 to 3
+346,664,318,Dunamis Energy Nominee Corporation,1530 16th St Ste 500,22.5,-5.0,source bonus differs (support rows found or lost),Denver commercial construction permits 0 to 6; Mile High CRE 0 to 2.5; sources 3 to 14; recency 0 to 8
+347,490,143,Unattached address (possible occupier: NAOSU Thermaculture LLC),3145 Larimer ST,22.5,18.0,source bonus differs (support rows found or lost),Colorado business registrations 0 to 1.5; sources 0 to 3
+348,491,143,"Unattached address (possible occupier: Hawkstone Imports, LLC)",4120 N Madison ST,22.5,18.0,source bonus differs (support rows found or lost),Colorado business registrations 0 to 1.5; sources 0 to 3
+353,585,232,"Unattached address (possible occupier: Clove & Twine, LLC)",3833 N Steele ST 1332,20.5,10.0,source bonus differs (support rows found or lost),Colorado UCC filings 0 to 2; Mile High CRE 0 to 2.5; sources 0 to 6
+354,582,228,"Unattached address (possible occupier: Empire Distributors of Colorado, Inc.)",5301 N Peoria ST D,20.5,10.0,source bonus differs (support rows found or lost),Colorado UCC filings 0 to 2; Mile High CRE 0 to 2.5; sources 0 to 6
+355,388,33,Unattached address (no company attached),39 S Kalamath ST,20.0,18.0,was named after a project or possible occupier and scored at half; now an address row at full points,Denver concept and site plans 3 to 6; State water permits 2 to 1; recency 0 to 15; fit 0 to -15
+360,386,26,Unattached address (no company attached),10825 E 47th AVE,20.0,20.0,score unchanged; other rows moved around it,
+361,385,24,Unattached address (no company attached),4852 N Pearl St,20.0,20.0,score unchanged; other rows moved around it,
+362,384,22,Unattached address (no company attached),11551 E 45th AVE,20.0,20.0,score unchanged; other rows moved around it,
+363,383,20,Unattached address (no company attached),2636 Walnut St 100,20.0,20.0,score unchanged; other rows moved around it,
+364,342,-22,Unattached address (no company attached),855 N Wyandot ST,20.0,24.0,stage rule gives a different stage,stage 12 to 8
+365,379,14,Unattached address (no company attached),191 N Yuma ST,20.0,20.0,score unchanged; other rows moved around it,
+366,378,12,Unattached address (no company attached),4795 N Leyden ST,20.0,20.0,score unchanged; other rows moved around it,
+373,526,153,"Texas Flour Milling, LLC",730 17th St Ste 600,19.5,14.0,source bonus differs (support rows found or lost),Mile High CRE 0 to 2.5; sources 0 to 3
+375,474,99,G & F MANUFACTURING CO INC,withheld (not confirmed as a business premises; see source record),18.0,18.0,score unchanged; other rows moved around it,
+376,473,97,Belyoo Manufacturing LLC,1625 Larimer St Ste 800,18.0,18.0,score unchanged; other rows moved around it,
+377,472,95,KNF Welding & Fabrication LLC,withheld (not confirmed as a business premises; see source record),18.0,18.0,score unchanged; other rows moved around it,
+378,471,93,STEM Robotics LLC,withheld (not confirmed as a business premises; see source record),18.0,18.0,score unchanged; other rows moved around it,
+379,470,91,Athletica wear Manufacturing Group llc,withheld (not confirmed as a business premises; see source record),18.0,18.0,score unchanged; other rows moved around it,
+380,469,89,Taranis Aerospace Solutions LLC,withheld (not confirmed as a business premises; see source record),18.0,18.0,score unchanged; other rows moved around it,
+381,468,87,REVAMP3D MANUFACTURING LLC,withheld (not confirmed as a business premises; see source record),18.0,18.0,score unchanged; other rows moved around it,
+382,467,85,Cotton Fleece Pants Manufacturing Group LLC,withheld (not confirmed as a business premises; see source record),18.0,18.0,score unchanged; other rows moved around it,
+383,466,83,Perceptum Robotics LLC,withheld (not confirmed as a business premises; see source record),18.0,18.0,score unchanged; other rows moved around it,
+384,465,81,Ronin Custom Parts Manufacturing LLC,withheld (not confirmed as a business premises; see source record),18.0,18.0,score unchanged; other rows moved around it,
+385,464,79,"Sierra Restoration and Fabrication, LLC",withheld (not confirmed as a business premises; see source record),18.0,18.0,score unchanged; other rows moved around it,
+386,463,77,Altitude Steel Distribution and Fabrication Incorporated,withheld (not confirmed as a business premises; see source record),18.0,18.0,score unchanged; other rows moved around it,
+387,462,75,Rocky Mtn Welding Fabrication Ltd.,withheld (not confirmed as a business premises; see source record),18.0,18.0,score unchanged; other rows moved around it,
+388,274,-114,Gallego's Fabrications LLC,withheld (not confirmed as a business premises; see source record),18.0,27.0,source bonus differs (support rows found or lost),Denver commercial construction permits 3 to 0; sources 6 to 0
+389,461,72,SWIFT EDGE FABRICATION LLC,withheld (not confirmed as a business premises; see source record),18.0,18.0,score unchanged; other rows moved around it,
+390,460,70,Death Bloom Coffee Roasters LLC,1164 S Acoma St Unit 586,18.0,18.0,score unchanged; other rows moved around it,
+391,459,68,"New Millennium Coffee Roasters, LLC",withheld (not confirmed as a business premises; see source record),18.0,18.0,score unchanged; other rows moved around it,
+392,458,66,Vanguard Semiconductor Inc,withheld (not confirmed as a business premises; see source record),18.0,18.0,score unchanged; other rows moved around it,
+393,457,64,MXN Fabrication LLC,withheld (not confirmed as a business premises; see source record),18.0,18.0,score unchanged; other rows moved around it,
+394,456,62,Gray Matters Aerospace LLC,withheld (not confirmed as a business premises; see source record),18.0,18.0,score unchanged; other rows moved around it,
+395,455,60,Recreational Mods and Fabrications LLC,withheld (not confirmed as a business premises; see source record),18.0,18.0,score unchanged; other rows moved around it,
+396,454,58,Sandao Manufacturing LLC,withheld (not confirmed as a business premises; see source record),18.0,18.0,score unchanged; other rows moved around it,
+397,453,56,Vactor Manufacturing LLC,withheld (not confirmed as a business premises; see source record),18.0,18.0,score unchanged; other rows moved around it,
+398,452,54,Packaging LLC,2001 Lincoln St Unit 2112,18.0,18.0,score unchanged; other rows moved around it,
+399,451,52,Iron Wolf Fabrication Ltd.,withheld (not confirmed as a business premises; see source record),18.0,18.0,score unchanged; other rows moved around it,
+400,450,50,Hail On Wheels Fabrication LLC,withheld (not confirmed as a business premises; see source record),18.0,18.0,score unchanged; other rows moved around it,
+401,449,48,"Silicon Yu Semiconductor Co., Ltd.",withheld (not confirmed as a business premises; see source record),18.0,18.0,score unchanged; other rows moved around it,
+402,448,46,Fulcrum Roasters LLC,withheld (not confirmed as a business premises; see source record),18.0,18.0,score unchanged; other rows moved around it,
+403,507,104,Unattached address (no company attached),2454 S Delaware ST,18.0,18.0,score unchanged; other rows moved around it,
+404,688,284,"Highline Machining Properties, LLC","1040 S Gaylord St, Unit 56",18.0,-12.0,fit rule gives a different class,fit -15 to 15
+405,505,100,Unattached address (no company attached),10241 E 51st AVE,18.0,18.0,score unchanged; other rows moved around it,
+406,390,-16,Unattached address (no company attached),3894 N Olive ST,18.0,18.0,score unchanged; other rows moved around it,
+407,447,40,"Rock Drill Fabrication, LLC",withheld (not confirmed as a business premises; see source record),18.0,18.0,score unchanged; other rows moved around it,
+408,504,96,Unattached address (no company attached),1201 W Alameda AVE,18.0,18.0,score unchanged; other rows moved around it,
+409,445,36,JD Mobile Welding/Custom Fabrication LLC,withheld (not confirmed as a business premises; see source record),18.0,18.0,score unchanged; other rows moved around it,
+410,443,33,B.H.S Custom & Fabrication Welding Corp.,4398 Broadway,18.0,18.0,score unchanged; other rows moved around it,
+411,444,33,Gozie's Custom Exhaust and Fabrication LLC,withheld (not confirmed as a business premises; see source record),18.0,18.0,score unchanged; other rows moved around it,
+412,503,91,Unattached address (no company attached),240 W Arizona AVE,18.0,18.0,score unchanged; other rows moved around it,
+413,442,29,"Gray Raven Brand Fabrication, LLC",withheld (not confirmed as a business premises; see source record),18.0,18.0,score unchanged; other rows moved around it,
+414,501,87,Unattached address (no company attached),13000 E Albrook Dr,18.0,18.0,score unchanged; other rows moved around it,
+415,389,-26,Unattached address (no company attached),9226 E NORTHFIELD BLVD,18.0,18.0,score unchanged; other rows moved around it,
+416,500,84,Unattached address (no company attached),12905 E 39th AVE,18.0,18.0,score unchanged; other rows moved around it,
+417,499,82,Unattached address (no company attached),4585 N Ironton ST,18.0,18.0,score unchanged; other rows moved around it,
+418,441,23,"Cutthroat Welding & Fabrication, LLC",withheld (not confirmed as a business premises; see source record),18.0,18.0,score unchanged; other rows moved around it,
+419,440,21,Lowel Plastics Ltd,2020 Arapahoe St Unit 1255,18.0,18.0,score unchanged; other rows moved around it,
+420,391,-29,Unattached address (no company attached),3958 N Yosemite St,18.0,18.0,score unchanged; other rows moved around it,
+421,498,77,Unattached address (no company attached),13300 E 38th AVE,18.0,18.0,score unchanged; other rows moved around it,
+422,497,75,Unattached address (no company attached),4920 N Nome ST,18.0,18.0,score unchanged; other rows moved around it,
+423,496,73,Unattached address (no company attached),2711 Larimer ST,18.0,18.0,score unchanged; other rows moved around it,
+424,392,-32,Unattached address (no company attached),3400 N Brighton BLVD,18.0,18.0,score unchanged; other rows moved around it,
+425,393,-32,Unattached address (no company attached),3901 Wynkoop ST,18.0,18.0,score unchanged; other rows moved around it,
+426,495,69,Unattached address (no company attached),12435 E 42ND AVE 1,18.0,18.0,score unchanged; other rows moved around it,
+427,494,67,Unattached address (no company attached),3840 N Olive St,18.0,18.0,score unchanged; other rows moved around it,
+428,395,-33,Unattached address (no company attached),8948 E 46th,18.0,18.0,score unchanged; other rows moved around it,
+430,396,-34,Unattached address (no company attached),1350 N Shoshone St,18.0,18.0,score unchanged; other rows moved around it,
+432,397,-35,Unattached address (no company attached),2743 Blake ST,18.0,18.0,score unchanged; other rows moved around it,
+433,493,60,Unattached address (no company attached),70 N Rio Grande BLVD,18.0,18.0,score unchanged; other rows moved around it,
+434,492,58,Unattached address (no company attached),9165 E Northfield Blvd 125 Ste,18.0,18.0,score unchanged; other rows moved around it,
+436,476,40,Unattached address (no company attached),3070 Blake ST 150,18.0,18.0,score unchanged; other rows moved around it,
+437,488,51,Unattached address (no company attached),3940 N Holly ST,18.0,18.0,score unchanged; other rows moved around it,
+439,487,48,Unattached address (no company attached),5100 N Fox ST A,18.0,18.0,score unchanged; other rows moved around it,
+440,486,46,Unattached address (no company attached),1515 E 47th AVE,18.0,18.0,score unchanged; other rows moved around it,
+442,398,-44,Unattached address (no company attached),1490 S Cherokee ST,18.0,18.0,score unchanged; other rows moved around it,
+443,399,-44,Unattached address (no company attached),2500 W. 14th Ave,18.0,18.0,score unchanged; other rows moved around it,
+444,485,41,Unattached address (no company attached),3450 N Brighton BLVD,18.0,18.0,score unchanged; other rows moved around it,
+445,483,38,Unattached address (no company attached),221 N Broadway,18.0,18.0,score unchanged; other rows moved around it,
+446,482,36,Unattached address (no company attached),3863 N Steele 1273,18.0,18.0,score unchanged; other rows moved around it,
+447,266,-181,Mothership Manufacturing LLC,1545 S Broadway,18.0,27.0,source bonus differs (support rows found or lost),Denver commercial construction permits 3 to 0; sources 6 to 0
+448,433,-15,Voyage Start Manufacturing & Trading LLC,withheld (not confirmed as a business premises; see source record),18.0,18.0,score unchanged; other rows moved around it,
+449,430,-19,Abundant Link Manufacturing & Trading LLC,withheld (not confirmed as a business premises; see source record),18.0,18.0,score unchanged; other rows moved around it,
+450,428,-22,Evergreen Innovation Manufacturing & Trading LLC,withheld (not confirmed as a business premises; see source record),18.0,18.0,score unchanged; other rows moved around it,
+451,431,-20,Excel Union Manufacturing & Trading LLC,withheld (not confirmed as a business premises; see source record),18.0,18.0,score unchanged; other rows moved around it,
+452,429,-23,Grand Fortune Manufacturing & Trading LLC,withheld (not confirmed as a business premises; see source record),18.0,18.0,score unchanged; other rows moved around it,
+453,426,-27,Novatech Manufacturing & Trading LLC,withheld (not confirmed as a business premises; see source record),18.0,18.0,score unchanged; other rows moved around it,
+454,432,-22,Shine Brilliant Manufacturing & Trading LLC,withheld (not confirmed as a business premises; see source record),18.0,18.0,score unchanged; other rows moved around it,
+455,427,-28,Summit Glory Manufacturing & Trading LLC,withheld (not confirmed as a business premises; see source record),18.0,18.0,score unchanged; other rows moved around it,
+456,481,25,Unattached address (no company attached),2669 Larimer ST K,18.0,18.0,score unchanged; other rows moved around it,
+457,477,20,Unattached address (no company attached),11500 E 53rd AVE,18.0,18.0,score unchanged; other rows moved around it,
+458,400,-58,Unattached address (no company attached),1473 W Maple AVE,18.0,18.0,score unchanged; other rows moved around it,
+459,424,-35,Ten Fingers Machining Inc,2121 S Oneida St Ste 325,18.0,18.0,score unchanged; other rows moved around it,
+460,423,-37,"Rollon Aerospace, LLC",withheld (not confirmed as a business premises; see source record),18.0,18.0,score unchanged; other rows moved around it,
+461,422,-39,Anhinga MFG LLC,withheld (not confirmed as a business premises; see source record),18.0,18.0,score unchanged; other rows moved around it,
+462,480,18,Unattached address (no company attached),4200 N Jason ST,18.0,18.0,score unchanged; other rows moved around it,
+463,401,-62,Unattached address (no company attached),552 N Kalamath ST,18.0,18.0,score unchanged; other rows moved around it,
+464,402,-62,Unattached address (no company attached),1701 W 13th AVE,18.0,18.0,score unchanged; other rows moved around it,
+465,403,-62,Unattached address (no company attached),8751 E 46th PL,18.0,18.0,score unchanged; other rows moved around it,
+466,421,-45,Death's Head Coffee Roasters LLC,withheld (not confirmed as a business premises; see source record),18.0,18.0,score unchanged; other rows moved around it,
+467,479,12,Unattached address (no company attached),12000 E 45th AVE,18.0,18.0,score unchanged; other rows moved around it,
+469,420,-49,"Paramount Brewing, LLC",withheld (not confirmed as a business premises; see source record),18.0,18.0,score unchanged; other rows moved around it,
+470,419,-51,Good Day Brewery LLC,withheld (not confirmed as a business premises; see source record),18.0,18.0,score unchanged; other rows moved around it,
+471,418,-53,"Definitive Welding, Fabrication, and Auto Works LLC",withheld (not confirmed as a business premises; see source record),18.0,18.0,score unchanged; other rows moved around it,
+472,417,-55,Prison Letters Brewing Company L.L.C.,withheld (not confirmed as a business premises; see source record),18.0,18.0,score unchanged; other rows moved around it,
+473,416,-57,Plastics PolyTech Manufacturing LLC,withheld (not confirmed as a business premises; see source record),18.0,18.0,score unchanged; other rows moved around it,
+474,415,-59,FERGUSON FIRE AND FABRICATION INC,withheld (not confirmed as a business premises; see source record),18.0,18.0,score unchanged; other rows moved around it,
+475,414,-61,Next Level Welding & Fabrication LLC,withheld (not confirmed as a business premises; see source record),18.0,18.0,score unchanged; other rows moved around it,
+476,413,-63,"Mortuus Equipment Manufacturing, Ltd","2218 s. kalamath st., Unit B",18.0,18.0,score unchanged; other rows moved around it,
+477,412,-65,Weld Hi Fabrication LLC,withheld (not confirmed as a business premises; see source record),18.0,18.0,score unchanged; other rows moved around it,
+478,411,-67,Forged Fabrication & Ironworks LLC,withheld (not confirmed as a business premises; see source record),18.0,18.0,score unchanged; other rows moved around it,
+479,410,-69,"Lindborg Fabrication & Design, LLC",withheld (not confirmed as a business premises; see source record),18.0,18.0,score unchanged; other rows moved around it,
+480,409,-71,"MB Manufacturing, LLC",withheld (not confirmed as a business premises; see source record),18.0,18.0,score unchanged; other rows moved around it,
+481,408,-73,No Surrender Strength & Metal Fabrication LLC,withheld (not confirmed as a business premises; see source record),18.0,18.0,score unchanged; other rows moved around it,
+482,407,-75,Artist Proof Manufacturing LLC,withheld (not confirmed as a business premises; see source record),18.0,18.0,score unchanged; other rows moved around it,
+483,406,-77,Summit Food Manufacturing LLC,withheld (not confirmed as a business premises; see source record),18.0,18.0,score unchanged; other rows moved around it,
+484,405,-79,MR. IGLOO MUSIC MFG. LLC,withheld (not confirmed as a business premises; see source record),18.0,18.0,score unchanged; other rows moved around it,
+485,404,-81,RBell Brewing LLC,withheld (not confirmed as a business premises; see source record),18.0,18.0,score unchanged; other rows moved around it,
+486,198,-288,Unattached address (no company attached),1501 S Acoma ST,17.0,32.0,fit rule gives a different class,fit 0 to -15
+487,509,22,Unattached address (no company attached),4290 N Brighton Blvd 125,17.0,17.0,score unchanged; other rows moved around it,
+488,347,-141,Unattached address (no company attached),2601 S Platte River DR,16.0,23.0,was named after a project or possible occupier and scored at half; now an address row at full points,Denver concept and site plans 6 to 12; Denver concept and site plans repeat points 0 to 3; State water permits 2 to 1; fit 0 to -15
+489,510,21,TC3 Inc,withheld (not confirmed as a business premises; see source record),16.0,16.0,score unchanged; other rows moved around it,
+490,517,27,"Campos Precision, LLC",withheld (not confirmed as a business premises; see source record),16.0,16.0,score unchanged; other rows moved around it,
+491,511,20,Unattached address (no company attached),570 W 44th Ave,16.0,16.0,score unchanged; other rows moved around it,
+492,512,20,Unattached address (no company attached),4900 N Kingston ST,16.0,16.0,score unchanged; other rows moved around it,
+493,521,28,Unattached address (no company attached),3800 N Quitman ST,16.0,16.0,score unchanged; other rows moved around it,
+494,520,26,Unattached address (no company attached),7300 E Cherry Creek South DR,16.0,16.0,score unchanged; other rows moved around it,
+495,514,19,Unattached address (no company attached),450 E 52nd AVE,16.0,16.0,score unchanged; other rows moved around it,
+496,515,19,Unattached address (no company attached),2151 E 45th AVE,16.0,16.0,score unchanged; other rows moved around it,
+497,516,19,Unattached address (no company attached),4607 N Xenia ST,16.0,16.0,score unchanged; other rows moved around it,
+498,519,21,Unattached address (no company attached),3893 N Steele ST 1214,16.0,16.0,score unchanged; other rows moved around it,
+499,518,19,Unattached address (no company attached),4395 N Oneida ST,16.0,16.0,score unchanged; other rows moved around it,
+500,576,76,Unattached address (no company attached),1025 N Zuni ST,15.5,10.0,source bonus differs (support rows found or lost),Mile High CRE 0 to 2.5; sources 0 to 3
+501,584,83,Unattached address (possible occupier: NORDIC ANALYTICAL LABORATORIES LLC),3960 N Grape ST,15.0,10.0,source bonus differs (support rows found or lost),Colorado UCC filings 0 to 2; sources 0 to 3
+502,583,81,World Courier Denver,"10500 E 54th vAe, Unit D",15.0,10.0,now named from a state permit or equipment filing at the address; address rows score half,State water permits 0 to 2; sources 0 to 3
+503,597,94,Unattached address (possible occupier: West Benton LLC),913 N Wyandot ST,14.5,10.0,source bonus differs (support rows found or lost),Colorado business registrations 0 to 1.5; sources 0 to 3
+504,591,87,Unattached address (possible occupier: Rover Solutions Group LLC),9522 E Northfield BLVD,14.5,10.0,source bonus differs (support rows found or lost),Colorado business registrations 0 to 1.5; sources 0 to 3
+505,70,-435,Unattached address (possible occupier: BURNHOOD LLC),4511 E 46th AVE,14.5,52.5,fit rule gives a different class,Denver commercial construction permits 21 to 6; stage 12 to 4; fit 0 to -15
+506,322,-184,Unattached address (possible occupier: E.N.O.C.H. llc),12033 E 38th AVE,14.5,25.0,fit rule gives a different class,Colorado business registrations 0 to 1.5; sources 0 to 3; fit 0 to -15
+507,596,89,Unattached address (possible occupier: Valley Soul Inc),2708 Larimer ST,14.5,10.0,source bonus differs (support rows found or lost),Colorado business registrations 0 to 1.5; sources 0 to 3
+508,589,81,"Unattached address (possible occupier: Rocky Mountain Commerce, LLC)",1430 W Alameda AVE,14.5,10.0,source bonus differs (support rows found or lost),Colorado business registrations 0 to 1.5; sources 0 to 3
+509,237,-272,Unattached address (no company attached),1630 S Acoma ST,14.5,29.5,fit rule gives a different class,fit 0 to -15
+510,573,63,Unattached address (possible occupier: SELLSCAPE LLC),13100 E 38th AVE,14.5,10.0,source bonus differs (support rows found or lost),Colorado business registrations 0 to 1.5; sources 0 to 3
+511,565,54,Unattached address (possible occupier: TRENDSPHERE RETAIL LLC),3108 N Brighton Blvd,14.5,10.0,source bonus differs (support rows found or lost),Colorado business registrations 0 to 1.5; sources 0 to 3
+512,551,39,"Unattached address (possible occupier: EAI Holdings, Inc.)",3851 N Steele ST 1393,14.5,10.0,source bonus differs (support rows found or lost),Colorado business registrations 0 to 1.5; sources 0 to 3
+513,594,81,Unattached address (no company attached),9500 E Northfield BLVD,14.0,10.0,source bonus differs (support rows found or lost),State water permits 0 to 1; sources 0 to 3
+514,525,11,"GTE Biosciences, LLC","250 Fillmore Street, Suite 525",14.0,14.0,score unchanged; other rows moved around it,
+515,528,13,BONNIE BRAE WELDING LLC,withheld (not confirmed as a business premises; see source record),14.0,14.0,score unchanged; other rows moved around it,
+517,600,83,"Unattached address (possible occupier: AMAZTECH, LLC)",4040 N Quebec ST,13.5,9.0,source bonus differs (support rows found or lost),Colorado business registrations 0 to 1.5; sources 0 to 3
+518,530,12,Park Pass Coffee LLC,4491 Tennyson St,13.0,13.0,score unchanged; other rows moved around it,
+519,387,-132,S5 Hospitality LLC,3601 Quebec St,13.0,19.0,source bonus differs (support rows found or lost),Denver commercial construction permits 3 to 0; sources 6 to 3
+520,639,119,"SADDLE BUTTE ENERGY, LLC",1900 16th St Ste 200,13.0,-1.0,source bonus differs (support rows found or lost),Denver commercial construction permits 0 to 6; sources 0 to 8
+521,533,12,Unattached address (no company attached),96 S Zuni ST,13.0,13.0,score unchanged; other rows moved around it,
+524,306,-218,Sysco Denver,5000 Beeler St,12.0,25.0,now named from a state permit or equipment filing at the address; address rows score half,Denver commercial construction permits 6 to 3; State water permits 0 to 2; sources 0 to 3; recency 15 to 0
+525,508,-17,"Liaison Home Automation, LLC",withheld (not confirmed as a business premises; see source record),11.0,17.0,fit rule gives a different class,fit 6 to 0
+527,598,71,Unattached address (no company attached),2950 N Brighton 80,10.0,10.0,score unchanged; other rows moved around it,
+528,595,67,Unattached address (no company attached),473 W Bayaud AVE,10.0,10.0,score unchanged; other rows moved around it,
+529,593,64,Unattached address (no company attached),4595 N Quebec ST,10.0,10.0,score unchanged; other rows moved around it,
+530,592,62,Unattached address (no company attached),2330 W Mulberry PL,10.0,10.0,score unchanged; other rows moved around it,
+531,563,32,Unattached address (no company attached),1974 S Acoma ST,10.0,10.0,score unchanged; other rows moved around it,
+533,590,57,Unattached address (no company attached),6101 E 45th,10.0,10.0,score unchanged; other rows moved around it,
+536,588,52,Unattached address (no company attached),4201 N Brighton BLVD,10.0,10.0,score unchanged; other rows moved around it,
+537,587,50,Unattached address (no company attached),9400 E 40th AVE,10.0,10.0,score unchanged; other rows moved around it,
+538,586,48,Unattached address (no company attached),3615 Delgany 505,10.0,10.0,score unchanged; other rows moved around it,
+541,581,40,Unattached address (no company attached),1308 S Jason ST,10.0,10.0,score unchanged; other rows moved around it,
+542,580,38,Unattached address (no company attached),4655 N Humboldt ST,10.0,10.0,score unchanged; other rows moved around it,
+543,579,36,Unattached address (no company attached),810 N Vallejo ST 48 & 50,10.0,10.0,score unchanged; other rows moved around it,
+544,569,25,Unattached address (no company attached),1110 W 3rd AVE,10.0,10.0,score unchanged; other rows moved around it,
+545,578,33,Unattached address (no company attached),3827 N Steele ST 1312,10.0,10.0,score unchanged; other rows moved around it,
+546,572,26,Unattached address (no company attached),3900 N Nome ST N UNIT,10.0,10.0,score unchanged; other rows moved around it,
+547,577,30,Unattached address (no company attached),4937 N Dallas ST,10.0,10.0,score unchanged; other rows moved around it,
+548,575,27,Unattached address (no company attached),4400 N Brighton BLVD,10.0,10.0,score unchanged; other rows moved around it,
+550,574,24,Unattached address (no company attached),2600 N Sheridan BLVD,10.0,10.0,score unchanged; other rows moved around it,
+553,571,18,Unattached address (no company attached),11475 E 53rd AVE 170,10.0,10.0,score unchanged; other rows moved around it,
+554,570,16,Unattached address (no company attached),7585 E Academy BLVD,10.0,10.0,score unchanged; other rows moved around it,
+555,543,-12,Unattached address (no company attached),3980 N Quebec ST,10.0,10.0,score unchanged; other rows moved around it,
+556,568,12,Unattached address (no company attached),602 S Lipan ST,10.0,10.0,score unchanged; other rows moved around it,
+563,544,-19,Unattached address (no company attached),728 S Lipan ST,10.0,10.0,score unchanged; other rows moved around it,
+564,626,62,"Unattached address (possible occupier: Vita Inclinata Technologies, Inc.)",5050 Osage Street,10.0,5.0,source bonus differs (support rows found or lost),Colorado UCC filings 0 to 2; sources 0 to 3
+568,545,-23,Unattached address (no company attached),3458 Walnut ST,10.0,10.0,score unchanged; other rows moved around it,
+569,558,-11,Unattached address (no company attached),3870 N Paris 1,10.0,10.0,score unchanged; other rows moved around it,
+570,556,-14,Unattached address (no company attached),4501 N Havana ST,10.0,10.0,score unchanged; other rows moved around it,
+571,546,-25,Unattached address (no company attached),1252 Byers,10.0,10.0,score unchanged; other rows moved around it,
+572,513,-59,Unattached address (no company attached),3500 Chestnut PL,10.0,16.0,source bonus differs (support rows found or lost),Denver commercial construction permits 3 to 0; sources 3 to 0
+573,554,-19,Unattached address (no company attached),3835 N Paris ST,10.0,10.0,score unchanged; other rows moved around it,
+574,547,-27,Unattached address (no company attached),5725 E E 39th ave RD,10.0,10.0,score unchanged; other rows moved around it,
+575,552,-23,Unattached address (no company attached),3757 N Brighton BLVD,10.0,10.0,score unchanged; other rows moved around it,
+576,548,-28,Unattached address (no company attached),4716 N Beeler CT,10.0,10.0,score unchanged; other rows moved around it,
+577,550,-27,Unattached address (no company attached),4801 N Jackson ST,10.0,10.0,score unchanged; other rows moved around it,
+578,549,-29,Unattached address (no company attached),4640 N Ironton ST,10.0,10.0,score unchanged; other rows moved around it,
+579,599,20,Unattached address (possible occupier: Vault Designer Logistics LLC),4970 Cook St,9.5,9.5,score unchanged; other rows moved around it,
+580,601,21,Unattached address (no company attached),4550 N Central Park BLVD,9.0,9.0,score unchanged; other rows moved around it,
+581,602,21,West Community Economic Development Corporation,"4200 Morrison Rd, Unit 3",8.0,8.0,score unchanged; other rows moved around it,
+582,603,21,A & Sons Communications Technology LLC,withheld (not confirmed as a business premises; see source record),8.0,8.0,score unchanged; other rows moved around it,
+583,661,78,"Voice Media Group, LLC","1278 Lincoln Street, Suite 100",8.0,-1.0,recency points differ,Denver commercial construction permits 3 to 0; Mile High CRE 0 to 4; recency 0 to 8
+584,606,22,Unattached address (no company attached),901 N Navajo ST,8.0,8.0,score unchanged; other rows moved around it,
+585,604,19,Precision Dance LLC,withheld (not confirmed as a business premises; see source record),8.0,8.0,score unchanged; other rows moved around it,
+586,605,19,The Gathering Place: A Refuge for Rebuilding Lives,withheld (not confirmed as a business premises; see source record),8.0,8.0,score unchanged; other rows moved around it,
+587,634,47,Unattached address (possible occupier: Denver Power Washing LLC),4662 N Beeler CT,7.5,3.0,source bonus differs (support rows found or lost),Colorado business registrations 0 to 1.5; sources 0 to 3
+588,174,-414,WE FOOD ENTERPRISES HOSPITALITY GROUP LLC,"150 Sheridan Blvd, Ste 306",6.0,36.0,fit rule gives a different class,fit 15 to -15
+589,609,20,Catalyst Technologies Inc.,"2721 W 24th Ave, Unit 104",6.0,6.0,score unchanged; other rows moved around it,
+590,611,21,"Tribal Energy Development Company, LLC","3000 Lawrence St, Ste 15",6.0,6.0,score unchanged; other rows moved around it,
+591,612,21,"Altaris Space, Inc.","2699 Alcott St, Unit 1126",6.0,6.0,score unchanged; other rows moved around it,
+592,613,21,Greenland Energy Company,"3400 East Bayaud Ave, Suite 400",6.0,6.0,score unchanged; other rows moved around it,
+593,614,21,"Lightyear Space, Inc.","1933 South Acoma Street, Unit 409",6.0,6.0,score unchanged; other rows moved around it,
+594,355,-239,"Foundry Underwriting, Inc.",100 Steele Street Suite 902,6.0,21.0,fit rule gives a different class,fit 0 to -15
+595,615,20,"Wenrich Lucas Energy, LLC","260 Josephine St., Suite 400",6.0,6.0,score unchanged; other rows moved around it,
+596,619,23,Foundate Systems Inc.,"360 Acoma Street, Unit 118",6.0,6.0,score unchanged; other rows moved around it,
+597,620,23,FX Energy LLC,"1221 S Clarkson St, Ste 219",6.0,6.0,score unchanged; other rows moved around it,
+598,622,24,"Tribal Energy Alternatives, Inc",withheld (not confirmed as a business premises; see source record),6.0,6.0,score unchanged; other rows moved around it,
+599,628,29,Unattached address (no company attached),209 N Kalamath ST 28 UNIT,5.0,5.0,score unchanged; other rows moved around it,
+600,534,-66,Unattached address (no company attached),4800 Dahlia St,5.0,11.5,was named after a project or possible occupier and scored at half; now an address row at full points,Colorado business registrations 6 to 0; Mile High CRE 2.5 to 5; sources 3 to 0; recency 15 to 0; fit -15 to 0
+601,638,37,Unattached address (no company attached),5000 N Columbine ST,5.0,0.0,was named after a project or possible occupier and scored at half; now an address row at full points,Denver concept and site plans 6 to 12; State water permits 2 to 1
+602,627,25,Unattached address (no company attached),12330 E. 46th Ave,5.0,5.0,score unchanged; other rows moved around it,
+603,640,37,"DENVER ENERGY CENTER, LLC","633 17th Street, Ste. 100",4.5,-1.0,source bonus differs (support rows found or lost),Mile High CRE 0 to 2.5; sources 0 to 3
+604,651,47,Ironhorse Industrial Park LLC,"555 17th Street, Suite 2400",4.5,-1.0,source bonus differs (support rows found or lost),Mile High CRE 0 to 2.5; sources 0 to 3
+605,654,49,CACHE INFORMATION SYSTEMS,"4643 S ULSTER ST, UNIT 100",4.5,-1.0,source bonus differs (support rows found or lost),Mile High CRE 0 to 2.5; sources 0 to 3
+606,318,-288,QUIKTRIP CORPORATION,18602 East Maxwell Place,4.0,25.0,now named from a state permit or equipment filing at the address; address rows score half,APCD air permit status 0 to 2; Denver commercial construction permits 6 to 3; Denver concept and site plans 0 to 2; State water permits 0 to 2; sources 0 to 6; recency 15 to 0; fit 0 to -15
+607,372,-235,Shamrock Foods Systems Warehouse,5005 Kalamath St,4.0,20.0,now named from a state permit or equipment filing at the address; address rows score half,Denver commercial construction permits 12 to 6; State water permits 0 to 2; sources 0 to 3; fit 0 to -15
+608,636,28,Unattached address (no company attached),4640 N Pecos ST H UNIT,3.0,3.0,score unchanged; other rows moved around it,
+609,635,26,Unattached address (no company attached),4590 N Quebec ST,3.0,3.0,score unchanged; other rows moved around it,
+610,633,23,Unattached address (no company attached),2760 Larimer ST,3.0,3.0,score unchanged; other rows moved around it,
+611,632,21,Unattached address (no company attached),209 N Kalamath 17,3.0,3.0,score unchanged; other rows moved around it,
+612,671,59,"QB Energy Management, LLC",1001 17th St Ste 1600,3.0,-9.0,source bonus differs (support rows found or lost),APCD air permit status 0 to 1; Colorado UCC filings 0 to 4; State water permits 0 to 1; sources 0 to 6
+613,484,-129,UPS Supply Chain Solutions COEFA,12360 E 46th Ave,2.5,18.0,now named from a state permit or equipment filing at the address; address rows score half,Denver commercial construction permits 6 to 3; Mile High CRE 0 to 2.5; State water permits 0 to 2; sources 0 to 6; recency 8 to 0; fit 0 to -15
+614,234,-380,"NRG RELIABILITY SOLUTIONS, LLC",4545 EAST 51ST AVENUE,1.0,30.0,fit rule gives a different class,Denver concept and site plans 6 to 3; State water permits 0 to 1; sources 3 to 6; recency 15 to 0; fit 0 to -15
+615,637,22,Chester Street Apartments LP LLLP,"1660 S. Albion St., Suite 200",1.0,1.0,score unchanged; other rows moved around it,
+616,665,49,"Unattached address (possible occupier: CORPORATE INSTALLATIONS, INCORPORATED)",11220 E 53rd AVE 400,0.0,-5.0,source bonus differs (support rows found or lost),Colorado UCC filings 0 to 2; sources 0 to 3
+617,669,52,Unattached address (possible occupier: NiniDoinhair LLC),3830 N Ivy St,-0.5,-5.0,source bonus differs (support rows found or lost),Colorado business registrations 0 to 1.5; sources 0 to 3
+618,667,49,Unattached address (possible occupier: Kama Ji 11 LLC),3831 N Ivy ST,-0.5,-5.0,source bonus differs (support rows found or lost),Colorado business registrations 0 to 1.5; sources 0 to 3
+619,641,22,"Incline Energy III, LLC",withheld (not confirmed as a business premises; see source record),-1.0,-1.0,score unchanged; other rows moved around it,
+620,643,23,Concierge Legal Systems Corporation,withheld (not confirmed as a business premises; see source record),-1.0,-1.0,score unchanged; other rows moved around it,
+621,645,24,Dark Carz Technologies Corp,withheld (not confirmed as a business premises; see source record),-1.0,-1.0,score unchanged; other rows moved around it,
+622,646,24,Dream Technologies Inc.,withheld (not confirmed as a business premises; see source record),-1.0,-1.0,score unchanged; other rows moved around it,
+623,647,24,"Land's End Energy, LLC","200 Columbine Street, Suite 240",-1.0,-1.0,score unchanged; other rows moved around it,
+624,648,24,"Red Hills Energy Partners, LLC","175 Rampart Way, Suite 901",-1.0,-1.0,score unchanged; other rows moved around it,
+625,649,24,BossPac Technologies Inc.,not given in the source,-1.0,-1.0,score unchanged; other rows moved around it,
+626,650,24,"New Charter Technologies, Inc.",3801 E Florida Ave Ste 820,-1.0,-1.0,score unchanged; other rows moved around it,
+627,652,25,"Unibap Space Solutions, LLC",withheld (not confirmed as a business premises; see source record),-1.0,-1.0,score unchanged; other rows moved around it,
+628,653,25,"Gypsum Technologies , Inc.",withheld (not confirmed as a business premises; see source record),-1.0,-1.0,score unchanged; other rows moved around it,
+629,655,26,RES Energy Services Inc.,1601 19th St Ste 400,-1.0,-1.0,score unchanged; other rows moved around it,
+630,656,26,"Dawn's Edge Technology, LLC",5105 W 38th Ave Unit 7,-1.0,-1.0,score unchanged; other rows moved around it,
+631,657,26,"Barrell Energy, Inc","303 S. Broadway, Suite 200-356",-1.0,-1.0,score unchanged; other rows moved around it,
+632,658,26,Growflow Technologies LLC,"4380 S Syracuse Street, Suite 200",-1.0,-1.0,score unchanged; other rows moved around it,
+633,659,26,R & O ENERGY USA INC.,"2128 W 32nd Ave, FL 2",-1.0,-1.0,score unchanged; other rows moved around it,
+634,660,26,Kiau Technologies PBC,910 Santa Fe Dr Unit 104,-1.0,-1.0,score unchanged; other rows moved around it,
+635,683,48,"Xcimer Energy, Inc.",10325 E 47th Ave,-3.5,-9.0,source bonus differs (support rows found or lost),Mile High CRE 0 to 2.5; sources 0 to 3
+636,684,48,Concord Energy Logistics LLC,1408 Wazee Street,-3.5,-9.0,source bonus differs (support rows found or lost),Mile High CRE 0 to 2.5; sources 0 to 3
+638,668,30,Unattached address (no company attached),10900 E Smith RD,-5.0,-5.0,score unchanged; other rows moved around it,
+639,666,27,Unattached address (no company attached),4600 N Willow St,-5.0,-5.0,score unchanged; other rows moved around it,
+640,663,23,INFLECTION MANUFACTURING SYSTEMS LLC,2450 S University Blvd Unit 364,-6.5,-3.0,source bonus differs (support rows found or lost),Denver commercial construction permits 3 to 0; Mile High CRE 0 to 2.5; sources 6 to 3
+641,670,29,BCM ENERGY SHOWROOM CORPORATION,withheld (not confirmed as a business premises; see source record),-9.0,-9.0,score unchanged; other rows moved around it,
+642,672,30,PSE Can Am CO Solar LLC,"518 17th Street, Suite 950",-9.0,-9.0,score unchanged; other rows moved around it,
+643,673,30,DRI Global Technology LLC,withheld (not confirmed as a business premises; see source record),-9.0,-9.0,score unchanged; other rows moved around it,
+644,674,30,"Kai Health Technology, Inc.",3513 Brighton Blvd Ste 485,-9.0,-9.0,score unchanged; other rows moved around it,
+645,675,30,"Cleat Street Technologies, Inc.",1925 Blake St Ste 201,-9.0,-9.0,score unchanged; other rows moved around it,
+646,676,30,Lexington Energy LLC,1430 Wynkoop Street,-9.0,-9.0,score unchanged; other rows moved around it,
+647,677,30,Aquila Technology Solutions,1095 S Monaco Pkwy,-9.0,-9.0,score unchanged; other rows moved around it,
+648,624,-24,Common Forge Ventures LLC,"1073 S Pearl Street, Unit 101",-9.0,6.0,fit rule gives a different class,fit 0 to -15
+649,678,29,Solar Tech LLC,4545 E Warren Ave Unit 430,-9.0,-9.0,score unchanged; other rows moved around it,
+650,679,29,"Zavanna Energy Intermediate, LLC",1200 17th St Ste 1100,-9.0,-9.0,score unchanged; other rows moved around it,
+651,681,30,"Cybergrade Technologies, LLC",withheld (not confirmed as a business premises; see source record),-9.0,-9.0,score unchanged; other rows moved around it,
+652,685,33,Black Diamond Crude Energy LLC,withheld (not confirmed as a business premises; see source record),-9.0,-9.0,score unchanged; other rows moved around it,
+653,686,33,RTI Systems Inc.,"4895 Joliet St., Unit FGH",-9.0,-9.0,score unchanged; other rows moved around it,
+654,434,-220,Global MFG Consultants LLC,withheld (not confirmed as a business premises; see source record),-12.0,18.0,fit rule gives a different class,fit 15 to -15
+656,689,33,IMPERIAL MACHINING CO.,1705 E 69TH AVE UNIT B,70.0,70.0,score unchanged; other rows moved around it,
+657,690,33,Durango Tire Shop Inc,withheld (not confirmed as a business premises; see source record),63.0,63.0,score unchanged; other rows moved around it,
+658,691,33,Quattro Machining Services Inc.,"2350 E 70th Ave, Bldg A",60.0,61.0,signal points differ,State water permits 2 to 1
+659,692,33,"VEXOR CUSTOM WOODWORKING TOOLS, INC.",withheld (not confirmed as a business premises; see source record),59.0,59.0,score unchanged; other rows moved around it,
+660,34,-626,"RADICAL BOTANICALS, LLC",44 COOK ST STE 100,59.0,65.0,moved between the Denver section and the county-unconfirmed section (denver to unconfirmed),Denver commercial construction permits 3 to 0; sources 6 to 3
+661,693,32,HARRELSON LLC,5650 LOWELL BLVD UNIT C,56.0,56.0,score unchanged; other rows moved around it,
+662,694,32,"Per Revolution Machining, LLC",6321 Washington St Unit I,56.0,56.0,score unchanged; other rows moved around it,
+663,696,33,"Nav Auto 1, LLC",withheld (not confirmed as a business premises; see source record),52.0,52.0,score unchanged; other rows moved around it,
+665,698,33,VANCE BROTHERS LLC,380 W 62ND AVE,43.0,43.0,score unchanged; other rows moved around it,
+666,700,34,Merritt Welding and Fabrication,withheld (not confirmed as a business premises; see source record),38.0,38.0,score unchanged; other rows moved around it,
+667,699,32,WESTFAX BREWING COMPANY,withheld (not confirmed as a business premises; see source record),38.0,38.0,score unchanged; other rows moved around it,
+668,701,33,CNC Pros Colorado LLC,"5770 Clarkson Street, #C",37.0,37.0,score unchanged; other rows moved around it,
+669,711,42,"Scrip Foundry, Inc.","400 S. Colorado Blvd., Ste 800",36.0,21.0,fit rule gives a different class,fit 0 to 15
+670,712,42,"Synteric Robotics, Inc.","2369 S. Trenton Way, Suite P",36.0,21.0,fit rule gives a different class,fit 0 to 15
+671,702,31,"ZIMMERMAN METALS, INC.",201 E. 58th Avenue,35.0,35.0,score unchanged; other rows moved around it,
+672,697,25,A-1 CHIPSEAL COMPANY,2505 E 74TH AVE,31.0,47.0,fit rule gives a different class,APCD air permit status 2 to 1; fit 15 to 0
+673,705,32,Green Machine 303 LLC,"5380 Tennyson Street, Suite D",31.0,31.0,score unchanged; other rows moved around it,
+674,703,29,NAVAJO MANUFACTURING COMPANY,withheld (not confirmed as a business premises; see source record),31.0,31.0,score unchanged; other rows moved around it,
+675,704,29,LAZO Foods LLC,not given in the source,31.0,31.0,score unchanged; other rows moved around it,
+676,708,32,Mad Macks Brewing LLC,withheld (not confirmed as a business premises; see source record),23.0,26.0,source bonus differs (support rows found or lost),sources 6 to 3
+677,710,33,Young K Corporation,withheld (not confirmed as a business premises; see source record),23.0,23.0,score unchanged; other rows moved around it,
+678,707,29,"Volley Automation, Inc.","5675 Pecos Street, Suite 101",21.0,27.0,fit rule gives a different class,fit 6 to 0
+679,713,34,Unattached address (no company attached),25000 East 56th Avenue,20.0,20.0,score unchanged; other rows moved around it,
+680,719,39,Aaron Security Manufacturing & Distribution LLC,withheld (not confirmed as a business premises; see source record),18.0,18.0,score unchanged; other rows moved around it,
+683,718,35,Imagination Fabrication & Welding LLC,5380 Tennyson St Ste G,18.0,18.0,score unchanged; other rows moved around it,
+684,717,33,Metro Specialty Plastics Inc,5635 Franklin St Unit C,18.0,18.0,score unchanged; other rows moved around it,
+685,716,31,Hughes Precision Manufacturing LLC,400 S Colorado Blvd Ste 450,18.0,18.0,score unchanged; other rows moved around it,
+686,715,29,Rocky Mountain Chassis Fabrication LLC,1001 E 62nd Ave Unit 405,18.0,18.0,score unchanged; other rows moved around it,
+688,714,26,Q Fabrication LLC,withheld (not confirmed as a business premises; see source record),18.0,18.0,score unchanged; other rows moved around it,
+689,721,32,Unattached address (no company attached),5350 Newport Street,13.0,13.0,score unchanged; other rows moved around it,
+690,723,33,Unattached address (possible occupier: LIUFENGXIANGMR LLC),7800 S Fairplay St,9.5,9.5,score unchanged; other rows moved around it,
+691,722,31,Unattached address (possible occupier: ZHANGYUHAOMR LLC),6795 Broadway,9.5,9.5,score unchanged; other rows moved around it,
+692,720,28,LIBERTY OILFIELD SERVICES LLC,950 17th STREET,8.0,14.0,source bonus differs (support rows found or lost),Denver commercial construction permits 3 to 0; sources 3 to 0
+693,727,34,"Lux Aeterna Space, Inc.",2300 E 76th Ave Ste 400,-1.0,-1.0,score unchanged; other rows moved around it,
+694,529,-165,"Altius Space Machines, Inc.","1225 17th Street, Suite 1100",-7.0,14.0,moved between the Denver section and the county-unconfirmed section (denver to unconfirmed),Denver commercial construction permits 3 to 0; sources 3 to 0; fit 0 to -15
+695,731,36,Project Trench,not given in the source (code name only),24.0,24.0,score unchanged; other rows moved around it,
+696,732,36,Project Laser,not given in the source (code name only),24.0,24.0,score unchanged; other rows moved around it,
+697,733,36,Project Magnesium,not given in the source (code name only),24.0,24.0,score unchanged; other rows moved around it,
+698,734,36,Project Cedar,not given in the source (code name only),24.0,24.0,score unchanged; other rows moved around it,
+699,735,36,Project Caraway,not given in the source (code name only),24.0,24.0,score unchanged; other rows moved around it,
+700,736,36,Project Fluorine,not given in the source (code name only),24.0,24.0,score unchanged; other rows moved around it,
+701,737,36,Project Ladybug,not given in the source (code name only),24.0,24.0,score unchanged; other rows moved around it,
+702,738,36,Project Neptune,not given in the source (code name only),24.0,24.0,score unchanged; other rows moved around it,
+703,739,36,Project Sweet Summit,not given in the source (code name only),24.0,24.0,score unchanged; other rows moved around it,
+704,740,36,Project SAM,not given in the source (code name only),17.0,17.0,score unchanged; other rows moved around it,
+705,741,36,Project Skyforge,not given in the source (code name only),17.0,17.0,score unchanged; other rows moved around it,
+706,742,36,Project Skyline2025,not given in the source (code name only),17.0,17.0,score unchanged; other rows moved around it,
+707,743,36,Project New Vernon,not given in the source (code name only),9.0,9.0,score unchanged; other rows moved around it,

@@ -1,0 +1,26 @@
+n,lookup,what_it_settles
+1,19301 E 70th Ave (PepsiCo High Point plant),"Whether the mechanical, electrical and plumbing logs are open or closed: tells you if air is still being specified or already installed"
+2,4301 N Forest St (Safeway milk plant),"Whether the 2025 'Compressor Building Addition' is refrigeration or plant air, and who the mechanical contractor is"
+3,11645 E 37th Ave (Frito-Lay),Scope of the $4.9M 2025 alteration (new line or building work) and whether mechanical permits are issued
+4,4735 Florence St (Conagra bakery),Scope of the open tenant-finish permit and whether it adds production equipment
+5,4555 York St (Nestle Purina),Scope of the open permit at the pet food plant; new process line or building repair
+6,5150 Brighton Blvd,Whether the June 2026 concept review is the SRM Concrete batch plant (ground truth D14) and whether the truck wash filing here is the outgoing occupant
+7,4990 N Ironton St (Amcor Rigid Packaging),Whether the new-building permit at this address is Amcor's plant and how far along it is
+8,4823 Lima St (Colorado Prefare Foods / Native Foods),Which of the two food companies occupies the space and whether a production kitchen build-out is permitted
+9,95 S Tejon ST,Tenant name for a fit-out site with no company in any source (Alteration/Tenant Finish); application names usually carry the tenant
+10,4460 N Madison ST,Tenant name for a under construction site with no company in any source (Addition); application names usually carry the tenant
+11,3100 N Brighton BLVD 1200,Tenant name for a fit-out site with no company in any source (Alteration/Tenant Finish); application names usually carry the tenant
+12,890 N Navajo ST,Tenant name for a fit-out site with no company in any source (Alteration/Tenant Finish); application names usually carry the tenant
+13,1630 35th ST,Tenant name for a fit-out site with no company in any source (Alteration/Tenant Finish); application names usually carry the tenant
+14,5150 N Colorado BLVD,Tenant name for a fit-out site with no company in any source (Alteration/Tenant Finish); application names usually carry the tenant
+15,9400 E 46th 100,Tenant name for a operating and expanding site with no company in any source (Alteration/Tenant Finish); application names usually carry the tenant
+16,3939 N Kearney ST,Tenant name for a operating and expanding site with no company in any source (New Non-Building Structure); application names usually carry the tenant
+17,12655 E 42nd AVE,Tenant name for a fit-out site with no company in any source (Alteration/Tenant Finish); application names usually carry the tenant
+18,4700 N Kingston ST,Tenant name for a operating and expanding site with no company in any source (Alteration/Tenant Finish); application names usually carry the tenant
+19,1812 35th St,Tenant name for a fit-out site with no company in any source (Alteration/Tenant Finish); application names usually carry the tenant
+20,17688 E 45th AVE 190 UNIT,Tenant name for a fit-out site with no company in any source (Alteration/Tenant Finish); application names usually carry the tenant
+21,11194 E 45th AVE,Tenant name for a fit-out site with no company in any source (Alteration/Tenant Finish); application names usually carry the tenant
+22,4511 E 46th AVE,Tenant name for a fit-out site with no company in any source (Alteration/Tenant Finish); application names usually carry the tenant
+23,3869 N Steele ST 1258,Tenant name for a fit-out site with no company in any source (Alteration/Tenant Finish); application names usually carry the tenant
+24,3200 Larimer ST,Tenant name for a fit-out site with no company in any source (Alteration/Tenant Finish); application names usually carry the tenant
+25,9900 E 51st AVE,Tenant name for a fit-out site with no company in any source (Alteration/Tenant Finish); application names usually carry the tenant

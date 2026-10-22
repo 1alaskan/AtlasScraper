@@ -1,0 +1,71 @@
+rank,score,site_address,zip,stage,fit_before,possible_occupier_v3,match,source,name,detail,record_id,address_in_source
+15,72.0,3939 N Kearney ST,80207,fit-out,unknown,,same street address,EPA FRS,ADAMS MCCLURE,NAICS 323113 (all: 323113),110009562099,3939 KEARNEY STREET
+19,71.0,95 S Tejon ST,80223,fit-out,unknown,,no match,,,,,
+22,68.0,4460 N Madison ST,,under construction,unknown,,no match,,,,,
+24,67.5,3100 N Brighton BLVD 1200,,fit-out,unknown,,no match,,,,,
+34,65.5,890 N Navajo ST,80204,fit-out,unknown,AFFORDABLE CLASSICS LLC,no match,,,,,
+35,65.0,2323 W Mulberry PL,,fit-out,unknown,,no match,,,,,
+39,63.5,5590 N Joliet ST,80239,fit-out,unknown,WC Property Holding LLC,no match,,,,,
+42,63.0,1630 35th ST,80216,fit-out,strong,,same street address,EPA FRS,MOUNTAIN CEMENT CO,NAICS 327320 (all: 327320),110001427965,1630 35TH ST
+43,63.0,18309 E 65th AVE,,operating and expanding,moderate,,same street address,Denver business licences,Christian Brothers Automotive Green Valley Ranch,Garage - Repair of Motor Vehic; applied 2026-07-23; expires 2027-07-28,2026-BFN-0016072,18309 E 65TH Ave
+46,61.0,5150 N Colorado BLVD,80216,fit-out,unknown,,no match,,,,,
+50,59.0,3480 S Poplar ST,80224,under construction,moderate,,no match,,,,,
+52,59.0,9400 E 46th 101,80238,operating and expanding,unknown,,no match,,,,,
+54,58.0,3490 Park AVE,80216,fit-out,moderate,,same street address,Denver business licences,7-11#39849,Retail Tobacco Store; applied 2020-06-09; expires 2027-07-22,2020-BFN-0002931,3490 PARK AVE
+54,58.0,3490 Park AVE,80216,fit-out,moderate,,same street address,Denver business licences,7-11#39849,Retail Food; applied 2024-06-18; expires 2027-07-22,2024-BFN-0030243,3490 PARK AVE
+54,58.0,3490 Park AVE,80216,fit-out,moderate,,same street address,Denver business licences,7-Eleven #39849A,Combined License; applied 2026-01-06; expires 2027-04-22,2026-BFN-0000203,3490 PARK Ave
+55,57.0,3625 E 48th AVE,80216,operating and expanding (permit under $50k),unknown,Perpetual First LLC,same street address,Denver business licences,MOODSWING,Combined License; applied 2024-10-09; expires 2027-03-04,2024-BFN-0042450,3625 E 48TH Ave
+55,57.0,3625 E 48th AVE,80216,operating and expanding (permit under $50k),unknown,Perpetual First LLC,same street address,Denver business licences,Moodswing,Retail Food; applied 2025-08-11; expires 2026-12-31,2025-BFN-0017808,3625 E 48TH AVE
+56,56.5,3875 Walnut ST,,under construction,weak,,no match,,,,,
+64,55.5,1160 S Colorado BLVD,,fit-out,moderate,"Finish Line Colorado, LLC",no match,,,,,
+65,54.0,1485 40th ST,,under construction,weak,,no match,,,,,
+66,54.0,4475 E 50th AVE,80216,fit-out,strong,,same street address,EPA FRS,AMERICOLD  DENVER PLANT # 0563,NAICS 49312 (all: 49312),110000528536,4475 E. 50TH AVE.
+67,54.0,2763 Blake ST,,fit-out,strong,,same street address,EPA FRS,"A. R. WILFLEY AND SONS, INC.",NAICS 333911 (all: 333911;333914),110000466843,2763 BLAKE STREET
+67,54.0,2763 Blake ST,,fit-out,strong,,"nearby, different address (weak)",EPA FRS,A R WILFLEY AND SONS INC,NAICS 333911; 39 m from the permit point,110038894890,2750 BLAKE ST
+68,54.0,12655 E 42nd AVE 50,80239,fit-out,unknown,,no match,,,,,
+71,54.0,4700 N Kingston ST,80239,operating and expanding,unknown,,"nearby, different address (weak)",EPA FRS,"CARGILL, INC.",NAICS 325411; 70 m from the permit point,110002360720,11170 EAST 47TH AVENUE
+71,54.0,4700 N Kingston ST,80239,operating and expanding,unknown,,"nearby, different address (weak)",EPA FRS,HENRY COMPANY,NAICS 324122; 65 m from the permit point,110001430719,11155 E 47TH AVE
+72,53.0,3800 N Holly ST 1101 UNIT,,fit-out,unknown,,no match,,,,,
+77,52.0,5440 N Roslyn ST,80216,under construction,unknown,,same street address,EPA FRS,CITY & COUNTY OF DENVER - ROSLYN,NAICS 324121 (all: 324121;921190),110001430693,5440 ROSLYN STREET
+81,51.0,3869 N Steele ST 1258,80205,fit-out,unknown,,no match,,,,,
+82,50.0,1812 35th St,80216,fit-out,unknown,,same street address,Denver business licences,NON PLUS ULTRA,Combined License; applied 2022-10-25; expires 2027-02-20,2022-BFN-0014269,1812 35TH St 2
+82,50.0,1812 35th St,80216,fit-out,unknown,,"nearby, different address (weak)",EPA FRS,MILLER PRESS INC,NAICS 323111; 35 m from the permit point,110001726972,3440 BRIGHTON BLVD
+86,49.5,813 N Navajo ST,80204,fit-out,unknown,Prototype Labs Ltd.,no match,,,,,
+87,49.0,6090 E 39th AVE,80207,operating and expanding,unknown,,same street address,Denver business licences,We Don't Waste,Wholesale Food; applied 2025-04-30; expires 2027-05-27,2025-BFN-0008395,6090 E 39TH AVE
+89,48.5,17688 E 45th AVE 190 UNIT,,fit-out,unknown,,no match,,,,,
+90,48.0,4001 N Monroe ST,80216,operating and expanding (permit under $50k),unknown,,no match,,,,,
+91,48.0,3615 Delgany ST 900,80216,fit-out,unknown,,"same street address, different unit",Denver business licences,DEAR EMILIA,Combined License; applied 2025-10-15; expires 2027-01-15,2025-BFN-0022906,3615 DELGANY St 100
+91,48.0,3615 Delgany ST 900,80216,fit-out,unknown,,"same street address, different unit",Denver business licences,Dear Emilia,Retail Food; applied 2026-01-05; expires 2027-01-08,2026-BFN-0000162,3615 DELGANY ST 100
+91,48.0,3615 Delgany ST 900,80216,fit-out,unknown,,"nearby, different address (weak)",EPA FRS,COLORADO STRIJPE WRIGHT,NAICS 33999; 39 m from the permit point,110024437082,3606 DELGANY
+92,48.0,11194 E 45th AVE,80239,fit-out,unknown,,no match,,,,,
+96,47.0,2000 N Broadway,80205,operating and expanding,moderate,,same street address,Denver business licences,BIG O TIRES,Garage - Repair of Motor Vehic; applied 2026-03-18; expires 2027-04-09,2026-BFN-0005823,2000 N BROADWAY
+99,46.0,11100 E 45th AVE,80239,fit-out,unknown,MILE HIGH EQUIPMENT LLC,same street address,EPA FRS,MILE HIGH EQUIPMENT CO,NAICS 332813 (all: 332813;333415;335220;335222),110000467209,11100 E. 45TH AVE.
+99,46.0,11100 E 45th AVE,80239,fit-out,unknown,MILE HIGH EQUIPMENT LLC,"nearby, different address (weak)",EPA FRS,KAISER PERMANENTE-NORTHFIELD SUPPORT SERVICES,NAICS 493190; 61 m from the permit point,110002985253,11000 E 45TH AVE
+100,45.5,3930 Blake St 140 Ste,80205,operating and expanding,unknown,Otherwise Systems Inc.,no match,,,,,
+101,45.0,4121 N Monroe ST,80216,operating and expanding (permit under $50k),unknown,,no match,,,,,
+102,45.0,3200 Larimer ST,80205,fit-out,unknown,,no match,,,,,
+103,45.0,9900 E 51st AVE,80238,fit-out,unknown,,no match,,,,,
+104,45.0,4950 N Oakland ST,80239,under construction,unknown,,no match,,,,,
+105,45.0,14135 E 42nd AVE,80239,fit-out,unknown,,same street address,EPA FRS,JONES SIGN CO INC,NAICS 339950 (all: 339950),110003003179,14135 E 42ND AVE STE 60
+106,45.0,4080 N Globeville RD,80216,fit-out,unknown,,same street address,EPA FRS,"COLORADO PETROLEUM, INC",NAICS 425120 (all: 324110;324191;425110;425120),110001436768,4080 GLOBEVILLE ROAD
+107,45.0,4545 N Holly ST,80216,fit-out,unknown,,no match,,,,,
+109,45.0,9300 E 46th PL,80238,operating and expanding,unknown,DENVER MODERN LLC,no match,,,,,
+110,44.5,1241 W Bayaud AVE,80223,planned,unknown,Friends of Denver Animal Shelter,no match,,,,,
+111,44.5,3400 Walnut ST,80205,fit-out (permit under $50k),unknown,,"nearby, different address (weak)",EPA FRS,WALNUT ST WOODWORKS INC,NAICS 321918; 61 m from the permit point,110054825285,3440 WALNUT ST
+115,44.0,3530 Chestnut PL,80216,fit-out,unknown,"Press & Pour Consulting, LLC",same street address,Denver business licences,CHESTNUT CELLARS,Combined License; applied 2025-09-19; expires 2027-01-05,2025-BFN-0021064,3530 CHESTNUT Pl
+115,44.0,3530 Chestnut PL,80216,fit-out,unknown,"Press & Pour Consulting, LLC","nearby, different address (weak)",EPA FRS,ATLAS METALS & IRON CORP PROCESSING,NAICS 331492; 16 m from the permit point,110002984708,3500 CHESTNUT ST
+116,44.0,4665 N Paris St 212,80239,fit-out,unknown,,no match,,,,,
+117,44.0,6171 E Evans AVE,80222,fit-out,moderate,,same street address,EPA FRS,TIRE EXCHANGER,NAICS 326212 (all: 326212),110038611302,6171 E EVANS AVE
+117,44.0,6171 E Evans AVE,80222,fit-out,moderate,,same street address,Denver business licences,DISCOUNT TIRE,Garage - Repair of Motor Vehic; applied 2018-09-26; expires 2026-11-16,2018-BFN-0007238,6171 E EVANS Ave
+118,43.5,2710 Walnut ST,80205,fit-out,unknown,Tomarco Contractor Specialties Inc,no match,,,,,
+119,43.5,11600 E 53rd AVE,80239,fit-out,unknown,"KW INTERNATIONAL (CO), INC.","nearby, different address (weak)",EPA FRS,LARSEN WAREHOUSING AND DISTRIBUTION,NAICS 325510; 57 m from the permit point,110032985223,11685 E 53RD AVE
+119,43.5,11600 E 53rd AVE,80239,fit-out,unknown,"KW INTERNATIONAL (CO), INC.","nearby, different address (weak)",EPA FRS,MASTER BUILDERS SOLUTIONS AT THE LARSEN WAREHOUSE,NAICS 493110; 57 m from the permit point,110046526078,11685 E 53RD ST #D
+121,43.0,1245 S Inca ST,,operating and expanding,strong,,same street address,EPA FRS,SCOTT PRINTING CO,NAICS 323111 (all: 323111;999999),110038622265,1245 S INCA ST
+121,43.0,1245 S Inca ST,,operating and expanding,strong,,same street address,EPA FRS,ADAMS MCCLURE - INCA STREET,NAICS 323111 (all: 32311;323110;323111),110001401313,1245 S INCA ST
+122,43.0,5500 E Pacific PL,80222,operating and expanding,strong,,same street address,Denver business licences,Olive & Finch,Wholesale Food - Commissary; applied 2024-10-01; expires 2026-10-14,2024-BFN-0041676,5500 E PACIFIC PL
+122,43.0,5500 E Pacific PL,80222,operating and expanding,strong,,"nearby, different address (weak)",EPA FRS,SALES OIL CO,NAICS 324110; 24 m from the permit point,110038621596,5435 E PACIFIC PL
+124,42.5,1901 29th ST,80216,fit-out,unknown,Small time investments LLC,no match,,,,,
+125,42.5,11075 E 40th AVE,80239,fit-out,unknown,YOU LIANA INTERNATIONAL INC,no match,,,,,
+126,42.0,857 N Bryant ST,,fit-out,unknown,,no match,,,,,
+127,41.0,4600 E 48th AVE,80216,fit-out,unknown,,same street address,Denver business licences,Denver Rescue Mission,Retail Food; applied 2024-03-28; expires 2027-04-24,2024-BFN-0019360,4600 E 48TH AVE
+129,40.0,3440 Walnut ST,80205,fit-out (permit under $50k),strong,,same street address,EPA FRS,WALNUT ST WOODWORKS INC,NAICS 321918 (all: 321918),110054825285,3440 WALNUT ST
