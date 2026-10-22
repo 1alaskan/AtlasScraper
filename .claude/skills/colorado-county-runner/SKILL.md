@@ -30,6 +30,15 @@ What is new per county: its local sources (mostly permit and planning portals), 
 
 Work from the GitHub repo `1alaskan/AtlasScraper` (private), cloned to the session's working folder. It replaces the Windows folder on Matthew's computer. Paths below are relative to the repo root.
 
+The whole run works from a cloud session with no computer linked (Matthew often starts it from his phone). Getting set up in a fresh session, in this order:
+
+1. If the repo is not already cloned, attach it with the `add_repo` tool (owner `1alaskan`, repo `AtlasScraper`, access `push`) and clone it with the command the tool returns. One clone, generous timeout.
+2. `gunzip -k` the two large `.csv.gz` files under `step4-scrape/` (see below).
+3. Confirm the session is attached to the Claude project "Atlas Lead Pipeline New" by reading one small project file (for example `step3-validation/ground_truth_overlay.csv`). If the Projects tool is missing, ask Matthew to open the chat inside that project.
+4. Sanity check: `cd step5-analysis/v3/scripts && python3 build_v3.py ../../../step4-scrape ../.. --county denver --out <scratch folder>` and `cmp` the four outputs against `step5-analysis/v3/`. They must be identical (checked 2026-10-22: identical, 32 seconds). If they differ, stop and report before running the new county.
+
+Everything the scripts need is standard-library Python, and the Census geocoder, the Census ZCTA file, data.colorado.gov and the portal hosts are reachable from the cloud shell. Nothing depends on files on Matthew's computer.
+
 - `step4-scrape/`: one `scrape_<source>.csv` per source, `scrape_flagged_v2.csv`, `scrape_notes.md`, and `scripts/` with the pull scripts. The two large statewide files are stored gzipped (GitHub's 100 MB limit): `scrape_ucc_filings/scrape_ucc_filings_v2.csv.gz` and `scrape_business_registrations/scrape_business_registrations_v2.csv.gz`. Before the analysis step run `gunzip -k` on both. The unzipped copies are git-ignored; never commit them. The `.zip` files at the top of `step4-scrape/` hold the older v1 files and are not used.
 - `step5-analysis/v3/scripts/`: the analysis pipeline (`build_v3.py`, `v3_lib.py`, `v3_config.py`, `v3_signals.py`, `v3_resolve.py`, `v3_score.py`, `v3_geocode.py`, `verify_v3.py`, `report_v3.py`) and `county_configs/` (one file per county). Denver outputs are in `step5-analysis/v3/`.
 - `frs_filtered.csv` and `frs_filter.py`: the EPA facility registry file used to name unattached addresses.
@@ -172,7 +181,7 @@ The v3 scripts now take the county as an argument (`--county <name>`). Everythin
 
 Copy `county_configs/_template.py` to `county_configs/{county}.py` and fill it in (see `county_configs/README.md`). It carries:
 
-- **Scope test.** `COUNTY`, `COUNTY_FULL`, `AIRS_PREFIX` (the county's FIPS code, e.g. Adams 001, Denver 031) and a `{county}_zip_share.json` file in the scripts folder (share of each zip inside the county, from the Census 2020 ZCTA-to-county file; build it before the first run). Use `county` where the source carries it. Where it does not (UCC, business registrations), use zip codes from the Census ZCTA-to-county file, and the Census geocoder for zips that straddle county lines. Say which files were used. For APCD, the county field can hold the company office in place of the site, so check it against the AIRS ID county prefix on a sample.
+- **Scope test.** `COUNTY`, `COUNTY_FULL`, `AIRS_PREFIX` (the county's FIPS code, e.g. Adams 001, Denver 031) and a `{county}_zip_share.json` file in the scripts folder. Make it with `python3 build_zip_share.py {county}` (downloads the Census 2020 ZCTA-to-county file once; same formula as Denver's file, which `python3 build_zip_share.py denver --check` proves). Use `county` where the source carries it. Where it does not (UCC, business registrations), use zip codes from the Census ZCTA-to-county file, and the Census geocoder for zips that straddle county lines. Say which files were used. For APCD, the county field can hold the company office in place of the site, so check it against the AIRS ID county prefix on a sample.
 - **Mailing-address trap.** Sites whose mailing city suggests one county but which sit in another are common around Denver. Mark them `county_basis = mailing address, county unconfirmed` and keep them in a separate section. Do not drop them and do not guess.
 - **County sources.** `LOCAL_LAYERS = False` until this county has build-verdict local sources with a loader. The v3 code only reads Denver's permit and site plan layers; a new county's local sources need a loader added first, which is a code change to propose to Matthew, not to improvise.
 - **Local noise cuts.** `WAT_AIRPORT` and `WAT_AIRPORT_SIC` for the water permit cut. Whatever this county's data shows, such as an airport, a military base, a university campus or a large retail district. Report how many rows each cut removes.
@@ -183,6 +192,7 @@ Copy `county_configs/_template.py` to `county_configs/{county}.py` and fill it i
 
 ```
 cd step5-analysis/v3/scripts
+python3 build_zip_share.py {county}
 python3 build_v3.py ../../../step4-scrape ../.. --county {county} --out ../../{county}
 python3 verify_v3.py ../../{county}
 python3 report_v3.py ../../{county}

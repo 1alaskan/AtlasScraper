@@ -61,7 +61,10 @@ continue". Run it again until it finishes. `--offline` skips the lookups and tre
 | `v3_geocode.py` | Cached, resumable Census geocoder lookups. |
 | `verify_v3.py` | Self-check of the two output files. |
 | `report_v3.py` | Prints the report as Markdown. |
+| `build_zip_share.py` | Makes `<county>_zip_share.json` from the Census ZCTA-to-county file. |
 
 ## Another county
 
-Copy `county_configs/_template.py` to `county_configs/<county>.py`, add `<county>_zip_share.json`, and run with `--county <county> --out <folder>`. Details in `county_configs/README.md`. The county's own permit and site plan layers are not loaded (`LOCAL_LAYERS = False`); only the statewide sources are used.
+Copy `county_configs/_template.py` to `county_configs/<county>.py`, run `python3 build_zip_share.py <county>` to make `<county>_zip_share.json`, and run with `--county <county> --out <folder>`. Details in `county_configs/README.md`.
+
+Checked in a cloud session (Linux, Python 3.13) on 2026-10-22: the Denver rebuild is byte-identical to the committed output, and a template Adams config runs end to end with live Census geocoder lookups in about two minutes. The county's own permit and site plan layers are not loaded (`LOCAL_LAYERS = False`); only the statewide sources are used.
