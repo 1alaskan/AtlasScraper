@@ -273,7 +273,7 @@ def resolve(sg, S4, log=print):
             if True:
                 sp = r["secured_party"][:50] or "not given"
                 hidden = " [lender not named: filed through an agent]" if C.AGENT_LENDER.search(r["secured_party"]) else ""
-                tag = "support: generic or blanket lien" if r["flag_v2"] != "Y" else "support: flagged filing that was cut as noise or sits outside the Denver test"
+                tag = "support: generic or blanket lien" if r["flag_v2"] != "Y" else "support: flagged filing that was cut as noise or sits outside the " + C.COUNTY + " test"
                 text = "UCC %s initial filing, secured party %s%s: %s (%s)" % (r["record_date"], sp, hidden, r["description"][:80] or "no collateral text", tag)
                 s = sig(UCC, r, "ucc_generic", "", text, flagged=False, seq=r["debtor_seq"])
                 s["rule"] = ""
@@ -345,7 +345,7 @@ def resolve(sg, S4, log=print):
                 keys.append(nk(r["permittee"]))
             ak = addr_key(r["site_address"])
             done = set()
-            in_denver = (r["county"].strip().upper() == "DENVER") if src == WAT else r.get("airs_id", "").startswith("031")
+            in_denver = (r["county"].strip().upper() == C.COUNTY_UP) if src == WAT else r.get("airs_id", "").startswith(C.AIRS_PREFIX)
             for k in keys:
                 a = name_ix.get(k) if len(k) >= 4 else None
                 if a is not None and id(a) not in done and not a.has_row(src, r["record_id"]):
@@ -376,16 +376,16 @@ def resolve(sg, S4, log=print):
     for r in sg["cre"]:
         city = r["city"].strip().upper()
         head = r["description"].split(" | ")[0]
-        addrs = [(r["site_address"], city in ("", "DENVER"))]
+        addrs = [(r["site_address"], city in ("", C.COUNTY_UP))]
         for part in (r.get("addresses_all") or "").split(";"):
             part = part.strip()
             if not part:
                 continue
             m = re.match(r"^(.*?),\s*([A-Za-z .]+)$", part)
             if m:
-                addrs.append((m.group(1), m.group(2).strip().upper() == "DENVER"))
+                addrs.append((m.group(1), m.group(2).strip().upper() == C.COUNTY_UP))
             else:
-                addrs.append((part, city in ("", "DENVER")))
+                addrs.append((part, city in ("", C.COUNTY_UP)))
         hit = set()
         for adr, ok in addrs:
             ak = addr_key(adr)
@@ -399,7 +399,7 @@ def resolve(sg, S4, log=print):
                 hit.add(id(a))
                 text = "Mile High CRE %s mentions this address: %s" % (r["record_date"], head[:100])
                 a.add(sig(CRE, r, "press_addr", "A" if r["flag"] == "Y" else "", text, flagged=False), "possible", "[possible match]")
-        if city in ("", "DENVER"):
+        if city in ("", C.COUNTY_UP):
             hn = " " + nk(head + " " + r["company_name"]) + " "
             for k, a in name_keys:
                 if (" " + k + " ") in hn and id(a) not in hit and not a.has_row(CRE, r["record_id"]):
@@ -459,7 +459,7 @@ def resolve(sg, S4, log=print):
             elif wat and clash and not den:
                 county = re.search(r"places it in ([A-Za-z ]+ County)", clash[0]["basis"]).group(1)
                 a.section = "unconfirmed"
-                a.basis = "Denver mailing address, county unconfirmed (sources disagree: the water permit county field says Denver, the Census geocoder places the address in %s)" % county
+                a.basis = "%s mailing address, county unconfirmed (sources disagree: the water permit county field says %s, the Census geocoder places the address in %s)" % (C.COUNTY, C.COUNTY, county)
             elif wat:
                 a.section, a.basis = "denver", wat[0]["basis"]
             elif den:

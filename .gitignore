@@ -1,0 +1,4 @@
+step4-scrape/scrape_ucc_filings/scrape_ucc_filings_v2.csv
+step4-scrape/scrape_business_registrations/scrape_business_registrations_v2.csv
+__pycache__/
+*.pyc

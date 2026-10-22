@@ -19,8 +19,9 @@ csv.field_size_limit(10 ** 9)
 
 def main():
     out = sys.argv[1]
-    rk = list(csv.DictReader(open(out + "/denver_ranked_accounts_v3.csv", newline="", encoding="utf-8")))
-    ev = list(csv.DictReader(open(out + "/denver_evidence_v3.csv", newline="", encoding="utf-8")))
+    RK, EV = find_files(out)
+    rk = list(csv.DictReader(open(RK, newline="", encoding="utf-8")))
+    ev = list(csv.DictReader(open(EV, newline="", encoding="utf-8")))
     by = defaultdict(list)
     for e in ev:
         by[e["rank"]].append(e)
@@ -57,7 +58,7 @@ def main():
                 bad.append((x["rank"], "%s: evidence gives %s, ranked file says %s" % (label, g(got), g(want))))
         if float(m.group(5)) not in (0, 4, 8, 12) or float(m.group(6)) not in (-15, 0, 6, 15):
             bad.append((x["rank"], "stage or fit points outside the table"))
-    text = open(out + "/denver_ranked_accounts_v3.csv", encoding="utf-8").read() + open(out + "/denver_evidence_v3.csv", encoding="utf-8").read()
+    text = open(RK, encoding="utf-8").read() + open(EV, encoding="utf-8").read()
     if chr(8212) in text:
         bad.append(("-", "em dash in an output file"))
     for e in ev:

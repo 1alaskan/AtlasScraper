@@ -41,14 +41,14 @@ def scope_pre(r, state, zshare):
     city = r["city"].strip().upper().rstrip(",")
     sh = zshare.get(zp)
     if sh is not None and sh >= 0.99:
-        return ("in", "denver", "zip %s is in Denver County (Census 2020 ZCTA file)" % zp)
-    if sh is None and city != "DENVER":
-        return ("out", "zip not in Denver and mailing city not Denver")
-    if sh is not None and sh < 0.10 and city != "DENVER":
-        return ("out", "zip under 10% Denver and mailing city not Denver")
+        return ("in", "denver", "zip %s is in %s (Census 2020 ZCTA file)" % (zp, C.COUNTY_FULL))
+    if sh is None and city != C.COUNTY_UP:
+        return ("out", "zip not in %s and mailing city not %s" % (C.COUNTY, C.COUNTY))
+    if sh is not None and sh < 0.10 and city != C.COUNTY_UP:
+        return ("out", "zip under 10%% %s and mailing city not %s" % (C.COUNTY, C.COUNTY))
     if not addr_key(r["site_address"]):
-        if city == "DENVER":
-            return ("in", "unconfirmed", "Denver mailing address, county unconfirmed (no street address to check)")
+        if city == C.COUNTY_UP:
+            return ("in", "unconfirmed", C.COUNTY + " mailing address, county unconfirmed (no street address to check)")
         return ("out", "split zip, no street address")
     q = "%s, %s, CO %s" % (re.sub(r"\s+", " ", r["site_address"]).strip(), r["city"].strip(), zp)
     return ("geo", q, zp, city, sh)
@@ -59,16 +59,16 @@ def scope_final(pre, gcache):
         return pre
     _, q, zp, city, sh = pre
     res = gcache.get(q, "error")
-    if res == "Denver County":
-        why = "zip %s is split" % zp if sh is not None else "zip %s is not a Denver zip" % zp
-        return ("in", "denver", "Census geocoder places the address in Denver County (%s)" % why)
+    if res == C.COUNTY_FULL:
+        why = "zip %s is split" % zp if sh is not None else "zip %s is not a %s zip" % (zp, C.COUNTY)
+        return ("in", "denver", "Census geocoder places the address in %s (%s)" % (C.COUNTY_FULL, why))
     if res in ("no match", "error"):
-        if city == "DENVER" or (sh is not None and sh >= 0.5):
-            return ("in", "unconfirmed", "Denver mailing address, county unconfirmed (Census geocoder could not place it)")
-        return ("out", "geocoder could not place it; mailing city not Denver")
-    if city == "DENVER":
-        return ("in", "unconfirmed", "Denver mailing address, county unconfirmed (Census geocoder places it in %s)" % res)
-    return ("out", "geocoder places it in %s; mailing city not Denver" % res)
+        if city == C.COUNTY_UP or (sh is not None and sh >= 0.5):
+            return ("in", "unconfirmed", C.COUNTY + " mailing address, county unconfirmed (Census geocoder could not place it)")
+        return ("out", "geocoder could not place it; mailing city not %s" % C.COUNTY)
+    if city == C.COUNTY_UP:
+        return ("in", "unconfirmed", C.COUNTY + " mailing address, county unconfirmed (Census geocoder places it in %s)" % res)
+    return ("out", "geocoder places it in %s; mailing city not %s" % (res, C.COUNTY))
 
 
 # --------------------------------------------------------------------------- UCC
@@ -149,7 +149,7 @@ def geocode_needs(ucc, reg, cre_rows, zshare, layer_keys):
         if p[0] == "geo":
             need.append(p[1])
     for r in cre_rows:
-        if r["flag"] == "Y" and r["city"].strip().upper() == "DENVER" and addr_key(r["site_address"]) and addr_key(r["site_address"]) not in layer_keys:
+        if r["flag"] == "Y" and r["city"].strip().upper() == C.COUNTY_UP and addr_key(r["site_address"]) and addr_key(r["site_address"]) not in layer_keys:
             need.append(cre_query(r))
     seen = set()
     out = []
@@ -175,7 +175,7 @@ def fit_sic(r):
 
 
 def cre_query(r):
-    return "%s, Denver, CO" % re.sub(r"\s+", " ", r["site_address"]).strip()
+    return "%s, %s, CO" % (re.sub(r"\s+", " ", r["site_address"]).strip(), C.COUNTY)
 
 
 def sig(src, r, kind, tier, text, **kw):
@@ -192,8 +192,8 @@ def build_signals(S4, zshare, geocoder):
     cuts = Cuts()
     out = dict(named=[], address=[], naming=[], oedit=[], drops=[])
 
-    permits = read_all(S4, PER)
-    sdp = read_all(S4, SDP)
+    permits = read_all(S4, PER) if C.LOCAL_LAYERS else []
+    sdp = read_all(S4, SDP) if C.LOCAL_LAYERS else []
     water = read_all(S4, WAT)
     air = read_all(S4, AIR)
     cre = read_all(S4, CRE)
@@ -223,7 +223,7 @@ def build_signals(S4, zshare, geocoder):
         for r in rows:
             sc = scope_final(scope_pre(r, r["debtor_state"], zshare), gcache)
             if sc[0] == "out":
-                cuts.add(src, "outside Denver scope (state, zip, mailing city, geocoder)")
+                cuts.add(src, "outside %s scope (state, zip, mailing city, geocoder)" % C.COUNTY)
                 continue
             if r["debtor_name_has_entity_token"] != "Y":
                 cuts.add(src, "debtor name has no business word (may be an individual)")
@@ -235,7 +235,7 @@ def build_signals(S4, zshare, geocoder):
             agent = is_agent_address(r, agent_count)
             if agent:
                 section = "unconfirmed"
-                basis = "Denver mailing address, county unconfirmed (address on file is a registered-agent or virtual-office suite; operating site unknown)"
+                basis = C.COUNTY + " mailing address, county unconfirmed (address on file is a registered-agent or virtual-office suite; operating site unknown)"
             sp = r.get("secured_party", "")
             if tier == "A":
                 cut, kind, note = classify_ucc_a(r)
@@ -243,7 +243,7 @@ def build_signals(S4, zshare, geocoder):
                     cuts.add(src, cut)
                     continue
                 if nk(r["company_name"]) in C.WEB_DROPS:
-                    cuts.add(src, "dropped after the first run's web check (site is outside Denver County)")
+                    cuts.add(src, "dropped after the first run's web check (site is outside %s)" % C.COUNTY_FULL)
                     out["drops"].append((r["company_name"], C.WEB_DROPS[nk(r["company_name"])]))
                     continue
                 word = ucc_word(r)
@@ -284,7 +284,7 @@ def build_signals(S4, zshare, geocoder):
                 continue
             sc = scope_final(scope_pre(r, "CO", zshare), gcache)
             if sc[0] == "out":
-                cuts.add(src, "Colorado address outside Denver scope")
+                cuts.add(src, "Colorado address outside %s scope" % C.COUNTY)
                 continue
             if r["record_date"][:7] == "2026-02" and r.get("agent_organization_name", "").strip().lower() == "colorado registered agents inc":
                 cuts.add(src, "February 2026 bulk filings through Colorado Registered Agents Inc")
@@ -415,10 +415,10 @@ def build_signals(S4, zshare, geocoder):
     src = "State water permits (WQCD)"
     fl = [r for r in water if r["flag"] == "Y"]
     cuts.add(src, "flagged rows statewide", len(fl))
-    den = [r for r in fl if r["county"].strip().upper() == "DENVER"]
-    cuts.add(src, "flagged rows with county Denver", len(den))
-    cuts.add(src, "flagged rows with a Denver mailing city but another county in the source (left out: the source states the county)",
-             sum(1 for r in fl if r["city"].strip().upper() == "DENVER" and r["county"].strip().upper() not in ("DENVER", "")))
+    den = [r for r in fl if r["county"].strip().upper() == C.COUNTY_UP]
+    cuts.add(src, "flagged rows with county %s" % C.COUNTY, len(den))
+    cuts.add(src, "flagged rows with a %s mailing city but another county in the source (left out: the source states the county)" % C.COUNTY,
+             sum(1 for r in fl if r["city"].strip().upper() == C.COUNTY_UP and r["county"].strip().upper() not in (C.COUNTY_UP, "")))
     kept_water = set()
     for r in den:
         rt = r["record_type"]
@@ -461,7 +461,7 @@ def build_signals(S4, zshare, geocoder):
                                 basis="county field in state water permit record", seq="", names=names, info=dict(sic=fit_sic(r), sic_desc=r.get("sic_description", ""))))
     # naming rows: every Denver County water row that names an operator (kept or not), for assumption 5 and for the SIC evidence
     for r in water:
-        if r["county"].strip().upper() != "DENVER" or r["record_id"] in kept_water:
+        if r["county"].strip().upper() != C.COUNTY_UP or r["record_id"] in kept_water:
             continue
         rt = r["record_type"]
         construction = rt.startswith(C.CONSTRUCTION_WATER)
@@ -478,10 +478,10 @@ def build_signals(S4, zshare, geocoder):
     src = "APCD air permit status"
     fl = [r for r in air if r["flag"] == "Y"]
     cuts.add(src, "flagged rows statewide (not oil and gas)", len(fl))
-    cuts.add(src, "rows whose county column says Denver but AIRS prefix is not 031 (left out; office address in place of the site)",
-             sum(1 for r in fl if r["county"].strip().upper() == "DENVER" and not r["airs_id"].startswith("031")))
-    den = [r for r in fl if r["airs_id"].startswith("031")]
-    cuts.add(src, "flagged rows with AIRS prefix 031 (Denver)", len(den))
+    cuts.add(src, "rows whose county column says %s but AIRS prefix is not %s (left out; office address in place of the site)" % (C.COUNTY, C.AIRS_PREFIX),
+             sum(1 for r in fl if r["county"].strip().upper() == C.COUNTY_UP and not r["airs_id"].startswith(C.AIRS_PREFIX)))
+    den = [r for r in fl if r["airs_id"].startswith(C.AIRS_PREFIX)]
+    cuts.add(src, "flagged rows with AIRS prefix %s (%s)" % (C.AIRS_PREFIX, C.COUNTY), len(den))
     for r in den:
         d = r["description"]
         nm = r["company_name"]
@@ -497,7 +497,7 @@ def build_signals(S4, zshare, geocoder):
         if cut:
             cuts.add(src, cut)
             text = "Air permit row %s (%s) received %s: %s; AIRS %s (cut as noise: %s; support only)" % (r.get("permit_number", ""), r["record_type"], r["record_date"], d[:70], r["airs_id"], cut.split(" (")[0])
-            out["naming"].append(sig(AIR, r, "noise", "A", text, grade="operator", flagged=False, basis="AIRS ID prefix 031 (Denver) in air permit record", seq="",
+            out["naming"].append(sig(AIR, r, "noise", "A", text, grade="operator", flagged=False, basis="AIRS ID prefix %s (%s) in air permit record" % (C.AIRS_PREFIX, C.COUNTY), seq="",
                                      names=[nm], info=dict(datacentre=bool(re.search(r"data cent|coresite|iron mountain|intelishift", nm + " " + d, re.I)))))
             continue
         apen = bool(C.AIR_APEN.search(r["record_type"]))
@@ -505,33 +505,33 @@ def build_signals(S4, zshare, geocoder):
         old = " (received before 2024; still in the six-month processing window)" if r["record_date"] < "2024-01-01" else ""
         text = "Air permit %s (%s) received %s%s: %s; AIRS %s" % (r.get("permit_number", ""), r["record_type"], r["record_date"], old, d[:80], r["airs_id"])
         cuts.add(src, "rows kept as signals")
-        out["named"].append(sig(AIR, r, kind, "A", text, grade="operator", stage="operating and expanding", basis="AIRS ID prefix 031 (Denver) in air permit record", seq="",
+        out["named"].append(sig(AIR, r, kind, "A", text, grade="operator", stage="operating and expanding", basis="AIRS ID prefix %s (%s) in air permit record" % (C.AIRS_PREFIX, C.COUNTY), seq="",
                                 names=[nm], info=dict(moderate=bool(C.AIR_MODERATE.search(d + " " + nm)), desc=d)))
 
     # ------------------------------------------------------------------ Mile High CRE
     src = "Mile High CRE"
     fl = [r for r in cre if r["flag"] == "Y"]
     cuts.add(src, "flagged rows statewide (industrial category)", len(fl))
-    den = [r for r in fl if r["city"].strip().upper() == "DENVER"]
-    cuts.add(src, "flagged rows with city Denver", len(den))
+    den = [r for r in fl if r["city"].strip().upper() == C.COUNTY_UP]
+    cuts.add(src, "flagged rows with city %s" % C.COUNTY, len(den))
     for r in den:
         ak = addr_key(r["site_address"])
         if not ak:
             cuts.add(src, "no single street address (market reports, portfolio sales, round-ups)")
             continue
         if nk(r["company_name"]) in C.WEB_DROPS:
-            cuts.add(src, "dropped after the first run's web check (site is outside Denver County)")
+            cuts.add(src, "dropped after the first run's web check (site is outside %s)" % C.COUNTY_FULL)
             continue
         if ak in layer_keys:
-            section, basis = "denver", "address is in the Denver permit or site plan layer (Denver only)"
+            section, basis = "denver", "address is in the %s permit or site plan layer (%s only)" % (C.COUNTY, C.COUNTY)
         else:
             res = gcache.get(cre_query(r), "error")
-            if res == "Denver County":
-                section, basis = "denver", "Census geocoder places the address in Denver County (press address, no zip in the source)"
+            if res == C.COUNTY_FULL:
+                section, basis = "denver", "Census geocoder places the address in %s (press address, no zip in the source)" % C.COUNTY_FULL
             elif res in ("no match", "error"):
-                section, basis = "unconfirmed", "Denver mailing address, county unconfirmed (Census geocoder found no match for the press address)"
+                section, basis = "unconfirmed", C.COUNTY + " mailing address, county unconfirmed (Census geocoder found no match for the press address)"
             else:
-                section, basis = "unconfirmed", "Denver mailing address, county unconfirmed (Census geocoder places it in %s)" % res
+                section, basis = "unconfirmed", C.COUNTY + " mailing address, county unconfirmed (Census geocoder places it in %s)" % res
         head = r["description"].split(" | ")[0]
         text = "Mile High CRE %s names this address: %s" % (r["record_date"], head[:110])
         cuts.add(src, "rows kept as address signals")
@@ -545,15 +545,15 @@ def build_signals(S4, zshare, geocoder):
             cuts.add(src, "rows from minutes (mostly non-industrial)")
             continue
         blob = " ".join([r.get("county", ""), r.get("description", ""), r.get("notes", "")])
-        if not re.search(r"denver", blob, re.I):
-            cuts.add(src, "no Denver County or Metro Denver reference")
+        if not re.search(re.escape(C.COUNTY.lower()), blob, re.I):
+            cuts.add(src, "no %s or Metro %s reference" % (C.COUNTY_FULL, C.COUNTY))
             continue
         cb = r.get("county_basis", "")
-        if r.get("county", "").strip().lower() == "denver county":
+        if r.get("county", "").strip().lower() == C.COUNTY_FULL.lower():
             basis = "OEDIT post: " + (cb or "stated")
         else:
-            basis = "OEDIT post: Metro Denver under consideration" if re.search(r"under consideration|considered|metro denver", blob, re.I) else "OEDIT post: wage benchmark only"
-        if cb == "wage benchmark only" and r.get("county", "").strip().lower() == "denver county":
+            basis = "OEDIT post: Metro %s under consideration" % C.COUNTY if re.search(r"under consideration|considered|metro " + re.escape(C.COUNTY.lower()), blob, re.I) else "OEDIT post: wage benchmark only"
+        if cb == "wage benchmark only" and r.get("county", "").strip().lower() == C.COUNTY_FULL.lower():
             basis = "OEDIT post: wage benchmark only"
         jobs = (" jobs %s" % r["jobs"]) if r.get("jobs") else ""
         twin = (" [%s]" % r["notes"][:60]) if re.search(r"same (?:project|company)", r.get("notes", "") + r.get("description", ""), re.I) else ""

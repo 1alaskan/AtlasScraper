@@ -263,6 +263,15 @@ def read_all(folder, source):
     with open(os.path.join(folder, FILES[source]), newline="", encoding="utf-8-sig") as f:
         return list(csv.DictReader(f))
 
+def find_files(out):
+    """-> (ranked file, evidence file) in a v3 output folder, whatever the county prefix is."""
+    import glob
+    rk = sorted(glob.glob(os.path.join(out, "*_ranked_accounts_v3.csv")))
+    ev = sorted(glob.glob(os.path.join(out, "*_evidence_v3.csv")))
+    if len(rk) != 1 or len(ev) != 1:
+        raise SystemExit("Expected exactly one *_ranked_accounts_v3.csv and one *_evidence_v3.csv in %s" % out)
+    return rk[0], ev[0]
+
 
 def load_json(path, default=None):
     if os.path.exists(path):

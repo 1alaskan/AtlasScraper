@@ -1,21 +1,23 @@
 # Step 5 v3 scripts
 
-One command rebuilds the Denver County ranking from the Step 4 files:
+One command rebuilds a county ranking from the Step 4 files:
 
 ```
-python3 build_v3.py <step4-scrape folder> <step5-analysis folder>
+python3 build_v3.py <step4-scrape folder> <step5-analysis folder> --county denver
 ```
+
+`--county` picks `county_configs/<county>.py` (default `denver`). Before running, `gunzip -k` the two large v2 files in `step4-scrape` (they are stored as `.csv.gz`).
 
 On Matthew's computer, from this folder:
 
 ```
-python3 build_v3.py "../../../step4-scrape" "../.."
+python3 build_v3.py "../../../step4-scrape" "../.." --county denver
 ```
 
 Output goes to `<step5-analysis>/v3/` (change it with `--out <folder>`):
 
-- `denver_ranked_accounts_v3.csv`
-- `denver_evidence_v3.csv`
+- `<county>_ranked_accounts_v3.csv`
+- `<county>_evidence_v3.csv`
 - `rank_changes_v3.csv` (rows that moved more than 10 places against the tier B run, with the cause)
 - `v3_report.json` (cut counts, ground-truth check, sensitivity runs, rank changes)
 
@@ -55,12 +57,11 @@ continue". Run it again until it finishes. `--offline` skips the lookups and tre
 | `v3_resolve.py` | Resolution: one account per company or unattached address, address joins, reach into the full files. |
 | `v3_score.py` | Scoring, stage and fit rules. |
 | `v3_lib.py` | Constants, the fixed points table, name and address normalisers, file readers. |
-| `v3_config.py` | Word lists for the cuts and fit rules, the web checks, the two Step 3 ties, the 17 ground-truth projects. |
+| `v3_config.py` | Word lists for the cuts and fit rules, shared by every county; county values load from `county_configs/`. |
 | `v3_geocode.py` | Cached, resumable Census geocoder lookups. |
 | `verify_v3.py` | Self-check of the two output files. |
 | `report_v3.py` | Prints the report as Markdown. |
 
 ## Another county
 
-See "How to re-run for another county" in `analysis_notes_v3.md`. In short: replace `denver_zip_share.json`, the AIRS
-prefix and county name in `v3_signals.py`, and drop the two Denver-only layers.
+Copy `county_configs/_template.py` to `county_configs/<county>.py`, add `<county>_zip_share.json`, and run with `--county <county> --out <folder>`. Details in `county_configs/README.md`. The county's own permit and site plan layers are not loaded (`LOCAL_LAYERS = False`); only the statewide sources are used.

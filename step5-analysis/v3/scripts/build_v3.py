@@ -1,17 +1,21 @@
 #!/usr/bin/env python3
-"""Step 5 v3: rebuild the Denver County ranking in one pass from the Step 4 files.
+"""Step 5 v3: rebuild a county ranking in one pass from the Step 4 files. Default county: denver.
 
-Usage:  python3 build_v3.py <step4-scrape folder> <step5-analysis folder> [--out <folder>] [--offline] [--budget 150]
+Usage:  python3 build_v3.py <step4-scrape folder> <step5-analysis folder> [--county denver] [--out <folder>] [--offline] [--budget 150]
+        --county picks county_configs/<county>.py (scope, local noise cuts, web checks, ground truth). The points table is the same for every county.
 
 Reads   step4-scrape: the three _v2 files, the five unchanged source files, ucc_b1a_fulltext_hits.csv
         this folder:  denver_zip_share.json, geocode_cache.json
         step5-analysis: denver_ranked_accounts.csv and denver_ranked_accounts_v2.csv, ONLY to fill the two comparison
         columns (rank_step5, rank_step5b) and the rank-change report after the ranking is final.
-Writes  <out>/denver_ranked_accounts_v3.csv, <out>/denver_evidence_v3.csv, <out>/v3_report.json
+Writes  <out>/<county>_ranked_accounts_v3.csv, <out>/<county>_evidence_v3.csv, <out>/v3_report.json
 Web use: the Census geocoder only, for addresses not yet in geocode_cache.json (see v3_geocode.py).
 """
 import csv, os, re, sys, time
 from collections import Counter, defaultdict
+
+if "--county" in sys.argv:                      # must be set before v3_config is imported
+    os.environ["V3_COUNTY"] = sys.argv[sys.argv.index("--county") + 1].lower()
 
 from v3_lib import *
 import v3_config as C
@@ -105,11 +109,11 @@ def display(a, sc, extra):
 def next_step(a, sc):
     stage, fit = sc["stage"][0], sc["fit"][0]
     if a.kind == "oedit":
-        return "Watch for the state press release that names the company; do not treat as a Denver account until it does"
+        return "Watch for the state press release that names the company; do not treat as a %s account until it does" % C.COUNTY
     if a.kind == "address" and a.section == "unconfirmed":
         return "Tenant not identified; county not confirmed"
     if a.section == "unconfirmed":
-        return "Confirm the county with the assessor before treating this as a Denver account; if it is yours, qualify by phone"
+        return "Confirm the county with the assessor before treating this as a %s account; if it is yours, qualify by phone" % C.COUNTY
     if a.kind == "address":
         if a.step3:
             return "Find the mechanical contractor and timing; air is specified during mechanical design"
@@ -203,7 +207,7 @@ def label_of(a, d):
 
 
 def main():
-    pos = [x for i, x in enumerate(sys.argv[1:], 1) if not x.startswith("--") and not sys.argv[i - 1] in ("--out", "--budget")]
+    pos = [x for i, x in enumerate(sys.argv[1:], 1) if not x.startswith("--") and not sys.argv[i - 1] in ("--out", "--budget", "--county")]
     if len(pos) < 2:
         print(__doc__)
         sys.exit(2)
@@ -211,7 +215,10 @@ def main():
     OUT = arg("--out", os.path.join(S5, "v3"))
     os.makedirs(OUT, exist_ok=True)
     t0 = time.time()
-    zshare = load_json(os.path.join(HERE, "denver_zip_share.json"))
+    zshare = load_json(os.path.join(HERE, C.ZIP_SHARE_FILE))
+    if zshare is None:
+        print("Missing %s: build the zip share file for %s first (see county_configs/README.md)." % (C.ZIP_SHARE_FILE, C.COUNTY_FULL))
+        sys.exit(2)
     gpath = os.path.join(HERE, "geocode_cache.json")
 
     def geocoder(queries):
@@ -234,8 +241,8 @@ def main():
     extra["shared"] = shared_n
 
     scored = rank_accounts(accounts, BASE)
-    n1, a1, rows1 = old_ranks(os.path.join(S5, "denver_ranked_accounts.csv"))
-    n2, a2, rows2 = old_ranks(os.path.join(S5, "denver_ranked_accounts_v2.csv"))
+    n1, a1, rows1 = old_ranks(os.path.join(S5, C.COUNTY_SLUG + "_ranked_accounts.csv"))
+    n2, a2, rows2 = old_ranks(os.path.join(S5, C.COUNTY_SLUG + "_ranked_accounts_v2.csv"))
 
     out_rows, evid_rows, meta = [], [], []
     capped = 0
@@ -289,11 +296,11 @@ def main():
                          tier=row["tier"], r5=r5, r5b=r5b, gt=gt, name=d["company_name"], addr=d["site_address"], key=key,
                          web=("web check" in sc["fit"][1]), n_sources=len(srcs)))
 
-    with open(os.path.join(OUT, "denver_ranked_accounts_v3.csv"), "w", newline="", encoding="utf-8") as f:
+    with open(os.path.join(OUT, C.COUNTY_SLUG + "_ranked_accounts_v3.csv"), "w", newline="", encoding="utf-8") as f:
         w = csv.DictWriter(f, fieldnames=RANK_COLS)
         w.writeheader()
         w.writerows(out_rows)
-    with open(os.path.join(OUT, "denver_evidence_v3.csv"), "w", newline="", encoding="utf-8") as f:
+    with open(os.path.join(OUT, C.COUNTY_SLUG + "_evidence_v3.csv"), "w", newline="", encoding="utf-8") as f:
         w = csv.DictWriter(f, fieldnames=EVID_COLS)
         w.writeheader()
         w.writerows(evid_rows)
@@ -396,10 +403,10 @@ def main():
     old_section = {}
     for x in rows2:
         cb = x["county_basis"]
-        old_section[int(x["rank"])] = "oedit" if cb.startswith("OEDIT") else "unconfirmed" if cb.startswith("Denver mailing address") else "denver"
+        old_section[int(x["rank"])] = "oedit" if cb.startswith("OEDIT") else "unconfirmed" if cb.startswith(C.COUNTY + " mailing address") else "denver"
     for mv in moves:
         if old_section.get(mv["was"]) != mv["section"]:
-            mv["cause"] = "moved between the Denver section and the county-unconfirmed section (%s to %s)" % (old_section.get(mv["was"]), mv["section"])
+            mv["cause"] = "moved between the %s section and the county-unconfirmed section (%s to %s)" % (C.COUNTY, old_section.get(mv["was"]), mv["section"])
     rep["moves"] = moves
     big = [mv for mv in moves if abs(mv["delta"]) > 10]
     rep["moves_over_10"] = dict(count=len(big), by_cause=dict(Counter(mv["cause"] for mv in big)))
@@ -413,7 +420,7 @@ def main():
     rep["v3_rows_not_in_v2"] = [dict(rank=m["rank"], name=m["name"], addr=m["addr"], score=m["total"], tier=m["tier"]) for m in meta if m["r5b"] == ""]
     rep["top50_named_without_web_check"] = [dict(rank=m["rank"], name=m["name"]) for m in meta[:50] if m["kind"] == "company" and not m["web"]]
     save_json(os.path.join(OUT, "v3_report.json"), rep)
-    print("ranked %d rows: %d Denver (%d companies, %d addresses), %d county unconfirmed, %d OEDIT; %d evidence rows (%.0fs)" % (
+    print(("ranked %d rows: %d " + C.COUNTY.replace("%", "%%") + " (%d companies, %d addresses), %d county unconfirmed, %d OEDIT; %d evidence rows (%.0fs)") % (
         len(meta), len(den), rep["rows"]["denver_companies"], rep["rows"]["denver_addresses"], rep["rows"]["unconfirmed"], rep["rows"]["oedit"], len(evid_rows), time.time() - t0))
     print("wrote", OUT)
 

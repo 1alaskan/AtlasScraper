@@ -6,7 +6,7 @@ Usage: python3 report_v3.py <v3 output folder> [cuts|top N|gt|sens|moves|rows]
 import json, sys
 
 ORDER = ["flagged rows statewide", "flagged rows (every", "flagged rows", "zero-valuation", "flagged rows in the DIA", "flagged rows with county", "flagged rows with a Denver mailing",
-         "rows whose county", "flagged rows with AIRS", "flagged rows with city", "no Colorado address", "outside Denver scope", "Colorado address outside", "debtor name has no business word",
+         "rows whose county", "flagged rows with AIRS", "flagged rows with city", "no Colorado address", "outside ", "Colorado address outside", "debtor name has no business word",
          "SBA continuation", "ADDED: pharmacy", "paving", "forklifts", "dry-cleaner", "'bottling'", "dropped after", "February 2026", "registered-agent", "entity since",
          "DIA neighborhood on airport", "special events", "assessor parcel class", "ADDED in v3: permit cancelled", "permit cancelled", "not industrially zoned", "no usable street",
          "industrial stormwater general-permit renewal", "renewals", "wastewater", "airport construction", "portable", "flagged on acreage", "transit",
