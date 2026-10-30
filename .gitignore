@@ -3,3 +3,4 @@ step4-scrape/scrape_business_registrations/scrape_business_registrations_v2.csv
 __pycache__/
 *.pyc
 step5-analysis/v3/scripts/census_cache/
+step4-scrape/adams/raw/
