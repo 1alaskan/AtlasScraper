@@ -376,16 +376,16 @@ def resolve(sg, S4, log=print):
     for r in sg["cre"]:
         city = r["city"].strip().upper()
         head = r["description"].split(" | ")[0]
-        addrs = [(r["site_address"], city in ("", C.COUNTY_UP))]
+        addrs = [(r["site_address"], city == "" or city in C.CITY_OK)]
         for part in (r.get("addresses_all") or "").split(";"):
             part = part.strip()
             if not part:
                 continue
             m = re.match(r"^(.*?),\s*([A-Za-z .]+)$", part)
             if m:
-                addrs.append((m.group(1), m.group(2).strip().upper() == C.COUNTY_UP))
+                addrs.append((m.group(1), m.group(2).strip().upper() in C.CITY_OK))
             else:
-                addrs.append((part, city in ("", C.COUNTY_UP)))
+                addrs.append((part, city == "" or city in C.CITY_OK))
         hit = set()
         for adr, ok in addrs:
             ak = addr_key(adr)
@@ -399,7 +399,7 @@ def resolve(sg, S4, log=print):
                 hit.add(id(a))
                 text = "Mile High CRE %s mentions this address: %s" % (r["record_date"], head[:100])
                 a.add(sig(CRE, r, "press_addr", "A" if r["flag"] == "Y" else "", text, flagged=False), "possible", "[possible match]")
-        if city in ("", C.COUNTY_UP):
+        if city == "" or city in C.CITY_OK:
             hn = " " + nk(head + " " + r["company_name"]) + " "
             for k, a in name_keys:
                 if (" " + k + " ") in hn and id(a) not in hit and not a.has_row(CRE, r["record_id"]):

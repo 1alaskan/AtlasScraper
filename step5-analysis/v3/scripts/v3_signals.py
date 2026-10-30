@@ -42,12 +42,12 @@ def scope_pre(r, state, zshare):
     sh = zshare.get(zp)
     if sh is not None and sh >= 0.99:
         return ("in", "denver", "zip %s is in %s (Census 2020 ZCTA file)" % (zp, C.COUNTY_FULL))
-    if sh is None and city != C.COUNTY_UP:
+    if sh is None and city not in C.MAIL_CITIES:
         return ("out", "zip not in %s and mailing city not %s" % (C.COUNTY, C.COUNTY))
-    if sh is not None and sh < 0.10 and city != C.COUNTY_UP:
+    if sh is not None and sh < 0.10 and city not in C.MAIL_CITIES:
         return ("out", "zip under 10%% %s and mailing city not %s" % (C.COUNTY, C.COUNTY))
     if not addr_key(r["site_address"]):
-        if city == C.COUNTY_UP:
+        if city in C.MAIL_CITIES:
             return ("in", "unconfirmed", C.COUNTY + " mailing address, county unconfirmed (no street address to check)")
         return ("out", "split zip, no street address")
     q = "%s, %s, CO %s" % (re.sub(r"\s+", " ", r["site_address"]).strip(), r["city"].strip(), zp)
@@ -63,10 +63,10 @@ def scope_final(pre, gcache):
         why = "zip %s is split" % zp if sh is not None else "zip %s is not a %s zip" % (zp, C.COUNTY)
         return ("in", "denver", "Census geocoder places the address in %s (%s)" % (C.COUNTY_FULL, why))
     if res in ("no match", "error"):
-        if city == C.COUNTY_UP or (sh is not None and sh >= 0.5):
+        if city in C.MAIL_CITIES or (sh is not None and sh >= 0.5):
             return ("in", "unconfirmed", C.COUNTY + " mailing address, county unconfirmed (Census geocoder could not place it)")
         return ("out", "geocoder could not place it; mailing city not %s" % C.COUNTY)
-    if city == C.COUNTY_UP:
+    if city in C.MAIL_CITIES:
         return ("in", "unconfirmed", C.COUNTY + " mailing address, county unconfirmed (Census geocoder places it in %s)" % res)
     return ("out", "geocoder places it in %s; mailing city not %s" % (res, C.COUNTY))
 
@@ -149,7 +149,7 @@ def geocode_needs(ucc, reg, cre_rows, zshare, layer_keys):
         if p[0] == "geo":
             need.append(p[1])
     for r in cre_rows:
-        if r["flag"] == "Y" and r["city"].strip().upper() == C.COUNTY_UP and addr_key(r["site_address"]) and addr_key(r["site_address"]) not in layer_keys:
+        if r["flag"] == "Y" and r["city"].strip().upper() in C.CITY_OK and addr_key(r["site_address"]) and addr_key(r["site_address"]) not in layer_keys:
             need.append(cre_query(r))
     seen = set()
     out = []
@@ -175,7 +175,7 @@ def fit_sic(r):
 
 
 def cre_query(r):
-    return "%s, %s, CO" % (re.sub(r"\s+", " ", r["site_address"]).strip(), C.COUNTY)
+    return "%s, %s, CO" % (re.sub(r"\s+", " ", r["site_address"]).strip(), r["city"].strip().title() or C.COUNTY)
 
 
 def sig(src, r, kind, tier, text, **kw):
@@ -418,7 +418,7 @@ def build_signals(S4, zshare, geocoder):
     den = [r for r in fl if r["county"].strip().upper() == C.COUNTY_UP]
     cuts.add(src, "flagged rows with county %s" % C.COUNTY, len(den))
     cuts.add(src, "flagged rows with a %s mailing city but another county in the source (left out: the source states the county)" % C.COUNTY,
-             sum(1 for r in fl if r["city"].strip().upper() == C.COUNTY_UP and r["county"].strip().upper() not in (C.COUNTY_UP, "")))
+             sum(1 for r in fl if r["city"].strip().upper() in C.MAIL_CITIES and r["county"].strip().upper() not in (C.COUNTY_UP, "")))
     kept_water = set()
     for r in den:
         rt = r["record_type"]
@@ -512,8 +512,8 @@ def build_signals(S4, zshare, geocoder):
     src = "Mile High CRE"
     fl = [r for r in cre if r["flag"] == "Y"]
     cuts.add(src, "flagged rows statewide (industrial category)", len(fl))
-    den = [r for r in fl if r["city"].strip().upper() == C.COUNTY_UP]
-    cuts.add(src, "flagged rows with city %s" % C.COUNTY, len(den))
+    den = [r for r in fl if r["city"].strip().upper() in C.CITY_OK]
+    cuts.add(src, "flagged rows with city %s" % (C.COUNTY if not C.SPLIT_CITIES else "in " + C.COUNTY_FULL + " or a split city"), len(den))
     for r in den:
         ak = addr_key(r["site_address"])
         if not ak:
@@ -530,6 +530,9 @@ def build_signals(S4, zshare, geocoder):
                 section, basis = "denver", "Census geocoder places the address in %s (press address, no zip in the source)" % C.COUNTY_FULL
             elif res in ("no match", "error"):
                 section, basis = "unconfirmed", C.COUNTY + " mailing address, county unconfirmed (Census geocoder found no match for the press address)"
+            elif r["city"].strip().upper() in C.SPLIT_CITIES:
+                cuts.add(src, "split-city mailing address that the Census geocoder places outside %s" % C.COUNTY_FULL)
+                continue
             else:
                 section, basis = "unconfirmed", C.COUNTY + " mailing address, county unconfirmed (Census geocoder places it in %s)" % res
         head = r["description"].split(" | ")[0]

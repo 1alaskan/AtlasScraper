@@ -80,6 +80,8 @@ import importlib, os
 COUNTY_SLUG = os.environ.get("V3_COUNTY", "denver").lower()
 COUNTY = COUNTY_FULL = AIRS_PREFIX = ZIP_SHARE_FILE = None
 LOCAL_LAYERS = False
+MAIL_CITIES = None                           # mailing cities treated as the county's own name (default: the county name, as Denver is both city and county)
+SPLIT_CITIES = set()                         # mailing cities that straddle the county line; their rows are placed by zip share and the Census geocoder only
 WAT_AIRPORT = re.compile(r"(?!x)x")          # never matches unless the county file sets a local airport or base cut
 WAT_AIRPORT_SIC = set()
 WEB_CHECKS, WEB_CHECKS_V3 = {}, {}
@@ -98,3 +100,8 @@ for _req in ("COUNTY", "COUNTY_FULL", "AIRS_PREFIX", "ZIP_SHARE_FILE"):
     if not globals()[_req]:
         raise SystemExit("county_configs/%s.py must define %s" % (COUNTY_SLUG, _req))
 COUNTY_UP = COUNTY.upper()
+if MAIL_CITIES is None:
+    MAIL_CITIES = {COUNTY_UP}
+MAIL_CITIES = {c.upper() for c in MAIL_CITIES}
+SPLIT_CITIES = {c.upper() for c in SPLIT_CITIES} - MAIL_CITIES
+CITY_OK = MAIL_CITIES | SPLIT_CITIES
