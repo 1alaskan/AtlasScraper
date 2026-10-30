@@ -1,0 +1,4 @@
+geocoder: 30 addresses to look up (148 already cached)
+signals: 243 named, 24 address-only, 8 OEDIT (59s)
+ranked 228 rows: 202 Adams (191 companies, 11 addresses), 18 county unconfirmed, 8 OEDIT; 525 evidence rows (72s)
+wrote ../../adams
