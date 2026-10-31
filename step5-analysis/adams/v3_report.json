@@ -288,7 +288,7 @@
  "ground_truth": {
   "C18 CEMCO": [
    [
-    78,
+    70,
     "name and address",
     "Cemco LLC",
     "9410 Heinz Way",
@@ -298,11 +298,19 @@
   "C19 Prost Brewing": [],
   "C20 Amprius (cancelled)": [],
   "C21 VSK Energy (cancelled)": [],
-  "C22 Philip Morris ZYN campus": [],
+  "C22 Philip Morris ZYN campus": [
+   [
+    1,
+    "name and address",
+    "Philip Morris International, PMI U.S. ZYN plant (Kairus Inc)",
+    "25315 E 48th Avenue",
+    "93.0"
+   ]
+  ],
   "C23 Solid Power": [],
   "C24 Pretred": [
    [
-    10,
+    9,
     "name and address",
     "PRETRED, INC.",
     "6550 N. DENALI ST",
@@ -328,16 +336,16 @@
   "D05 Craft Beverage Warehouse": [],
   "D16 Metro Water Recovery (Hite substation)": [
    [
-    39,
+    114,
     "name and address",
     "METRO WATER RECOVERY",
     "6450 YORK ST",
-    "61.0"
+    "31.0"
    ]
   ],
   "D17 Vartega": [
    [
-    92,
+    84,
     "name and address",
     "VARTEGA INC.",
     "5675 PECOS ST.",
@@ -365,7 +373,7 @@
   ],
   "X08 Boise Cascade door shop": [
    [
-    80,
+    72,
     "name and address",
     "Boise Cascade Denver Millwork",
     "11011 E 104th Ave, Ste 1000",
@@ -395,14 +403,14 @@
  },
  "rows": {
   "denver": 202,
-  "denver_50_plus": 84,
+  "denver_50_plus": 76,
   "denver_addresses": 11,
   "denver_companies": 191,
   "denver_fit": {
-   "moderate": 4,
-   "strong": 158,
+   "moderate": 10,
+   "strong": 144,
    "unknown": 29,
-   "weak": 11
+   "weak": 19
   },
   "denver_sources": {
    "1": 148,
@@ -425,9 +433,9 @@
    "B": 68
   },
   "top100_tier": {
-   "A": 91,
+   "A": 90,
    "A+B": 4,
-   "B": 5
+   "B": 6
   },
   "total": 228,
   "unconfirmed": 18,
@@ -438,7 +446,7 @@
   "recency doubled": {
    "changed": 1,
    "enter": [
-    "AGOV Underground LLC @ withheld (not confirmed as a b"
+    "FLASHFILL SERVICES, LLC @ 8830 YOSEMITE STREET"
    ],
    "leave": [
     "CARLISLE EPS HOLDING, LLC @ 12601 E 33RD AVE STE 114"
@@ -446,52 +454,76 @@
    "top10_same": true
   },
   "recency removed": {
-   "changed": 4,
+   "changed": 9,
    "enter": [
-    "ALLIED DEMOLITION INC @ 7901 US HIGHWAY 85",
     "HOLCIM - WCR, INC @ 4801 E 78TH AVE",
     "SWARCO COLORADO PAINT, LLC @ 2851 Walden St.",
-    "SASHCO, INC @ 14802 GRANT STREET"
+    "SASHCO, INC @ 14802 GRANT STREET",
+    "Cherry Creek Recycling, LLC @ 12500 1st St Unit 1",
+    "Quattro Machining Services Inc. @ 2350 E 70th Ave, Bldg A",
+    "NORTH AMERICAN GALVANIZING COMPANY @ 4400 E 61ST AVE",
+    "RECONSERVE OF COLORADO @ 5801 FRANKLIN ST",
+    "WESTLAKE ROYAL ROOFING LLC @ 10121 DALLAS STREET",
+    "OWENS CORNING ROOFING AND ASPHALT, LLC @ 5201 N. BANNOCK ST"
    ],
    "leave": [
-    "CNC Pros Colorado LLC @ 5770 Clarkson Street, #C",
     "DG METAL LLC @ withheld (not confirmed as a b",
     "Skyline Motors LLC @ withheld (not confirmed as a b",
-    "H&H Enterprises, Inc. dba H&H Metals @ 12520 Grant Drive #100"
+    "H&H Enterprises, Inc. dba H&H Metals @ 12520 Grant Drive #100",
+    "Claremont Foods, LLC @ 11751 Huron St Ste 600",
+    "WESTERN INDUSTRIAL CONTRACTORS @ 14805 E Moncrieff Pl",
+    "AGOV Underground LLC @ withheld (not confirmed as a b",
+    "McCallin Steel Storage Systems, Inc. @ withheld (not confirmed as a b",
+    "VEOLIA ES TECHNICAL SOLUTIONS, L.L.C. @ 9131 E 96TH AVE",
+    "Durango Tire Shop Inc @ withheld (not confirmed as a b"
    ],
    "top10_same": true
   },
   "source bonus doubled": {
-   "changed": 0,
-   "enter": [],
-   "leave": [],
+   "changed": 4,
+   "enter": [
+    "A-1 CHIPSEAL CO @ 2505 E 74TH AVE",
+    "CRYOSHIELD INDUSTRIAL SERVICES LLC @ withheld (not confirmed as a b",
+    "MT Underground LLC @ withheld (not confirmed as a b",
+    "HOLCIM - WCR, INC @ 4801 E 78TH AVE"
+   ],
+   "leave": [
+    "AGOV Underground LLC @ withheld (not confirmed as a b",
+    "McCallin Steel Storage Systems, Inc. @ withheld (not confirmed as a b",
+    "VEOLIA ES TECHNICAL SOLUTIONS, L.L.C. @ 9131 E 96TH AVE",
+    "Durango Tire Shop Inc @ withheld (not confirmed as a b"
+   ],
    "top10_same": false
   },
   "source bonus removed": {
-   "changed": 1,
+   "changed": 2,
    "enter": [
-    "AGOV Underground LLC @ withheld (not confirmed as a b"
+    "FLASHFILL SERVICES, LLC @ 8830 YOSEMITE STREET",
+    "PROTOCAST, INC. @ withheld (not confirmed as a b"
    ],
    "leave": [
-    "CARLISLE EPS HOLDING, LLC @ 12601 E 33RD AVE STE 114"
+    "CARLISLE EPS HOLDING, LLC @ 12601 E 33RD AVE STE 114",
+    "WESTERN INDUSTRIAL CONTRACTORS @ 14805 E Moncrieff Pl"
    ],
    "top10_same": false
   },
   "tier B points doubled": {
-   "changed": 1,
+   "changed": 2,
    "enter": [
-    "Cherry Creek Recycling, LLC @ 12500 1st St Unit 1"
+    "Cherry Creek Recycling, LLC @ 12500 1st St Unit 1",
+    "Denver Machine Shop, Inc. @ withheld (not confirmed as a b"
    ],
    "leave": [
-    "CARLISLE EPS HOLDING, LLC @ 12601 E 33RD AVE STE 114"
+    "VEOLIA ES TECHNICAL SOLUTIONS, L.L.C. @ 9131 E 96TH AVE",
+    "Durango Tire Shop Inc @ withheld (not confirmed as a b"
    ],
    "top10_same": false
   },
   "tier B points halved": {
    "changed": 2,
    "enter": [
-    "AGOV Underground LLC @ withheld (not confirmed as a b",
-    "McCallin Steel Storage Systems, Inc. @ withheld (not confirmed as a b"
+    "FLASHFILL SERVICES, LLC @ 8830 YOSEMITE STREET",
+    "PROTOCAST, INC. @ withheld (not confirmed as a b"
    ],
    "leave": [
     "GINZEL ENTERPRISES LLC @ 5720 HOLLY ST STE G",
@@ -505,7 +537,7 @@
    "addr": "25315 E 48th Avenue",
    "evidence": "Air permit 24AD0700 (To Be Determined) received 2025-11-06: PROCESS MANUFACTURING FACILITY OF VAPE PRODUCTS LOCATED @ 25315 E 48TH AVE, AURO; AIRS 001-2314 || Water permit CONOX0957 (CONOX000) received 2026-02-13: facility Kairus - Warehouse, permittee Kairus Inc, SIC 4226 Trucking and warehousing, status Effective || Water permit CONOX0965 (CONOX000) received 2026-02-13: facility Kairus - Production Facility, permittee Kairus Inc., SIC 2131 Tobacco products, status Effective || Points: signal 41 (APCD air permit status: 25; State water permits: 12; Mile High CRE: 2.5; Colorado business registrations: 1.5); sources 14; recency 15; stage 8; fit 15",
    "fit": "strong: manufacturing SIC 2131 on a state water permit",
-   "name": "KAIRUS INC.",
+   "name": "Philip Morris International, PMI U.S. ZYN plant (Kairus Inc), Aurora (Adams County)",
    "r5": "",
    "r5b": "",
    "rank": 1,
@@ -517,7 +549,7 @@
   {
    "addr": "4545 E 64th Ave, 4545 E 64th Ave",
    "evidence": "Air permit 95AD678 (IA, Modification) received 2025-02-11: FACILITY-WIDE; AIRS 001-0087 || Water permit COR428924 (COR400000) received 2025-10-15: facility Ardent Mills Commerce City, permittee Ardent Mills, LLC, SIC 2041 Food and kindred products, status Effective || Water permit row COR900464 (COR900000) received 2024-06-21: facility Ardent Mills Commerce City, permittee Ardent Mills LLC, SIC 2041, status Effective (cut as noise or not flagged; support only) || Points: signal 45 (APCD air permit status: 25; State water permits: 20); sources 8; recency 15; stage 8; fit 15",
-   "fit": "strong: manufacturing SIC 2041 on a state water permit",
+   "fit": "strong: Flour mill in Commerce City; company site (web check 2026-10-30) describes an equipment update and capacity expansion, groundbreaking summer 2024, completion targeted end of 2026.",
    "name": "ARDENT MILLS, LLC",
    "r5": "",
    "r5b": "",
@@ -530,7 +562,7 @@
   {
    "addr": "12300 GRANT ST #110",
    "evidence": "Air permit 24AD0860 (To Be Determined) received 2024-08-06: FORGE NANO INC STACK EF-12; AIRS 001-2319 || Air permit 24AD0861 (To Be Determined) received 2024-08-06: FORGE NANO INC STACK 6; AIRS 001-2319 || Air permit 24AD0862 (To Be Determined) received 2024-08-06: FORGE NANO INC STACK H-4 EXHAUST; AIRS 001-2319 || Points: signal 37 (APCD air permit status: 25; State water permits: 12); sources 8; recency 15; stage 8; fit 15",
-   "fit": "strong: manufacturing SIC 3569 on a state water permit",
+   "fit": "strong: Builds atomic layer deposition coating equipment on site and runs daily lab experiments at a 40,000 sq ft Thornton facility; trade press (web check 2026-10-30).",
    "name": "FORGE NANO, INC",
    "r5": "",
    "r5b": "",
@@ -543,7 +575,7 @@
   {
    "addr": "1111 E. 71st Street",
    "evidence": "Air permit 19AD0598 (Final Approval) received 2020-03-04 (received before 2024; still in the six-month processing window): TRUSTILE DOORS - FACILITY WIDE PERMIT; AIRS 001-2219 || Water permit COR901681 (COR900000) received 2024-09-17: facility TruStile Doors, LLC, permittee TruStile Doors LLC, SIC 2431 Lumber and wood products, status Effective || UCC 2025-08-28 initial filing, secured party CANON FINANCIAL SERVICES, INC.: All of the Debtor's rights, title and interest whatsoever in and to the followin (support: generic or blanket lien) || Points: signal 41 (APCD air permit status: 25; State water permits: 12; Colorado UCC filings: 4); sources 11; recency 8; stage 8; fit 15",
-   "fit": "strong: manufacturing SIC 2431 on a state water permit",
+   "fit": "strong: Manufactures architectural MDF doors at 1111 E 71st Ave (Denver mailing address, zip 80229); trade directory (web check 2026-10-30).",
    "name": "TRUSTILE DOORS LLC.",
    "r5": "",
    "r5b": "",
@@ -556,7 +588,7 @@
   {
    "addr": "9155 Boston St",
    "evidence": "Air permit 89AD381-1 (FA, Transfer Plant Ownership) received 2025-03-25: D-A PACKAGING BOILER; AIRS 001-0352 || Air permit 89AD381-3 (FA, Transfer Plant Ownership) received 2025-03-25: D-A PACKAGING Lubricating oils blending, runway and aircraft deicing fluids blen; AIRS 001-0352 || Air permit 20AD0091 (IA, Modification) received 2025-03-25: D-A PACKAGING - METHANOL STORAGE TANK; AIRS 001-0352 || Points: signal 37 (APCD air permit status: 25; Colorado business registrations: 6; Colorado UCC filings: 4; State water permits: 2); sources 14; recency 8; stage 8; fit 15",
-   "fit": "strong: manufacturing SIC 2992 on a state water permit",
+   "fit": "strong: Contract blending and packaging of lubricants and industrial fluids at the former Crystal Packaging plant in Henderson; trade press (web check 2026-10-30).",
    "name": "D-A PACKAGING, LLC",
    "r5": "",
    "r5b": "",
@@ -567,26 +599,13 @@
    "tier": "A"
   },
   {
-   "addr": "13150 N. HURON ST",
-   "evidence": "Air permit 95AD1112 (To Be Determined) received 2025-03-06: PUBLIC OWNED TREATMENT PLANT; AIRS 001-1219 || Mile High CRE 2026-06-30 names the company: New City of Westminster Courthouse Under Construction [name match only] [possible match] || UCC 2026-07-19 initial filing, secured party Faris Machinery Company LLC: VOLVO PNUEMATIC ROLLER MODEL: PT-125C S/N: VCET125CL0S327360 (support: generic or blanket lien) [same name, different address: possible match] || Points: signal 33 (APCD air permit status: 25; Mile High CRE: 4; State water permits: 2; Colorado UCC filings: 2); sources 6; recency 15; stage 8; fit 15",
-   "fit": "strong: process emission units on an air permit",
-   "name": "CITY OF WESTMINSTER",
-   "r5": "",
-   "r5b": "",
-   "rank": 6,
-   "score": 77.0,
-   "sources": 4,
-   "stage": "operating and expanding",
-   "tier": "A"
-  },
-  {
    "addr": "withheld (not confirmed as a business premises; see source record)",
    "evidence": "UCC 2026-10-05: machining center | All Purchase Money Security Interest in 2025 Matsuura 5Axis Vertical Machining Center, Model No. MAM72-42V; wh || UCC 2026-08-06: machining center, doosan | All 2022 Doosan DVF5000 Machining center Serial No. MV0111-000733; whether any of the foregoing is owned now o || UCC 2025-10-08: machining center | The property covered under Loan Schedule # 20035114 between Debtor and Secured Party, including the Equipment  || Points: signal 34 (Colorado UCC filings: 25+9 repeat); sources 0; recency 15; stage 12; fit 15",
-   "fit": "strong: finances production machinery in a UCC filing (machining center)",
+   "fit": "strong: CNC job shop in Commerce City: vertical milling, turning, 5-axis, live tooling, sawing, assembly, AS9100; trade directory (web check 2026-10-30).",
    "name": "S & W Precision Machining LLC",
    "r5": "",
    "r5b": "",
-   "rank": 7,
+   "rank": 6,
    "score": 76.0,
    "sources": 1,
    "stage": "buying equipment (repeat buyer; operating and expanding)",
@@ -595,11 +614,11 @@
   {
    "addr": "2660 WEST 64TH AVE",
    "evidence": "Air permit 01AD0053 (To Be Determined) received 2026-07-14: FACILITY-WIDE; AIRS 001-0103 || UCC 2024-06-04 initial filing, secured party WAGNER EQUIPMENT CO.: QUIKELADDS CSC SERIAL NUMBER PO1497215 AND ADDITIONS, REPLACEMENTS, ATTACHMENTS, (support: generic or blanket lien) || Water permit row COR900794 (COR900000) received 2024-06-27: facility Quikrete of Colorado Denver, permittee Quikrete Companies Inc, SIC 3299, status Effective (cut as noise or not flagged; support only) || Points: signal 31 (APCD air permit status: 25; Colorado UCC filings: 4; State water permits: 2); sources 6; recency 15; stage 8; fit 15",
-   "fit": "strong: manufacturing SIC 3299 on a state water permit",
+   "fit": "strong: Manufactures packaged cement mortars, grouts, stucco and waterproofing products at 2660 W 64th Ave (zip 80221); trade directory (web check 2026-10-30).",
    "name": "QUIKRETE DENVER",
    "r5": "",
    "r5b": "",
-   "rank": 8,
+   "rank": 7,
    "score": 75.0,
    "sources": 3,
    "stage": "operating and expanding",
@@ -612,7 +631,7 @@
    "name": "VALHALLA INDUSTRIES, INC.",
    "r5": "",
    "r5b": "",
-   "rank": 9,
+   "rank": 8,
    "score": 74.0,
    "sources": 1,
    "stage": "operating and expanding",
@@ -621,39 +640,13 @@
   {
    "addr": "6550 N. DENALI ST",
    "evidence": "Air permit 26AD0189 (Final Approval) received 2025-10-21: HEADQUARTERS TIRE RECYCLING; AIRS 001-2359 || Mile High CRE 2025-10-28 mentions this address: Avison Young Negotiates 152,034 SF Industrial Lease in Denver [possible match] || Water permit row CONOX0968 (CONOX000) received 2026-02-19: facility Denali, permittee Pretred, SIC 5093, status Effective (cut as noise or not flagged; support only) || Points: signal 29.5 (APCD air permit status: 25; Mile High CRE: 2.5; State water permits: 2); sources 6; recency 15; stage 8; fit 15",
-   "fit": "strong: process emission units on an air permit",
+   "fit": "strong: Processes end-of-life tires and manufactures recycled-rubber road barriers in a 152,000 sq ft Aurora plant at Denali Logistics Park; local EDC press (web check 2026-10-30).",
    "name": "PRETRED, INC.",
    "r5": "",
    "r5b": "",
-   "rank": 10,
+   "rank": 9,
    "score": 73.5,
    "sources": 3,
-   "stage": "operating and expanding",
-   "tier": "A"
-  },
-  {
-   "addr": "11751 Huron St Ste 600",
-   "evidence": "UCC 2026-09-28: conveyor | One (1) CEIA Horizon Metal Detector; One (1) One CEIA Belt Conveyor. Together with all attachments including a || UCC 2026-04-13: conveyor | 1 - CEIA Horizontal Metal Detector THS/MS21-1000X75; 1- CEIA Belt Conveyor THS/FB-COV-1525x950 and proceeds || UCC 2025-09-15: conveyor | (1) SLAB PRESSING & CONVEYOR; (1) TOPPER; (1) ENCODER; Accessories per invoice The equipment financed under Co || Points: signal 31 (Colorado UCC filings: 25+6 repeat); sources 0; recency 15; stage 12; fit 15",
-   "fit": "strong: finances production machinery in a UCC filing (conveyor)",
-   "name": "Claremont Foods, LLC",
-   "r5": "",
-   "r5b": "",
-   "rank": 11,
-   "score": 73.0,
-   "sources": 1,
-   "stage": "buying equipment (repeat buyer; operating and expanding)",
-   "tier": "A+B"
-  },
-  {
-   "addr": "14805 E Moncrieff Pl",
-   "evidence": "UCC 2024-07-16: compressor | ONE (1) BLM GROUP USA LIBERTY SYSTEM, AIR ASSIST GAS GENERATOR MODEL D7H-V75MD; SERIAL NUMBER: D24G6-00; DESCR || UCC 2026-07-30 initial filing, secured party All Copy Products, Inc.: Canon and HP Copiers and Printers AND ALL PRODUCTS, PROCEEDS AND ATTACHMENTS. TH (support: generic or blanket lien) || UCC 2026-05-14 initial filing, secured party HYG Financial Services, Inc.: All of the equipment now or hereafter leased by Lessor to Lessee; and all access (support: generic or blanket lien) || Points: signal 32 (Colorado UCC filings: 30; State water permits: 2); sources 3; recency 15; stage 8; fit 15",
-   "fit": "strong: manufacturing SIC 3535 on a state water permit",
-   "name": "WESTERN INDUSTRIAL CONTRACTORS",
-   "r5": "",
-   "r5b": "",
-   "rank": 12,
-   "score": 73.0,
-   "sources": 2,
    "stage": "operating and expanding",
    "tier": "A"
   },
@@ -664,24 +657,11 @@
    "name": "WARD PRECISION MANUFACTURING, INC.",
    "r5": "",
    "r5b": "",
-   "rank": 13,
+   "rank": 10,
    "score": 73.0,
    "sources": 1,
    "stage": "buying equipment (repeat buyer; operating and expanding)",
    "tier": "A+B"
-  },
-  {
-   "addr": "9101 Yosemite St",
-   "evidence": "Air permit 21AD0127 (To Be Determined) received 2026-05-27: SAVAGE IRONDALE - TRANSLOADING PETROLEUM PRODUCTS; AIRS 001-2084 || Water permit row CONOX0998 (CONOX000) received 2026-05-11: facility Irondale Terminal, Denver, CO, permittee Cando Rail & Terminals (U.S.) LLC, SIC 4789, status Effective (cut as noise or not flagged; support only) || Registered in Colorado 2025-12-04 (FLLC); status Good Standing; office Midvale UT (support: registration under the same name) [same name, different address: possible match] || Points: signal 28.5 (APCD air permit status: 25; State water permits: 2; Colorado business registrations: 1.5); sources 6; recency 15; stage 8; fit 15",
-   "fit": "strong: process emission units on an air permit",
-   "name": "Cando Rail & Terminals (U.S.) LLC",
-   "r5": "",
-   "r5b": "",
-   "rank": 14,
-   "score": 72.5,
-   "sources": 3,
-   "stage": "operating and expanding",
-   "tier": "A"
   },
   {
    "addr": "5720 HOLLY ST STE G",
@@ -690,7 +670,7 @@
    "name": "GINZEL ENTERPRISES LLC",
    "r5": "",
    "r5b": "",
-   "rank": 15,
+   "rank": 11,
    "score": 72.0,
    "sources": 1,
    "stage": "buying equipment",
@@ -699,11 +679,11 @@
   {
    "addr": "withheld (not confirmed as a business premises; see source record)",
    "evidence": "UCC 2026-08-19 initial filing [tier B B1a], secured party Zions Bancorporation, N.A. dba Zions Equipment Finance: ter 32 for System / 846, a blast machine with Dual 30 HP, Serial Number 713. (1) KleanVac Dust Collector 16/32 VHP / 120 || UCC 2024-02-22 initial filing, secured party BANC OF AMERICA LEASING & CAPITAL, LLC: no collateral text (support: generic or blanket lien) || UCC 2024-12-16 initial filing, secured party UMB BANK, N. A.: All equipment listed further herein attached Exhibit A; whether any of the foreg (support: generic or blanket lien) [same name, different address: possible match] || Points: signal 30 (Colorado UCC filings: 30); sources 0; recency 15; stage 12; fit 15",
-   "fit": "strong: finances process equipment in a UCC filing (dust collector)",
+   "fit": "strong: Industrial coatings firm: surface prep, media blasting, high-performance coatings, pipeline coating and lining, at 11905 E 124th Ave Henderson; business directory (web check 2026-10-30).",
    "name": "Coblaco Services, Inc.",
    "r5": "",
    "r5b": "",
-   "rank": 16,
+   "rank": 12,
    "score": 72.0,
    "sources": 1,
    "stage": "buying equipment",
@@ -716,7 +696,7 @@
    "name": "DURALUX FINISH, INC.",
    "r5": "",
    "r5b": "",
-   "rank": 17,
+   "rank": 13,
    "score": 70.0,
    "sources": 2,
    "stage": "operating and expanding",
@@ -729,7 +709,7 @@
    "name": "GENESEE WESTER, INC.",
    "r5": "",
    "r5b": "",
-   "rank": 18,
+   "rank": 14,
    "score": 70.0,
    "sources": 1,
    "stage": "buying equipment",
@@ -742,36 +722,10 @@
    "name": "IMPERIAL MACHINING CO.",
    "r5": "",
    "r5b": "",
-   "rank": 19,
+   "rank": 15,
    "score": 70.0,
    "sources": 1,
    "stage": "buying equipment (repeat buyer; operating and expanding)",
-   "tier": "A"
-  },
-  {
-   "addr": "withheld (not confirmed as a business premises; see source record)",
-   "evidence": "UCC 2025-11-13: cnc | 1 USED JOHNFORD CNC HORIZONTAL BORING MILL MODEL BMC 220 ALL AND ANY RELATED EQUIPMENT LEASED OR FINANCED FROM || UCC 2024-04-03: press brake | Verson 1000-HPB-23 Press Brake S/N 14039; whether any of the foregoing is owned now or acquired later and wher || UCC 2026-06-17 initial filing [tier B B1b+B1c], secured party FIVE-LAKES FINANCIAL, INC. DBA TECH FINANCIAL SERVICES: All assets, personal property, and fixtures whether now or hereafter existing or now owned or thereafter acquired and wh || Points: signal 28 (Colorado UCC filings: 25+3 repeat); sources 0; recency 15; stage 12; fit 15",
-   "fit": "strong: finances production machinery in a UCC filing (cnc)",
-   "name": "Denver Machine Shop, Inc.",
-   "r5": "",
-   "r5b": "",
-   "rank": 20,
-   "score": 70.0,
-   "sources": 1,
-   "stage": "buying equipment (repeat buyer; operating and expanding)",
-   "tier": "A+B"
-  },
-  {
-   "addr": "5770 Clarkson Street, #C",
-   "evidence": "UCC 2026-09-17: machining center | Title to the consigned goods including but not limited to: Kitamura Horizontal Machining Center Model: MyCente || Points: signal 25 (Colorado UCC filings: 25); sources 0; recency 15; stage 12; fit 15",
-   "fit": "strong: finances production machinery in a UCC filing (machining center)",
-   "name": "CNC Pros Colorado LLC",
-   "r5": "",
-   "r5b": "",
-   "rank": 21,
-   "score": 67.0,
-   "sources": 1,
-   "stage": "buying equipment",
    "tier": "A"
   },
   {
@@ -781,7 +735,7 @@
    "name": "DG METAL LLC",
    "r5": "",
    "r5b": "",
-   "rank": 22,
+   "rank": 16,
    "score": 67.0,
    "sources": 1,
    "stage": "buying equipment",
@@ -794,7 +748,7 @@
    "name": "Skyline Motors LLC",
    "r5": "",
    "r5b": "",
-   "rank": 23,
+   "rank": 17,
    "score": 67.0,
    "sources": 1,
    "stage": "buying equipment",
@@ -803,11 +757,11 @@
   {
    "addr": "12520 Grant Drive #100",
    "evidence": "UCC 2025-10-28: trumpf | One (1) new TRUMPF TruLaser 3040 Bevel Edition (L95) Machine, Serial Number A3242L0098 with LiftMaster Compact || Points: signal 25 (Colorado UCC filings: 25); sources 0; recency 15; stage 12; fit 15",
-   "fit": "strong: finances production machinery in a UCC filing (trumpf)",
+   "fit": "strong: Sheet metal fabrication: laser cutting, bending, welding, punching, routing, sawing for Denver metro; company site (web check 2026-10-30). Address not on page.",
    "name": "H&H Enterprises, Inc. dba H&H Metals",
    "r5": "",
    "r5b": "",
-   "rank": 24,
+   "rank": 18,
    "score": 67.0,
    "sources": 1,
    "stage": "buying equipment",
@@ -816,13 +770,39 @@
   {
    "addr": "12601 E 33RD AVE STE 114",
    "evidence": "Air permit 93AD1300 (FA, Transfer Plant Ownership) received 2025-04-14: FACILITY-WIDE; AIRS 001-0560 || Registered in Colorado 2025-01-12 (FLLC); status Good Standing; office Scottsdale AZ (support: registration under the same name) [same name, different address: possible match] || Water permit row COR900610 (COR900000) received 2024-06-25 at this address: project or facility 'Insulfoam' (support only) [joined by street address only] [possible match] || Points: signal 27.5 (APCD air permit status: 25; Colorado business registrations: 1.5; State water permits: 1); sources 6; recency 8; stage 8; fit 15",
-   "fit": "strong: process emission units on an air permit",
+   "fit": "strong: Insulfoam plant making EPS foam board insulation and insulated sheathing at 12601 E 33rd Ave Unit 110, Aurora; trade directory (web check 2026-10-30).",
    "name": "CARLISLE EPS HOLDING, LLC",
    "r5": "",
    "r5b": "",
-   "rank": 25,
+   "rank": 19,
    "score": 64.5,
    "sources": 3,
+   "stage": "operating and expanding",
+   "tier": "A"
+  },
+  {
+   "addr": "11751 Huron St Ste 600",
+   "evidence": "UCC 2026-09-28: conveyor | One (1) CEIA Horizon Metal Detector; One (1) One CEIA Belt Conveyor. Together with all attachments including a || UCC 2026-04-13: conveyor | 1 - CEIA Horizontal Metal Detector THS/MS21-1000X75; 1- CEIA Belt Conveyor THS/FB-COV-1525x950 and proceeds || UCC 2025-09-15: conveyor | (1) SLAB PRESSING & CONVEYOR; (1) TOPPER; (1) ENCODER; Accessories per invoice The equipment financed under Co || Points: signal 31 (Colorado UCC filings: 25+6 repeat); sources 0; recency 15; stage 12; fit 6",
+   "fit": "moderate: Contract food manufacturer and packer (gluten-free, organic, kosher); trade blog and 2012 local press which placed its plant near Niwot (web check 2026-10-30). Westminster site unconfirmed.",
+   "name": "Claremont Foods, LLC",
+   "r5": "",
+   "r5b": "",
+   "rank": 20,
+   "score": 64.0,
+   "sources": 1,
+   "stage": "buying equipment (repeat buyer; operating and expanding)",
+   "tier": "A+B"
+  },
+  {
+   "addr": "14805 E Moncrieff Pl",
+   "evidence": "UCC 2024-07-16: compressor | ONE (1) BLM GROUP USA LIBERTY SYSTEM, AIR ASSIST GAS GENERATOR MODEL D7H-V75MD; SERIAL NUMBER: D24G6-00; DESCR || UCC 2026-07-30 initial filing, secured party All Copy Products, Inc.: Canon and HP Copiers and Printers AND ALL PRODUCTS, PROCEEDS AND ATTACHMENTS. TH (support: generic or blanket lien) || UCC 2026-05-14 initial filing, secured party HYG Financial Services, Inc.: All of the equipment now or hereafter leased by Lessor to Lessee; and all access (support: generic or blanket lien) || Points: signal 32 (Colorado UCC filings: 30; State water permits: 2); sources 3; recency 15; stage 8; fit 6",
+   "fit": "moderate: Construction contractor installing material handling and mechanical systems in client plants, HQ 14805 E Moncrieff Pl Aurora; business directory (web check 2026-10-30). Own shop work unconfirmed.",
+   "name": "WESTERN INDUSTRIAL CONTRACTORS",
+   "r5": "",
+   "r5b": "",
+   "rank": 21,
+   "score": 64.0,
+   "sources": 2,
    "stage": "operating and expanding",
    "tier": "A"
   },
@@ -833,7 +813,7 @@
    "name": "AGOV Underground LLC",
    "r5": "",
    "r5b": "",
-   "rank": 26,
+   "rank": 22,
    "score": 63.0,
    "sources": 1,
    "stage": "buying equipment (repeat buyer; operating and expanding)",
@@ -842,11 +822,11 @@
   {
    "addr": "withheld (not confirmed as a business premises; see source record)",
    "evidence": "UCC 2024-09-30: paint booth | EQUIPMENT DESCRIBED BELOW; WHETHER ANY OF THE FOREGOING IS OWNED NOW OR ACQUIRED LATER; ALL ACCESSIONS, ADDITI || UCC 2026-08-05 initial filing, secured party Zions Bancorporation, N.A. dba Zions Equipment Fin: All equipment whether now owned or hereafter acquired together with all present  (support: generic or blanket lien) || UCC 2025-11-05 initial filing, secured party Zions Bancorporation, N.A. dba Zions Equipment Fin: All equipment whether now owned or hereafter acquired together with all present  (support: generic or blanket lien) || Points: signal 25 (Colorado UCC filings: 25); sources 0; recency 15; stage 8; fit 15",
-   "fit": "strong: finances production machinery in a UCC filing (paint booth)",
+   "fit": "strong: Manufactures racking and conveyor systems for steel service centers, based in Commerce City; trade press (web check 2026-10-30).",
    "name": "McCallin Steel Storage Systems, Inc.",
    "r5": "",
    "r5b": "",
-   "rank": 27,
+   "rank": 23,
    "score": 63.0,
    "sources": 1,
    "stage": "operating and expanding",
@@ -855,11 +835,11 @@
   {
    "addr": "9131 E 96TH AVE",
    "evidence": "Air permit 95AD1089 (To Be Determined) received 2026-06-23: HENDERSON SOLVENT RECYCLING FACILITY FACILITY-WIDE; AIRS 001-0224 || Points: signal 25 (APCD air permit status: 25); sources 0; recency 15; stage 8; fit 15",
-   "fit": "strong: process emission units on an air permit",
+   "fit": "strong: 24/7 solvent recycling plant in Henderson: fractional distillation, tank blending, rail handling; new larger column added; company site (web check 2026-10-30).",
    "name": "VEOLIA ES TECHNICAL SOLUTIONS, L.L.C.",
    "r5": "",
    "r5b": "",
-   "rank": 28,
+   "rank": 24,
    "score": 63.0,
    "sources": 1,
    "stage": "operating and expanding",
@@ -872,7 +852,7 @@
    "name": "Durango Tire Shop Inc",
    "r5": "",
    "r5b": "",
-   "rank": 29,
+   "rank": 25,
    "score": 63.0,
    "sources": 1,
    "stage": "buying equipment",
@@ -885,7 +865,7 @@
    "name": "FLASHFILL SERVICES, LLC",
    "r5": "",
    "r5b": "",
-   "rank": 30,
+   "rank": 26,
    "score": 63.0,
    "sources": 1,
    "stage": "operating and expanding",
@@ -894,11 +874,11 @@
   {
    "addr": "withheld (not confirmed as a business premises; see source record)",
    "evidence": "UCC 2024-01-17: cnc, machining center, haas | The following is collateral information for this contract: SCHEDULE 'A' EQUIPMENT SCHEDULE THIS SCHEDULE is at || UCC 2026-02-09 initial filing, secured party PB&T BANK: SEE ATTACHED (support: generic or blanket lien) || Points: signal 25 (Colorado UCC filings: 25); sources 0; recency 15; stage 8; fit 15",
-   "fit": "strong: finances production machinery in a UCC filing (cnc)",
+   "fit": "strong: Foundry and machine shop casting aluminum, magnesium and zinc (investment, sand, permanent mold, die) at 3900 E 68th Ave, Commerce City; business directory (web check 2026-10-30).",
    "name": "PROTOCAST, INC.",
    "r5": "",
    "r5b": "",
-   "rank": 31,
+   "rank": 27,
    "score": 63.0,
    "sources": 1,
    "stage": "operating and expanding",
@@ -911,23 +891,10 @@
    "name": "CRYOSHIELD INDUSTRIAL SERVICES LLC",
    "r5": "",
    "r5b": "",
-   "rank": 32,
+   "rank": 28,
    "score": 63.0,
    "sources": 2,
    "stage": "buying equipment",
-   "tier": "A"
-  },
-  {
-   "addr": "6955 E 50TH AVE",
-   "evidence": "Air permit 26AD0050 (To Be Determined) received 2025-11-07: RUSH TRUCK CENTERS DENVER PAINT BOOTHS; AIRS 001-2354 || Points: signal 25 (APCD air permit status: 25); sources 0; recency 15; stage 8; fit 15",
-   "fit": "strong: process emission units on an air permit",
-   "name": "RUSH ENTERPRISES, INC.",
-   "r5": "",
-   "r5b": "",
-   "rank": 33,
-   "score": 63.0,
-   "sources": 1,
-   "stage": "operating and expanding",
    "tier": "A"
   },
   {
@@ -937,24 +904,24 @@
    "name": "MT Underground LLC",
    "r5": "",
    "r5b": "",
-   "rank": 34,
+   "rank": 29,
    "score": 61.5,
    "sources": 2,
    "stage": "buying equipment",
    "tier": "A"
   },
   {
-   "addr": "7901 US HIGHWAY 85",
-   "evidence": "Air permit 16AD1116 (IA, Modification) received 2025-10-07: CONCRETE / ASPHALT RECYCLING OPERATIONS; AIRS 001-2144 || UCC 2025-01-10 initial filing, secured party WAGNER EQUIPMENT CO: CATERPILLAR 963K SERIAL NUMBER LBL01060 AND ADDITIONS, REPLACEMENTS, ATTACHMENTS (support: generic or blanket lien) [same name, different address: possible match] || Points: signal 27 (APCD air permit status: 25; Colorado UCC filings: 2); sources 3; recency 8; stage 8; fit 15",
-   "fit": "strong: process emission units on an air permit",
-   "name": "ALLIED DEMOLITION INC",
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "evidence": "UCC 2025-11-13: cnc | 1 USED JOHNFORD CNC HORIZONTAL BORING MILL MODEL BMC 220 ALL AND ANY RELATED EQUIPMENT LEASED OR FINANCED FROM || UCC 2024-04-03: press brake | Verson 1000-HPB-23 Press Brake S/N 14039; whether any of the foregoing is owned now or acquired later and wher || UCC 2026-06-17 initial filing [tier B B1b+B1c], secured party FIVE-LAKES FINANCIAL, INC. DBA TECH FINANCIAL SERVICES: All assets, personal property, and fixtures whether now or hereafter existing or now owned or thereafter acquired and wh || Points: signal 28 (Colorado UCC filings: 25+3 repeat); sources 0; recency 15; stage 12; fit 6",
+   "fit": "moderate: Listed as a machine shop and apprenticeship sponsor at 9762 Hanover Ct E, Henderson; training directory (web check 2026-10-30). Shop work not described on page.",
+   "name": "Denver Machine Shop, Inc.",
    "r5": "",
    "r5b": "",
-   "rank": 35,
+   "rank": 30,
    "score": 61.0,
-   "sources": 2,
-   "stage": "operating and expanding",
-   "tier": "A"
+   "sources": 1,
+   "stage": "buying equipment (repeat buyer; operating and expanding)",
+   "tier": "A+B"
   },
   {
    "addr": "4801 E 78TH AVE",
@@ -963,7 +930,7 @@
    "name": "HOLCIM - WCR, INC",
    "r5": "",
    "r5b": "",
-   "rank": 36,
+   "rank": 31,
    "score": 61.0,
    "sources": 2,
    "stage": "operating and expanding",
@@ -972,11 +939,11 @@
   {
    "addr": "2851 Walden St.",
    "evidence": "Air permit 17AD0462 (FA, Company Name Change) received 2025-09-10: PAINT MANUFACTURING AT 3851 N WALDEN STREET FARR DUST COLLECTION SYSTEM; AIRS 001-2164 || Water permit row COR901482 (COR900000) received 2024-07-16: facility Swarco Colorado Paint, LLC, permittee Swarco Colorado Paint, LLC, SIC 2851, status Effective (cut as noise or not flagged; support only) || Points: signal 27 (APCD air permit status: 25; State water permits: 2); sources 3; recency 8; stage 8; fit 15",
-   "fit": "strong: manufacturing SIC 2851 on a state water permit",
+   "fit": "strong: Manufactures waterborne and solventborne traffic paints and plural-component systems in an automated plant at 2851 Walden St, Aurora; company site (web check 2026-10-30).",
    "name": "SWARCO COLORADO PAINT, LLC",
    "r5": "",
    "r5b": "",
-   "rank": 37,
+   "rank": 32,
    "score": 61.0,
    "sources": 2,
    "stage": "operating and expanding",
@@ -985,76 +952,11 @@
   {
    "addr": "14802 GRANT STREET",
    "evidence": "Air permit 21AD0364 (To Be Determined) received 2025-08-28: SASHCO - CAULK MANUFACTURING FACILITY WIDE PERMIT; AIRS 001-2275 || Air permit 26AD0444.XP (Permit Exempt, APEN Only) received 2025-08-28: SASHCO - AMMONIUM HYDROXIDE USE IN THE MANUFACTURING OF WATER BASED CHEMICALS; AIRS 001-2275 || Water permit row COR901643 (COR900000) received 2024-07-17: facility Sashco Inc, permittee Sashco Inc., SIC 2891, status Effective (cut as noise or not flagged; support only) || Points: signal 27 (APCD air permit status: 25; State water permits: 2); sources 3; recency 8; stage 8; fit 15",
-   "fit": "strong: manufacturing SIC 2891 on a state water permit",
+   "fit": "strong: Manufactures acrylic latex and rubber-based joint sealants at 14802 Grant St, Thornton; trade directory (web check 2026-10-30).",
    "name": "SASHCO, INC",
    "r5": "",
    "r5b": "",
-   "rank": 38,
-   "score": 61.0,
-   "sources": 2,
-   "stage": "operating and expanding",
-   "tier": "A"
-  },
-  {
-   "addr": "6450 YORK ST",
-   "evidence": "Air permit 25AD0306 (Initial Application) received 2025-08-12: ROBERT W. HITE TREATMENT FACILITY RTO; AIRS 001-0097 || Water permit row COR428980 (COR400000) received 2025-10-23: Metro Water Recovery, Denver (not a scoring signal; support only) || Water permit row COR424956 (COR400000) received 2024-10-23: Robert W Hite Plant, Denver (not a scoring signal; support only) || Points: signal 27 (APCD air permit status: 25; State water permits: 2); sources 3; recency 8; stage 8; fit 15",
-   "fit": "strong: process emission units on an air permit",
-   "name": "METRO WATER RECOVERY",
-   "r5": "",
-   "r5b": "",
-   "rank": 39,
-   "score": 61.0,
-   "sources": 2,
-   "stage": "operating and expanding",
-   "tier": "A"
-  },
-  {
-   "addr": "39.7735490, -104.389309",
-   "evidence": "Air permit 25AD0386 (Final Approval) received 2025-06-23: THORNBURG PIT SAND & GRAVEL PIT; AIRS 001-2345 || Water permit row COG502235 (COG500000) received 2024-12-04: facility Thornburg Pit, permittee Bennett Creek Ranch LLC, SIC 1442, status Admin continued (cut as noise or not flagged; support only) || Points: signal 27 (APCD air permit status: 25; State water permits: 2); sources 3; recency 8; stage 8; fit 15",
-   "fit": "strong: process emission units on an air permit",
-   "name": "BENNETT CREEK RANCH LLC",
-   "r5": "",
-   "r5b": "",
-   "rank": 40,
-   "score": 61.0,
-   "sources": 2,
-   "stage": "operating and expanding",
-   "tier": "A"
-  },
-  {
-   "addr": "withheld (not confirmed as a business premises; see source record)",
-   "evidence": "UCC 2024-11-01: compressor, welder | The following described equipment, together with all proceeds of such equipment, including, without limitation || UCC 2025-06-17 initial filing, secured party C T Corporation System, as representative [lender not named: filed through an agent]: The equipment, inventory, and personal property related thereto financed under,  (support: generic or blanket lien) || UCC 2024-02-08 initial filing, secured party XCMG America Financial LLC: Account No. 15300 ALL GOODS OR OTHER PROPERTY LEASED OR FINANCED BY SECURED PART (support: generic or blanket lien) || Points: signal 30 (Colorado UCC filings: 30); sources 0; recency 8; stage 8; fit 15",
-   "fit": "strong: finances production machinery in a UCC filing (welder)",
-   "name": "MARINI DIESEL, INC.",
-   "r5": "",
-   "r5b": "",
-   "rank": 41,
-   "score": 61.0,
-   "sources": 1,
-   "stage": "operating and expanding",
-   "tier": "A"
-  },
-  {
-   "addr": "6405 CALHOUN BYERS ROAD",
-   "evidence": "Air permit 25AD0426 (Final Approval) received 2025-05-29: SAND CREEK MINE GRAVEL MINING; AIRS 001-2347 || UCC 2026-09-30 initial filing, secured party WAGNER EQUIPMENT COMPANY: SMITHCO SX2-4034 SERIAL NUMBER 1S9SS4022VL476260, SMITHCO SX2-4034 SERIAL NUMBER (support: generic or blanket lien) [same name, different address: possible match] || UCC 2026-08-04 initial filing, secured party Wells Fargo Financial Leasing, Inc.: This UCC-1 Financing Statement covers all of Debtor's right, title and interest  (support: generic or blanket lien) [same name, different address: possible match] || Points: signal 27 (APCD air permit status: 25; Colorado UCC filings: 2); sources 3; recency 8; stage 8; fit 15",
-   "fit": "strong: process emission units on an air permit",
-   "name": "KELLEY TRUCKING INC.",
-   "r5": "",
-   "r5b": "",
-   "rank": 42,
-   "score": 61.0,
-   "sources": 2,
-   "stage": "operating and expanding",
-   "tier": "A"
-  },
-  {
-   "addr": "55 W BROMLEY LN",
-   "evidence": "Air permit 08AD0450 (IA, Modification) received 2025-05-06: SOIL VAPOR EXTRACTION SYSTEM; AIRS 001-1257 || UCC 2025-04-29 initial filing, secured party Deere Credit, Inc.: JOHN DEERE 408R 408R Self-Propelled Sprayer S/N: 251011 The above described prop (support: generic or blanket lien) [same name, different address: possible match] || UCC 2024-05-18 initial filing, secured party Deere Credit, Inc.: JOHN DEERE 318G 318G Skid Steer S/N: 436026 The above described property is owne (support: generic or blanket lien) [same name, different address: possible match] || Points: signal 27 (APCD air permit status: 25; Colorado UCC filings: 2); sources 3; recency 8; stage 8; fit 15",
-   "fit": "strong: process emission units on an air permit",
-   "name": "AGFINITY, INC.",
-   "r5": "",
-   "r5b": "",
-   "rank": 43,
+   "rank": 33,
    "score": 61.0,
    "sources": 2,
    "stage": "operating and expanding",
@@ -1067,24 +969,11 @@
    "name": "Cherry Creek Recycling, LLC",
    "r5": "",
    "r5b": "",
-   "rank": 44,
+   "rank": 34,
    "score": 61.0,
    "sources": 1,
    "stage": "operating and expanding",
    "tier": "B"
-  },
-  {
-   "addr": "1095 S 4TH AVE",
-   "evidence": "Air permit 08AD0168 (FA, Modification) received 2025-02-11: COATING LINE; AIRS 001-0195 || Water permit row COR900072 (COR900000) received 2024-06-04: facility Intertape Polymer Group, permittee Intertape Polymer Group, SIC 2672, status Effective (cut as noise or not flagged; support only) || Points: signal 27 (APCD air permit status: 25; State water permits: 2); sources 3; recency 8; stage 8; fit 15",
-   "fit": "strong: manufacturing SIC 2672 on a state water permit",
-   "name": "INTERTAPE POLYMER CORP (IPG)",
-   "r5": "",
-   "r5b": "",
-   "rank": 45,
-   "score": 61.0,
-   "sources": 2,
-   "stage": "operating and expanding",
-   "tier": "A"
   },
   {
    "addr": "2350 E 70th Ave, Bldg A",
@@ -1093,7 +982,7 @@
    "name": "Quattro Machining Services Inc.",
    "r5": "",
    "r5b": "",
-   "rank": 46,
+   "rank": 35,
    "score": 61.0,
    "sources": 2,
    "stage": "operating and expanding",
@@ -1106,7 +995,7 @@
    "name": "MechFi Designs LLC",
    "r5": "",
    "r5b": "",
-   "rank": 47,
+   "rank": 36,
    "score": 60.5,
    "sources": 2,
    "stage": "operating and expanding",
@@ -1115,11 +1004,11 @@
   {
    "addr": "14806 E 33RD PLACE",
    "evidence": "Air permit 93AD1538 (To Be Determined) received 2024-11-25: PRINTING AT 14806 E 3RD PL; AIRS 001-0938 || Registered in Colorado 2024-01-12 (FPC); status Good Standing; office Renton WA (support: registration under the same name) [same name, different address: possible match] || Points: signal 26.5 (APCD air permit status: 25; Colorado business registrations: 1.5); sources 3; recency 8; stage 8; fit 15",
-   "fit": "strong: name suggests manufacturing or processing (Packaging); not confirmed",
+   "fit": "strong: All Packaging Company, a Mill Rock unit, makes printed paperboard folding cartons at its Aurora plant; trade press (web check 2026-10-30).",
    "name": "MILL ROCK PACKAGING",
    "r5": "",
    "r5b": "",
-   "rank": 48,
+   "rank": 37,
    "score": 60.5,
    "sources": 2,
    "stage": "operating and expanding",
@@ -1132,7 +1021,7 @@
    "name": "HARRELSON LLC",
    "r5": "",
    "r5b": "",
-   "rank": 49,
+   "rank": 38,
    "score": 60.0,
    "sources": 2,
    "stage": "operating and expanding",
@@ -1141,11 +1030,11 @@
   {
    "addr": "withheld (not confirmed as a business premises; see source record)",
    "evidence": "UCC 2025-09-09: cnc | Norma NGC CNC Grinder 24038 Equipment is subject to Agreement # 209646-0002 including the above equipment with || UCC 2024-04-18: cnc | CNC Programmable Top and Face Grinder Model AL805 with Cartridge Filtration System, Mist Extraction System, CO || Points: signal 28 (Colorado UCC filings: 25+3 repeat); sources 0; recency 8; stage 8; fit 15",
-   "fit": "strong: finances production machinery in a UCC filing (cnc)",
+   "fit": "strong: Family-owned Denver maker of custom cutting tools, router bits and shaper cutters for over 30 years; trade press (web check 2026-10-30).",
    "name": "VEXOR CUSTOM WOODWORKING TOOLS, INC.",
    "r5": "",
    "r5b": "",
-   "rank": 50,
+   "rank": 39,
    "score": 59.0,
    "sources": 1,
    "stage": "operating and expanding",
@@ -1158,7 +1047,7 @@
    "name": "Precision Casting Prototypes and Engineering Inc.",
    "r5": "",
    "r5b": "",
-   "rank": 51,
+   "rank": 40,
    "score": 59.0,
    "sources": 1,
    "stage": "operating and expanding",
@@ -1171,7 +1060,7 @@
    "name": "4283929 DELAWARE, LLC",
    "r5": "",
    "r5b": "",
-   "rank": 52,
+   "rank": 41,
    "score": 59.0,
    "sources": 1,
    "stage": "operating and expanding",
@@ -1184,7 +1073,7 @@
    "name": "Pit 14",
    "r5": "",
    "r5b": "",
-   "rank": 53,
+   "rank": 42,
    "score": 58.0,
    "sources": 1,
    "stage": "under construction",
@@ -1197,7 +1086,7 @@
    "name": "Optimized Distribution Partners Inc.",
    "r5": "",
    "r5b": "",
-   "rank": 54,
+   "rank": 43,
    "score": 57.0,
    "sources": 1,
    "stage": "buying equipment",
@@ -1210,7 +1099,7 @@
    "name": "Air Squared",
    "r5": "",
    "r5b": "",
-   "rank": 55,
+   "rank": 44,
    "score": 57.0,
    "sources": 2,
    "stage": "operating and expanding",
@@ -1223,7 +1112,7 @@
    "name": "WANCO INC",
    "r5": "",
    "r5b": "",
-   "rank": 56,
+   "rank": 45,
    "score": 56.0,
    "sources": 1,
    "stage": "operating and expanding",
@@ -1236,7 +1125,7 @@
    "name": "Per Revolution Machining, LLC",
    "r5": "",
    "r5b": "",
-   "rank": 57,
+   "rank": 46,
    "score": 56.0,
    "sources": 1,
    "stage": "operating and expanding",
@@ -1249,7 +1138,7 @@
    "name": "ORION ENVIRONMENTAL, INC.",
    "r5": "",
    "r5b": "",
-   "rank": 58,
+   "rank": 47,
    "score": 56.0,
    "sources": 1,
    "stage": "operating and expanding",
@@ -1262,7 +1151,7 @@
    "name": "NOA BRANDS AMERICA, INC.",
    "r5": "",
    "r5b": "",
-   "rank": 59,
+   "rank": 48,
    "score": 56.0,
    "sources": 1,
    "stage": "operating and expanding",
@@ -1275,212 +1164,275 @@
    "name": "ALBERT FREI & SONS INC",
    "r5": "",
    "r5b": "",
-   "rank": 60,
+   "rank": 49,
    "score": 56.0,
    "sources": 1,
+   "stage": "operating and expanding",
+   "tier": "A"
+  },
+  {
+   "addr": "5650 HAVANA, RMA, BLDG. 128",
+   "evidence": "Air permit 05AD0037 (FA, Modification) received 2024-12-13: CREMATOR; AIRS 001-0066 || Points: signal 25 (APCD air permit status: 25); sources 0; recency 8; stage 8; fit 15",
+   "fit": "strong: process emission units on an air permit",
+   "name": "ROCKY MOUNTAIN ARSENAL - USARMY",
+   "r5": "",
+   "r5b": "",
+   "rank": 50,
+   "score": 56.0,
+   "sources": 1,
+   "stage": "operating and expanding",
+   "tier": "A"
+  },
+  {
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "evidence": "UCC 2024-12-12: cnc, lathe, haas | One (1) - Used Haas SL20T CNC Lathe with all standard options & accessories together with all replacements, su || Points: signal 25 (Colorado UCC filings: 25); sources 0; recency 8; stage 8; fit 15",
+   "fit": "strong: finances production machinery in a UCC filing (cnc)",
+   "name": "Twin Harts Tool Ltd.",
+   "r5": "",
+   "r5b": "",
+   "rank": 51,
+   "score": 56.0,
+   "sources": 1,
+   "stage": "operating and expanding",
+   "tier": "A"
+  },
+  {
+   "addr": "9551 WILLOW COURT",
+   "evidence": "Air permit 19AD0985 (Final Approval) received 2024-12-03: AUTO BODY REPAIR AND REFINISHING FACILITY (COMMERCIAL TRUCK & RV) - LOCATED AT 9; AIRS 001-2224 || Points: signal 25 (APCD air permit status: 25); sources 0; recency 8; stage 8; fit 15",
+   "fit": "strong: process emission units on an air permit",
+   "name": "DIVERSIFIED BODY & PAINT SHOP",
+   "r5": "",
+   "r5b": "",
+   "rank": 52,
+   "score": 56.0,
+   "sources": 1,
+   "stage": "operating and expanding",
+   "tier": "A"
+  },
+  {
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "evidence": "UCC 2024-11-13: cnc, conveyor, fanuc | ONE USED SAMSUNG SMEC SL 2000BY CNC TURNING CENTER SERIAL NUMBER 17C8N0014 WITH FANUC CNC CONTROL, TOOL PRESET || Points: signal 25 (Colorado UCC filings: 25); sources 0; recency 8; stage 8; fit 15",
+   "fit": "strong: finances production machinery in a UCC filing (cnc)",
+   "name": "WANEK MACHINE LLC",
+   "r5": "",
+   "r5b": "",
+   "rank": 53,
+   "score": 56.0,
+   "sources": 1,
+   "stage": "operating and expanding",
+   "tier": "A"
+  },
+  {
+   "addr": "not given in the source",
+   "evidence": "Water permit COG318131 (COG318000) received 2025-06-10: facility Singletree, permittee Singletree Land Company, LLC, SIC 3715 Transportation equipment, status Admin continued || Water permit row COR901634 (COR900000) received 2024-07-17: facility Singletree, permittee Singletree Land Company, LLC, SIC 3715, status Effective (cut as noise or not flagged; support only) || Registered in Colorado 2026-02-05 (DLLC); status Good Standing; office Hartsel CO (support: registration under the same name) [same name, different address: possible match] || Points: signal 21.5 (State water permits: 20; Colorado business registrations: 1.5); sources 3; recency 8; stage 8; fit 15",
+   "fit": "strong: manufacturing SIC 3715 on a state water permit",
+   "name": "Singletree",
+   "r5": "",
+   "r5b": "",
+   "rank": 54,
+   "score": 55.5,
+   "sources": 2,
+   "stage": "under construction",
+   "tier": "A"
+  },
+  {
+   "addr": "2505 E 74TH AVE",
+   "evidence": "Air permit 25AD0421.XP (Permit Exempt, APEN Only) received 2025-05-22: DENVER, CO VEHICLE MAITENANCE; AIRS 001-2346 || UCC 2026-05-07: compressor, doosan | DOOSAN/BOBCAT AIR COMPRESSOR MODEL: PA185VWDO-T4F S/N: 521092UHAJM38 (weak tier: towable construction compressor) || UCC 2026-09-30 initial filing, secured party PB&T BANK: SEE ATTACHED (support: generic or blanket lien) || Points: signal 21 (APCD air permit status: 12; Colorado UCC filings: 8; State water permits: 1); sources 11; recency 15; stage 8; fit 0",
+   "fit": "unknown: nothing in the records says what the company makes",
+   "name": "A-1 CHIPSEAL CO",
+   "r5": "",
+   "r5b": "",
+   "rank": 55,
+   "score": 55.0,
+   "sources": 3,
+   "stage": "operating and expanding",
+   "tier": "A"
+  },
+  {
+   "addr": "6330 Washington St",
+   "evidence": "Water permit CONOX0984 (CONOX000) received 2026-02-09: facility Reddy Ice-Denver A & K (230), permittee Reddy Ice LLC, SIC 2097 Food and kindred products, status Effective || Registered in Colorado 2024-11-08 (DPC-PBC); status Delinquent; office broomfield CO (support: registration under the same name) [same name, different address: possible match] || Water permit row CONOX0985 (CONOX000) received 2026-02-09: Reddy Ice-Brush (227), Brush (not a scoring signal; support only) [same name, different address: possible match] || Points: signal 13.5 (State water permits: 12; Colorado business registrations: 1.5); sources 3; recency 15; stage 8; fit 15",
+   "fit": "strong: manufacturing SIC 2097 on a state water permit",
+   "name": "Reddy Ice-Denver A & K (230)",
+   "r5": "",
+   "r5b": "",
+   "rank": 56,
+   "score": 54.5,
+   "sources": 2,
+   "stage": "operating and expanding",
+   "tier": "A"
+  },
+  {
+   "addr": "22000 E 38th Ave",
+   "evidence": "Water permit COR901721 (COR900000) received 2025-12-30: facility Shamrock Foods Company, permittee Shamrock Foods Company, SIC 4222 Trucking and warehousing, status Effective || Water permit row COR900583 (COR900000) received 2024-05-20: facility Shamrock Foods, permittee Shamrock Foods Co, SIC 4222, status Effective (cut as noise or not flagged; support only) || Registered in Colorado 2026-05-21 (DLLC); status Good Standing; office Wilmington CA (support: registration under the same name) [same name, different address: possible match] || Points: signal 13.5 (State water permits: 12; Colorado business registrations: 1.5); sources 3; recency 15; stage 8; fit 15",
+   "fit": "strong: name suggests manufacturing or processing (Foods); not confirmed",
+   "name": "Shamrock Foods Company",
+   "r5": "",
+   "r5b": "",
+   "rank": 57,
+   "score": 54.5,
+   "sources": 2,
+   "stage": "operating and expanding",
+   "tier": "A"
+  },
+  {
+   "addr": "6955 E 50TH AVE",
+   "evidence": "Air permit 26AD0050 (To Be Determined) received 2025-11-07: RUSH TRUCK CENTERS DENVER PAINT BOOTHS; AIRS 001-2354 || Points: signal 25 (APCD air permit status: 25); sources 0; recency 15; stage 8; fit 6",
+   "fit": "moderate: Truck dealership at 6955 E 50th Ave, Commerce City, with on-site collision center and heated paint booth; company site (web check 2026-10-30). Service shop air, not production.",
+   "name": "RUSH ENTERPRISES, INC.",
+   "r5": "",
+   "r5b": "",
+   "rank": 58,
+   "score": 54.0,
+   "sources": 1,
+   "stage": "operating and expanding",
+   "tier": "A"
+  },
+  {
+   "addr": "4400 E 61ST AVE",
+   "evidence": "Air permit 04AD0157.XP (To Be Determined) received 2024-04-15: AZZ GALVANIZING-DENVER (4) HCL PICKLING BATHS; AIRS 001-1311 || Water permit row COR900669 (COR900000) received 2024-06-26: facility North American Galvanizing, permittee North American Galvanizing, SIC 3479, status Effective (cut as noise or not flagged; support only) || Points: signal 27 (APCD air permit status: 25; State water permits: 2); sources 3; recency 0; stage 8; fit 15",
+   "fit": "strong: manufacturing SIC 3479 on a state water permit",
+   "name": "NORTH AMERICAN GALVANIZING COMPANY",
+   "r5": "",
+   "r5b": "",
+   "rank": 59,
+   "score": 53.0,
+   "sources": 2,
+   "stage": "operating and expanding",
+   "tier": "A"
+  },
+  {
+   "addr": "5801 FRANKLIN ST",
+   "evidence": "Air permit 85AD200 (FA, Modification) received 2023-10-19 (received before 2024; still in the six-month processing window): PROCESSING OF BAKERY SCRAP KILN & RTO; AIRS 001-0216 || Water permit row COR900453 (COR900000) received 2024-06-21: facility ReConserve of Colorado, permittee ReConserve of Colorado, SIC 2041, status Effective (cut as noise or not flagged; support only) || Water permit row COR426915 (COR400000) received 2025-03-12 at this address: project or facility 'ReConserve of Colorado Expansion' (support only) [joined by street address only] [possible match] || Points: signal 27 (APCD air permit status: 25; State water permits: 2); sources 3; recency 0; stage 8; fit 15",
+   "fit": "strong: manufacturing SIC 2041 on a state water permit",
+   "name": "RECONSERVE OF COLORADO",
+   "r5": "",
+   "r5b": "",
+   "rank": 60,
+   "score": 53.0,
+   "sources": 2,
    "stage": "operating and expanding",
    "tier": "A"
   }
  ],
  "top50_named_without_web_check": [
   {
-   "name": "KAIRUS INC.",
+   "name": "Philip Morris International, PMI U.S. ZYN plant (Kairus Inc), Aurora (Adams County)",
    "rank": 1
   },
   {
-   "name": "ARDENT MILLS, LLC",
-   "rank": 2
-  },
-  {
-   "name": "FORGE NANO, INC",
-   "rank": 3
-  },
-  {
-   "name": "TRUSTILE DOORS LLC.",
-   "rank": 4
-  },
-  {
-   "name": "D-A PACKAGING, LLC",
-   "rank": 5
-  },
-  {
-   "name": "CITY OF WESTMINSTER",
-   "rank": 6
-  },
-  {
-   "name": "S & W Precision Machining LLC",
-   "rank": 7
-  },
-  {
-   "name": "QUIKRETE DENVER",
+   "name": "VALHALLA INDUSTRIES, INC.",
    "rank": 8
   },
   {
-   "name": "VALHALLA INDUSTRIES, INC.",
-   "rank": 9
-  },
-  {
-   "name": "PRETRED, INC.",
+   "name": "WARD PRECISION MANUFACTURING, INC.",
    "rank": 10
   },
   {
-   "name": "Claremont Foods, LLC",
+   "name": "GINZEL ENTERPRISES LLC",
    "rank": 11
   },
   {
-   "name": "WESTERN INDUSTRIAL CONTRACTORS",
-   "rank": 12
-  },
-  {
-   "name": "WARD PRECISION MANUFACTURING, INC.",
+   "name": "DURALUX FINISH, INC.",
    "rank": 13
   },
   {
-   "name": "Cando Rail & Terminals (U.S.) LLC",
+   "name": "GENESEE WESTER, INC.",
    "rank": 14
   },
   {
-   "name": "GINZEL ENTERPRISES LLC",
+   "name": "IMPERIAL MACHINING CO.",
    "rank": 15
   },
   {
-   "name": "Coblaco Services, Inc.",
+   "name": "DG METAL LLC",
    "rank": 16
   },
   {
-   "name": "DURALUX FINISH, INC.",
+   "name": "Skyline Motors LLC",
    "rank": 17
   },
   {
-   "name": "GENESEE WESTER, INC.",
-   "rank": 18
-  },
-  {
-   "name": "IMPERIAL MACHINING CO.",
-   "rank": 19
-  },
-  {
-   "name": "Denver Machine Shop, Inc.",
-   "rank": 20
-  },
-  {
-   "name": "CNC Pros Colorado LLC",
-   "rank": 21
-  },
-  {
-   "name": "DG METAL LLC",
+   "name": "AGOV Underground LLC",
    "rank": 22
   },
   {
-   "name": "Skyline Motors LLC",
-   "rank": 23
-  },
-  {
-   "name": "H&H Enterprises, Inc. dba H&H Metals",
-   "rank": 24
-  },
-  {
-   "name": "CARLISLE EPS HOLDING, LLC",
+   "name": "Durango Tire Shop Inc",
    "rank": 25
   },
   {
-   "name": "AGOV Underground LLC",
+   "name": "FLASHFILL SERVICES, LLC",
    "rank": 26
   },
   {
-   "name": "McCallin Steel Storage Systems, Inc.",
-   "rank": 27
-  },
-  {
-   "name": "VEOLIA ES TECHNICAL SOLUTIONS, L.L.C.",
+   "name": "CRYOSHIELD INDUSTRIAL SERVICES LLC",
    "rank": 28
   },
   {
-   "name": "Durango Tire Shop Inc",
+   "name": "MT Underground LLC",
    "rank": 29
   },
   {
-   "name": "FLASHFILL SERVICES, LLC",
-   "rank": 30
-  },
-  {
-   "name": "PROTOCAST, INC.",
+   "name": "HOLCIM - WCR, INC",
    "rank": 31
   },
   {
-   "name": "CRYOSHIELD INDUSTRIAL SERVICES LLC",
-   "rank": 32
-  },
-  {
-   "name": "RUSH ENTERPRISES, INC.",
-   "rank": 33
-  },
-  {
-   "name": "MT Underground LLC",
+   "name": "Cherry Creek Recycling, LLC",
    "rank": 34
   },
   {
-   "name": "ALLIED DEMOLITION INC",
+   "name": "Quattro Machining Services Inc.",
    "rank": 35
   },
   {
-   "name": "HOLCIM - WCR, INC",
+   "name": "MechFi Designs LLC",
    "rank": 36
   },
   {
-   "name": "SWARCO COLORADO PAINT, LLC",
-   "rank": 37
-  },
-  {
-   "name": "SASHCO, INC",
+   "name": "HARRELSON LLC",
    "rank": 38
   },
   {
-   "name": "METRO WATER RECOVERY",
-   "rank": 39
-  },
-  {
-   "name": "BENNETT CREEK RANCH LLC",
+   "name": "Precision Casting Prototypes and Engineering Inc.",
    "rank": 40
   },
   {
-   "name": "MARINI DIESEL, INC.",
+   "name": "4283929 DELAWARE, LLC",
    "rank": 41
   },
   {
-   "name": "KELLEY TRUCKING INC.",
+   "name": "Pit 14",
    "rank": 42
   },
   {
-   "name": "AGFINITY, INC.",
+   "name": "Optimized Distribution Partners Inc.",
    "rank": 43
   },
   {
-   "name": "Cherry Creek Recycling, LLC",
+   "name": "Air Squared",
    "rank": 44
   },
   {
-   "name": "INTERTAPE POLYMER CORP (IPG)",
+   "name": "WANCO INC",
    "rank": 45
   },
   {
-   "name": "Quattro Machining Services Inc.",
+   "name": "Per Revolution Machining, LLC",
    "rank": 46
   },
   {
-   "name": "MechFi Designs LLC",
+   "name": "ORION ENVIRONMENTAL, INC.",
    "rank": 47
   },
   {
-   "name": "MILL ROCK PACKAGING",
+   "name": "NOA BRANDS AMERICA, INC.",
    "rank": 48
   },
   {
-   "name": "HARRELSON LLC",
+   "name": "ALBERT FREI & SONS INC",
    "rank": 49
   },
   {
-   "name": "VEXOR CUSTOM WOODWORKING TOOLS, INC.",
+   "name": "ROCKY MOUNTAIN ARSENAL - USARMY",
    "rank": 50
   }
  ],
@@ -1488,7 +1440,7 @@
  "v3_rows_not_in_v2": [
   {
    "addr": "25315 E 48th Avenue",
-   "name": "KAIRUS INC.",
+   "name": "Philip Morris International, PMI U.S. ZYN plant (Kairus Inc), Aurora (Adams County)",
    "rank": 1,
    "score": 93.0,
    "tier": "A"
@@ -1522,787 +1474,787 @@
    "tier": "A"
   },
   {
-   "addr": "13150 N. HURON ST",
-   "name": "CITY OF WESTMINSTER",
-   "rank": 6,
-   "score": 77.0,
-   "tier": "A"
-  },
-  {
    "addr": "withheld (not confirmed as a business premises; see source record)",
    "name": "S & W Precision Machining LLC",
-   "rank": 7,
+   "rank": 6,
    "score": 76.0,
    "tier": "A"
   },
   {
    "addr": "2660 WEST 64TH AVE",
    "name": "QUIKRETE DENVER",
-   "rank": 8,
+   "rank": 7,
    "score": 75.0,
    "tier": "A"
   },
   {
    "addr": "withheld (not confirmed as a business premises; see source record)",
    "name": "VALHALLA INDUSTRIES, INC.",
-   "rank": 9,
+   "rank": 8,
    "score": 74.0,
    "tier": "A+B"
   },
   {
    "addr": "6550 N. DENALI ST",
    "name": "PRETRED, INC.",
-   "rank": 10,
+   "rank": 9,
    "score": 73.5,
-   "tier": "A"
-  },
-  {
-   "addr": "11751 Huron St Ste 600",
-   "name": "Claremont Foods, LLC",
-   "rank": 11,
-   "score": 73.0,
-   "tier": "A+B"
-  },
-  {
-   "addr": "14805 E Moncrieff Pl",
-   "name": "WESTERN INDUSTRIAL CONTRACTORS",
-   "rank": 12,
-   "score": 73.0,
    "tier": "A"
   },
   {
    "addr": "withheld (not confirmed as a business premises; see source record)",
    "name": "WARD PRECISION MANUFACTURING, INC.",
-   "rank": 13,
+   "rank": 10,
    "score": 73.0,
    "tier": "A+B"
   },
   {
-   "addr": "9101 Yosemite St",
-   "name": "Cando Rail & Terminals (U.S.) LLC",
-   "rank": 14,
-   "score": 72.5,
-   "tier": "A"
-  },
-  {
    "addr": "5720 HOLLY ST STE G",
    "name": "GINZEL ENTERPRISES LLC",
-   "rank": 15,
+   "rank": 11,
    "score": 72.0,
    "tier": "B"
   },
   {
    "addr": "withheld (not confirmed as a business premises; see source record)",
    "name": "Coblaco Services, Inc.",
-   "rank": 16,
+   "rank": 12,
    "score": 72.0,
    "tier": "B"
   },
   {
    "addr": "6200 N WASHINGTON ST. SUITE 17",
    "name": "DURALUX FINISH, INC.",
-   "rank": 17,
+   "rank": 13,
    "score": 70.0,
    "tier": "A"
   },
   {
    "addr": "withheld (not confirmed as a business premises; see source record)",
    "name": "GENESEE WESTER, INC.",
-   "rank": 18,
+   "rank": 14,
    "score": 70.0,
    "tier": "A"
   },
   {
    "addr": "1705 E 69TH AVE UNIT B",
    "name": "IMPERIAL MACHINING CO.",
-   "rank": 19,
+   "rank": 15,
    "score": 70.0,
-   "tier": "A"
-  },
-  {
-   "addr": "withheld (not confirmed as a business premises; see source record)",
-   "name": "Denver Machine Shop, Inc.",
-   "rank": 20,
-   "score": 70.0,
-   "tier": "A+B"
-  },
-  {
-   "addr": "5770 Clarkson Street, #C",
-   "name": "CNC Pros Colorado LLC",
-   "rank": 21,
-   "score": 67.0,
    "tier": "A"
   },
   {
    "addr": "withheld (not confirmed as a business premises; see source record)",
    "name": "DG METAL LLC",
-   "rank": 22,
+   "rank": 16,
    "score": 67.0,
    "tier": "A"
   },
   {
    "addr": "withheld (not confirmed as a business premises; see source record)",
    "name": "Skyline Motors LLC",
-   "rank": 23,
+   "rank": 17,
    "score": 67.0,
    "tier": "A"
   },
   {
    "addr": "12520 Grant Drive #100",
    "name": "H&H Enterprises, Inc. dba H&H Metals",
-   "rank": 24,
+   "rank": 18,
    "score": 67.0,
    "tier": "A"
   },
   {
    "addr": "12601 E 33RD AVE STE 114",
    "name": "CARLISLE EPS HOLDING, LLC",
-   "rank": 25,
+   "rank": 19,
    "score": 64.5,
+   "tier": "A"
+  },
+  {
+   "addr": "11751 Huron St Ste 600",
+   "name": "Claremont Foods, LLC",
+   "rank": 20,
+   "score": 64.0,
+   "tier": "A+B"
+  },
+  {
+   "addr": "14805 E Moncrieff Pl",
+   "name": "WESTERN INDUSTRIAL CONTRACTORS",
+   "rank": 21,
+   "score": 64.0,
    "tier": "A"
   },
   {
    "addr": "withheld (not confirmed as a business premises; see source record)",
    "name": "AGOV Underground LLC",
-   "rank": 26,
+   "rank": 22,
    "score": 63.0,
    "tier": "A"
   },
   {
    "addr": "withheld (not confirmed as a business premises; see source record)",
    "name": "McCallin Steel Storage Systems, Inc.",
-   "rank": 27,
+   "rank": 23,
    "score": 63.0,
    "tier": "A"
   },
   {
    "addr": "9131 E 96TH AVE",
    "name": "VEOLIA ES TECHNICAL SOLUTIONS, L.L.C.",
-   "rank": 28,
+   "rank": 24,
    "score": 63.0,
    "tier": "A"
   },
   {
    "addr": "withheld (not confirmed as a business premises; see source record)",
    "name": "Durango Tire Shop Inc",
-   "rank": 29,
+   "rank": 25,
    "score": 63.0,
    "tier": "A"
   },
   {
    "addr": "8830 YOSEMITE STREET",
    "name": "FLASHFILL SERVICES, LLC",
-   "rank": 30,
+   "rank": 26,
    "score": 63.0,
    "tier": "A"
   },
   {
    "addr": "withheld (not confirmed as a business premises; see source record)",
    "name": "PROTOCAST, INC.",
-   "rank": 31,
+   "rank": 27,
    "score": 63.0,
    "tier": "A"
   },
   {
    "addr": "withheld (not confirmed as a business premises; see source record)",
    "name": "CRYOSHIELD INDUSTRIAL SERVICES LLC",
-   "rank": 32,
-   "score": 63.0,
-   "tier": "A"
-  },
-  {
-   "addr": "6955 E 50TH AVE",
-   "name": "RUSH ENTERPRISES, INC.",
-   "rank": 33,
+   "rank": 28,
    "score": 63.0,
    "tier": "A"
   },
   {
    "addr": "withheld (not confirmed as a business premises; see source record)",
    "name": "MT Underground LLC",
-   "rank": 34,
+   "rank": 29,
    "score": 61.5,
    "tier": "A"
   },
   {
-   "addr": "7901 US HIGHWAY 85",
-   "name": "ALLIED DEMOLITION INC",
-   "rank": 35,
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "name": "Denver Machine Shop, Inc.",
+   "rank": 30,
    "score": 61.0,
-   "tier": "A"
+   "tier": "A+B"
   },
   {
    "addr": "4801 E 78TH AVE",
    "name": "HOLCIM - WCR, INC",
-   "rank": 36,
+   "rank": 31,
    "score": 61.0,
    "tier": "A"
   },
   {
    "addr": "2851 Walden St.",
    "name": "SWARCO COLORADO PAINT, LLC",
-   "rank": 37,
+   "rank": 32,
    "score": 61.0,
    "tier": "A"
   },
   {
    "addr": "14802 GRANT STREET",
    "name": "SASHCO, INC",
-   "rank": 38,
-   "score": 61.0,
-   "tier": "A"
-  },
-  {
-   "addr": "6450 YORK ST",
-   "name": "METRO WATER RECOVERY",
-   "rank": 39,
-   "score": 61.0,
-   "tier": "A"
-  },
-  {
-   "addr": "39.7735490, -104.389309",
-   "name": "BENNETT CREEK RANCH LLC",
-   "rank": 40,
-   "score": 61.0,
-   "tier": "A"
-  },
-  {
-   "addr": "withheld (not confirmed as a business premises; see source record)",
-   "name": "MARINI DIESEL, INC.",
-   "rank": 41,
-   "score": 61.0,
-   "tier": "A"
-  },
-  {
-   "addr": "6405 CALHOUN BYERS ROAD",
-   "name": "KELLEY TRUCKING INC.",
-   "rank": 42,
-   "score": 61.0,
-   "tier": "A"
-  },
-  {
-   "addr": "55 W BROMLEY LN",
-   "name": "AGFINITY, INC.",
-   "rank": 43,
+   "rank": 33,
    "score": 61.0,
    "tier": "A"
   },
   {
    "addr": "12500 1st St Unit 1",
    "name": "Cherry Creek Recycling, LLC",
-   "rank": 44,
+   "rank": 34,
    "score": 61.0,
    "tier": "B"
   },
   {
-   "addr": "1095 S 4TH AVE",
-   "name": "INTERTAPE POLYMER CORP (IPG)",
-   "rank": 45,
-   "score": 61.0,
-   "tier": "A"
-  },
-  {
    "addr": "2350 E 70th Ave, Bldg A",
    "name": "Quattro Machining Services Inc.",
-   "rank": 46,
+   "rank": 35,
    "score": 61.0,
    "tier": "A"
   },
   {
    "addr": "withheld (not confirmed as a business premises; see source record)",
    "name": "MechFi Designs LLC",
-   "rank": 47,
+   "rank": 36,
    "score": 60.5,
    "tier": "A"
   },
   {
    "addr": "14806 E 33RD PLACE",
    "name": "MILL ROCK PACKAGING",
-   "rank": 48,
+   "rank": 37,
    "score": 60.5,
    "tier": "A"
   },
   {
    "addr": "5650 LOWELL BLVD UNIT C",
    "name": "HARRELSON LLC",
-   "rank": 49,
+   "rank": 38,
    "score": 60.0,
    "tier": "A"
   },
   {
    "addr": "withheld (not confirmed as a business premises; see source record)",
    "name": "VEXOR CUSTOM WOODWORKING TOOLS, INC.",
-   "rank": 50,
+   "rank": 39,
    "score": 59.0,
    "tier": "A"
   },
   {
    "addr": "withheld (not confirmed as a business premises; see source record)",
    "name": "Precision Casting Prototypes and Engineering Inc.",
-   "rank": 51,
+   "rank": 40,
    "score": 59.0,
    "tier": "A"
   },
   {
    "addr": "9731 HANOVER CT E",
    "name": "4283929 DELAWARE, LLC",
-   "rank": 52,
+   "rank": 41,
    "score": 59.0,
    "tier": "A"
   },
   {
    "addr": "7271 Colorado Blvd",
    "name": "Pit 14",
-   "rank": 53,
+   "rank": 42,
    "score": 58.0,
    "tier": "A"
   },
   {
    "addr": "withheld (not confirmed as a business premises; see source record)",
    "name": "Optimized Distribution Partners Inc.",
-   "rank": 54,
+   "rank": 43,
    "score": 57.0,
    "tier": "A"
   },
   {
    "addr": "675 E 124th Ave",
    "name": "Air Squared",
-   "rank": 55,
+   "rank": 44,
    "score": 57.0,
    "tier": "A"
   },
   {
    "addr": "5870 TENNYSON ST",
    "name": "WANCO INC",
-   "rank": 56,
+   "rank": 45,
    "score": 56.0,
    "tier": "A"
   },
   {
    "addr": "6321 Washington St Unit I",
    "name": "Per Revolution Machining, LLC",
-   "rank": 57,
+   "rank": 46,
    "score": 56.0,
    "tier": "A"
   },
   {
    "addr": "withheld (not confirmed as a business premises; see source record)",
    "name": "ORION ENVIRONMENTAL, INC.",
-   "rank": 58,
+   "rank": 47,
    "score": 56.0,
    "tier": "A"
   },
   {
    "addr": "801 W 116TH AVE STE 100",
    "name": "NOA BRANDS AMERICA, INC.",
-   "rank": 59,
+   "rank": 48,
    "score": 56.0,
    "tier": "A"
   },
   {
    "addr": "9001 MONACO STREET",
    "name": "ALBERT FREI & SONS INC",
-   "rank": 60,
+   "rank": 49,
    "score": 56.0,
    "tier": "A"
   },
   {
    "addr": "5650 HAVANA, RMA, BLDG. 128",
    "name": "ROCKY MOUNTAIN ARSENAL - USARMY",
-   "rank": 61,
+   "rank": 50,
    "score": 56.0,
    "tier": "A"
   },
   {
    "addr": "withheld (not confirmed as a business premises; see source record)",
    "name": "Twin Harts Tool Ltd.",
-   "rank": 62,
+   "rank": 51,
    "score": 56.0,
    "tier": "A"
   },
   {
    "addr": "9551 WILLOW COURT",
    "name": "DIVERSIFIED BODY & PAINT SHOP",
-   "rank": 63,
+   "rank": 52,
    "score": 56.0,
    "tier": "A"
   },
   {
    "addr": "withheld (not confirmed as a business premises; see source record)",
    "name": "WANEK MACHINE LLC",
-   "rank": 64,
+   "rank": 53,
    "score": 56.0,
    "tier": "A"
   },
   {
    "addr": "not given in the source",
    "name": "Singletree",
-   "rank": 65,
+   "rank": 54,
    "score": 55.5,
    "tier": "A"
   },
   {
    "addr": "2505 E 74TH AVE",
    "name": "A-1 CHIPSEAL CO",
-   "rank": 66,
+   "rank": 55,
    "score": 55.0,
    "tier": "A"
   },
   {
    "addr": "6330 Washington St",
    "name": "Reddy Ice-Denver A & K (230)",
-   "rank": 67,
+   "rank": 56,
    "score": 54.5,
    "tier": "A"
   },
   {
    "addr": "22000 E 38th Ave",
    "name": "Shamrock Foods Company",
-   "rank": 68,
+   "rank": 57,
    "score": 54.5,
+   "tier": "A"
+  },
+  {
+   "addr": "6955 E 50TH AVE",
+   "name": "RUSH ENTERPRISES, INC.",
+   "rank": 58,
+   "score": 54.0,
    "tier": "A"
   },
   {
    "addr": "4400 E 61ST AVE",
    "name": "NORTH AMERICAN GALVANIZING COMPANY",
-   "rank": 69,
+   "rank": 59,
    "score": 53.0,
    "tier": "A"
   },
   {
    "addr": "5801 FRANKLIN ST",
    "name": "RECONSERVE OF COLORADO",
-   "rank": 70,
+   "rank": 60,
    "score": 53.0,
    "tier": "A"
   },
   {
    "addr": "10121 DALLAS STREET",
    "name": "WESTLAKE ROYAL ROOFING LLC",
-   "rank": 71,
+   "rank": 61,
    "score": 53.0,
    "tier": "A"
   },
   {
    "addr": "5201 N. BANNOCK ST",
    "name": "OWENS CORNING ROOFING AND ASPHALT, LLC",
-   "rank": 72,
+   "rank": 62,
    "score": 53.0,
    "tier": "A"
   },
   {
    "addr": "withheld (not confirmed as a business premises; see source record)",
+   "name": "MARINI DIESEL, INC.",
+   "rank": 63,
+   "score": 52.0,
+   "tier": "A"
+  },
+  {
+   "addr": "withheld (not confirmed as a business premises; see source record)",
    "name": "Nav Auto 1, LLC",
-   "rank": 73,
+   "rank": 64,
+   "score": 52.0,
+   "tier": "A"
+  },
+  {
+   "addr": "1095 S 4TH AVE",
+   "name": "INTERTAPE POLYMER CORP (IPG)",
+   "rank": 65,
    "score": 52.0,
    "tier": "A"
   },
   {
    "addr": "21101 E 32ND PKWY",
    "name": "ADVANCED CIRCUITS, INC",
-   "rank": 74,
+   "rank": 66,
    "score": 52.0,
    "tier": "A"
   },
   {
    "addr": "5990 WASHINGTON STREET",
    "name": "DP MEDIA NETWORK LLC",
-   "rank": 75,
+   "rank": 67,
    "score": 52.0,
    "tier": "A"
   },
   {
    "addr": "10300 East 107th Place",
    "name": "Rocky Mountain Power Train",
-   "rank": 76,
+   "rank": 68,
    "score": 51.0,
    "tier": "A"
   },
   {
    "addr": "25755 E 65th Ave",
    "name": "WIC Manufacturing Facility",
-   "rank": 77,
+   "rank": 69,
    "score": 51.0,
    "tier": "A"
   },
   {
    "addr": "9410 Heinz Way",
    "name": "Cemco LLC",
-   "rank": 78,
+   "rank": 70,
    "score": 50.0,
    "tier": "A"
   },
   {
    "addr": "1550 E. 73rd Ave., Unit A",
    "name": "CCM Drexel Denver",
-   "rank": 79,
+   "rank": 71,
    "score": 50.0,
    "tier": "A"
   },
   {
    "addr": "11011 E 104th Ave, Ste 1000",
    "name": "Boise Cascade Denver Millwork",
-   "rank": 80,
+   "rank": 72,
    "score": 50.0,
    "tier": "A"
   },
   {
    "addr": "18001 E Colfax Ave",
    "name": "Cooper Lighting",
-   "rank": 81,
+   "rank": 73,
    "score": 50.0,
    "tier": "A"
   },
   {
    "addr": "5400 Pecos Street",
    "name": "Coors Distributing Company",
-   "rank": 82,
+   "rank": 74,
    "score": 50.0,
    "tier": "A"
   },
   {
    "addr": "3879 E 120th Ave",
    "name": "Fox Chase Inc.",
-   "rank": 83,
+   "rank": 75,
    "score": 50.0,
    "tier": "A"
   },
   {
    "addr": "707 Umatilla St",
    "name": "UFP Technologies Main Building",
-   "rank": 84,
+   "rank": 76,
    "score": 50.0,
    "tier": "A"
   },
   {
    "addr": "10220 BRIGHTON ROAD",
    "name": "DIVERSIFIED BODY ACQUISITION, LLC",
-   "rank": 85,
+   "rank": 77,
    "score": 48.0,
    "tier": "A"
   },
   {
    "addr": "9455 Boston Ct.",
    "name": "FORTERRA PIPE AND PRECAST, LLC DBA RINKER MATERIALS",
-   "rank": 86,
+   "rank": 78,
    "score": 48.0,
    "tier": "A"
   },
   {
    "addr": "11900 EAST 33RD AVENUE",
    "name": "CANNA CLUB LLC",
-   "rank": 87,
+   "rank": 79,
    "score": 48.0,
    "tier": "A"
   },
   {
    "addr": "4711 W 58TH AVE",
    "name": "BRENNTAG PACIFIC, INC.",
-   "rank": 88,
+   "rank": 80,
    "score": 48.0,
    "tier": "A"
   },
   {
    "addr": "withheld (not confirmed as a business premises; see source record)",
    "name": "Precision Metal Manufacturing, LLC",
-   "rank": 89,
+   "rank": 81,
    "score": 48.0,
    "tier": "A"
   },
   {
    "addr": "withheld (not confirmed as a business premises; see source record)",
    "name": "Roberto Lopez Rodriguez LLC",
-   "rank": 90,
+   "rank": 82,
    "score": 48.0,
    "tier": "A"
   },
   {
    "addr": "1300 W 120TH AVE",
    "name": "DIGITAL GLOBE",
-   "rank": 91,
+   "rank": 83,
    "score": 48.0,
    "tier": "A"
   },
   {
    "addr": "5675 PECOS ST.",
    "name": "VARTEGA INC.",
-   "rank": 92,
+   "rank": 84,
    "score": 48.0,
    "tier": "A"
   },
   {
    "addr": "9000 E 90TH AVE",
    "name": "EM MATERIALS LLC",
-   "rank": 93,
+   "rank": 85,
    "score": 48.0,
    "tier": "A"
   },
   {
    "addr": "7000 RALEIGH STREET, UNIT E",
    "name": "WALTER COMPOSITES, INC.",
-   "rank": 94,
+   "rank": 86,
    "score": 48.0,
    "tier": "A"
   },
   {
    "addr": "156 W 56TH AVE",
    "name": "UNIVAR SOLUTIONS USA LLC",
-   "rank": 95,
+   "rank": 87,
    "score": 48.0,
+   "tier": "A"
+  },
+  {
+   "addr": "13150 N. HURON ST",
+   "name": "CITY OF WESTMINSTER",
+   "rank": 88,
+   "score": 47.0,
    "tier": "A"
   },
   {
    "addr": "6425 Washington St Unit 1",
    "name": "Family Machine LLC",
-   "rank": 96,
+   "rank": 89,
    "score": 44.0,
    "tier": "B"
   },
   {
    "addr": "2501 Dallas Street Suite 128",
    "name": "Create Foods, LLC",
-   "rank": 97,
+   "rank": 90,
    "score": 43.5,
    "tier": "B"
   },
   {
    "addr": "631 E 120TH AVE",
    "name": "CRASH CHAMPIONS, LLC",
-   "rank": 98,
+   "rank": 91,
    "score": 43.0,
    "tier": "A"
   },
   {
    "addr": "2597 West 64th Avenue",
    "name": "Qickdrain",
-   "rank": 99,
+   "rank": 92,
    "score": 43.0,
    "tier": "A"
   },
   {
    "addr": "14831 Washington Street",
    "name": "Meati Foods",
-   "rank": 100,
+   "rank": 93,
    "score": 43.0,
    "tier": "A"
   },
   {
    "addr": "21361 E Colfax Ave",
    "name": "Picadilly Batch Plant",
-   "rank": 101,
+   "rank": 94,
    "score": 43.0,
    "tier": "A"
   },
   {
    "addr": "35582 E. 56th Ave.",
    "name": "Copeland Precast East",
-   "rank": 102,
+   "rank": 95,
    "score": 43.0,
    "tier": "A"
   },
   {
    "addr": "10551 Florence Street",
    "name": "Ditch Witch of the Rockies",
-   "rank": 103,
+   "rank": 96,
    "score": 43.0,
+   "tier": "A"
+  },
+  {
+   "addr": "9101 Yosemite St",
+   "name": "Cando Rail & Terminals (U.S.) LLC",
+   "rank": 97,
+   "score": 42.5,
    "tier": "A"
   },
   {
    "addr": "withheld (not confirmed as a business premises; see source record)",
    "name": "JOAQUIN MFG. CORP.",
-   "rank": 104,
+   "rank": 98,
    "score": 38.0,
    "tier": "B"
   },
   {
+   "addr": "5770 Clarkson Street, #C",
+   "name": "CNC Pros Colorado LLC",
+   "rank": 99,
+   "score": 37.0,
+   "tier": "A"
+  },
+  {
    "addr": "18130 E 22nd Ave",
    "name": "Amazon.com Services LLC - DEN41",
-   "rank": 105,
+   "rank": 100,
    "score": 37.0,
    "tier": "A"
   },
   {
    "addr": "3250 Quentin St., Suite 122",
    "name": "Marshall Industries Incorporated",
-   "rank": 106,
+   "rank": 101,
    "score": 36.0,
    "tier": "A"
   },
   {
    "addr": "withheld (not confirmed as a business premises; see source record)",
    "name": "Cross Spur Industries LLC",
-   "rank": 107,
+   "rank": 102,
    "score": 36.0,
    "tier": "A"
   },
   {
    "addr": "1401 W 85th Ave, Unit A102",
    "name": "Unbound Robotics inc.",
-   "rank": 108,
+   "rank": 103,
    "score": 36.0,
    "tier": "A"
   },
   {
    "addr": "201 E. 58th Avenue",
    "name": "ZIMMERMAN METALS, INC.",
-   "rank": 109,
+   "rank": 104,
    "score": 36.0,
    "tier": "B"
   },
   {
    "addr": "14700 E Smith Road",
    "name": "ABF Freight System, Inc.",
-   "rank": 110,
+   "rank": 105,
    "score": 35.0,
    "tier": "A"
   },
   {
    "addr": "15900 E 32nd Ave",
    "name": "Knight Transportation Inc",
-   "rank": 111,
+   "rank": 106,
    "score": 35.0,
    "tier": "A"
   },
   {
    "addr": "445 W 53 Place",
    "name": "Heibar Manufacturing",
-   "rank": 112,
+   "rank": 107,
    "score": 35.0,
    "tier": "A"
   },
   {
    "addr": "4985 Locust St",
    "name": "Colorado Wilbert Vault",
-   "rank": 113,
+   "rank": 108,
    "score": 35.0,
    "tier": "A"
   },
   {
    "addr": "10850 E 104 ave",
    "name": "Cummins Henderson Master Rebuilt Center",
-   "rank": 114,
+   "rank": 109,
    "score": 35.0,
    "tier": "A"
   },
   {
    "addr": "26000 E. 64TH AVENUE",
    "name": "KARCHER NORTH AMERICA dba WINDSOR INDUSTRIES",
-   "rank": 115,
+   "rank": 110,
    "score": 35.0,
    "tier": "A"
   },
   {
    "addr": "2430 W 62ND CT",
    "name": "CW ELABORATIONS",
-   "rank": 116,
+   "rank": 111,
    "score": 35.0,
    "tier": "A"
   },
   {
    "addr": "5850 Holly St",
    "name": "J.B. HUNT TRANSPORT, INC.",
-   "rank": 117,
+   "rank": 112,
    "score": 32.5,
+   "tier": "A"
+  },
+  {
+   "addr": "7901 US HIGHWAY 85",
+   "name": "ALLIED DEMOLITION INC",
+   "rank": 113,
+   "score": 31.0,
+   "tier": "A"
+  },
+  {
+   "addr": "6450 YORK ST",
+   "name": "METRO WATER RECOVERY",
+   "rank": 114,
+   "score": 31.0,
+   "tier": "A"
+  },
+  {
+   "addr": "39.7735490, -104.389309",
+   "name": "BENNETT CREEK RANCH LLC",
+   "rank": 115,
+   "score": 31.0,
+   "tier": "A"
+  },
+  {
+   "addr": "6405 CALHOUN BYERS ROAD",
+   "name": "KELLEY TRUCKING INC.",
+   "rank": 116,
+   "score": 31.0,
+   "tier": "A"
+  },
+  {
+   "addr": "55 W BROMLEY LN",
+   "name": "AGFINITY, INC.",
+   "rank": 117,
+   "score": 31.0,
    "tier": "A"
   },
   {

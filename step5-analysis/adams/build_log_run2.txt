@@ -1,0 +1,4 @@
+signals: 243 named, 24 address-only, 8 OEDIT (24s)
+ranked 228 rows: 202 Adams (191 companies, 11 addresses), 18 county unconfirmed, 8 OEDIT; 525 evidence rows (35s)
+wrote ../../adams
+exit=0

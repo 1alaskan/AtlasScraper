@@ -77,7 +77,15 @@ WEB_ADDRESS_OK = set()
 WEB_CHECKS_V3 = {}
 
 # --------------------------------------------------------------------------- ties carried over from Step 3 (not from the scraped files)
-KNOWN_TIES = []
+# Kairus Inc is the entity behind the Philip Morris (PMI U.S.) ZYN plant: the Step 2 back-test found Kairus Inc as the grantee of the
+# 148-acre Adams County parcel at 25301 to 25315 E 48th Ave (parcel 0181917301001), as the company on the Adams County incentive
+# agreement of 2024-07-09 (PrimeGov), and the state water permit at 25315 E 48th Ave carries SIC 2131 (chewing and smoking tobacco).
+# Aurora's permits at that address are filed as "Project Waterfall". See step3-validation/adams/validation_adams_notes.md.
+KNOWN_TIES = [
+    {"name_key": "KAIRUS", "addr_keys": ["25315 E 48", "25301 E 48"],
+     "display": "Philip Morris International, PMI U.S. ZYN plant (Kairus Inc), Aurora (Adams County)",
+     "note": "tied to Philip Morris / PMI U.S. by the Step 2 back-test: Kairus Inc holds the parcel, signed the Adams County incentive agreement and is the water permit operator at 25315 E 48th Ave"},
+]
 STEP3_OCCUPIERS = {}
 
 # --------------------------------------------------------------------------- the Adams County ground-truth projects (names, aliases, addresses)
@@ -91,7 +99,7 @@ GROUND_TRUTH = {
     "C19 Prost Brewing": (["PROST BREWING"], ["351 W 104"]),
     "C20 Amprius (cancelled)": (["AMPRIUS"], ["18875 E BROMLEY"]),
     "C21 VSK Energy (cancelled)": (["VSK ENERGY", "VIKRAM SOLAR"], []),
-    "C22 Philip Morris ZYN campus": (["PHILIP MORRIS", "SWEDISH MATCH", "PMI US", "PMI U S"], []),
+    "C22 Philip Morris ZYN campus": (["PHILIP MORRIS", "SWEDISH MATCH", "PMI US", "PMI U S", "KAIRUS"], ["25315 E 48", "25301 E 48"]),
     "C23 Solid Power": (["SOLID POWER"], []),
     "C24 Pretred": (["PRETRED"], ["6550 DENALI"]),
     "C25 RK Industries": (["RK INDUSTRIES", "RK MECHANICAL", "RK MISSION CRITICAL"], ["3301 LEWISTON", "17450 E 32", "3800 XANTHIA"]),
