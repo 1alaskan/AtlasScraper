@@ -31,7 +31,7 @@ START = "2024-01-01"
 PAGE = 1000
 
 RULES = [
-    ("incentive", re.compile(r"\b(incentive|business assistance|economic development agreement|tax rebate|"
+    ("incentive", re.compile(r"\b(incentives?|business assistance|economic development agreement|tax rebate|"
                              r"fee waiver|sales tax (rebate|reimbursement|refund)|use tax (rebate|reimbursement|refund)|"
                              r"enterprise zone|urban renewal plan|tax increment)\b", re.I)),
     ("rezoning", re.compile(r"\b(rezon\w*|zone change|zoning map amendment|zoning change|zoning of)\b", re.I)),
@@ -45,12 +45,12 @@ RULES = [
                              r"purchase and sale|disposition and development|cost[- ]sharing agreement|"
                              r"water (resources|rights) (dedication|agreement)|will[- ]serve)\b", re.I)),
 ]
-RESIDENTIAL = re.compile(r"\b(residential|apartments?|single[- ]family|townhomes?|townhouses?|housing|homes?|"
-                         r"dwelling|multi[- ]?family|duplex|senior living|subdivision filing)\b", re.I)
+RESIDENTIAL = re.compile(r"\b(residential|apartments?|single[- ]family|townhomes?|townhouses?|housing|homes|"
+                         r"dwelling|multi[- ]?family|duplex|senior living|subdivision filing|to r-?[1-4])\b", re.I)
 NONRES = re.compile(r"\b(industrial|commercial|warehouse|manufactur\w*|logistics|business|employment|"
                     r"data center|retail|office|mixed[- ]use|distribution|cold storage|energy|solar|battery|"
                     r"plant|facility|center)\b", re.I)
-BOILERPLATE = re.compile(r"^\s*(roll call|pledge|call to order|approval of( the)? agenda|agenda approval|adjourn\w*|"
+BOILERPLATE = re.compile(r"^\s*(by\b|consolidated items|.*\bitems?\s*$|approval of regular agenda|roll call|pledge|call to order|approval of( the)? agenda|agenda approval|adjourn\w*|"
                          r"public (invited|comment)|consent agenda|reports?( by| from)?|executive session|ceremonies|"
                          r"approval of minutes|mayor|council|city manager|city attorney|study session|presentations?|"
                          r"business|general business|public hearings?|ordinances? for (initial|final)|resolutions?|"
@@ -58,11 +58,26 @@ BOILERPLATE = re.compile(r"^\s*(roll call|pledge|call to order|approval of( the)
                          r"consent|motion|recess|work session|item[s]? for)\b", re.I)
 SUFFIX = re.compile(r"^(LLC|L\.L\.C\.?|INC\.?|INCORPORATED|CORP\.?|CORPORATION|COMPANY|CO\.|LTD\.?|LIMITED|LP|L\.P\.|LLP|"
                     r"PLC|GMBH|LLLP|N\.A\.|P\.C\.)[,.;)]*$", re.I)
-STOP = {"WITH", "BETWEEN", "AND", "FOR", "TO", "OF", "BY", "FROM", "THE", "A", "AN", "APPROVING", "AUTHORIZING",
+STOP = {"WITH", "BETWEEN", "FOR", "TO", "OF", "BY", "FROM", "THE", "A", "AN", "APPROVING", "AUTHORIZING",
         "APPROVE", "AUTHORIZE", "INTO", "ON", "IN", "AT", "AS", "KNOWN", "ENTITLED", "RESOLUTION", "ORDINANCE",
         "AGREEMENT", "CONTRACT", "AMENDMENT", "AMENDING", "ACCEPTING", "AMONG", "GRANTING", "APPLICANT", "OWNER",
         "DEVELOPER", "COLORADO,", "BRIGHTON,", "BRIGHTON", "COLORADO", "CITY", "COUNCIL", "SUBMITTED", "FILED",
-        "REQUEST", "REQUESTED", "(", "-", ";", "APPLICATION"}
+        "REQUEST", "REQUESTED", "-", ";", "APPLICATION", "BE", "IS", "ARE", "WAS", "WERE", "ALSO", "HEREIN", "SHALL"}
+PERSON_ITEM = re.compile(r"\b(appoint\w*|re-?appoint\w*|recogni\w*|honor\w*|proclaim\w*|in memory|retire\w*|"
+                         r"condolence\w*|congratulat\w*|employee of|oath|swearing|elect\w* |mayor pro tem|"
+                         r"resignation|farewell|welcom\w*|citizen of|volunteer of|birthday|anniversary|"
+                         r"scholarship|student|eagle scout|award\w*)\b", re.I)
+CONTRACT = re.compile(r"\b(contract|construction|professional services|services agreement|purchase|bid|"
+                      r"change order|task order|design|engineering|consult\w*)\b", re.I)
+
+
+def scrub_person_items(title):
+    """Appointments, proclamations and recognitions name individuals; cut the title at the
+    keyword so no personal name is written."""
+    m = PERSON_ITEM.search(title)
+    if m:
+        return title[:m.end()].rstrip() + " [name withheld]"
+    return title
 
 EXTRA_COLS = ["matter_id", "body", "matter_status", "intro_date", "agenda_date", "passed_date", "enactment_number",
               "event_dates", "last_action", "last_action_date", "event_id", "residential", "parser_version"]
@@ -89,19 +104,34 @@ def http(path, params=None):
 
 
 def company_from_title(title):
-    toks = title.replace("(", " ( ").split()
+    toks = title.split()
     for i, t in enumerate(toks):
         if SUFFIX.match(t):
             j = i
-            while j > 0 and toks[j - 1].strip(",") .upper() not in STOP and not toks[j - 1].endswith(";"):
+            while j > 0 and toks[j - 1].strip(",").upper() not in STOP and not toks[j - 1].endswith(";") and i - j < 10:
                 j -= 1
-                if len(toks[i] .split()) and i - j >= 7:
-                    break
+            if j == i:
+                continue
             name = " ".join(toks[j:i + 1]).strip(" ,.;")
             name = re.sub(r"^(D/B/A|DBA)\s+", "", name, flags=re.I)
-            if 1 <= len(name.split()) <= 8 and not c.looks_like_person(name):
+            if re.search(r"\b(CITY|BRIGHTON|COUNTY|DISTRICT|AUTHORITY|BOARD)\b.*\bAND\b", name, re.I):
+                name = name[name.upper().rfind(" AND ") + 5:]
+            name = re.sub(r"^AND\s+", "", name, flags=re.I)
+            if 2 <= len(name.split()) <= 11 and not c.looks_like_person(name):
                 return name
     return ""
+
+
+def role_for(title, rule, company):
+    if not company:
+        return "unknown"
+    if rule == "incentive":
+        return "grantee"
+    if rule in ("rezoning", "planned development", "use by special review", "site plan", "plat", "annexation"):
+        return "applicant"
+    if CONTRACT.search(title):
+        return "contractor"
+    return "unknown"
 
 
 def flag_title(title, mtype):
@@ -151,6 +181,9 @@ def main():
     for m in matters:
         title = c.clean(m.get("MatterTitle"))
         mtype = c.clean(m.get("MatterTypeName"))
+        if PERSON_ITEM.search(title):
+            title = scrub_person_items(title)
+            counts["titles cut at a person-item keyword"] += 1
         flag, rule, res = flag_title(title, mtype)
         its = sorted(items_by_matter.get(m["MatterId"], []), key=lambda i: i["_event"]["EventDate"])
         ev_dates = sorted({i["_event"]["EventDate"][:10] for i in its})
@@ -160,7 +193,7 @@ def main():
         rows.append({
             "source": SOURCE, "source_level": "County (Adams)", "record_id": c.clean(m.get("MatterFile")),
             "record_date": (m.get("MatterIntroDate") or "")[:10], "date_type": "introduced",
-            "record_type": mtype, "company_name": company, "company_role": "applicant" if company else "unknown",
+            "record_type": mtype, "company_name": company, "company_role": role_for(title, rule, company),
             "site_address": "", "city": "Brighton", "county": "Adams", "zip": "",
             "description": c.clean(title, 500), "flag": flag, "flag_rule": rule,
             "source_url": url, "retrieved_at": m["_fetched_at"],
@@ -180,13 +213,16 @@ def main():
             counts["unlinked agenda items left out as boilerplate"] += 1
             continue
         ev = it["_event"]
+        if PERSON_ITEM.search(title):
+            title = scrub_person_items(title)
+            counts["titles cut at a person-item keyword"] += 1
         flag, rule, res = flag_title(title, "")
         company = company_from_title(title)
         url = WEB + "/MeetingDetail.aspx?" + urllib.parse.urlencode({"ID": ev["EventId"], "GUID": ev["EventGuid"]})
         rows.append({
             "source": SOURCE, "source_level": "County (Adams)", "record_id": "EI-%d" % it["EventItemId"],
             "record_date": ev["EventDate"][:10], "date_type": "agenda", "record_type": "agenda item",
-            "company_name": company, "company_role": "applicant" if company else "unknown",
+            "company_name": company, "company_role": role_for(title, rule, company),
             "site_address": "", "city": "Brighton", "county": "Adams", "zip": "",
             "description": c.clean(title, 500), "flag": flag, "flag_rule": rule,
             "source_url": url, "retrieved_at": it["_fetched_at"],

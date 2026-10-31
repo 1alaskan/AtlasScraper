@@ -47,7 +47,7 @@ BUSINESS_HINT = re.compile(
     r"design|homes|properties|property|industries|industrial|interiors|remodeling|"
     r"renovations?|signs?|fire|steel|concrete|glass|events?|productions?|management|"
     r"engineering|commercial|general|facilities|facility|installations?|colorado|denver|"
-    r"adams|county|city|town|district|authority|university|school|church|ministries|"
+    r"county|city|town|district|authority|university|school|church|ministries|"
     r"hospital|clinic|bank|credit union|trust co|holdings?|investments?|capital|realty|"
     r"real estate|land|ranch|farms?|dairy|foods?|logistics|trucking|transport\w*|"
     r"energy|solar|power|oil|gas|water|sanitation|metro\w*|housing|apartments?|"
@@ -70,6 +70,9 @@ BUSINESS_HINT = re.compile(
     r"distributors?|wholesale|imports?|exports?|express|freight|cargo|courier|delivery|"
     r"leasing|rentals?|rent|fitness|gym|studio|theat(er|re)|cinema|arena|stadium|"
     r"resort|lodging|inn|suites|golf|country club|cemetery|mortuary|funeral|labeling|"
+    r"stockpile|crushing|emissions|testing|dump|landfill|mud|quarry|pit|batch|wind|hardware|containers|expansion|"
+    r"redevelopment|revitalization|master plan|service plan|metro district|metropolitan|"
+    r"fellowship|ministry|parish|congregation|temple|mosque|synagogue|"
     r"elevator|enclosures|libraries|library|carts|automation|sortation|fiber|constructors|"
     r"toyota|honda|ford|chevrolet|chevy|nissan|subaru|kia|hyundai|dodge|jeep|ram|gmc|buick|"
     r"mazda|volkswagen|vw|bmw|mercedes|audi|lexus|acura|infiniti|tesla|rivian|volvo|"
@@ -256,41 +259,66 @@ CASE_VOCAB = re.compile(
     r"residence|residential|cup|conditional|use|permit|temporary|special|event|sign|signs|"
     r"liquor|license|renewal|rpl|rebuild|replat|replatting|exception|appeal|cdp|pud|puda|"
     r"from|to|of|the|and|for|at|on|in|a|an|new|existing|proposed|property|project|"
-    r"application|request|rd|st|ave|ln|dr|ct|blvd|pkwy|way|north|south|east|west|n|s|e|w)\b",
+    r"application|request|rd|st|ave|ln|dr|ct|blvd|pkwy|way|north|south|east|west|n|s|e|w|"
+    r"place|pl|street|avenue|road|drive|lane|court|circle|cir|swimming|pool|container|conex|"
+    r"con[c]?ept|casa|house|lot line|adjustment|boundary|carport|patio|porch|deck|pergola|"
+    r"workshop|hobby|second|unit|units|site|plan|review|replat|row|r-o-w|easement|dedication|"
+    r"rezoning|rezone|combination|comprehensive|administrative|relief|appeal|boa|bocc)\b",
     re.I)
 
 
 def looks_like_individual_party(name):
-    """Grantor or grantee on a deed: 'SMITH JOHN A', 'SMITH JOHN & JANE', 'JONES FAMILY TRUST'.
-    Split on the joiners and treat the whole name as a person if any part reads as one."""
+    """Grantor or grantee on a deed: 'SMITH JOHN A', 'SMITH JOHN & JANE', 'JONES FAMILY TRUST',
+    'MILLER ADAM J UND 1/8 INT'. Strip ownership-share and care-of fragments, split on the
+    joiners, and treat the whole name as a person if any part reads as one."""
     n = clean(name)
     if not n:
         return False
     if PERSON_TRUST.search(n):
         return True
-    parts = [p for p in re.split(r"\s*(?:&|\band\b|,|;|/)\s*", n, flags=re.I) if p.strip()]
+    n = re.sub(r"\bUND\s+[\d/.%\s]+INT\b", " ", n, flags=re.I)     # undivided interest shares
+    n = re.sub(r"\b(et\s*al\.?|etal)\b", " ", n, flags=re.I)
+    n = re.sub(r"\bC/O\b.*$", " ", n, flags=re.I)                   # care-of address line
+    parts = [p for p in re.split(r"\s*(?:&|\band\b|;|,)\s*", n, flags=re.I) if p.strip()]
     for p in parts:
-        if BUSINESS_HINT.search(p):
+        p_nodigit = re.sub(r"\S*\d\S*", " ", p)
+        if re.search(r"\btrust\b", p_nodigit, re.I):
+            if INSTITUTIONAL_TRUST.search(p_nodigit):     # 'WILMINGTON TRUST NA'
+                continue
+            return True                                   # 'THE RENEE A CASTILLO TRUST'
+        if BUSINESS_HINT.search(p_nodigit):
             continue
-        words = p.replace(".", " ").split()
+        words = [w for w in p_nodigit.replace(".", " ").split() if w.upper() not in ("JR", "SR", "II", "III", "IV")]
         if 1 <= len(words) <= 4 and all(re.fullmatch(r"[A-Za-z][A-Za-z'\-]*", w) for w in words):
             return True
     return False
 
 
+INSTITUTIONAL_TRUST = re.compile(
+    r"\b(llc|inc|corp|corporation|bank|company|co|n\.?a\.?|district|association|foundation|church|"
+    r"university|school|fund|reit|trust co|trust company|land trust|housing|community|national|"
+    r"federal|state|county|city|investment|investors|realty|properties|holdings|partners|capital|"
+    r"industrial|commercial|business|charitable|employees|pension|retirement|benefit|union)\b", re.I)
+
+
 def looks_like_individual_project(name):
-    """For planning record names like 'Garcia Gazebo Setback Variance' or 'Smith Subdivision
-    Final Plat': strip the case vocabulary and treat one or two plain words left over, with no
-    business term, as a person's name. Loses a few two-word development names, which is the
-    safe side of the brief's rule."""
+    """For planning record and project names like 'Garcia Gazebo Setback Variance', 'Smith
+    Subdivision Final Plat' or 'Martinez Casa 6850': drop numbers and the case vocabulary, then
+    treat one or two plain words left over, with no business term, as a person's name. Loses a
+    few two-word development names, which is the safe side of the brief's rule."""
     n = clean(name)
     if not n:
         return False
     if PERSON_TRUST.search(n):
         return True
-    if BUSINESS_HINT.search(n):
+    if re.match(r"^\d", n):                           # address-led names carry no person
         return False
-    rest = CASE_VOCAB.sub(" ", n)
+    if n != n.upper() and re.search(r"\b[A-Z]{3,}\b", n):   # an acronym in a mixed-case name (EVRAZ, TCVMD)
+        return False
+    no_digits = re.sub(r"\S*\d\S*", " ", n)          # addresses and case numbers are not hints
+    if BUSINESS_HINT.search(no_digits):
+        return False
+    rest = CASE_VOCAB.sub(" ", no_digits)
     rest = re.sub(r"[^A-Za-z' \-]", " ", rest)
     words = [w for w in rest.split() if w]
     return 1 <= len(words) <= 2 and all(re.fullmatch(r"[A-Za-z][A-Za-z'\-]*", w) for w in words)

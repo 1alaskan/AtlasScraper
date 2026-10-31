@@ -166,8 +166,11 @@ def main():
         addr = cc.clean(p.get("CONCATADDR1")) if p else ""
         addr2 = cc.clean(p.get("CONCATADDR2")) if p else ""
         city = cc.clean(p.get("LOCCITY")) if p else ""
+        if not city and addr2:
+            city = re.sub(r"\s+CO$", "", addr2, flags=re.I)
         if not city:
-            city = "Unincorporated Adams County" if juris == "Unincorporated" else (juris or "")
+            city = juris or ""
+        city = "Unincorporated Adams County" if city.lower() in ("unincorporated", "unincorporated adams county") else city.title()
         vac = cc.clean(v.get("VACIMP")) if v else ""
         desc = "%s deed, %s%s, land use %s%s%s" % (
             cc.clean(at.get("deedtype")) or "unknown", "$" + money(price) if price is not None else "no price",
@@ -179,7 +182,7 @@ def main():
             "record_date": cc.ms_to_date(at.get("saledt")), "date_type": "sale",
             "record_type": "property sale (%s)" % (cc.clean(at.get("deedtype")) or "deed"),
             "company_name": grantee, "company_role": "grantee" if grantee else "unknown",
-            "site_address": (addr + (" " + addr2 if addr2 else "")).strip(), "city": city, "county": cc.COUNTY,
+            "site_address": addr, "city": city, "county": cc.COUNTY,
             "zip": (cc.clean(p.get("LOCZIP"))[:5] if p else ""),
             "description": cc.clean(desc, 500), "flag": flag, "flag_rule": rule,
             "source_url": cc.layer_query_url(SALES, "recptno='%s' AND parcelnb='%s'" % (cc.clean(at.get("recptno")), pn)),

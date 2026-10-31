@@ -65,6 +65,9 @@ EXCLUDED_FOLDERDESC = {"Public Improvement Permit", "Tree Mitigation"}
 PREFIX = re.compile(r"^(?:\s*\|?\s*(?:BUILDINGONLINE|PERMITSONLINE|BUILDING ONLINE)\s*\|?\s*)+", re.I)
 PHONE = re.compile(r"\(?\b\d{3}\)?[-. ]\d{3}[-. ]\d{4}\b")
 EMAIL = re.compile(r"\S+@\S+")
+# Staff and applicant first names typed into the description ("ATTN REGAN", "SPOKE W CHRIS", "PER PE R LOWMAN").
+NAME_NOTES = re.compile(r"\b(ATTN:?|SPOKE W(?:ITH)?|PER PE|PER PLANS EXAMINER|PER INSPECTOR|CALL|CONTACT)\s+"
+                        r"(?!CONTRACTOR\b|APPLICANT\b|OWNER\b|STATE\b|CITY\b|PE\b|PE-)[A-Z][A-Za-z\.]*(?:\s+[A-Z][A-Za-z\.]+)?", re.I)
 CODENAME = re.compile(r"\bPROJECT\s+([A-Z][A-Z0-9'\-]+)(?:\s+([A-Z][A-Z0-9'\-]+))?")
 SCOPE_WORDS = {"TENANT", "TI", "FIRE", "CORE", "MAIN", "WATER", "ETHANOL", "TEMP", "TEMPORARY", "COMMERCIAL",
                "PHASE", "STRUCTURE", "CONVEYOR", "ADVISE", "BLDG", "BUILDING", "SITE", "REVISION", "ELECTRICAL",
@@ -204,6 +207,7 @@ def main():
         desc_raw = c.clean(at.get("FolderDescription"))
         desc = PREFIX.sub("", desc_raw).strip(" |-")
         desc = EMAIL.sub("", PHONE.sub("", desc)).strip()
+        desc = NAME_NOTES.sub(lambda m: m.group(1).upper() + " [name withheld]", desc)
         residential = (sdesc in RES_SUBDESC or fdesc in RES_FOLDERDESC or bool(RES_TEXT.search(desc)))
         if residential:
             left["residential"] += 1
