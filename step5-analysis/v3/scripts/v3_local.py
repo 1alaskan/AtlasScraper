@@ -14,13 +14,13 @@ Mapping, permits:
                     whatever the Step 3 rule said, because the Denver table scores them as small permits (6 points), not as construction;
                   - Aurora sub-permits (record ids not ending -000-00: fire alarm, sprinkler, gas detection records that inherit the
                     parent's type and valuation) are held at B3b;
-                  - Aurora intake and permit twins (the same scope_key on two or more parent records) keep the tier on the earliest record
-                    only; the others become unflagged support, so one scope is counted once;
+                  - Aurora intake and permit twins (the same normalised scope on two or more parent records, same day included) keep the
+                    tier on the earliest record only; the others become unflagged support, so one scope is counted once;
                   - commercial, not industrial, use buildings (mercantile, business, hotel, assembly, educational, institutional, animal
                     shelter) are held at B3a, as is "Commercial Miscellaneous";
                   - on the Adams County layer, which has no valuation, tier A needs a construction permit type (tenant finish, warehouse,
-                    core and shell, office, addition, change in use, or "Other" with a building word in the description) and a description
-                    free of the small-equipment words above; everything else is B3b;
+                    core and shell, office, change in use) or, for "Other / New, Addition or Alteration", a construction word in the
+                    description itself; and a description free of the small-equipment words above; everything else is B3b;
                   - rows at an apartment-style address are left out.
   flag_rule_v2    starts with "B3a " or "B3b " for tier B, as the Denver tier B script wrote it; the Step 3 rule follows.
   class           New Building, Addition or Alteration/Tenant Finish, from the permit type and type of work words. Denver's other
@@ -51,9 +51,9 @@ LOW_VALUE = re.compile(r"\b(fences?|signs?|alarms?|fire sprinklers?|sprinklers?|
 COMMERCIAL_USE = re.compile(r"mercantile|business use|hotel|assembly|educational|institutional|animal shelter|commercial miscellaneous|daycare|church|school", re.I)
 ADAMS_CONSTRUCTION = re.compile(r"tenant finish|warehouse|core\s*&\s*shell|core and shell|office|addition|change in use|manufactur|industrial|plant|"
                                 r"building|sq\.? ?ft|square f|suite|shell|factory|process", re.I)
-CONSTRUCTION_DESC = re.compile(r"tenant finish|tenant improvement|build.?out|new building|new \d|addition|sq\.? ?ft|square f|remodel|interior|"
+CONSTRUCTION_DESC = re.compile(r"tenant finish|tenant improvement|build.?out|new building|new \d[\d,]* ?(?:sq|sf|square|unit|bay|building)|addition|sq\.? ?ft|square f|remodel|interior|"
                                r"core\s*(?:&|and)\s*shell|shell building|mezzanine|production|manufactur|process|clean ?room|expansion|new facility|"
-                               r"ground.?up|new construction|new warehouse|new office", re.I)
+                               r"ground.?up|new construction|new warehouse|new office|compressor|instrument air|air skid|process equipment|production line", re.I)
 APT = re.compile(r"\b(apt|apartment)\b\.?\s*#?\s*[A-Z0-9-]+", re.I)
 NEW_WORDS = re.compile(r"\bnew\b|core\s*&\s*shell|core and shell|new construction|shell building|use building\b", re.I)
 ADD_WORDS = re.compile(r"\baddition\b|\badd\b", re.I)
@@ -115,14 +115,23 @@ def load_permits(s4, files):
                 rows.append(dict(r))
         aurora = any(r.get("scope_key") for r in rows[:50])
         no_val = not any((r.get("valuation") or "").strip() for r in rows[:200])
-        # Aurora: the earliest parent record per scope keeps the tier; later twins become support
+        # Aurora: the earliest parent record per scope keeps the tier; later (or same-day, higher-numbered) twins become support.
+        # The scope key is normalised: the "SCOPE OF WORK INCLUDE(S)" tail, "ON HOLD" and the "11 622" style prefixes differ between the
+        # intake and the permit record of the same job.
+        def scope(r):
+            k = (r.get("scope_key") or "").upper()
+            k = re.sub(r"\s*SCOPE OF WORK.*$", "", k)
+            k = re.sub(r"\s*ON HOLD\s*$", "", k)
+            k = re.sub(r"\|\s*\d[\d ]*", "| ", k)
+            return re.sub(r"\s+", " ", k).strip()
         first = {}
         if aurora:
             for r in rows:
                 if r["record_id"].endswith("-000-00") and r.get("scope_key"):
-                    k = r["scope_key"]
-                    if k not in first or r["record_date"] < first[k]:
-                        first[k] = r["record_date"]
+                    k = scope(r)
+                    key = (r["record_date"], r["record_id"])
+                    if k not in first or key < first[k]:
+                        first[k] = key
         for r in rows:
             if APT.search(r.get("site_address", "")):
                 continue
@@ -133,7 +142,7 @@ def load_permits(s4, files):
                 desc = r.get("description", "")
                 if aurora and not r["record_id"].endswith("-000-00"):
                     tier, rule = "B", "B3b " + rule + " (held at B3b: sub-permit of a parent folder)"
-                elif aurora and r.get("scope_key") and first.get(r["scope_key"]) and r["record_date"] > first[r["scope_key"]]:
+                elif aurora and r.get("scope_key") and first.get(scope(r)) and (r["record_date"], r["record_id"]) > first[scope(r)]:
                     tier, rule = "", rule + " (unflagged: later twin of an earlier record with the same scope)"
                 elif tier in ("A", "B") and "B3b" not in rule and re.search(r"demoli|\bdemo\b|racking|pallet rack|high.?piled|deferred submittal", words + " " + desc[:120], re.I):
                     tier, rule = "B", "B3b " + rule + " (held at B3b: demolition, racking or a deferred submittal)"
@@ -143,7 +152,7 @@ def load_permits(s4, files):
                     tier, rule = "B", "B3b " + rule + " (held at B3b: low-value work in the description)"
                 elif tier == "A" and COMMERCIAL_USE.search(words):
                     tier, rule = "B", "B3a " + rule + " (held at B3a: commercial, not industrial, use building)"
-                elif tier == "A" and no_val and not (ADAMS_CONSTRUCTION.search(words) or ADAMS_CONSTRUCTION.search(desc[:160])):
+                elif tier == "A" and no_val and not (ADAMS_CONSTRUCTION.search(re.sub(r"\bother\s*/\s*(new|addition|alteration)\b", "", words, flags=re.I)) or CONSTRUCTION_DESC.search(desc[:200])):
                     tier, rule = "B", "B3b " + rule + " (held at B3b: no valuation and no construction word)"
             r["flag_tier"] = tier
             r["flag_rule_v2"] = rule
