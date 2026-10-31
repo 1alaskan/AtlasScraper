@@ -187,6 +187,6 @@ def score(a, P=BASE):
 
 def points_text(sc):
     order = sorted(sc["per"].items(), key=lambda kv: -(kv[1][0] + kv[1][1]))
-    parts = "; ".join("%s: %s%s" % (SHORT.get(k, k), g(b), ("+%s repeat" % g(r)) if r else "") for k, (b, r) in order if b + r > 0)
+    parts = "; ".join("%s: %s%s" % (C.SRC_LABEL.get(k, SHORT.get(k, k)), g(b), ("+%s repeat" % g(r)) if r else "") for k, (b, r) in order if b + r > 0)
     return "Points: signal %s (%s); sources %s; recency %s; stage %s; fit %s" % (
         g(sc["signal"]), parts, g(sc["sources"]), g(sc["recency"]), g(sc["stage"][1]), g(FIT_PTS[sc["fit"][0]]))

@@ -321,8 +321,9 @@ def build_signals(S4, zshare, geocoder):
         st = "cancelled " + r["cancel_date"] if r["cancel_date"] else ("finaled " + r["final_date"] if r["final_date"] else "not finaled")
         if r.get("_carried"):
             st += " (carried on under change-of-contractor record %s)" % r["_carried"]
+        val = money(r["valuation"]) if (r["valuation"].strip() or C.LOCAL_PERMIT_FILES is None) else "no valuation"
         return "%s permit %s%s: %s, %s, received %s, issued %s, %s; parcel class %s, zone %s" % (
-            C.COUNTY, r["record_id"], tag, r["class"], money(r["valuation"]), r["record_date"], r["date_issued"] or "n/a", st, r["parcel_class"] or "blank", r["zone_district"] or "blank")
+            C.COUNTY, r["record_id"], tag, r["class"], val, r["record_date"], r["date_issued"] or "n/a", st, r["parcel_class"] or "blank", r["zone_district"] or "blank")
 
     def permit_stage(r):
         fin = r.get("final_date", "")

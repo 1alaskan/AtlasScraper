@@ -1,20 +1,15 @@
 rank,site_address,zip,epa_registry_facility_names,naics_primary,ranked_row_label
-15,6300 N POWHATON RD,,AMAZON.COM SERVICES LLC - BJC1,493110,Unattached address (no company attached)
-45,25755 E 65TH AVE,,"WESTERN INDUSTRIAL CONTRACTORS, INC.",33299,Unattached address (possible occupier: Western Industrial Co
-47,17450 E 32ND PL,,MILGARD MANUFACTURING INC,326199,Unattached address (possible occupier: FURNITURE FRENZY TRAD
-49,6198 FRANKLIN ST,,CHEROKEE,221112,Unattached address (no company attached)
-72,525 E 58th AVE,,WILSONART DENVER,493110,Unattached address (no company attached)
-128,24210 E 19TH AVE,,O'REILLY DISTRIBUTION CENTER DC-27,493110,Unattached address (no company attached)
-173,5725 N Pecos St,,SIMPSON STRONG TIE (DENVER),321920,Unattached address (no company attached)
-212,3590 N HIMALAYA RD,,COLORADO ROOFING PRODUCTS LLC,326150,Unattached address (no company attached)
-214,17500 E 22ND AVE,,OPTIMA BATTERIES INCORPORATED,335911,Unattached address (no company attached)
-220,14300 E 35TH PL,,DISTRIBUTOR WIRE & CABLE,33592,Unattached address (possible occupier: BACK-TO-BACK TRUCKING
-230,3431 N WINDSOR DR,,VERICENTER INC.,221119,Unattached address (possible occupier: Silver Crest Holdings
-279,3250 N QUENTIN ST,,ALPHA MANUFACTURING,334111,Unattached address (possible occupier: Marshall Industries I
-295,3650 N FRASER ST,,PETCO ANIMAL SUPPLIES DISTRIBUTION CENTER #499,493110,Unattached address (no company attached)
-318,12421 WASHINGTON ST STE 100,80241,FISCHER IMAGING CORP,334517,Unattached address (no company attached)
-325,14501 E 35TH PL,,INTERNATIONAL BEAUTY PRODUCTS DBA JEROME RUSSELL,32562,Unattached address (possible occupier: SPEED XPRESS INC.)
-332,875 W 64TH AVE,,SIEGRIST CONST,324121,Unattached address (no company attached)
-344,17750 E 32ND PL,,"VWR INTERNATIONAL, LLC",423490,Unattached address (no company attached)
-349,21250 E 36TH DR,,FIRESTONE BUILDING PRODUCTS,32615,Unattached address (no company attached)
-369,1751 N POWHATON RD A,,BLUE SPRUCE ENERGY CENTER,221112,Unattached address (no company attached)
+16,6300 N POWHATON RD,,AMAZON.COM SERVICES LLC - BJC1,493110,Unattached address (possible occupier: PROJECT CHORRO)
+37,17450 E 32ND PL,,MILGARD MANUFACTURING INC,326199,Unattached address (possible occupier: FURNITURE FRENZY TRAD
+39,6198 FRANKLIN ST,,CHEROKEE,221112,Unattached address (no company attached)
+97,24210 E 19TH AVE,,O'REILLY DISTRIBUTION CENTER DC-27,493110,Unattached address (no company attached)
+106,25755 E 65TH AVE,,"WESTERN INDUSTRIAL CONTRACTORS, INC.",33299,Unattached address (possible occupier: Western Industrial Co
+127,5725 PECOS ST,,SIMPSON STRONG TIE (DENVER),321920,Unattached address (possible occupier: CFM Company)
+175,3431 N WINDSOR DR,,VERICENTER INC.,221119,Unattached address (possible occupier: Silver Crest Holdings
+213,17500 E 22ND AVE,,OPTIMA BATTERIES INCORPORATED,335911,Unattached address (no company attached)
+229,3250 N QUENTIN ST,,ALPHA MANUFACTURING,334111,Unattached address (possible occupier: Marshall Industries I
+235,3590 N HIMALAYA RD,,COLORADO ROOFING PRODUCTS LLC,326150,Unattached address (no company attached)
+256,12421 WASHINGTON ST STE 100,80241,FISCHER IMAGING CORP,334517,Unattached address (no company attached)
+261,14501 E 35TH PL,,INTERNATIONAL BEAUTY PRODUCTS DBA JEROME RUSSELL,32562,Unattached address (possible occupier: SPEED XPRESS INC.)
+275,17750 E 32ND PL,,"VWR INTERNATIONAL, LLC",423490,Unattached address (possible occupier: AVANTOR INC)
+301,1751 N POWHATON RD A,,BLUE SPRUCE ENERGY CENTER,221112,Unattached address (no company attached)

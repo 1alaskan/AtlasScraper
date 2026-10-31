@@ -322,7 +322,7 @@ def resolve(sg, S4, log=print):
             else:
                 cls = "possible"
             text = "%s permit %s at this address: %s, %s, received %s, parcel class %s (unflagged, or flagged and cut; support)" % (
-                C.COUNTY, r["record_id"], r["class"], money(r["valuation"]), r["record_date"], r["parcel_class"] or "blank")
+                C.COUNTY, r["record_id"], r["class"], money(r["valuation"]) if (r["valuation"].strip() or C.LOCAL_PERMIT_FILES is None) else "no valuation", r["record_date"], r["parcel_class"] or "blank")
             s = sig(PER, r, "permit_unflagged", r.get("flag_tier", ""), text, flagged=False)
             a.add(s, cls, "" if cls == "confirmed" else "[possible match]")
     # site plans that are not signals
@@ -444,6 +444,19 @@ def resolve(sg, S4, log=print):
             a.occupiers.append((disp, "%s at this address; possible, not confirmed" % ("business registration" if src == REG else "UCC debtor")))
             a.other_names = []
             counts["address_with_one_unflagged_name_as_possible_occupier"] += 1
+
+    # ------------------------------------------------------------------ occupiers named on county permit rows (tenant, applicant or project fields)
+    if C.LOCAL_PERMIT_FILES:
+        for a in accounts:
+            if a.kind == "address" and not a.occupiers:
+                names = Counter()
+                for e in a.sigs:
+                    if e["src"] == PER and e["row"].get("company_role") in ("tenant", "applicant", "project") and e["row"].get("company_name", "").strip():
+                        names[clean_name(e["row"]["company_name"])] += 1
+                if names:
+                    disp, n = names.most_common(1)[0]
+                    a.occupiers.append((disp, "named as the tenant, applicant or project on %d county permit row%s at this address; possible, not confirmed" % (n, "" if n == 1 else "s")))
+                    counts["address_named_from_county_permit_rows"] += 1
 
     # ------------------------------------------------------------------ section and county basis
     for a in accounts:
