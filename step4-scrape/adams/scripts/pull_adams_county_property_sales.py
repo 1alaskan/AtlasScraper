@@ -4,7 +4,8 @@ industrial or vacant commercial/industrial parcels, into the step 4 shared forma
 
 Usage:  python3 pull_adams_county_property_sales.py [--since YYYY-MM-DD] [--fresh]
 
---since  saledt cursor (default 2024-01-01). For an incremental run pass the last record_date
+--since  saledt cursor (default 2024-01-01; any other value writes to
+         scrape_<slug>_since_<date>.csv so the full file is kept). For an incremental run pass the last record_date
          already held and de-duplicate on record_id downstream.
 --fresh  ignore today's raw cache and refetch.
 
@@ -69,6 +70,7 @@ def main():
     ap.add_argument("--since", default="2024-01-01")
     ap.add_argument("--fresh", action="store_true")
     a = ap.parse_args()
+    out = OUT if a.since == "2024-01-01" else OUT.replace(".csv", "_since_%s.csv" % a.since)
     day = cc.now_iso()[:10].replace("-", "")
     root = os.path.join(cc.RAW_ROOT, SLUG)
     cache = os.path.join(root, "sales_%s_%s" % (a.since, day))
@@ -201,7 +203,7 @@ def main():
             "longitude": "%.6f" % p["_cx"] if p and p.get("_cx") else "",
             "parser_version": cc.PARSER_VERSION})
     rows.sort(key=lambda r: (r["record_date"], r["record_id"]))
-    cc.write_csv(OUT, cc.COMMON_COLS + EXTRA_COLS, rows)
+    cc.write_csv(out, cc.COMMON_COLS + EXTRA_COLS, rows)
     print("rows written: %d of %d sales in the source filter" % (len(rows), n_source))
     print("grantee names blanked as individuals: %d; grantor names blanked: %d" % (blank_grantee, blank_grantor))
     print("flag rules:", rules.most_common())

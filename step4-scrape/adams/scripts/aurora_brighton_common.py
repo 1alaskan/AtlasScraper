@@ -155,7 +155,7 @@ def ms_to_date(ms):
 def clean(s, limit=None):
     if s is None:
         return ""
-    s = re.sub(r"\s+", " ", str(s)).replace("—", "-").replace("–", "-").strip()
+    s = re.sub(r"\s+", " ", str(s)).replace("-", "-").replace("-", "-").strip()
     return s[:limit] if limit else s
 
 

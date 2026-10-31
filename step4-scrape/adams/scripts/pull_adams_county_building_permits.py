@@ -4,7 +4,8 @@
 
 Usage:  python3 pull_adams_county_building_permits.py [--since YYYY-MM-DD] [--fresh]
 
---since  CaseOpened cursor (default 2024-01-01). The default run also carries in 2023 permits
+--since  CaseOpened cursor (default 2024-01-01; any other value writes to
+         scrape_<slug>_since_<date>.csv so the full file is kept). The default run also carries in 2023 permits
          whose ApplicationStatus is still active. For an incremental run pass the last
          record_date already held and de-duplicate on record_id downstream.
 --fresh  ignore today's raw cache and refetch.
@@ -175,6 +176,7 @@ def main():
     ap.add_argument("--since", default="2024-01-01")
     ap.add_argument("--fresh", action="store_true")
     a = ap.parse_args()
+    out = OUT if a.since == "2024-01-01" else OUT.replace(".csv", "_since_%s.csv" % a.since)
     day = cc.now_iso()[:10].replace("-", "")
     cache = os.path.join(cc.RAW_ROOT, SLUG, "%s_%s" % (a.since, day))
     if a.fresh:
@@ -238,7 +240,7 @@ def main():
             "latitude": "%.6f" % y if y else "", "longitude": "%.6f" % x if x else "",
             "accela_url": cc.clean(at.get("LinkToAccela")), "parser_version": cc.PARSER_VERSION})
     rows.sort(key=lambda r: (r["record_date"], r["record_id"]))
-    cc.write_csv(OUT, cc.COMMON_COLS + EXTRA_COLS, rows)
+    cc.write_csv(out, cc.COMMON_COLS + EXTRA_COLS, rows)
     print("rows written: %d of %d in the source filter" % (len(rows), n_source))
     print("residential rows left out: %d %s" % (sum(residential.values()), residential.most_common()))
     print("flag rules:", rules.most_common())

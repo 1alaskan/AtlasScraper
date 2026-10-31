@@ -4,7 +4,8 @@
 
 Usage:  python3 pull_adams_county_planning_cases.py [--since YYYY-MM-DD] [--fresh]
 
---since  DATE_OPENED cursor (default 2024-01-01). The default run also carries in 2023
+--since  DATE_OPENED cursor (default 2024-01-01; any other value writes to
+         scrape_<slug>_since_<date>.csv so the full file is kept). The default run also carries in 2023
          cases whose RECORD_STATUS is still open. For an incremental run pass the last
          record_date already held and de-duplicate on (record_id, parcel_number) downstream.
 --fresh  ignore today's raw cache and refetch.
@@ -46,6 +47,7 @@ def main():
     ap.add_argument("--since", default="2024-01-01")
     ap.add_argument("--fresh", action="store_true")
     a = ap.parse_args()
+    out = OUT if a.since == "2024-01-01" else OUT.replace(".csv", "_since_%s.csv" % a.since)
     day = cc.now_iso()[:10].replace("-", "")
     cache = os.path.join(cc.RAW_ROOT, SLUG, "%s_%s" % (a.since, day))
     if a.fresh:
@@ -103,7 +105,7 @@ def main():
         if r["site_address"] in ("0", "0 -", "-"):
             r["site_address"] = ""
     rows.sort(key=lambda r: (r["record_date"], r["record_id"]))
-    cc.write_csv(OUT, cc.COMMON_COLS + EXTRA_COLS, rows)
+    cc.write_csv(out, cc.COMMON_COLS + EXTRA_COLS, rows)
     print("rows written: %d (source count %d)" % (len(rows), n_source))
     print("record names blanked as probable individuals:", individuals)
     print("distinct cases:", len({r["record_id"] for r in rows}))

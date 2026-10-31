@@ -44,7 +44,7 @@ BUSINESS_HINT = re.compile(
     r"plc|gmbh|sa|construction|constructors?|contractors?|contracting|builders?|building|"
     r"group|services?|electric|electrical|mechanical|plumbing|roofing|restoration|"
     r"development|developers?|enterprises?|associates|partners|partnership|solutions|systems|"
-    r"design|homes|properties|property|industries|industrial|interiors|remodeling|"
+    r"homes|properties|property|industries|industrial|interiors|remodeling|"
     r"renovations?|signs?|fire|steel|concrete|glass|events?|productions?|management|"
     r"engineering|commercial|general|facilities|facility|installations?|colorado|denver|"
     r"county|city|town|district|authority|university|school|church|ministries|"
@@ -228,10 +228,19 @@ def ms_to_date(ms):
     return datetime.fromtimestamp(ms / 1000.0, tz=timezone.utc).strftime("%Y-%m-%d")
 
 
+EMAIL_RE = re.compile(r"[\w.+-]+@[\w-]+\.[\w.-]+")
+PHONE_RE = re.compile(r"(?<![\d.])(?:\+?1[-.]?)?(?:\(\d{3}\)\s?|\b\d{3}[-.])\d{3}[-.]\d{4}\b(?![\d.])|"
+                      r"(?i:\b(?:phone|call|tel|cell|contact|ph|mobile|text)\W{0,3})\(?\d{3}\)?[-. ]\d{3}[-. ]\d{4}\b")
+
+
 def clean(s, limit=None):
+    """Whitespace-collapse, replace the dashes the brief bans, and remove e-mail addresses and
+    phone numbers wherever they appear (free-text descriptions carry them now and then)."""
     if s is None:
         return ""
-    s = re.sub(r"\s+", " ", str(s)).replace("—", "-").replace("–", "-").strip()
+    s = re.sub(r"\s+", " ", str(s)).replace("-", "-").replace("-", "-").strip()
+    s = EMAIL_RE.sub("[email removed]", s)
+    s = PHONE_RE.sub("[phone removed]", s)
     return s[:limit] if limit else s
 
 
@@ -263,7 +272,12 @@ CASE_VOCAB = re.compile(
     r"place|pl|street|avenue|road|drive|lane|court|circle|cir|swimming|pool|container|conex|"
     r"con[c]?ept|casa|house|lot line|adjustment|boundary|carport|patio|porch|deck|pergola|"
     r"workshop|hobby|second|unit|units|site|plan|review|replat|row|r-o-w|easement|dedication|"
-    r"rezoning|rezone|combination|comprehensive|administrative|relief|appeal|boa|bocc)\b",
+    r"rezoning|rezone|combination|comprehensive|administrative|relief|appeal|boa|bocc|"
+    r"requests?|preliminary|design|standards?|text|amendments?|noticing|requirements?|"
+    r"corrections?|no|line|lines|lots|plots|vested|rights|extension|filing|filings|nos?|"
+    r"block|tract|parcel|parcels|split|dwellings|duplexes|residences|quadplex|triplex|"
+    r"acres|ranchettes|estates|gardens|conex|slaughter|hangars|access|drainage|grading|"
+    r"christmas|tree|trees|sales|generation|tent|stand|booth|kiosk|cart|food|truck|trucks)\b",
     re.I)
 
 
@@ -289,7 +303,7 @@ def looks_like_individual_party(name):
         if BUSINESS_HINT.search(p_nodigit):
             continue
         words = [w for w in p_nodigit.replace(".", " ").split() if w.upper() not in ("JR", "SR", "II", "III", "IV")]
-        if 1 <= len(words) <= 4 and all(re.fullmatch(r"[A-Za-z][A-Za-z'\-]*", w) for w in words):
+        if 1 <= len(words) <= 5 and all(re.fullmatch(r"[A-Za-z][A-Za-z'\-]*", w) for w in words):
             return True
     return False
 
@@ -315,6 +329,10 @@ def looks_like_individual_project(name):
         return False
     if n != n.upper() and re.search(r"\b[A-Z]{3,}\b", n):   # an acronym in a mixed-case name (EVRAZ, TCVMD)
         return False
+    n = re.sub(r"\([^)]*\)", " ", n)                                # '(Todd Creek Farms, Filing 5)' asides
+    n = re.sub(r"\b(at|on|for|@)\s+\d.*$", " ", n, flags=re.I)   # '... at 5200 Sheridan' tails
+    n = re.sub(r"\b(on|along|near|off)\s+[A-Z][\w\s.]*?\b(street|st|avenue|ave|road|rd|drive|dr|lane|ln|"
+               r"court|ct|place|pl|blvd|boulevard|way|pkwy|parkway|circle|cir|hwy|highway)\b.*$", " ", n, flags=re.I)
     no_digits = re.sub(r"\S*\d\S*", " ", n)          # addresses and case numbers are not hints
     if BUSINESS_HINT.search(no_digits):
         return False
