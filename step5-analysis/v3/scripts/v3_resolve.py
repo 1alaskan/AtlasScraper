@@ -254,7 +254,7 @@ def resolve(sg, S4, log=print):
 
     def note_name(ak, zp, name, src, row):
         k = nk(name)
-        if len(k) < 3:
+        if len(k) < 3 or k in C.PERSON_NAMED:
             return
         d = at_addr[(ak, zp)]
         if k not in d or (src == REG and d[k][1] == UCC):
@@ -321,8 +321,8 @@ def resolve(sg, S4, log=print):
                     continue      # a registration or lien alone does not put the company at the street address; no suite match, no support
             else:
                 cls = "possible"
-            text = "Denver permit %s at this address: %s, %s, received %s, parcel class %s (unflagged, or flagged and cut; support)" % (
-                r["record_id"], r["class"], money(r["valuation"]), r["record_date"], r["parcel_class"] or "blank")
+            text = "%s permit %s at this address: %s, %s, received %s, parcel class %s (unflagged, or flagged and cut; support)" % (
+                C.COUNTY, r["record_id"], r["class"], money(r["valuation"]), r["record_date"], r["parcel_class"] or "blank")
             s = sig(PER, r, "permit_unflagged", r.get("flag_tier", ""), text, flagged=False)
             a.add(s, cls, "" if cls == "confirmed" else "[possible match]")
     # site plans that are not signals
@@ -333,8 +333,8 @@ def resolve(sg, S4, log=print):
         for a in addr_ix.get(ak, []):
             if a.kind == "company" and a.sites[ak]["section"] != "denver":
                 continue
-            text = "Denver %s %s at this address, opened %s, status %s, zone %s (support: not industrially zoned)" % (
-                r["record_type"], r["record_id"], r["record_date"], r.get("status", ""), r.get("zone_district", "") or "blank")
+            text = "%s %s %s at this address, opened %s, status %s, zone %s (support: not industrially zoned)" % (
+                C.COUNTY, r["record_type"], r["record_id"], r["record_date"], r.get("status", ""), r.get("zone_district", "") or "blank")
             a.add(sig(SDP, r, "sdp_other", "A", text, flagged=False), "possible", "[possible match]")
     # industrial site plans and flagged permits already used as signals elsewhere are not repeated.
     # water and air rows by name (statewide) or by address (Denver County)
@@ -469,12 +469,12 @@ def resolve(sg, S4, log=print):
                 best = max(own, key=lambda e: (e["ak"] == a.main_ak, e["date"]))
                 a.section, a.basis = best["section"], best["basis"]
             else:
-                a.section, a.basis = "denver", "Denver permit layer (Denver only)"
+                a.section, a.basis = "denver", "%s permit layer (%s only)" % (C.COUNTY, C.COUNTY)
         elif a.kind == "address":
             layer = [e for e in a.sigs if e["src"] in (PER, SDP) and e["flagged"]]
             if layer:
                 a.section = "denver"
-                a.basis = "Denver permit layer (Denver only)" if any(e["src"] == PER for e in layer) else "Denver site plan layer (Denver only)"
+                a.basis = ("%s permit layer (%s only)" % (C.COUNTY, C.COUNTY)) if any(e["src"] == PER for e in layer) else ("%s site plan layer (%s only)" % (C.COUNTY, C.COUNTY))
             else:
                 e = [e for e in a.sigs if e["src"] == CRE and e["flagged"]][0]
                 a.section, a.basis = e["section"], e["basis"]

@@ -82,11 +82,16 @@ COUNTY = COUNTY_FULL = AIRS_PREFIX = ZIP_SHARE_FILE = None
 LOCAL_LAYERS = False
 MAIL_CITIES = None                           # mailing cities treated as the county's own name (default: the county name, as Denver is both city and county)
 SPLIT_CITIES = set()                         # mailing cities that straddle the county line; their rows are placed by zip share and the Census geocoder only
+LOCAL_PERMIT_FILES = None                    # county permit files (shared 17-column format) read through v3_local; None = Denver's own layer when LOCAL_LAYERS
+LOCAL_PLAN_FILES = None                      # county planning and development files read through v3_local; None = Denver's own layer when LOCAL_LAYERS
+LOCAL_PERMIT_LABEL = None                    # how the permit layer is named in the sources column; None = the Denver label
+LOCAL_PLAN_LABEL = None                      # how the planning layer is named in the sources column; None = the Denver label
 WAT_AIRPORT = re.compile(r"(?!x)x")          # never matches unless the county file sets a local airport or base cut
 WAT_AIRPORT_SIC = set()
 WEB_CHECKS, WEB_CHECKS_V3 = {}, {}
 WEB_ADDRESS_OK = set()
 WEB_DROPS = {}
+PERSON_NAMED = set()                         # registered entities named after a private individual, left out of every listing (name keys); Matthew's decision per county
 WEB_NOT_CONFIRMED_V3 = []
 KNOWN_TIES = []
 STEP3_OCCUPIERS = {}
@@ -105,3 +110,7 @@ if MAIL_CITIES is None:
 MAIL_CITIES = {c.upper() for c in MAIL_CITIES}
 SPLIT_CITIES = {c.upper() for c in SPLIT_CITIES} - MAIL_CITIES
 CITY_OK = MAIL_CITIES | SPLIT_CITIES
+from v3_lib import PER as _PER, SDP as _SDP
+SRC_LABEL = {_PER: LOCAL_PERMIT_LABEL or _PER, _SDP: LOCAL_PLAN_LABEL or _SDP}
+PERMIT_LABEL = SRC_LABEL[_PER]
+PLAN_LABEL = SRC_LABEL[_SDP]

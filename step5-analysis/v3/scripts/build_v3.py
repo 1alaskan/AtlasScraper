@@ -259,7 +259,7 @@ def main():
                     e["text"] = STREET.sub("[address removed]", e["text"])
         gt = gt_match(a, d)
         r5, r5b = find_old(a, d, n1, a1), find_old(a, d, n2, a2)
-        row = dict(rank=i, score="%.1f" % sc["total"], county_basis=a.basis, stage=sc["stage"][0], sources_count=len(srcs), sources="; ".join(srcs),
+        row = dict(rank=i, score="%.1f" % sc["total"], county_basis=a.basis, stage=sc["stage"][0], sources_count=len(srcs), sources="; ".join(C.SRC_LABEL.get(x, x) for x in srcs),
                    first_signal_date=sc["first"], latest_signal_date=sc["latest"],
                    top_evidence=no_emdash(CONTACT.sub("[contact detail removed]", " || ".join(e["text"] for e in top)) + " || " + points_text(sc)),
                    compressed_air_fit="%s: %s" % sc["fit"], in_ground_truth=("yes: " + "; ".join("%s (%s)" % (p.split(" ")[0], h) for p, h in gt)) if gt else "no",

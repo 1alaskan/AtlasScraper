@@ -13,7 +13,13 @@ COUNTY = "Adams"                          # as it appears in the county columns 
 COUNTY_FULL = "Adams County"              # as the Census geocoder names it
 AIRS_PREFIX = "001"                       # APCD AIRS ID county prefix = FIPS 08001 (checked: 158 rows carry it, 165 rows say county Adams, 10 of those with another prefix)
 ZIP_SHARE_FILE = "adams_zip_share.json"   # share of each zip inside the county (Census 2020 ZCTA file), in the scripts folder; built 2026-10-30 by build_zip_share.py
-LOCAL_LAYERS = False                      # no Adams permit or site plan loader yet (the v3 code reads Denver's layers only)
+LOCAL_LAYERS = True                       # the Step 3 county pulls are read through v3_local (decision 1A, 2026-10-31)
+LOCAL_PERMIT_FILES = ["adams/scrape_adams_county_building_permits.csv", "adams/scrape_thornton_building_permits.csv",
+                      "adams/scrape_aurora_building_permits.csv"]
+LOCAL_PLAN_FILES = ["adams/scrape_adams_county_planning_cases.csv", "adams/scrape_thornton_development_projects.csv",
+                    "adams/scrape_aurora_development_applications.csv", "adams/scrape_commerce_city_active_development.csv"]
+LOCAL_PERMIT_LABEL = "Adams County, Thornton and Aurora building permits"
+LOCAL_PLAN_LABEL = "Adams County, Thornton, Aurora and Commerce City planning cases"
 
 # Mailing cities. Denver is a city and a county, so the Denver config needs none of this. Adams County has no city of that name,
 # so the mailing-city tests use these sets instead (v3_config defaults MAIL_CITIES to the county name and SPLIT_CITIES to empty,
@@ -74,6 +80,8 @@ WEB_CHECKS = {
 WEB_NOT_CONFIRMED_V3 = ['KAIRUS', 'VALHALLA INDUSTRIES', 'WARD PRECISION MANUFACTURING', 'GINZEL ENTERPRISES', 'DURALUX FINISH', 'GENESEE WESTER', 'IMPERIAL MACHINING', 'DG METAL', 'SKYLINE MOTORS', 'AGOV UNDERGROUND', 'DURANGO TIRE SHOP', 'FLASHFILL SERVICES', 'CRYOSHIELD INDUSTRIAL SERVICES', 'MT UNDERGROUND', 'HOLCIM WCR', 'CHERRY CREEK RECYCLING', 'QUATTRO MACHINING SERVICES', 'MECHFI DESIGNS', 'HARRELSON']
 WEB_DROPS = {}
 WEB_ADDRESS_OK = set()
+# Registered entities named after private individuals, left out of every listing (Matthew's decision, 2026-10-31).
+PERSON_NAMED = {"ROBERTO LOPEZ RODRIGUEZ", "LIUFENGXIANGMR", "ZHANGYUHAOMR"}
 WEB_CHECKS_V3 = {}
 
 # --------------------------------------------------------------------------- ties carried over from Step 3 (not from the scraped files)
@@ -86,7 +94,27 @@ KNOWN_TIES = [
      "display": "Philip Morris International, PMI U.S. ZYN plant (Kairus Inc), Aurora (Adams County)",
      "note": "tied to Philip Morris / PMI U.S. by the Step 2 back-test: Kairus Inc holds the parcel, signed the Adams County incentive agreement and is the water permit operator at 25315 E 48th Ave"},
 ]
-STEP3_OCCUPIERS = {}
+# Occupiers named in Step 2 records (the Thornton and Aurora permit descriptions name the tenant; the Adams County and Aurora layers
+# used here carry no applicant). The row stays an address row; only its label and fit come from Step 2.
+STEP3_OCCUPIERS = {
+    "3301 LEWISTON": {
+        "display": "RK Industries, Aurora manufacturing campus (occupier named in Step 2 Aurora permit records)",
+        "fit": ("strong", "custom prefabricated modules, metal fabrication; Aurora permits at this address are filed as RK INDUSTRIES, including a 2026 "
+                          "overhead-crane foundation (Step 2 notes); ground truth C25"),
+        "confidence": "address confirmed; occupier from Step 2 Aurora permit descriptions, not from a named field",
+    },
+    "251 E 126": {
+        "display": "Kiosk Information Systems (Posiflex), new Thornton plant (occupier named in Step 2 Thornton permit records)",
+        "fit": ("strong", "self-service kiosk manufacturing, metal fabrication and assembly; Thornton permits at this address name the tenant "
+                          "(Step 2 notes); ground truth X16"),
+        "confidence": "address confirmed; occupier from Step 2 Thornton permit descriptions",
+    },
+    "15107 GRANT": {
+        "display": "Izzio Artisan Bakery, Thornton plant (occupier named in Step 2 Thornton permit records)",
+        "fit": ("strong", "commercial bread bakery; Thornton permits at this address name the tenant (Step 2 notes); ground truth X15"),
+        "confidence": "address confirmed; occupier from Step 2 Thornton permit descriptions",
+    },
+}
 
 # --------------------------------------------------------------------------- the Adams County ground-truth projects (names, aliases, addresses)
 # From step3-validation/ground_truth_overlay.csv, county_clean = Adams (17 projects), plus the four overflow projects whose county is
@@ -108,7 +136,7 @@ GROUND_TRUTH = {
     "X08 Boise Cascade door shop": (["BOISE CASCADE"], ["11011 E 104"]),
     "X11 AMP (AMP Robotics)": (["AMP ROBOTICS"], []),
     "X15 Izzio Bakery": (["IZZIO"], ["15101 GRANT", "15107 GRANT"]),
-    "X16 Kiosk Information Systems": (["KIOSK INFORMATION SYSTEMS", "POSIFLEX"], []),
+    "X16 Kiosk Information Systems": (["KIOSK INFORMATION SYSTEMS", "POSIFLEX"], ["251 E 126"]),
     # county not settled in the overlay (Adams or a neighbour); listed so a hit is reported, not to claim them for Adams
     "X02 Cerebral Brewing (Adams or Arapahoe)": (["CEREBRAL BREWING"], ["9990 E COLFAX"]),
     "X03 Curated Barrel Project (Jefferson or Adams)": (["CURATED BARREL", "CONFLUENCE SPIRITS"], ["5525 W 56"]),

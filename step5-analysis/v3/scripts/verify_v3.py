@@ -23,7 +23,14 @@ def main():
     rk = list(csv.DictReader(open(RK, newline="", encoding="utf-8")))
     ev = list(csv.DictReader(open(EV, newline="", encoding="utf-8")))
     by = defaultdict(list)
+    known = {UCC, REG, PER, SDP, WAT, AIR, CRE, OED}
+    def canon(src):
+        # county permit and planning files keep their own source names in the evidence file; they are one layer each for the source bonus
+        if src in known:
+            return src
+        return PER if "permit" in src.lower() else SDP
     for e in ev:
+        e["source"] = canon(e["source"])
         by[e["rank"]].append(e)
     pat = re.compile(r"Points: signal ([\d.]+) \((.*?)\); sources ([\d.]+); recency ([\d.]+); stage ([\d.]+); fit (-?[\d.]+)\s*$")
     bad = []

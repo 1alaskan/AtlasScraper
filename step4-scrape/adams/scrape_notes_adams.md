@@ -11,9 +11,9 @@ Run 2026-10-31, three agents in parallel by portal platform, each following `dat
 5. **Company names are thin on the permit layers.** Adams County permits carry no applicant (97 percent blank; 40 tenant names were read out of descriptions). Aurora permits carry no name field (94 percent blank; 564 code names and suffixed project names were extracted). Thornton's description names the tenant and BUS_NAME is filled on 53 percent of commercial rows. The planning and development layers carry project or applicant names on most rows.
 6. **Snapshot sources.** Commerce City's two active layers and Thornton's development projects keep no history of their own; the scripts append rows never seen before and never delete, so history starts today. Rerun them weekly.
 7. **The Commerce City snapshot holds 4 rows dated before 2023** because the layer still lists them as active; they are kept as the snapshot rule says and marked by date.
-8. **PrimeGov was not fetched.** Its robots.txt on 2026-10-31 reads "User-agent: * / Disallow: /" (last modified 2026-10-08; step 2 had seen a 406 and used the JSON API). The script carries a robots gate and stops. The CSV is header-only.
+8. **PrimeGov was not fetched and is dropped.** Its robots.txt on 2026-10-31 reads "User-agent: * / Disallow: /" (last modified 2026-10-08; step 2 had seen a 406 and used the JSON API). The script carries a robots gate and stops; the header-only CSV was removed. Matthew dropped the source on 2026-10-31 (no manual read).
 9. **No Atlas Copco data, no contact with anyone, no records requests, no browser-only portals opened.** The step 2 ground-truth corrections are not applied.
-10. **These county files are not yet read by the v3 analysis.** The v3 code loads Denver's permit and site plan layers only (`LOCAL_LAYERS = False` for Adams); adding a loader for these layers is a code change for Matthew to approve (see `step5-analysis/adams/adams_analysis_notes.md`).
+10. **Seven of these files are read by the v3 analysis** through the county-layer loader approved on 2026-10-31 (`step5-analysis/v3/scripts/v3_local.py`): the three permit files as the permit layer and the four planning files as the planning layer. Property sales and Brighton Legistar are pulled but have no slot in the method yet (see `step5-analysis/adams/adams_analysis_notes.md`).
 
 ## Results at a glance
 
@@ -23,7 +23,7 @@ Run 2026-10-31, three agents in parallel by portal platform, each following `dat
 | Adams County building permits | scrape_adams_county_building_permits.csv | 1,352 non-residential | 13,125 fetched | 341 (A 252, B3b 89) | 2023-01-06 to 2026-10-29 |
 | Adams County property sales | scrape_adams_county_property_sales.csv | 1,603 on non-residential parcels | 56,616 sales fetched | 296 | 2024-01-03 to 2026-10-27 |
 | Commerce City active development (snapshot) | scrape_commerce_city_active_development.csv | 499 distinct (556 features) | 556 | 499 (industrial_use 20) | 2021-11-03 to 2026-10-31 |
-| Adams County PrimeGov items | scrape_adams_county_primegov_items.csv | 0 (blocked) | n/a | 0 | n/a |
+| Adams County PrimeGov items | (dropped 2026-10-31; blocked by robots.txt, no file) | 0 | n/a | 0 | n/a |
 | Thornton building permits | scrape_thornton_building_permits.csv | 1,996 (1,962 since 2024 + 34 active 2023) | 1,962 + 627 | 414 (A 86, B3a 54, B3b 274) | 2023-01-06 to 2026-10-28 |
 | Thornton development projects | scrape_thornton_development_projects.csv | 302 | 303 | 302 (industrial_use 31) | 2024-01-01 to 2026-10-23 |
 | Aurora development applications (Adams side) | scrape_aurora_development_applications.csv | 140 | 414 all counties | 140 (industrial_use 61) | 2023-03-27 to 2026-11-02 |
@@ -49,7 +49,7 @@ Null rates on the three key fields (company_name, site_address, record_date): Ad
 
 - Thornton's server returns HTML 500 on ORed address clauses: each request is one date range and one BuildingUse clause, filtered client-side (`scripts/thornton_common.py`).
 - Aurora's Cloudflare front returns 403 on some where-clause shapes (IS NULL with date literals): pulls are date-range queries filtered client-side (`scripts/aurora_brighton_common.py`).
-- PrimeGov: robots.txt disallows all; nothing fetched. Options are in the analysis notes.
+- PrimeGov: robots.txt disallows all; nothing fetched; dropped by decision.
 - gisserver.c3gov.com serves no robots.txt (the connection drops); services3.arcgis.com returns 403 on robots.txt. Both were read as no stated rule and pulled at one request a second with an identifying user agent.
 - Brighton's Legistar has bodies only for City Council and the South Brighton GID; Planning Commission and BURA items are not there.
 
@@ -57,4 +57,4 @@ Rerun: `python3 scripts/pull_<slug>.py` rebuilds from the cache; `--since YYYY-M
 
 ## Not pulled
 
-PrimeGov (blocked). Nothing else in scope is missing. By design: residential rows, personal names, attachments and record detail pages, and every browser-only portal.
+PrimeGov (blocked, then dropped). Nothing else in scope is missing. By design: residential rows, personal names, attachments and record detail pages, and every browser-only portal.

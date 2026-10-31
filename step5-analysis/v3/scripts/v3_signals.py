@@ -192,8 +192,13 @@ def build_signals(S4, zshare, geocoder):
     cuts = Cuts()
     out = dict(named=[], address=[], naming=[], oedit=[], drops=[])
 
-    permits = read_all(S4, PER) if C.LOCAL_LAYERS else []
-    sdp = read_all(S4, SDP) if C.LOCAL_LAYERS else []
+    if C.LOCAL_LAYERS and C.LOCAL_PERMIT_FILES is not None:
+        import v3_local
+        permits = v3_local.load_permits(S4, C.LOCAL_PERMIT_FILES)
+        sdp = v3_local.load_plans(S4, C.LOCAL_PLAN_FILES or [])
+    else:
+        permits = read_all(S4, PER) if C.LOCAL_LAYERS else []
+        sdp = read_all(S4, SDP) if C.LOCAL_LAYERS else []
     water = read_all(S4, WAT)
     air = read_all(S4, AIR)
     cre = read_all(S4, CRE)
@@ -227,6 +232,9 @@ def build_signals(S4, zshare, geocoder):
                 continue
             if r["debtor_name_has_entity_token"] != "Y":
                 cuts.add(src, "debtor name has no business word (may be an individual)")
+                continue
+            if nk(r["company_name"]) in C.PERSON_NAMED:
+                cuts.add(src, "entity named after a private individual (left out by decision)")
                 continue
             if r["transaction_type"] != "Initial Filing":
                 cuts.add(src, "SBA continuation or other amendment (flags sit on initial filings only)")
@@ -295,6 +303,9 @@ def build_signals(S4, zshare, geocoder):
             if re.search(r"withdrawn|dissolved|converted|merged", r["entity_status"], re.I):
                 cuts.add(src, "entity since withdrawn, dissolved, converted or merged")
                 continue
+            if nk(r["company_name"]) in C.PERSON_NAMED:
+                cuts.add(src, "entity named after a private individual (left out by decision)")
+                continue
             word = (r["flag_rule_v2"] or r["flag_rule"]).rsplit(": ", 1)[-1]
             if tier == "A":
                 text = "Registered in Colorado %s (%s, %s); status %s; name word: %s" % (r["record_date"], r["record_type"], r.get("jurisdiction_of_formation", ""), r["entity_status"], word)
@@ -310,8 +321,8 @@ def build_signals(S4, zshare, geocoder):
         st = "cancelled " + r["cancel_date"] if r["cancel_date"] else ("finaled " + r["final_date"] if r["final_date"] else "not finaled")
         if r.get("_carried"):
             st += " (carried on under change-of-contractor record %s)" % r["_carried"]
-        return "Denver permit %s%s: %s, %s, received %s, issued %s, %s; parcel class %s, zone %s" % (
-            r["record_id"], tag, r["class"], money(r["valuation"]), r["record_date"], r["date_issued"] or "n/a", st, r["parcel_class"] or "blank", r["zone_district"] or "blank")
+        return "%s permit %s%s: %s, %s, received %s, issued %s, %s; parcel class %s, zone %s" % (
+            C.COUNTY, r["record_id"], tag, r["class"], money(r["valuation"]), r["record_date"], r["date_issued"] or "n/a", st, r["parcel_class"] or "blank", r["zone_district"] or "blank")
 
     def permit_stage(r):
         fin = r.get("final_date", "")
@@ -338,7 +349,7 @@ def build_signals(S4, zshare, geocoder):
             return False
         return True
 
-    srcA, srcB = "Denver commercial construction permits, tier A", "Denver commercial construction permits, tier B"
+    srcA, srcB = C.PERMIT_LABEL + ", tier A", C.PERMIT_LABEL + ", tier B"
     A = [r for r in permits if r["flag_tier"] == "A"]
     cuts.add(srcA, "flagged rows", len(A))
     cuts.add(srcA, "zero-valuation permits in the full layer (never flagged in tier A; listed for the record)", sum(1 for r in permits if fnum(r["valuation"]) == 0))
@@ -396,7 +407,7 @@ def build_signals(S4, zshare, geocoder):
                                   info=dict(pc=r["parcel_class"], zone=r["zone_district"], val=v, cls=r["class"])))
 
     # ------------------------------------------------------------------ site plans
-    src = "Denver concept and site plans"
+    src = C.PLAN_LABEL
     cuts.add(src, "flagged rows (every row is flagged)", len(sdp))
     for r in sdp:
         if r["industrial_zoning"] != "Y":
@@ -405,9 +416,9 @@ def build_signals(S4, zshare, geocoder):
         if not addr_key(r["site_address"]):
             cuts.add(src, "no usable street address")
             continue
-        heavy = bool(re.match(r"^I-[AB]\b", r["zone_district"]))
+        heavy = r["_heavy"] if "_heavy" in r else bool(re.match(r"^I-[AB]\b", r["zone_district"]))
         kind = "sdp_heavy" if heavy else "sdp_imx"
-        text = "Denver %s %s opened %s, status %s, zone %s%s" % (r["record_type"], r["record_id"], r["record_date"], r.get("status", ""), r["zone_district"], "" if heavy else " (industrial mixed use)")
+        text = "%s %s %s opened %s, status %s, zone %s%s" % (C.COUNTY, r["record_type"], r["record_id"], r["record_date"], r.get("status", ""), r["zone_district"], "" if heavy else " (industrial mixed use)")
         cuts.add(src, "rows kept as signals")
         out["address"].append(sig(SDP, r, kind, "A", text, grade="address", stage="planned", info=dict(zone=r["zone_district"])))
 
