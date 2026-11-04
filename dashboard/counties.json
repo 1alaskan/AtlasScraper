@@ -1,0 +1,29 @@
+{
+  "counties": [
+    {
+      "slug": "denver",
+      "name": "Denver County",
+      "version": "v3b",
+      "run_date": "2026-10-11",
+      "ranked": "step5-analysis/v3/denver_ranked_accounts_v3b.csv",
+      "evidence": "step5-analysis/v3/denver_evidence_v3b.csv",
+      "notes": "step5-analysis/v3/analysis_notes_v3.md",
+      "extra_notes": [
+        "step5-analysis/v3/step5c/tenant_notes_v3.md"
+      ]
+    },
+    {
+      "slug": "adams",
+      "name": "Adams County",
+      "version": "v3",
+      "run_date": "2026-10-31",
+      "ranked": "step5-analysis/adams/adams_ranked_accounts_v3.csv",
+      "evidence": "step5-analysis/adams/adams_evidence_v3.csv",
+      "notes": "step5-analysis/adams/adams_analysis_notes.md",
+      "extra_notes": [
+        "step5-analysis/adams/webcheck_top50_notes.md",
+        "step5-analysis/adams/review_findings_3.md"
+      ]
+    }
+  ]
+}

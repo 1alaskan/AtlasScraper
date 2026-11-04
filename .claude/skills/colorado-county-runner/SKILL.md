@@ -57,7 +57,7 @@ If the repo is not attached, attach it with the add_repo tool. If a computer is 
 1. Read `step4-scrape/scrape_notes.md` and the "Bottom line" sections of `step3-validation/backtest_batch1_notes.md` and `backtest_batch2_notes.md`.
 2. Check whether this county already has files under any step folder. If it does, resume from the last finished step and say so. Do not overwrite a finished step unless asked.
 3. Check the age of the statewide scrape files. If they are more than about 60 days old, say so and ask whether to re-pull with the scripts in `step4-scrape/scripts/` before the analysis step. Do not re-pull without asking.
-4. Set up a task list with the four steps, the inventory page update, and the final check.
+4. Set up a task list with the four steps, the inventory page update, the Streamlit registration, and the final check.
 
 ## Step 1: Discovery (county tier only)
 
@@ -247,6 +247,10 @@ If the page cannot be found, or the publish is refused, leave the record file in
 
 The page holds data sources only. Lead lists stay in the spreadsheets under `step5-analysis/{county}/` and do not go on this page.
 
+## Last step, part 2: register the county on the Streamlit site
+
+The ranked lists are viewed on a Streamlit site (`streamlit_app.py` at the repo root, deployed from `main`). After the analysis step is committed, run `python3 dashboard/register_county.py` with the county's final ranked file, evidence file and notes (the command and column requirements are in `dashboard/README.md`), smoke-test the app as that file says, then commit `dashboard/counties.json` and push. Standing permission from Matthew: do this without asking.
+
 ## Stop and ask
 
 Run the four steps and the inventory page update through without waiting for approval between them. Stop only for these:
@@ -280,6 +284,7 @@ He prefers short, direct, numbers-first reports, with options in a table when th
 - How many accounts were ranked, and the top 10 with one line of evidence each.
 - The check: known projects found and at what rank, or a plain statement that the county had none to check against.
 - That the inventory page was updated, and how many sources it now lists.
+- That the county is registered on the Streamlit site (and the link, which is the same for every county).
 - What the sources could not show.
 - The three or four decisions he needs to make next.
 

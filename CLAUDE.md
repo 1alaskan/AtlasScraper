@@ -9,3 +9,4 @@ To run a county ("run Adams County"), load the `colorado-county-runner` skill. A
 - Everything runs in a cloud session with no computer linked: standard-library Python, and the Census geocoder, Census ZCTA file, data.colorado.gov and the portal hosts are all reachable from the cloud shell. Nothing depends on Matthew's Windows folder.
 - Step 1 (discovery) and step 3 (validation) inputs, including ground truth and back-test notes, live in the Claude project "Atlas Lead Pipeline New". Read them with the Projects tool.
 - Commit results and push to `main` at the end of each step.
+- `streamlit_app.py` + `dashboard/`: the Streamlit site that shows each county's ranked list, evidence and notes. It reads `dashboard/counties.json`; after a county's analysis step, run `python3 dashboard/register_county.py ...` (see its docstring) and push. Streamlit Community Cloud redeploys from `main`. Keep `requirements.txt` to what the app needs.
