@@ -1,0 +1,8 @@
+geocoder: 143 addresses to look up (31 already cached)
+geocoder: 111 of 143 looked up, time budget reached. Run the same command again to continue.
+exit 3
+geocoder: 32 addresses to look up (142 already cached)
+signals: 291 named, 8 address-only, 8 OEDIT (61s)
+ranked 236 rows: 204 Weld (204 companies, 0 addresses), 24 county unconfirmed, 8 OEDIT; 652 evidence rows (68s)
+wrote ../../weld/run1_nolayers
+exit 0
