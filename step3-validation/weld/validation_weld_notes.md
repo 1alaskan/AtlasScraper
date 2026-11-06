@@ -4,7 +4,7 @@ Run 2026-11-05 to 2026-11-06. Companion file: `validation_weld_matches.csv` (129
 
 ## Bottom line
 
-Weld County has 6 known projects in the ground truth (5 confirmed Weld, X27 Microvast best guess), so the method was a back-test, as in Denver. 57 county sources were found in step 1; 17 were tested; 9 earned a build verdict (3 back-tested, 5 inherited and spot-checked, 1 spot-checked only as a resolver); 8 parked; 2 dropped; the rest not tested.
+Weld County has 6 known projects in the ground truth (5 confirmed Weld, X27 Microvast best guess), so the method was a back-test, as in Denver. 56 county sources were found in step 1; 18 were tested; 9 earned a build verdict (3 back-tested, 5 inherited and spot-checked, 1 spot-checked only as a resolver); 7 parked; 2 dropped; 1 (Windsor permit reports) set aside as a manual download; the rest not tested.
 
 | Rank | Source | In scope | Confirmed | Possible | Before press (confirmed) | Verdict | Basis |
 |---|---|---|---|---|---|---|---|
