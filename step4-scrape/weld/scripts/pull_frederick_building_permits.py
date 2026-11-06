@@ -352,7 +352,7 @@ def main():
         addr = re.sub(r"\s+FREDERICK$", "", addr, flags=re.I)
         company, role = extract_company(desc, title)
         if not company and pbus:
-            company, role = pbus, "occupant"
+            company, role = pbus, "tenant"
 
         # industrial evidence, searched in order
         word, field = "", ""

@@ -55,7 +55,7 @@ def main():
         a = naddr(addr)
         for r in by_addr.get(a, []) if a else []:
             if not any(h[0] == r["rank"] for h in hits):
-                hits.append((r["rank"], r["company_name"], "confirmed: exact address (occupier may differ)"))
+                hits.append((r["rank"], r["company_name"], "possible: exact street address only (occupier may differ)"))
         if not hits and k:
             lead = k.split()[0]
             for kk, rs in by_name.items():

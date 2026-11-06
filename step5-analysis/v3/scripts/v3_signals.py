@@ -194,7 +194,7 @@ def build_signals(S4, zshare, geocoder):
 
     if C.LOCAL_LAYERS and C.LOCAL_PERMIT_FILES is not None:
         import v3_local
-        permits = v3_local.load_permits(S4, C.LOCAL_PERMIT_FILES)
+        permits = v3_local.load_permits(S4, C.LOCAL_PERMIT_FILES, getattr(C, "LOCAL_DESC_USE_HOLD", False))
         sdp = v3_local.load_plans(S4, C.LOCAL_PLAN_FILES or [])
     else:
         permits = read_all(S4, PER) if C.LOCAL_LAYERS else []

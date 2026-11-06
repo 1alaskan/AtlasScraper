@@ -478,6 +478,10 @@ def resolve(sg, S4, log=print):
             elif den:
                 best = max(den, key=lambda e: (e["ak"] == a.main_ak, e["date"]))
                 a.section, a.basis = "denver", best["basis"]
+            elif own and any(e["src"] in (PER, SDP) and e["cls"] == "confirmed" and e.get("section", "denver") == "denver" for e in a.sigs):
+                # A company whose own rows could not be placed (geocoder miss) but which is tied by an exact name plus address to the
+                # county's own permit or site plan layer, which only holds county sites. Added 2026-11-06 (Weld review, Hirsh Precision).
+                a.section, a.basis = "denver", "%s permit layer (%s only): tied by exact name plus address" % (C.COUNTY, C.COUNTY)
             elif own:
                 best = max(own, key=lambda e: (e["ak"] == a.main_ak, e["date"]))
                 a.section, a.basis = best["section"], best["basis"]

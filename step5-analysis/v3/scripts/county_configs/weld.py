@@ -21,6 +21,7 @@ LOCAL_PLAN_FILES = ["weld/scrape_weld_county_planning_cases.csv", "weld/scrape_w
                     "weld/scrape_fort_lupton_planning_projects.csv"]
 LOCAL_PERMIT_LABEL = "Weld county permits (Frederick)"
 LOCAL_PLAN_LABEL = "Weld county planning cases"
+LOCAL_DESC_USE_HOLD = True                # hold tier A permits whose description says retail, mercantile, well pad etc. (Frederick carries no valuation or use field)
 # No slot in the method (Matthew's decision 2026-11-06, side list): weld/scrape_weld_incentive_agreements.csv,
 # weld/scrape_weld_county_property_sales.csv, weld/scrape_weld_county_personal_property_accounts.csv.
 
@@ -100,7 +101,11 @@ PERSON_NAMED = set()
 WEB_CHECKS_V3 = {}
 
 # --------------------------------------------------------------------------- ties carried over from Step 3 (not from the scraped files)
-KNOWN_TIES = []
+KNOWN_TIES = [
+    {"name_key": "HIRSH PRECISION PRODUCTS", "addr_keys": ["4300 GODDING HOLLOW"],
+     "display": "Hirsh Precision Products, Inc., Frederick (Weld County)",
+     "note": "tied by the Frederick permit layer: HIRSH PRECISION PRODUCTS INC is the business name on the parcel at 4300 Godding Hollow Pkwy (Weld County, Frederick lies wholly in Weld) and the 2022 county incentive agreement names the same address; the Census geocoder could not place the street"},
+]
 STEP3_OCCUPIERS = {}
 
 # --------------------------------------------------------------------------- the Weld County ground-truth projects (names, aliases, addresses)

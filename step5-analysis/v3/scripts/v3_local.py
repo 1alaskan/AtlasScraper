@@ -48,6 +48,8 @@ LOW_VALUE = re.compile(r"\b(fences?|signs?|alarms?|fire sprinklers?|sprinklers?|
                        r"antennas?|awnings?|canop(?:y|ies)|pools?|solar|re-?roof\w*|siding|windows?|door replacement|grading|right of way|"
                        r"racking|racks?|pallet rack\w*|high piled|generators?|tanks?|tank battery|trailers?|poles?|cameras?|sheds?|cages?|"
                        r"fuel storage|fuel canopy|fireworks|scales?|retaining wall|light pole|well pump|monument|flagpole|dumpster|bollards?)\b", re.I)
+NON_PLANT_DESC = re.compile(r"mercantile|retail|restaurant|hotel|church|school|daycare|clinic|dental|medical office|car wash|carwash|gas station|convenience|"
+                            r"well pad|oil and gas pad|tank battery|wellsite|well site|multi.?family|apartment|townhome|clubhouse", re.I)
 COMMERCIAL_USE = re.compile(r"mercantile|business use|hotel|assembly|educational|institutional|animal shelter|commercial miscellaneous|daycare|church|school", re.I)
 ADAMS_CONSTRUCTION = re.compile(r"tenant finish|warehouse|core\s*&\s*shell|core and shell|office|addition|change in use|manufactur|industrial|plant|"
                                 r"building|sq\.? ?ft|square f|suite|shell|factory|process", re.I)
@@ -106,7 +108,7 @@ def _final(r):
     return ""
 
 
-def load_permits(s4, files):
+def load_permits(s4, files, desc_use_hold=False):
     out = []
     for f in files:
         rows = []
@@ -152,6 +154,10 @@ def load_permits(s4, files):
                     tier, rule = "B", "B3b " + rule + " (held at B3b: low-value work in the description)"
                 elif tier == "A" and COMMERCIAL_USE.search(words):
                     tier, rule = "B", "B3a " + rule + " (held at B3a: commercial, not industrial, use building)"
+                elif tier == "A" and no_val and desc_use_hold and NON_PLANT_DESC.search(desc[:160]):
+                    # Layers with no valuation and generic permit types (Frederick) carry the use only in the description.
+                    # Added 2026-11-06 after the Weld review; on only where the county config sets LOCAL_DESC_USE_HOLD = True (Weld), so Adams and Denver are unchanged.
+                    tier, rule = "B", "B3a " + rule + " (held at B3a: commercial use or well pad in the description, no valuation on the layer)"
                 elif tier == "A" and no_val and not (ADAMS_CONSTRUCTION.search(re.sub(r"\bother\s*/\s*(new|addition|alteration)\b", "", words, flags=re.I)) or CONSTRUCTION_DESC.search(desc[:200])):
                     tier, rule = "B", "B3b " + rule + " (held at B3b: no valuation and no construction word)"
             r["flag_tier"] = tier

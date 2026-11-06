@@ -34,7 +34,8 @@
       "evidence": "step5-analysis/weld/weld_evidence_v3.csv",
       "notes": "step5-analysis/weld/weld_analysis_notes.md",
       "extra_notes": [
-        "step5-analysis/weld/web_checks_weld.md"
+        "step5-analysis/weld/web_checks_weld.md",
+        "step5-analysis/weld/review_findings.md"
       ]
     }
   ]
