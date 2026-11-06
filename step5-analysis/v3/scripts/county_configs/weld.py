@@ -14,11 +14,15 @@ COUNTY = "Weld"                           # as it appears in the county columns 
 COUNTY_FULL = "Weld County"               # as the Census geocoder names it
 AIRS_PREFIX = "123"                       # APCD AIRS ID county prefix = FIPS 08123 (checked 2026-11-05: 712 rows carry 123 with county Weld, 27 carry 123 with county Denver (office address), 12 portable sources say Weld)
 ZIP_SHARE_FILE = "weld_zip_share.json"    # share of each zip inside the county (Census 2020 ZCTA file), in the scripts folder; built 2026-11-05 by build_zip_share.py (43 zips, 26 wholly inside)
-LOCAL_LAYERS = False                      # set True with the Weld Step 3 files once the scrape step is done
-LOCAL_PERMIT_FILES = []
-LOCAL_PLAN_FILES = []
-LOCAL_PERMIT_LABEL = ""
-LOCAL_PLAN_LABEL = ""
+LOCAL_LAYERS = True                       # Weld Step 3 files (pulled 2026-11-06), read through v3_local.py; first pass was run with False
+LOCAL_PERMIT_FILES = ["weld/scrape_frederick_building_permits.csv"]
+LOCAL_PLAN_FILES = ["weld/scrape_weld_county_planning_cases.csv", "weld/scrape_weld_county_site_plan_reviews.csv",
+                    "weld/scrape_frederick_development_applications.csv", "weld/scrape_greeley_trakit_projects.csv",
+                    "weld/scrape_fort_lupton_planning_projects.csv"]
+LOCAL_PERMIT_LABEL = "Weld county permits (Frederick)"
+LOCAL_PLAN_LABEL = "Weld county planning cases"
+# No slot in the method (Matthew's decision 2026-11-06, side list): weld/scrape_weld_incentive_agreements.csv,
+# weld/scrape_weld_county_property_sales.csv, weld/scrape_weld_county_personal_property_accounts.csv.
 
 # Mailing cities. Weld County has no city of that name, so the mailing-city tests use these sets.
 # MAIL_CITIES: mailing cities that sit wholly (or nearly wholly) inside Weld County. A row with one of these and no usable zip or
