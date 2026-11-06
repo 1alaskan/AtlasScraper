@@ -24,6 +24,18 @@
         "step5-analysis/adams/webcheck_top50_notes.md",
         "step5-analysis/adams/review_findings_3.md"
       ]
+    },
+    {
+      "slug": "weld",
+      "name": "Weld County",
+      "version": "v3",
+      "run_date": "2026-11-06",
+      "ranked": "step5-analysis/weld/weld_ranked_accounts_v3.csv",
+      "evidence": "step5-analysis/weld/weld_evidence_v3.csv",
+      "notes": "step5-analysis/weld/weld_analysis_notes.md",
+      "extra_notes": [
+        "step5-analysis/weld/web_checks_weld.md"
+      ]
     }
   ]
 }
