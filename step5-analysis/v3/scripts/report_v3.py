@@ -17,11 +17,24 @@ SRC = ["Colorado UCC filings, tier A", "Colorado UCC filings, tier B", "Colorado
        "APCD air permit status", "Mile High CRE", "OEDIT EDC approvals"]
 
 
+def _src_index(name):
+    # Denver's sources keep their fixed order; another county's labels (its county permit and planning layers) sort after them,
+    # in the order they first appear. Added 2026-11-06 for the Weld run; Denver output unchanged.
+    if name in SRC:
+        return SRC.index(name)
+    if name not in _EXTRA:
+        _EXTRA.append(name)
+    return len(SRC) + _EXTRA.index(name)
+
+
+_EXTRA = []
+
+
 def okey(row):
     for i, k in enumerate(ORDER):
         if row[1].startswith(k):
-            return (SRC.index(row[0]), i)
-    return (SRC.index(row[0]), len(ORDER))
+            return (_src_index(row[0]), i)
+    return (_src_index(row[0]), len(ORDER))
 
 
 def main():
