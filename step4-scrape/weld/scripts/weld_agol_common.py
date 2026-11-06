@@ -54,6 +54,36 @@ INDUSTRIAL_WORDS = re.compile(
     re.I)
 
 # Terms that mark a business or institution rather than a person.
+# Strong corporate tokens: a name carrying one of these is never read as a person by the given-name rule below.
+STRONG_CORP = re.compile(r"\b(llc|l\.l\.c|inc|incorporated|corp|corporation|co|company|ltd|limited|lp|llp|lllp|pllc|pc|plc|gmbh|"
+                         r"trust|partnership|partners|holdings?|group|enterprises?|association|assn|assoc|foundation|church|ministries|"
+                         r"district|county|city|town|state|university|school|bank|credit union|properties|investments?|development|"
+                         r"farms?|ranch|homes|apartments?|estates|ventures?|fund|reit|hoa|authority|commission|board|department|"
+                         r"industries|international|national|systems|services|solutions|technologies|energy|resources|"
+                         r"construction|builders|contractors?|logistics|trucking|manufacturing|products|dba|d/b/a)\b", re.I)
+# Common given names (assessor names run SURNAME GIVEN MIDDLE), used only with the rule above.
+GIVEN_NAMES = set("""JAMES JOHN ROBERT MICHAEL WILLIAM DAVID RICHARD JOSEPH THOMAS CHARLES CHRISTOPHER DANIEL MATTHEW ANTHONY MARK DONALD
+STEVEN PAUL ANDREW JOSHUA KENNETH KEVIN BRIAN GEORGE TIMOTHY RONALD EDWARD JASON JEFFREY RYAN JACOB GARY NICHOLAS ERIC JONATHAN
+STEPHEN LARRY JUSTIN SCOTT BRANDON BENJAMIN SAMUEL GREGORY ALEXANDER FRANK PATRICK RAYMOND JACK DENNIS JERRY TYLER AARON JOSE
+ADAM NATHAN HENRY DOUGLAS ZACHARY PETER KYLE NOAH ETHAN JEREMY WALTER CHRISTIAN KEITH ROGER TERRY AUSTIN SEAN GERALD CARL
+HAROLD DYLAN ARTHUR LAWRENCE JORDAN JESSE BRYAN BILLY BRUCE GABRIEL JOE LOGAN ALAN JUAN ALBERT WILLIE ELIJAH WAYNE RANDY
+VINCENT MASON ROY RALPH BOBBY RUSSELL BRADLEY PHILIP EUGENE LOUIS JESUS LEE LONNIE ROCKY DELON EMRON CLAYBORNE JAY TODD DALE
+DUANE DWAYNE GLEN GLENN DEAN LYLE LLOYD LEROY CLIFFORD CLYDE CURTIS MARVIN MELVIN NORMAN VERNON WARREN WESLEY ALLEN ALLAN
+MARY PATRICIA JENNIFER LINDA ELIZABETH BARBARA SUSAN JESSICA SARAH KAREN LISA NANCY BETTY MARGARET SANDRA ASHLEY KIMBERLY
+EMILY DONNA MICHELLE CAROL AMANDA DOROTHY MELISSA DEBORAH STEPHANIE REBECCA SHARON LAURA CYNTHIA KATHLEEN AMY ANGELA SHIRLEY
+ANNA BRENDA PAMELA EMMA NICOLE HELEN SAMANTHA KATHERINE CHRISTINE DEBRA RACHEL CAROLYN JANET CATHERINE MARIA HEATHER DIANE
+RUTH JULIE OLIVIA JOYCE VIRGINIA VICTORIA KELLY LAUREN CHRISTINA JOAN EVELYN JUDITH MEGAN ANDREA CHERYL HANNAH JACQUELINE
+MARTHA GLORIA TERESA ANN SARA MADISON FRANCES KATHRYN JANICE JEAN ABIGAIL ALICE JULIA JUDY SOPHIA GRACE DENISE AMBER DORIS
+MARILYN DANIELLE BEVERLY ISABELLA THERESA DIANA NATALIE BRITTANY CHARLOTTE MARIE KAYLA ALEXIS LORI MOLLY ELLA VICKI VICKIE
+ROBERTA TAMMY TAMI TONI TONYA CONNIE BONNIE PEGGY PATTY PATTI WANDA RHONDA LORRAINE LORETTA BRANDI BRANDY KRISTI KRISTIN
+KRISTEN KRISTINE KIM SHERRY SHERRI TERRI TERRY TRACY TRACI STACY STACEY WENDY LESLIE LESLEY DARLENE ARLENE CHARLENE MARLENE""".split())
+# Surnames that double as business or town words, so a hint in the first token alone does not make a company.
+SURNAME_COLLISION = {"BARBER", "LAW", "STONE", "PIERCE", "GROVER", "EVANS", "EATON", "AULT", "HUDSON", "FREDERICK", "WINDSOR",
+                     "MEAD", "KERSEY", "GILL", "CARR", "BAKER", "COOK", "FARMER", "MASON", "MILLER", "SMITH", "TAYLOR", "WRIGHT",
+                     "FISHER", "HUNTER", "GARDNER", "CARPENTER", "COOPER", "BREWER", "BUTLER", "FOSTER", "PORTER", "WALKER", "WARD",
+                     "WOOD", "WOODS", "FIELDS", "HILL", "HILLS", "RIVERS", "BROOKS", "LAKE", "SNOW", "FROST", "STEEL", "GLASS",
+                     "BANKS", "BELL", "BISHOP", "CHURCH", "DEAN", "KNIGHT", "LORD", "MARSHALL", "PAGE", "PARKS", "POWER",
+                     "POWERS", "RICH", "ROSE", "SHARP", "SHORT", "SMALL", "STRONG", "SWIFT", "WEST", "NORTH", "SOUTH", "EAST"}
 BUSINESS_HINT = re.compile(
     r"\b(llc|l\.l\.c|inc|incorporated|corp|corporation|co|company|ltd|lp|llp|lllp|pllc|pc|"
     r"plc|gmbh|sa|construction|constructors?|contractors?|contracting|builders?|building|"
@@ -325,6 +355,7 @@ def looks_like_individual_party(name):
     if PERSON_TRUST.search(n):
         return True
     n = re.sub(r"\bUND\s+[\d/.%\s]+INT\b", " ", n, flags=re.I)
+    n = re.sub(r"\([^)]*\)", " ", n)          # '(8.33% INT)', '(1/6 INT)', '(LE)', '(PR)' ownership-share and estate tags
     n = re.sub(r"\b(et\s*al\.?|etal)\b", " ", n, flags=re.I)
     n = re.sub(r"\bC/O\b.*$", " ", n, flags=re.I)
     parts = [p for p in re.split(r"\s*(?:&|\band\b|;|,)\s*", n, flags=re.I) if p.strip()]
@@ -333,6 +364,21 @@ def looks_like_individual_party(name):
         if re.search(r"\btrust\b", p_nodigit, re.I):
             if INSTITUTIONAL_TRUST.search(p_nodigit):
                 continue
+            return True
+        # Assessor format 'SURNAME FIRST [MIDDLE] I': a trailing single-letter initial is a person whatever the
+        # surname looks like (BARBER, LAW, STONE, PIERCE, GROVER and EVANS all collide with business or town words).
+        # Added 2026-11-06 after the QA pass found 12 such names in the first pull.
+        toks = p_nodigit.replace(".", " ").split()
+        if 3 <= len(toks) <= 4 and len(toks[-1]) == 1 and all(re.fullmatch(r"[A-Za-z][A-Za-z'\-]*", w) for w in toks):
+            return True
+        if 2 <= len(toks) <= 3 and toks[0].upper() in SURNAME_COLLISION and not BUSINESS_HINT.search(" ".join(toks[1:])) \
+                and all(re.fullmatch(r"[A-Za-z][A-Za-z'\-]*", w) for w in toks):
+            return True
+        # 'SURNAME GIVEN [GIVEN] [JR]' where a given name follows the surname and no strong corporate token is present:
+        # a person, even when the surname or the given name happens to be a business-hint word (FORD, STONE, ROCKY, NICHOLAS).
+        plain = [w for w in toks if w.upper() not in ("JR", "SR", "II", "III", "IV")]
+        if 2 <= len(plain) <= 4 and all(re.fullmatch(r"[A-Za-z][A-Za-z'\-]*", w) for w in plain) \
+                and not STRONG_CORP.search(p_nodigit) and any(w.upper() in GIVEN_NAMES for w in plain[1:]):
             return True
         if BUSINESS_HINT.search(p_nodigit):
             continue
