@@ -152,3 +152,54 @@ WEB_CHECKS_WELD = {
 - ARC COLORADO: searched "ARC Colorado Inc 7040 County Road 20 Longmont fabricated metal"; OpenGovUS and GunMade pages failed to load.
 
 Blocked or failed pages: schlossersigns.com (permission not granted), trustburn.com, gunmade.com, opengovus.com (client errors), jobs.expresspros.com (expired posting).
+# Weld County incentive agreement holders: compressed-air fit web check (2026-11-06)
+
+## Fit dict
+
+```python
+WELD_INCENTIVE_WEBCHECK = {
+    'NORTH AMERICAN MACHINES OF COLORADO TRULOG SIDING': ('strong', 'TruLog makes roll-formed steel log-look, board-and-batten and lap siding (building-product manufacturing, metal forming); trade directory confirms the product and lists LaSalle CO, the Niobrara Blvd site is the new Project Hawthorn plant per the county agreement and 2026 site plan, manufacturing there is inferred not confirmed; trade directory (web check 2026-11-06).'),
+    'OWENS BROCKWAY GLASS CONTAINER': ('strong', 'O-I glass container plant (Plant 28) at 11133 Eastman Park Dr, Windsor, makes glass bottles and jars; Town of Windsor manufacturer list and EPA GHGRP facility record (web check 2026-11-06).'),
+    'MOTHERLOAD CO PACKING': ('strong', 'Motherlode Co-Packing, sauce and condiment co-packer (BBQ and hot sauces, dressings, salsa, drink mixes) with contract manufacturing and private label at 560 Dahlia St, Hudson; trade directory (web check 2026-11-06).'),
+    'US ENGINEERING METALWORKS': ('strong', 'U.S. Engineering Metalworks runs prefabrication plants in Colorado and Kansas making piping, plumbing, steel and sheet metal assemblies, about 300,000 sq ft expanding to 500,000 by 2027; company site confirms the Colorado fab plant, Johnstown address comes from the county agreement; company site (web check 2026-11-06).'),
+    'ECOMOD': ('strong', 'EcoMod builds modular housing, dormitories and portable data centers from steel framing and upcycled container chassis at its Hudson CO plant, primary NAICS 332311 prefabricated metal buildings; federal contractor record (web check 2026-11-06).'),
+    'SCOTTS COMPANY HYPONEX': ('moderate', 'Scotts Miracle-Gro / Hyponex plant in Brighton with production, field, warehouse, machine operator and heavy equipment roles; Hyponex is the Scotts soil and mulch brand, so a growing media bagging and blending plant, product line at the site inferred from job postings not stated; job postings (web check 2026-11-06).'),
+    'CHARM INDUSTRIAL': ('strong', 'Charm Industrial Miniforge in Fort Lupton: biomass pyrolysis operations, bio-oil gasification and ironmaking R&D, with pyrolyzer operator and fabricator roles; pilot-scale chemical processing, team planned at 25+; company blog and job postings (web check 2026-11-06).'),
+    'K2D COLORADO PREMIUM FOODS': ('strong', 'Colorado Premium 175,000 sq ft sous vide protein processing plant at 2400 W 29th St, Greeley, with raw processing, searing and par-fry lines, opened Feb 2024; trade press (web check 2026-11-06).'),
+    'NORFOLK IRON AND METAL': ('strong', 'Norfolk Iron & Metal (NIM Group) metal processing center at 31825 Great Western Dr, Windsor: cut-to-length line and hydraulic leveler shearing aluminum, stainless, coated and cold-rolled sheet, a processing-only plant supplying NIM Group; press release and Town of Windsor manufacturer list (web check 2026-11-06).'),
+    'SPHERE RENEWABLES': ('moderate', 'Sphere Renewables, component manufacturer and distributor for wind, solar and storage projects, 43,000 sq ft headquarters with a production shop floor on WCR 8 in Fort Lupton; product assembled on site not named; trade press and job posting (web check 2026-11-06).'),
+    'BAE SYSTEMS SPACE AND MISSION SYSTEMS': ('strong', 'BAE Systems Space & Mission Systems bought the 130,000 sq ft former Danfoss building at 4120 Specialty Place (unincorporated Weld, east of Longmont) in Oct 2026 for $30M as an advanced manufacturing and integration plant for space hardware and sensor systems; retrofit and equipment buying now, production early 2028; regional news (web check 2026-11-06).'),
+    'COLORADO STUD': ('unknown', 'Not confirmed in two lookups; Lone Tree Lane in Nunn is a small industrial yard and warehouse park off US 85 serving oil and gas users, no page names Colorado Stud Company or its product; property listings (web check 2026-11-06).'),
+    'GG COLORADO II': ('unknown', 'Not confirmed in two lookups; no page ties GG Colorado II LLC to a business or product at Great Western Industrial Park Lot 15, Windsor, the name reads as a holding or project entity; web search (web check 2026-11-06).'),
+    'MICROVAST ENERGY': ('weak', 'Microvast bought the former Hexcel building at 31815 Great Western Dr, Windsor in July 2023 for an energy storage plant that never ramped; a 31,562 sq ft suite in the 99,536 sq ft building is now listed for lease with no tenant named, so Microvast appears gone; trade press and CBRE listing (web check 2026-11-06).'),
+    'AIRXCEL AQUA HOT HEATING SYSTEMS': ('strong', 'Aqua-Hot (Airxcel) makes hydronic RV and specialty vehicle heating systems, moved to a new Frederick building with expanded manufacturing space in Oct 2023; Miller Drive address from the county agreement and 2023 tenant finish permit; trade press (web check 2026-11-06).'),
+}
+```
+
+## Flags
+
+- MICROVAST ENERGY: company appears to have left the site. The 31815 Great Western Dr building is on the market for lease (CBRE) with no tenant named, and the 2023 ESS plant plan never ramped. Treat the address as a vacancy, not a Microvast account.
+- GG COLORADO II: name is a holding or project entity (UCC secured party Ares Capital), not a recognizable operator. Occupier at Great Western Industrial Park Lot 15 unconfirmed.
+- COLORADO STUD: occupier and product unconfirmed; Lone Tree Lane in Nunn is a yard-and-warehouse park. UCC with First Advantage Bank covers fixtures, which fits a small operator, but nothing says what it does.
+- NORTH AMERICAN MACHINES OF COLORADO / TRULOG SIDING: product confirmed, site not. Directory lists LaSalle CO; the Niobrara Blvd site is the new Project Hawthorn plant (2026 site plan review). The company website fetch (trulogsiding.com) was blocked by a permission timeout.
+- BAE SYSTEMS: site is in unincorporated Weld County (mailing address Longmont). Production not until early 2028; equipment procurement is underway now, which is the compressed-air buying window.
+- SCOTTS / HYPONEX and SPHERE RENEWABLES: site confirmed, specific product line at the site not stated on any page.
+- No site was found to be outside Weld County. No landlord, lender or contractor was ranked in place of an occupier except GG Colorado II, which may be one.
+
+## Settling page per company
+
+- NORTH AMERICAN MACHINES OF COLORADO / TRULOG SIDING: https://designandbuildwithmetal.com/supplier-directory/trulog (blocked: https://www.trulogsiding.com/)
+- OWENS BROCKWAY GLASS CONTAINER INC: https://www.windsorco.gov/1352/Manufacturing
+- MOTHERLOAD CO PACKING LLC: https://www.comanufacturers.com/products/motherlode-co-packing-comanufacturer-profile
+- US ENGINEERING METALWORKS: https://www.usengineering.com/solutions/metalworks/manufacturing-facilities
+- ECOMOD LLC: https://fed360.agency/contractors/ecomod-llc-SLWQQCUNEL38
+- THE SCOTTS COMPANY LLC / HYPONEX CORPORATION: https://www.builtincolorado.com/job/plant-manager/11215200 and https://www.builtincolorado.com/job/office-operations-manager/9272657
+- CHARM INDUSTRIAL INC: https://charmindustrial.com/blog/opening-our-colorado-miniforge-site
+- K2D INC / COLORADO PREMIUM FOODS: https://www.businesswire.com/news/home/20240205212442/en/Colorado-Premium-Opens-New-175000-Square-Foot-Sous-Vide-Processing-Plant
+- NORFOLK IRON AND METAL COMPANY: https://prnewswire.com/news-releases/nim-group-to-install-precision-cut-to-length-line-whydraulic-cassette-leveler-in-windsor-co-facility-301652906.html
+- SPHERE RENEWABLES: https://bizwest.com/?p=376186 and https://www.jobtarget.com/jobs/jt-ckoeyq46u3/production-training-lead-fort-lupton-colorado
+- BAE SYSTEMS SPACE AND MISSION SYSTEMS INC: https://www.kunc.org/news/2026-11-03/bae-buys-weld-county-danfoss-facility-for-30m
+- COLORADO STUD COMPANY: unresolved; https://www.cushmanwakefield.com/en/united-states/properties/for-sale/warehousedistribution/co/nunn/1300-lone-tree-lane/s121276835s121276835-s (park context only)
+- GG COLORADO II LLC: unresolved; web search for the exact name returned nothing relevant
+- MICROVAST ENERGY INC: https://bizwest.com/?p=368173 and https://www.cbre.com/properties/properties-for-lease/industrial/details/US-SMPL-207999/warehouseindustrial-31815-great-western-drive-windsor-co-80550
+- AIRXCEL INC / AQUA HOT HEATING SYSTEMS LLC: https://rv-pro.com/news/aqua-hot-celebrates-40th-anniversary/

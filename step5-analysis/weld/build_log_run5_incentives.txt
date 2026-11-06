@@ -1,4 +1,4 @@
 signals: 308 named, 255 address-only, 8 OEDIT (15s)
-ranked 369 rows: 338 Weld (221 companies, 117 addresses), 23 county unconfirmed, 8 OEDIT; 994 evidence rows (25s)
+ranked 369 rows: 338 Weld (221 companies, 117 addresses), 23 county unconfirmed, 8 OEDIT; 994 evidence rows (26s)
 wrote ../../weld/run5_incentives
 exit 0
