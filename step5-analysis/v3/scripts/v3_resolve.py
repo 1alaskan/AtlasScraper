@@ -409,6 +409,9 @@ def resolve(sg, S4, log=print):
 
     # ------------------------------------------------------------------ names that share an address (listing; one name alone is a possible occupier)
     site_keys = set(sg["layer_keys"])
+    for e in sg["named"]:
+        if e["src"] == INC and e["ak"]:          # a county incentive agreement names the facility; its address is a site, not a home
+            site_keys.add(e["ak"])
     for rows in (sg["water"], sg["air"]):
         for r in rows:
             k = addr_key(r["site_address"])

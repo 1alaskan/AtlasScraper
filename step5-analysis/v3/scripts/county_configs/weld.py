@@ -21,9 +21,11 @@ LOCAL_PLAN_FILES = ["weld/scrape_weld_county_planning_cases.csv", "weld/scrape_w
                     "weld/scrape_fort_lupton_planning_projects.csv"]
 LOCAL_PERMIT_LABEL = "Weld county permits (Frederick)"
 LOCAL_PLAN_LABEL = "Weld county planning cases"
+LOCAL_INCENTIVE_FILES = ["weld/scrape_weld_incentive_agreements.csv"]   # named county incentive agreements, scored from 2026-11-06 (Matthew: go)
+WEB_DROPS_TIER_B = True                   # web-check drops reach tier B liens too (5507 Distilling)
 LOCAL_DESC_USE_HOLD = True                # hold tier A permits whose description says retail, mercantile, well pad etc. (Frederick carries no valuation or use field)
-# No slot in the method (Matthew's decision 2026-11-06, side list): weld/scrape_weld_incentive_agreements.csv,
-# weld/scrape_weld_county_property_sales.csv, weld/scrape_weld_county_personal_property_accounts.csv.
+# No slot in the method: weld/scrape_weld_county_property_sales.csv and weld/scrape_weld_county_personal_property_accounts.csv
+# (side lists). The incentive agreements were a side list on the first pass and are scored from the second (same day).
 
 # Mailing cities. Weld County has no city of that name, so the mailing-city tests use these sets.
 # MAIL_CITIES: mailing cities that sit wholly (or nearly wholly) inside Weld County. A row with one of these and no usable zip or

@@ -265,6 +265,10 @@ def build_signals(S4, zshare, geocoder):
                 s = sig(UCC, r, kind, "A", text, grade=grade, section=section, basis=basis, seq=r["debtor_seq"],
                         names=[r["company_name"]], info=dict(sp=norm_party(sp), mach=mach_word(r) if kind != "ucc_weak" else "", note=note, agent=agent))
             else:
+                if getattr(C, "WEB_DROPS_TIER_B", False) and nk(r["company_name"]) in C.WEB_DROPS:
+                    cuts.add(src, "dropped after the first run's web check (site is outside %s)" % C.COUNTY_FULL)
+                    out["drops"].append((r["company_name"], C.WEB_DROPS[nk(r["company_name"])]))
+                    continue
                 rules = r["flag_rule_v2"].split("; ")
                 ids = [x.split(" ", 1)[0] for x in rules]
                 best = max(ids, key=lambda i: PTS["ucc_" + i.lower()])
@@ -575,6 +579,29 @@ def build_signals(S4, zshare, geocoder):
         text = "OEDIT %s %s: %s;%s%s" % (r["record_date"], r.get("program", ""), r["description"][:150], jobs, twin)
         cuts.add(src, "rows kept as code-name candidates")
         out["oedit"].append(sig(OED, r, "oedit", "A", text, grade="oedit", stage="planned", section="oedit", basis=basis, names=[r["company_name"]]))
+
+    # ------------------------------------------------------------------ county incentive agreements (named, addressed; added 2026-11-06)
+    for f in getattr(C, "LOCAL_INCENTIVE_FILES", []) or []:
+        src = "County incentive agreements"
+        rows = [r for r in csv.DictReader(open(os.path.join(S4, f), newline="", encoding="utf-8")) if r.get("flag") == "Y" and r.get("company_name", "").strip()]
+        cuts.add(src, "flagged rows", len(rows))
+        for r in rows:
+            r = dict(r)
+            r.setdefault("flag_rule_v2", "")
+            if r.get("county", "").strip().upper() != C.COUNTY_UP:
+                cuts.add(src, "county field is not %s" % C.COUNTY)
+                continue
+            if nk(r["company_name"]) in C.PERSON_NAMED:
+                cuts.add(src, "entity named after a private individual (left out by decision)")
+                continue
+            rtype = r.get("record_type", "")
+            cap = r.get("phase_1_cap", "")
+            text = "%s %s (%s): %s%s" % (C.COUNTY + " County tax incentive agreement", r["record_date"], rtype or "agreement", r["description"][:150], (" | phase 1 cap %s" % cap) if cap else "")
+            basis = "%s County incentive agreement names the facility at %s (county record, %s only)" % (C.COUNTY, r["site_address"][:60] or "an address the OCR did not give", C.COUNTY)
+            stage = "planned" if r["record_date"] >= D24 else None
+            cuts.add(src, "rows kept as signals")
+            out["named"].append(sig(INC, r, "incentive_named", "A", text, grade="equipment", stage=stage, section="denver" if r["site_address"].strip() else "unconfirmed",
+                                    basis=basis if r["site_address"].strip() else "%s County incentive agreement without a parsed facility address" % C.COUNTY, names=[r["company_name"]]))
 
     out["cuts"] = cuts.rows
     return out

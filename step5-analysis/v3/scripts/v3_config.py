@@ -86,6 +86,9 @@ LOCAL_PERMIT_FILES = None                    # county permit files (shared 17-co
 LOCAL_PLAN_FILES = None                      # county planning and development files read through v3_local; None = Denver's own layer when LOCAL_LAYERS
 LOCAL_PERMIT_LABEL = None                    # how the permit layer is named in the sources column; None = the Denver label
 LOCAL_PLAN_LABEL = None                      # how the planning layer is named in the sources column; None = the Denver label
+LOCAL_INCENTIVE_FILES = []                   # county incentive agreement files (shared 17-column format, flag Y rows only); empty = no such layer (Denver, Adams)
+LOCAL_DESC_USE_HOLD = False                  # hold tier A permits whose description says retail, well pad etc. at B3a (layers with no valuation or use field)
+WEB_DROPS_TIER_B = False                     # let WEB_DROPS also remove tier B UCC liens (off for Denver and Adams, whose lists were built without it)
 WAT_AIRPORT = re.compile(r"(?!x)x")          # never matches unless the county file sets a local airport or base cut
 WAT_AIRPORT_SIC = set()
 WEB_CHECKS, WEB_CHECKS_V3 = {}, {}

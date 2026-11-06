@@ -21,7 +21,8 @@ WAT = "State water permits (WQCD)"
 AIR = "APCD air permit status"
 CRE = "Mile High CRE"
 OED = "OEDIT EDC approvals"
-SRC_ORDER = [UCC, AIR, PER, WAT, SDP, REG, CRE, OED]
+INC = "County incentive agreements"   # named county personal-property tax incentive agreements (C.R.S. 30-11-123); added 2026-11-06, Weld first
+SRC_ORDER = [UCC, AIR, PER, WAT, SDP, REG, CRE, OED, INC]
 SHORT = {WAT: "State water permits"}
 
 FILES = {
@@ -47,6 +48,7 @@ PTS = {
     "air_process": 25,           # air permit application, modification or approval for process units
     "permit_new": 22,            # Denver permit, new building or addition, industrial property, $250k or more
     "water_construction": 20,    # construction stormwater permit with a manufacturing SIC or company-named facility
+    "incentive_named": 20,       # county tax incentive agreement naming the company and the facility address (approved before the equipment goes into service); added 2026-11-06
     "permit_alt": 18,            # Denver permit, alteration or tenant finish, industrial property, $250k or more
     "permit_b3a": 12,            # Denver permit, $50k to $250k, industrial property (B3a)
     "air_apen": 12,              # air permit APEN-only or exempt
