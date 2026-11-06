@@ -1,0 +1,4 @@
+signals: 291 named, 255 address-only, 8 OEDIT (12s)
+ranked 357 rows: 325 Weld (206 companies, 119 addresses), 24 county unconfirmed, 8 OEDIT; 961 evidence rows (21s)
+wrote ../../weld/run3_webchecks
+exit 0

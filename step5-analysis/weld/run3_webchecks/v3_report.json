@@ -1,0 +1,3919 @@
+{
+ "cuts": [
+  [
+   "Colorado UCC filings, tier A",
+   "flagged rows statewide",
+   901
+  ],
+  [
+   "Colorado UCC filings, tier A",
+   "outside Weld scope (state, zip, mailing city, geocoder)",
+   799
+  ],
+  [
+   "Colorado UCC filings, tier A",
+   "rows kept as signals",
+   88
+  ],
+  [
+   "Colorado UCC filings, tier A",
+   "kept at the weak tier (8 points): towable construction compressor",
+   6
+  ],
+  [
+   "Colorado UCC filings, tier A",
+   "forklifts and other lift or earthmoving equipment (Doosan, 'pneumatic' tyre)",
+   6
+  ],
+  [
+   "Colorado UCC filings, tier A",
+   "debtor name has no business word (may be an individual)",
+   5
+  ],
+  [
+   "Colorado UCC filings, tier A",
+   "kept at the weak tier (8 points): flagged word without production machinery",
+   5
+  ],
+  [
+   "Colorado UCC filings, tier A",
+   "kept at the weak tier (8 points): restaurant, commissary-kitchen or survey equipment",
+   2
+  ],
+  [
+   "Colorado UCC filings, tier A",
+   "dry-cleaner and laundry boilers",
+   1
+  ],
+  [
+   "Colorado UCC filings, tier A",
+   "ADDED: pharmacy and copier blanket liens where the flag word sits in boilerplate (Cardinal Health, Canon)",
+   1
+  ],
+  [
+   "Colorado UCC filings, tier A",
+   "paving and road-milling equipment ('pneumatic' rollers, Wirtgen milling machines)",
+   1
+  ],
+  [
+   "Colorado UCC filings, tier B",
+   "flagged rows statewide",
+   374
+  ],
+  [
+   "Colorado UCC filings, tier B",
+   "outside Weld scope (state, zip, mailing city, geocoder)",
+   344
+  ],
+  [
+   "Colorado UCC filings, tier B",
+   "rows kept as signals",
+   30
+  ],
+  [
+   "Colorado business registrations, tier A",
+   "flagged rows statewide",
+   2211
+  ],
+  [
+   "Colorado business registrations, tier A",
+   "no Colorado address (foreign entity showing an out-of-state head office); kept for name matching only",
+   1707
+  ],
+  [
+   "Colorado business registrations, tier A",
+   "Colorado address outside Weld scope",
+   498
+  ],
+  [
+   "Colorado business registrations, tier A",
+   "rows kept as signals",
+   6
+  ],
+  [
+   "Colorado business registrations, tier B",
+   "flagged rows statewide",
+   815
+  ],
+  [
+   "Colorado business registrations, tier B",
+   "Colorado address outside Weld scope",
+   667
+  ],
+  [
+   "Colorado business registrations, tier B",
+   "no Colorado address (foreign entity showing an out-of-state head office); kept for name matching only",
+   90
+  ],
+  [
+   "Colorado business registrations, tier B",
+   "rows kept as signals",
+   57
+  ],
+  [
+   "Colorado business registrations, tier B",
+   "registered-agent or virtual-office address (10 or more 2024-26 registrations at the same address and suite)",
+   1
+  ],
+  [
+   "Weld county permits (Frederick), tier A",
+   "flagged rows",
+   29
+  ],
+  [
+   "Weld county permits (Frederick), tier A",
+   "zero-valuation permits in the full layer (never flagged in tier A; listed for the record)",
+   0
+  ],
+  [
+   "Weld county permits (Frederick), tier A",
+   "flagged rows in the DIA neighborhood (all)",
+   0
+  ],
+  [
+   "Weld county permits (Frederick), tier A",
+   "rows kept as signals",
+   27
+  ],
+  [
+   "Weld county permits (Frederick), tier A",
+   "ADDED in v3: permit cancelled, with no change-of-contractor record carrying the work on",
+   2
+  ],
+  [
+   "Weld county permits (Frederick), tier A",
+   "of the kept rows, received in the last 90 days (kept at full weight; the layer undercounts this window)",
+   3
+  ],
+  [
+   "Weld county permits (Frederick), tier B",
+   "flagged rows",
+   204
+  ],
+  [
+   "Weld county permits (Frederick), tier B",
+   "rows kept as signals (B3b, under $50k)",
+   185
+  ],
+  [
+   "Weld county permits (Frederick), tier B",
+   "permit cancelled",
+   18
+  ],
+  [
+   "Weld county permits (Frederick), tier B",
+   "no usable street address",
+   1
+  ],
+  [
+   "Weld county planning cases",
+   "flagged rows (every row is flagged)",
+   424
+  ],
+  [
+   "Weld county planning cases",
+   "not industrially zoned (housing and mixed use dominate); kept as supporting evidence by address",
+   323
+  ],
+  [
+   "Weld county planning cases",
+   "no usable street address",
+   66
+  ],
+  [
+   "Weld county planning cases",
+   "rows kept as signals",
+   35
+  ],
+  [
+   "State water permits (WQCD)",
+   "flagged rows statewide",
+   1867
+  ],
+  [
+   "State water permits (WQCD)",
+   "flagged rows with county Weld",
+   250
+  ],
+  [
+   "State water permits (WQCD)",
+   "flagged rows with a Weld mailing city but another county in the source (left out: the source states the county)",
+   11
+  ],
+  [
+   "State water permits (WQCD)",
+   "flagged on acreage alone (no manufacturing SIC, no company-named facility): schools, parks, housing, roads, pipelines",
+   87
+  ],
+  [
+   "State water permits (WQCD)",
+   "rows kept as signals",
+   36
+  ],
+  [
+   "State water permits (WQCD)",
+   "transit, public works, retail and contractor-coded sites with no manufacturing SIC",
+   45
+  ],
+  [
+   "State water permits (WQCD)",
+   "industrial stormwater general-permit renewal wave, May to July 2024 (existing plants re-applying; kept as identity and SIC evidence)",
+   63
+  ],
+  [
+   "State water permits (WQCD)",
+   "airport construction and airline facilities at DEN (same reason as the DIA permit cut)",
+   3
+  ],
+  [
+   "State water permits (WQCD)",
+   "wastewater plants, hauling and detention or water-quality facilities",
+   9
+  ],
+  [
+   "State water permits (WQCD)",
+   "renewals (received more than a year after issue)",
+   7
+  ],
+  [
+   "APCD air permit status",
+   "flagged rows statewide (not oil and gas)",
+   1064
+  ],
+  [
+   "APCD air permit status",
+   "rows whose county column says Weld but AIRS prefix is not 123 (left out; office address in place of the site)",
+   14
+  ],
+  [
+   "APCD air permit status",
+   "flagged rows with AIRS prefix 123 (Weld)",
+   114
+  ],
+  [
+   "APCD air permit status",
+   "no street address for the site",
+   14
+  ],
+  [
+   "APCD air permit status",
+   "rows kept as signals",
+   74
+  ],
+  [
+   "APCD air permit status",
+   "emergency generators and fire pumps only (data centres, telecom, hotels, city buildings)",
+   8
+  ],
+  [
+   "APCD air permit status",
+   "fuel stations and bulk fuel",
+   15
+  ],
+  [
+   "APCD air permit status",
+   "hospitals, crematories, prisons, utilities, airport and city facilities, data centres, land development",
+   3
+  ],
+  [
+   "Mile High CRE",
+   "flagged rows statewide (industrial category)",
+   160
+  ],
+  [
+   "Mile High CRE",
+   "flagged rows with city in Weld County or a split city",
+   30
+  ],
+  [
+   "Mile High CRE",
+   "rows kept as address signals",
+   8
+  ],
+  [
+   "Mile High CRE",
+   "split-city mailing address that the Census geocoder places outside Weld County",
+   13
+  ],
+  [
+   "Mile High CRE",
+   "no single street address (market reports, portfolio sales, round-ups)",
+   9
+  ],
+  [
+   "OEDIT EDC approvals",
+   "flagged rows (every row is flagged)",
+   139
+  ],
+  [
+   "OEDIT EDC approvals",
+   "no Weld County or Metro Weld reference",
+   92
+  ],
+  [
+   "OEDIT EDC approvals",
+   "rows from minutes (mostly non-industrial)",
+   39
+  ],
+  [
+   "OEDIT EDC approvals",
+   "rows kept as code-name candidates",
+   8
+  ]
+ ],
+ "geocoder": {
+  "addresses": 174,
+  "results": {
+   "Adams County": 9,
+   "Boulder County": 17,
+   "Broomfield County": 3,
+   "Larimer County": 44,
+   "Weld County": 65,
+   "no match": 36
+  }
+ },
+ "ground_truth": {
+  "C34 Colorado Premium": [],
+  "C35 Hirsh Precision": [
+   [
+    159,
+    "name (as a possible occupier)",
+    "Unattached address (possible occupier: HIRSH PRECISION PRODU",
+    "4300 GODDING HOLLOW PKWY",
+    "30.0"
+   ],
+   [
+    326,
+    "name",
+    "Hirsh Precision Products, Inc.",
+    "4300 GODDING HOLLOW PKWY",
+    "73.0"
+   ]
+  ],
+  "C36 Sphere Renewables": [],
+  "X26 Agilent (Frederick expansion)": [
+   [
+    1,
+    "name",
+    "AGILENT TECHNOLOGIES US, INC.",
+    "7051 EAGLE BLVD",
+    "91.0"
+   ]
+  ],
+  "X27 Microvast (Windsor, consolidated away; county unconfirmed)": [],
+  "X28 TFP Nutrition": [
+   [
+    68,
+    "name",
+    "TEXAS FARM PRODUCTS COMPANY",
+    "450 N FRONT ST",
+    "52.0"
+   ],
+   [
+    92,
+    "name",
+    "J.D. Heiskell & Co.",
+    "450 Front Street",
+    "47.0"
+   ]
+  ]
+ },
+ "moves": [],
+ "moves_over_10": {
+  "by_cause": {},
+  "count": 0
+ },
+ "resolve_counts": {
+  "accounts_address": 124,
+  "accounts_company": 225,
+  "accounts_oedit": 8,
+  "address_named_from_county_permit_rows": 15,
+  "address_row_to_company_possible": 32,
+  "address_row_to_unattached_address": 223,
+  "address_rows_named_by_a_state_permit_operator": 3,
+  "address_with_one_unflagged_name_as_possible_occupier": 18,
+  "company_entities_with_a_flagged_signal": 222,
+  "merge_co_debtors": 4,
+  "merge_same_address_leading_word": 3
+ },
+ "rows": {
+  "denver": 325,
+  "denver_50_plus": 71,
+  "denver_addresses": 119,
+  "denver_companies": 206,
+  "denver_fit": {
+   "moderate": 14,
+   "strong": 131,
+   "unknown": 146,
+   "weak": 34
+  },
+  "denver_sources": {
+   "1": 238,
+   "2": 69,
+   "3": 17,
+   "4": 1
+  },
+  "denver_stage": {
+   "buying equipment": 25,
+   "fit-out": 62,
+   "operating and expanding": 109,
+   "planned": 29,
+   "under construction": 24,
+   "unknown": 76
+  },
+  "evidence_rows": 961,
+  "oedit": 8,
+  "support_rows_not_listed": 312,
+  "tier": {
+   "A": 186,
+   "A+B": 17,
+   "B": 154
+  },
+  "top100_tier": {
+   "A": 84,
+   "A+B": 11,
+   "B": 5
+  },
+  "total": 357,
+  "unconfirmed": 24,
+  "withheld": 114
+ },
+ "run_date": "2026-10-11",
+ "sensitivity": {
+  "recency doubled": {
+   "changed": 1,
+   "enter": [
+    "BLACK EAGLE ENERGY SERVICES @ 230 COMMERCE DRIVE"
+   ],
+   "leave": [
+    "SWIFT BEEF COMPANY @ 800 N 8TH AVE"
+   ],
+   "top10_same": true
+  },
+  "recency removed": {
+   "changed": 8,
+   "enter": [
+    "SUN MOUNTAIN, INC. @ 140 COMMERCE RD",
+    "MOUNTAIN PEAK POWER, LLC @ 10001 COUNTY RD 55",
+    "BIOCHAR NOW, LLC @ 19500 WELD COUNTY RD 7",
+    "W.W. CLYDE & CO. @ 590 N BALSAM AVE",
+    "J&B MANUFACTURING LLC @ withheld (not confirmed as a b",
+    "BAY STATE MILLING COMPANY @ 400 PLATTE ST",
+    "Keibon, Inc. @ 3005 W. 29th Street, Unit G2",
+    "JM SMUCKER, LLC @ 2900 PEAK AVE"
+   ],
+   "leave": [
+    "DESIGNLOGIC, INC. @ withheld (not confirmed as a b",
+    "Cutting Edge Steel, Inc. @ withheld (not confirmed as a b",
+    "PNEU LINE SUPPLY, INC. @ 2881 31ST AVE, STE 5",
+    "ECLIPSE ENGINEERING, INC. @ withheld (not confirmed as a b",
+    "Legacy Pie Co., LLC @ withheld (not confirmed as a b",
+    "Absolute Countertops & More, Inc. @ withheld (not confirmed as a b",
+    "BIG THOMPSON COMPOST LLC @ withheld (not confirmed as a b",
+    "LIVE SHARP INDUSTRIES, LLC @ 13782 E I-25 Frontage Rd Unit "
+   ],
+   "top10_same": false
+  },
+  "source bonus doubled": {
+   "changed": 5,
+   "enter": [
+    "Unattached address (no company attached) @ 8440 RASPBERRY WAY",
+    "BLACK EAGLE ENERGY SERVICES @ 230 COMMERCE DRIVE",
+    "J-2 CONTRACTING COMPANY @ 1519 EAST 8TH STREET",
+    "HYPONEX CORPORATION @ 1338 COUNTY RD 39",
+    "ASPHALT SPECIALTIES CO, INC @ 4125 US-85"
+   ],
+   "leave": [
+    "ECLIPSE ENGINEERING, INC. @ withheld (not confirmed as a b",
+    "Legacy Pie Co., LLC @ withheld (not confirmed as a b",
+    "Absolute Countertops & More, Inc. @ withheld (not confirmed as a b",
+    "BIG THOMPSON COMPOST LLC @ withheld (not confirmed as a b",
+    "LIVE SHARP INDUSTRIES, LLC @ 13782 E I-25 Frontage Rd Unit "
+   ],
+   "top10_same": false
+  },
+  "source bonus removed": {
+   "changed": 1,
+   "enter": [
+    "Schott Manufacturing Solutions LLC @ 9250 Bruin Blvd, Suite A"
+   ],
+   "leave": [
+    "SWIFT BEEF COMPANY @ 800 N 8TH AVE"
+   ],
+   "top10_same": false
+  },
+  "tier B points doubled": {
+   "changed": 3,
+   "enter": [
+    "Keibon, Inc. @ 3005 W. 29th Street, Unit G2",
+    "J&B MANUFACTURING LLC @ withheld (not confirmed as a b",
+    "Schott Manufacturing Solutions LLC @ 9250 Bruin Blvd, Suite A"
+   ],
+   "leave": [
+    "Absolute Countertops & More, Inc. @ withheld (not confirmed as a b",
+    "BIG THOMPSON COMPOST LLC @ withheld (not confirmed as a b",
+    "LIVE SHARP INDUSTRIES, LLC @ 13782 E I-25 Frontage Rd Unit "
+   ],
+   "top10_same": false
+  },
+  "tier B points halved": {
+   "changed": 4,
+   "enter": [
+    "BLACK EAGLE ENERGY SERVICES @ 230 COMMERCE DRIVE",
+    "Schott Manufacturing Solutions LLC @ 9250 Bruin Blvd, Suite A",
+    "Unattached address (no company attached) @ 8440 RASPBERRY WAY",
+    "FOUR C SONS INC @ withheld (not confirmed as a b"
+   ],
+   "leave": [
+    "HIGH PLAINS STEEL SERVICES, LLC @ 2055 Howard Smith Ave E",
+    "5507 Distilling, LLC @ withheld (not confirmed as a b",
+    "T&T GRINDERS, LLC @ withheld (not confirmed as a b",
+    "JW Fabrication LLC @ withheld (not confirmed as a b"
+   ],
+   "top10_same": false
+  }
+ },
+ "top": [
+  {
+   "addr": "7051 EAGLE BLVD",
+   "evidence": "Air permit 16WE0533 (IA, Modification) received 2023-10-03 (received before 2024; still in the six-month processing window): PHARMACEUTICAL MANUFACTURING FACILITY IN FREDERICK, CO; AIRS 123-9E73 || Weld permit FREDERICK-REC23-00000-000CE: New Building, no valuation, received 2023-04-03, issued n/a, not finaled; parcel class blank, zone blank [joined by street address only] [possible match] || Weld permit BLDG23-0146: New Building, no valuation, received 2023-03-21, issued n/a, not finaled; parcel class blank, zone blank [joined by street address only] [possible match] || Points: signal 38 (APCD air permit status: 25; Weld county permits (Frederick): 11; State water permits: 2); sources 11; recency 15; stage 12; fit 15",
+   "fit": "strong: Pharmaceutical manufacturing (therapeutic nucleic acids: siRNA, antisense, CRISPR guide RNA) at the Frederick site, with a $725M manufacturing expansion under way; trade press (web check 2026-11-06).",
+   "name": "AGILENT TECHNOLOGIES US, INC.",
+   "r5": "",
+   "r5b": "",
+   "rank": 1,
+   "score": 91.0,
+   "sources": 3,
+   "stage": "fit-out",
+   "tier": "A+B"
+  },
+  {
+   "addr": "4161 SPECIALTY PL",
+   "evidence": "Air permit 18WE0619 (To Be Determined) received 2025-06-02: SPECIALTY PLACE CATALYST MFG; AIRS 123-5648 || Air permit 96WE523 (To Be Determined) received 2025-02-27: MEAD FACILITY CHEMICAL MANUFACTURING; AIRS 123-0070 || Weld site plan review 1AMSPR22-06-184 opened 2023-04-05, status , zone  [joined by street address only] [possible match] || Points: signal 36 (APCD air permit status: 25+3 repeat; Weld county planning cases: 6; State water permits: 2); sources 11; recency 8; stage 8; fit 15",
+   "fit": "strong: Specialty chemical and organometallic catalyst production plant at Specialty Place, Mead, one of the company two Colorado production sites; trade press plus state air permit naming catalyst manufacturing (web check 2026-11-06).",
+   "name": "BOULDER SCIENTIFIC COMPANY, LLC",
+   "r5": "",
+   "r5b": "",
+   "rank": 2,
+   "score": 78.0,
+   "sources": 3,
+   "stage": "operating and expanding",
+   "tier": "A"
+  },
+  {
+   "addr": "19750 COUNTY ROAD 7",
+   "evidence": "Air permit 26WE0154 (To Be Determined) received 2025-09-29: BERTHOUD FACILITY - SOLID FUEL TESTING; AIRS 123-A2D2 || UCC 2026-07-28 initial filing, secured party EOS OF NORTH AMERICA, INC.: EOS M450-4 AND RELATED ACCESSORIES SI04014200-10328 (support: generic or blanket lien) || UCC 2026-05-25 initial filing, secured party EOS OF NORTH AMERICA, INC.: EOS M450-4 AND RELATED ACCESSORIES SI04014194 (support: generic or blanket lien) || Points: signal 31 (APCD air permit status: 25; Colorado UCC filings: 4; State water permits: 2); sources 6; recency 15; stage 8; fit 15",
+   "fit": "strong: Rocket engine manufacturing, additive manufacturing and test at the 90-acre former Ball site at 19750 Weld County Road 7, Berthoud; trade press (BizWest) (web check 2026-11-06).",
+   "name": "URSA MAJOR TECHNOLOGIES, INC.",
+   "r5": "",
+   "r5b": "",
+   "rank": 3,
+   "score": 75.0,
+   "sources": 3,
+   "stage": "operating and expanding",
+   "tier": "A"
+  },
+  {
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "evidence": "UCC 2026-04-20: cnc, dmg mori, fanuc | ONE NEW DMG MORI CMX 1100 V VERTICAL MILLING CENTER WITH FANUC F0iMF CNC CONTROL, LNS FOX MIST COLLECTOR, LNS  || UCC 2026-04-20: cnc, dmg mori, fanuc | ONE NEW DMG MORI CMX 1100 V VERTICAL MILLING CENTER WITH FANUC F0iMF CNC CONTROL, LNS FOX MIST COLLECTOR, LNS  || UCC 2025-03-18: machining center | ONE (1) BROTHER MODEL S700XD2 COMPACT MACHINING CENTER PKG. S/N JPN141269 INCLUDING ALL STANDARD ATTACHMENTS A || Points: signal 31 (Colorado UCC filings: 25+6 repeat); sources 0; recency 15; stage 12; fit 15",
+   "fit": "strong: Job machine shop in Dacono financing new DMG Mori and Brother CNC machining centers; NAICS machine-shop directory listing (web check 2026-11-06).",
+   "name": "OLD SCHOOL INDUSTRIES, INC.",
+   "r5": "",
+   "r5b": "",
+   "rank": 4,
+   "score": 73.0,
+   "sources": 1,
+   "stage": "buying equipment (repeat buyer; operating and expanding)",
+   "tier": "A"
+  },
+  {
+   "addr": "2055 Howard Smith Ave E",
+   "evidence": "UCC 2025-01-09 initial filing [tier B B1a], secured party BOKF, NA DBA BOK FINANCIAL: d Automation 74T Angle Processing, KRST, 20 HP, 230V/3/60, Fixed Speed, A/C. Tank Mntd, w/dryer, 2523 Auto Drain, 1/2\" N || UCC 2026-01-26 initial filing, secured party BOKF, NA DBA BOK FINANCIAL: Cambco 1170 Hydraulic Beam Cambering Machine, as described in Invoice #513487925 (support: generic or blanket lien) || UCC 2025-07-08 initial filing, secured party BOKF, NA DBA BOK FINANCIAL: 2014 Forklift YA GDP210DB (Serial #C876E01543B 200073280); whether any of the fo (support: generic or blanket lien) || Points: signal 32 (Colorado UCC filings: 30; State water permits: 2); sources 3; recency 15; stage 8; fit 15",
+   "fit": "strong: Structural steel fabricator and metal service center at 2055 Howard Smith Ave, Windsor, hiring fitter-welders and ironworkers; NAICS directory, job postings and Blue Book structural steel fabricator listing (web check 2026-11-06).",
+   "name": "HIGH PLAINS STEEL SERVICES, LLC",
+   "r5": "",
+   "r5b": "",
+   "rank": 5,
+   "score": 73.0,
+   "sources": 2,
+   "stage": "operating and expanding",
+   "tier": "B"
+  },
+  {
+   "addr": "2950 COLORFUL AVE",
+   "evidence": "Air permit 26WE0487 (To Be Determined) received 2026-06-11: INDIGO 25K DIGITAL PRINTING PRESS AT 2950 COLORFUL AVE MAKE: HP INDIGO MODEL: 25; AIRS 123-A2F1 || UCC 2026-06-10 initial filing, secured party Catalyst Packaging, LLC: THE COLLATERAL DESCRIBED ON EXHIBIT A ATTACHED HERETO AND MADE A PART HEREOF. (support: generic or blanket lien) [same name, different address: possible match] || UCC 2026-04-16 initial filing, secured party FIRSTBANK: SEE EXHIBIT A (support: generic or blanket lien) [same name, different address: possible match] || Points: signal 28.5 (APCD air permit status: 25; Colorado UCC filings: 2; Colorado business registrations: 1.5); sources 6; recency 15; stage 8; fit 15",
+   "fit": "strong: name suggests manufacturing or processing (Manufacturing); not confirmed",
+   "name": "UNDERGROUND MANUFACTURING, LLC",
+   "r5": "",
+   "r5b": "",
+   "rank": 6,
+   "score": 72.5,
+   "sources": 3,
+   "stage": "operating and expanding",
+   "tier": "A"
+  },
+  {
+   "addr": "1725 Skyway Dr Unit 150",
+   "evidence": "UCC 2026-09-28: compressor, chiller | 1 - Colston 30 Ton (25 HP) Air Cooled Chiller, 3 Phase 2 - Colston Dual Compressor 1 - Digital Readout and Pro || UCC 2026-09-24: conveyor | This filing covers the following properties, assets and rights of Debtor (collectively the \"Collateral\"): (a)  || UCC 2026-09-28 initial filing, secured party First Commonwealth Equipment Finance: 1 New Water Deaeration DA-15 with PreFilter SN#: TB-260120-04 (support: generic or blanket lien) || Points: signal 30 (Colorado UCC filings: 30); sources 0; recency 15; stage 12; fit 15",
+   "fit": "strong: finances production machinery in a UCC filing (chiller)",
+   "name": "Quantum J's Canning LLC",
+   "r5": "",
+   "r5b": "",
+   "rank": 7,
+   "score": 72.0,
+   "sources": 1,
+   "stage": "buying equipment",
+   "tier": "A"
+  },
+  {
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "evidence": "UCC 2026-01-23 initial filing [tier B B1a+B1c], secured party [address removed], LLC:  Fifth Street, Loveland, Colorado, including without limitation all equipment, machinery, distillation equipment, tanks, || UCC 2024-09-05 initial filing, secured party Points West Community Bank: All of the following which the Debtor owns now or in the future, together with a (support: generic or blanket lien) || Points: signal 30 (Colorado UCC filings: 30); sources 0; recency 15; stage 12; fit 15",
+   "fit": "strong: finances process equipment in a UCC filing (still)",
+   "name": "5507 Distilling, LLC",
+   "r5": "",
+   "r5b": "",
+   "rank": 8,
+   "score": 72.0,
+   "sources": 1,
+   "stage": "buying equipment",
+   "tier": "B"
+  },
+  {
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "evidence": "UCC 2025-12-26: conveyor | Superior 36x125 PS Conveyor S/N 2274825 whether or not inventory of the Customer(collectively, the \"Equipment\" || UCC 2025-12-26 initial filing, secured party 1st Source Bank, Construction Equipment Division: JCI 6203LPPM Low Profile Screening Plant S/N P222156 whether or not inventory of (support: generic or blanket lien) || UCC 2025-11-26 initial filing, secured party 1st Source Bank, Construction Equipment Division: Superior 8x16 Portable Feed Hopper s/n 2274865 whether or not inventory of the C (support: generic or blanket lien) || Points: signal 26 (Colorado UCC filings: 25; APCD air permit status: 1); sources 3; recency 15; stage 12; fit 15",
+   "fit": "strong: finances production machinery in a UCC filing (conveyor)",
+   "name": "LOUDWIRE DIESEL LLC",
+   "r5": "",
+   "r5b": "",
+   "rank": 9,
+   "score": 71.0,
+   "sources": 2,
+   "stage": "buying equipment",
+   "tier": "A"
+  },
+  {
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "evidence": "UCC 2026-07-23: cnc, machining center, haas | The following is collateral information for this contract: SCHEDULE 'A' EQUIPMENT SCHEDULE THIS SCHEDULE is at || UCC 2024-01-12: cnc, lathe, haas | The following is collateral information for this contract: SCHEDULE 'A' EQUIPMENT SCHEDULE THIS SCHEDULE is at || Points: signal 28 (Colorado UCC filings: 25+3 repeat); sources 0; recency 15; stage 12; fit 15",
+   "fit": "strong: finances production machinery in a UCC filing (cnc)",
+   "name": "JIM'S AUTOMOTIVE MACHINE SHOP, INC.",
+   "r5": "",
+   "r5b": "",
+   "rank": 10,
+   "score": 70.0,
+   "sources": 1,
+   "stage": "buying equipment (repeat buyer; operating and expanding)",
+   "tier": "A"
+  },
+  {
+   "addr": "2965 S 27TH AVE",
+   "evidence": "Air permit 92WE032 (FA, Modification) received 2024-09-13: PRINTING; AIRS 123-0266 || UCC 2026-03-20 initial filing, secured party All Copy Products, Inc.: Sharp BP-1200S Prod Printer AND ALL PRODUCTS, PROCEEDS AND ATTACHMENTS. (support: generic or blanket lien) || UCC 2024-09-27 initial filing, secured party OnPoint Capital, LLC: THIS IS AN ASSET SPECIFIC FILING - NOT AN ALL ASSET FILING. All items of equipme (support: generic or blanket lien) || Points: signal 29 (APCD air permit status: 25; Colorado UCC filings: 4); sources 3; recency 15; stage 8; fit 15",
+   "fit": "strong: Commercial printing plant at 2965 27th Ave, Greeley, with a state air permit for printing and a new Sharp production press; chamber directory listing (web check 2026-11-06).",
+   "name": "PIONEER PRESS OF GREELEY",
+   "r5": "",
+   "r5b": "",
+   "rank": 11,
+   "score": 70.0,
+   "sources": 2,
+   "stage": "operating and expanding",
+   "tier": "A"
+  },
+  {
+   "addr": "8127 W I-25 Frontage Rd",
+   "evidence": "UCC 2026-01-16: compressor | The following assets of Debtor in reference to EFA #13140001, whether in the form of goods or inventory, wheth || UCC 2025-09-30: compressor | The following assets of Debtor in reference to EFA #13140000, whether in the form of goods or inventory, wheth || UCC 2025-05-14: compressed air, compressor | The following described equipment, together with all proceeds of such equipment, including, without limitation || Points: signal 39 (Colorado UCC filings: 30+6 repeat; Colorado business registrations: 3); sources 3; recency 15; stage 12; fit 0",
+   "fit": "unknown: nothing in the records says what the company makes",
+   "name": "Impact Equipment Rentals, LLC",
+   "r5": "",
+   "r5b": "",
+   "rank": 12,
+   "score": 69.0,
+   "sources": 2,
+   "stage": "buying equipment (repeat buyer; operating and expanding)",
+   "tier": "A"
+  },
+  {
+   "addr": "800 N 8TH AVE",
+   "evidence": "Air permit 25WE0487 (Final Approval) received 2025-03-04: LONE TREE WWTF FLARE; AIRS 123-0018 || Air permit 95WE757 (To Be Determined) received 2024-11-06: FACILITY-WIDE; AIRS 123-0018 || UCC 2025-06-12 initial filing, secured party MARLIN LEASING CORP: (7) B415, (5) B8245, (1) B8255, (1) B8270, (1) C8255, (1) C8270, AND ALL REPLACE (support: generic or blanket lien) [same name, different address: possible match] || Points: signal 32 (APCD air permit status: 25+3 repeat; State water permits: 2; Colorado UCC filings: 2); sources 6; recency 8; stage 8; fit 15",
+   "fit": "strong: JBS beef slaughter and processing plant at 800 N 8th Ave, Greeley; USDA FSIS inspected establishment record (web check 2026-11-06).",
+   "name": "SWIFT BEEF COMPANY",
+   "r5": "",
+   "r5b": "",
+   "rank": 13,
+   "score": 69.0,
+   "sources": 3,
+   "stage": "operating and expanding",
+   "tier": "A"
+  },
+  {
+   "addr": "31815 GREAT WESTERN DRIVE",
+   "evidence": "UCC 2026-06-26: compressor, cnc, paint booth | KAISHAN KRSD SERIES ROTARY SCREW AIR COMPRESSOR (S/N KRSD-025A1V458U); SEMI-DOWNDRAFT DRAFT PAINT BOOTH; EVO32 || UCC 2026-08-20 initial filing, secured party LEAF Capital Funding, LLC: no collateral text (support: generic or blanket lien) || UCC 2026-06-25 initial filing, secured party SOUTHSTATE BANK, N.A.: ACCOUNTS AND OTHER RIGHTS TO PAYMENT: ALL RIGHTS TO PAYMENT, WHETHER OR NOT EARN (support: generic or blanket lien) || Points: signal 32.5 (Colorado UCC filings: 30; Mile High CRE: 2.5); sources 3; recency 15; stage 12; fit 6",
+   "fit": "moderate: Designs, manufactures and installs commercial signs with in-house fabrication and a new paint booth, CNC router not confirmed on the web; company press release and Blue Book manufacturer listing (web check 2026-11-06).",
+   "name": "SCHLOSSER SIGNS, INC.",
+   "r5": "",
+   "r5b": "",
+   "rank": 14,
+   "score": 68.5,
+   "sources": 2,
+   "stage": "buying equipment",
+   "tier": "A"
+  },
+  {
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "evidence": "UCC 2025-03-11 initial filing [tier B B1a], secured party Points West Community Bank:  of the jurisdiction which governs this transaction. Specific Property: 2017 MIGHTY GIANT GRINDER: MODEL NO. 3500: SERIA || UCC 2026-08-12 initial filing, secured party CNH Industrial Capital America LLC: 2025, Case, 321F, Serial No.: FNH321FHNSHP08644, Compact Wheel Loader SECURED CR (support: generic or blanket lien) || UCC 2025-03-06 initial filing, secured party Points West Community Bank: Equipment: All equipment including, but not limited to, all machinery, vehicles, (support: generic or blanket lien) || Points: signal 30 (Colorado UCC filings: 30); sources 0; recency 15; stage 8; fit 15",
+   "fit": "strong: finances process equipment in a UCC filing (grinder)",
+   "name": "T&T GRINDERS, LLC",
+   "r5": "",
+   "r5b": "",
+   "rank": 15,
+   "score": 68.0,
+   "sources": 1,
+   "stage": "operating and expanding",
+   "tier": "B"
+  },
+  {
+   "addr": "8490 HIGHWAY 66",
+   "evidence": "Air permit 26WE0126 (To Be Determined) received 2026-01-15: KURTZ, HEINTZELMAN, BEARSON SCREEN; AIRS 123-0560 || Air permit 22WE0392 (IA, Modification) received 2024-11-05: TWO RIVERS PROJECT #124 MATERIAL EXTRACTION, HANDLING, HAULING, & ASSOCIATED CON; AIRS 123-A199 || Air permit 98WE0746 (FA, Modification) received 2022-05-23 (received before 2024; still in the six-month processing window): PLANT 2 FORT LUPTON CONCRETE BATCH PLANT (S/N: 3298); AIRS 123-0544 || Points: signal 36 (APCD air permit status: 25+9 repeat; State water permits: 2); sources 3; recency 15; stage 8; fit 6",
+   "fit": "moderate: Sand, gravel and ready-mix concrete supplier; the Highway 66 site is its pit and ready-mix plant with screens on the air permit; Blue Book supplier profile plus state permits (web check 2026-11-06).",
+   "name": "RAPTOR MATERIALS LLC",
+   "r5": "",
+   "r5b": "",
+   "rank": 16,
+   "score": 68.0,
+   "sources": 2,
+   "stage": "operating and expanding",
+   "tier": "A"
+  },
+  {
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "evidence": "UCC 2025-06-23 initial filing [tier B B1a], secured party Verdant Commercial Capital, LLC: ipment. 1- Timesaver 32 Series Multi-Directional Rotary Brush Machine with Niagara-10 Wet Dust Collector & Duct Kit Toge || UCC 2025-12-04 initial filing, secured party MAC Funding Corporation: Please see attached in the collateral box. (support: generic or blanket lien) || UCC 2025-06-20 initial filing, secured party Verdant Commercial Capital, LLC: All of Debtor's right, title and interest in and to lease agreements, loan agree (support: generic or blanket lien) || Points: signal 30 (Colorado UCC filings: 30); sources 0; recency 15; stage 8; fit 15",
+   "fit": "strong: Metal fabrication shop in Ault building metal products from drawings with welding machines, press brakes and machining tools; production welder-fabricator job posting (web check 2026-11-06).",
+   "name": "JW Fabrication LLC",
+   "r5": "",
+   "r5b": "",
+   "rank": 17,
+   "score": 68.0,
+   "sources": 1,
+   "stage": "operating and expanding",
+   "tier": "B"
+  },
+  {
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "evidence": "UCC 2025-12-30: cnc, haas | The following is collateral information for this contract: SCHEDULE 'A' EQUIPMENT SCHEDULE THIS SCHEDULE is at || UCC 2026-09-10 initial filing, secured party SOUTHSTATE BANK, N.A.: ACCOUNTS AND OTHER RIGHTS TO PAYMENT: ALL RIGHTS TO PAYMENT, WHETHER OR NOT EARN (support: generic or blanket lien) || Points: signal 25 (Colorado UCC filings: 25); sources 0; recency 15; stage 12; fit 15",
+   "fit": "strong: Precision CNC milling and turning of industrial, heavy equipment and defense parts in Windsor; Thomasnet supplier profile (web check 2026-11-06).",
+   "name": "DESIGNLOGIC, INC.",
+   "r5": "",
+   "r5b": "",
+   "rank": 18,
+   "score": 67.0,
+   "sources": 1,
+   "stage": "buying equipment",
+   "tier": "A"
+  },
+  {
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "evidence": "UCC 2026-08-04: trumpf | THIS IS AN ASSET SPECIFIC FILING - NOT AN ALL ASSET FILING. All items of equipment, machinery, furniture, fixt || UCC 2025-02-06 initial filing, secured party Highland Capital Corp.: VECTIS COBOT WELDING SYSTEM Together with all present and future attachments, ac (support: generic or blanket lien) || Points: signal 25 (Colorado UCC filings: 25); sources 0; recency 15; stage 12; fit 15",
+   "fit": "strong: Fabricated structural metal manufacturer and laser processor (AS9100D, ISO 9001) at 101 Miller Dr, Dacono, about 72 staff, adding a Trumpf machine and cobot welder; NAICS directory and manufacturer directory (web check 2026-11-06).",
+   "name": "Cutting Edge Steel, Inc.",
+   "r5": "",
+   "r5b": "",
+   "rank": 19,
+   "score": 67.0,
+   "sources": 1,
+   "stage": "buying equipment",
+   "tier": "A"
+  },
+  {
+   "addr": "2881 31ST AVE, STE 5",
+   "evidence": "UCC 2026-07-27: molding machine | 2026 NISSAN 55 TON 5E INJECTOR MOLDING MACHINE (S/N H30523014K1); WHETHER ANY OF THE FOREGOING IS OWNED NOW OR || Points: signal 25 (Colorado UCC filings: 25); sources 0; recency 15; stage 12; fit 15",
+   "fit": "strong: Injection molder (Class 7 cleanroom) and assembler of plastic fluidic and pneumatic components for medical and industrial customers in Greeley, adding a Nissei 55 ton press; company capabilities page (web check 2026-11-06).",
+   "name": "PNEU LINE SUPPLY, INC.",
+   "r5": "",
+   "r5b": "",
+   "rank": 20,
+   "score": 67.0,
+   "sources": 1,
+   "stage": "buying equipment",
+   "tier": "A"
+  },
+  {
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "evidence": "UCC 2026-04-22: cnc, lathe, haas | The following is collateral information for this contract: SCHEDULE 'A' EQUIPMENT SCHEDULE THIS SCHEDULE is at || UCC 2026-04-22: cnc, lathe, haas | The following is collateral information for this contract: SCHEDULE 'A' EQUIPMENT SCHEDULE THIS SCHEDULE is at || UCC 2025-10-21 initial filing, secured party First Interstate Bank: All Inventory, Chattel Paper, Accounts, Equipment and General Intangibles; wheth (support: generic or blanket lien) || Points: signal 25 (Colorado UCC filings: 25); sources 0; recency 15; stage 12; fit 15",
+   "fit": "strong: Engineered seal manufacturer (spring-energized, rotary lip and wear ring seals, machined on CNC lathes) at 2540 S Main St, Erie, about 23 staff; NAICS directory and business listing, but Erie straddles Boulder and Weld and the county of this address was not confirmed (web check 2026-11-06).",
+   "name": "ECLIPSE ENGINEERING, INC.",
+   "r5": "",
+   "r5b": "",
+   "rank": 21,
+   "score": 67.0,
+   "sources": 1,
+   "stage": "buying equipment",
+   "tier": "A"
+  },
+  {
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "evidence": "UCC 2026-04-06: robot | One VEMAG Model Robot 500 || UCC 2026-08-24 initial filing, secured party First National Bank of Omaha: Purchase Money Security Interest in E-500SM ECONO DOUGH PRESS S/N 26525E50S; whe (support: generic or blanket lien) [same name, different address: possible match] || UCC 2024-01-12 initial filing, secured party First National Bank of Omaha: All inventory, equipment, accounts (including but not limited to all health-care (support: generic or blanket lien) [same name, different address: possible match] || Points: signal 25 (Colorado UCC filings: 25); sources 0; recency 15; stage 12; fit 15",
+   "fit": "strong: finances production machinery in a UCC filing (robot)",
+   "name": "Legacy Pie Co., LLC",
+   "r5": "",
+   "r5b": "",
+   "rank": 22,
+   "score": 67.0,
+   "sources": 1,
+   "stage": "buying equipment",
+   "tier": "A"
+  },
+  {
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "evidence": "UCC 2026-01-19: cnc | 2025 Park Industries SABERjet XP CNC Sawjet SN: 808204, 2025 Pathfinder 1300 Digital Slab Station SN: 808267,  || UCC 2026-01-09 initial filing, secured party ASSN COMPANY: Any and all assets of the debtor whether now owned or hereafter acquired or aris (support: generic or blanket lien) || Points: signal 25 (Colorado UCC filings: 25); sources 0; recency 15; stage 12; fit 15",
+   "fit": "strong: finances production machinery in a UCC filing (cnc)",
+   "name": "Absolute Countertops & More, Inc.",
+   "r5": "",
+   "r5b": "",
+   "rank": 23,
+   "score": 67.0,
+   "sources": 1,
+   "stage": "buying equipment",
+   "tier": "A"
+  },
+  {
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "evidence": "UCC 2025-11-27: conveyor | J&M CONVEYOR SERVICES INC W80 W80-STACKER CONVEYOR S/N: HY0524;together with (1) all attachments, accessories  || UCC 2025-11-19 initial filing, secured party COMPEER FINANCIAL, ACA: 2023 KLEEMANN MR130IEV02 TRACK MOUNT CRUSHER, S/N WGK0K078HKLA00331 WITH ALL ACC (support: generic or blanket lien) [same name, different address: possible match] || UCC 2025-10-31 initial filing, secured party Allegiant Partners Incorporated: Equipment - all equipment described below together with all parts, accessories,  (support: generic or blanket lien) [same name, different address: possible match] || Points: signal 25 (Colorado UCC filings: 25); sources 0; recency 15; stage 12; fit 15",
+   "fit": "strong: finances production machinery in a UCC filing (conveyor)",
+   "name": "BIG THOMPSON COMPOST LLC",
+   "r5": "",
+   "r5b": "",
+   "rank": 24,
+   "score": 67.0,
+   "sources": 1,
+   "stage": "buying equipment",
+   "tier": "A"
+  },
+  {
+   "addr": "13782 E I-25 Frontage Rd Unit B4",
+   "evidence": "UCC 2025-10-30: cnc, machining center | The following is collateral information for this contract: SCHEDULE 'A' EQUIPMENT SCHEDULE THIS SCHEDULE is at || Points: signal 25 (Colorado UCC filings: 25); sources 0; recency 15; stage 12; fit 15",
+   "fit": "strong: finances production machinery in a UCC filing (cnc)",
+   "name": "LIVE SHARP INDUSTRIES, LLC",
+   "r5": "",
+   "r5b": "",
+   "rank": 25,
+   "score": 67.0,
+   "sources": 1,
+   "stage": "buying equipment",
+   "tier": "A"
+  },
+  {
+   "addr": "230 COMMERCE DRIVE",
+   "evidence": "Air permit 11WE3658 (FA, Modification) received 2025-10-22: METAL PARTS MANUFACTURING FACILITY LOCATED AT 230 COMMERCE DRIVE, BERTHOUD CO AB; AIRS 123-7683 || Water permit row COR901389 (COR900000) received 2024-07-16 at this address: project or facility 'Blackeagle Energy Services Fabrication Shop' (support only) [joined by street address only] [possible match] || Points: signal 26 (APCD air permit status: 25; State water permits: 1); sources 3; recency 15; stage 8; fit 15",
+   "fit": "strong: Blackeagle Energy Services fabrication shop in Berthoud building mechanical and structural equipment for energy, water and gas clients, hiring structural welders, with a state air permit for metal parts manufacturing at 230 Commerce Drive; job posting and trade press (web check 2026-11-06).",
+   "name": "BLACK EAGLE ENERGY SERVICES",
+   "r5": "",
+   "r5b": "",
+   "rank": 26,
+   "score": 67.0,
+   "sources": 2,
+   "stage": "operating and expanding",
+   "tier": "A"
+  },
+  {
+   "addr": "9250 Bruin Blvd, Suite A",
+   "evidence": "UCC 2025-04-29: machining center, conveyor, haas | EQUIPMENT FINANCE AGREEMENT NUMBER: 3187952 1 NEW HAAS UMC500 UNIVERSAL MACHINING CENTER W 15K RPM SPINDLE W/  || UCC 2025-01-15: haas | Used 2014 Haas TR-210 Trunnion Type 2-Axis Rotary Table with Sigma-5 Brushless Servo Motors, S/N: 906424 Hyper || UCC 2024-04-25 initial filing [tier B B1c], secured party First Internet Bank of Indiana: All assets and property including but not limited to the following: All equipment and machinery, (excluding motor vehicl || Points: signal 28 (Colorado UCC filings: 25+3 repeat); sources 0; recency 15; stage 8; fit 15",
+   "fit": "strong: finances production machinery in a UCC filing (machining center)",
+   "name": "Schott Manufacturing Solutions LLC",
+   "r5": "",
+   "r5b": "",
+   "rank": 27,
+   "score": 66.0,
+   "sources": 1,
+   "stage": "operating and expanding",
+   "tier": "A+B"
+  },
+  {
+   "addr": "8440 RASPBERRY WAY",
+   "evidence": "Weld permit 26TMP-000859: New Building, no valuation, received 2026-10-07, issued n/a, not finaled; parcel class blank, zone blank || Weld Site Plan frederick-da-raspberry-hill-business-park-lot-17 opened 2025-03-24, status under review, zone  || Points: signal 34 (Weld county permits (Frederick): 22; Weld county planning cases: 12); sources 8; recency 15; stage 8; fit 0",
+   "fit": "unknown: industrially zoned site; use and occupier not identified (assessor class blank)",
+   "name": "Unattached address (no company attached)",
+   "r5": "",
+   "r5b": "",
+   "rank": 28,
+   "score": 65.0,
+   "sources": 2,
+   "stage": "under construction",
+   "tier": "A"
+  },
+  {
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "evidence": "UCC 2024-12-20: conveyor | Equipment: 2020 POWER SCREEN HL75 FEEDER CONVEYOR S/N: TRXTCS18CAL90013. || UCC 2024-12-13: conveyor | Seller reserves title to all Equipment sold hereunder, and all such Equipment shall remain personal property o [same name, different address: possible match] || UCC 2026-06-26 initial filing, secured party Deere & Company: JOHN DEERE 1775 1775NT Planter - Twenty-Four Row - 30 In. S/N: 805419;together w (support: generic or blanket lien) || Points: signal 25 (Colorado UCC filings: 25); sources 0; recency 15; stage 8; fit 15",
+   "fit": "strong: finances production machinery in a UCC filing (conveyor)",
+   "name": "FOUR C SONS INC",
+   "r5": "",
+   "r5b": "",
+   "rank": 29,
+   "score": 63.0,
+   "sources": 1,
+   "stage": "operating and expanding",
+   "tier": "A"
+  },
+  {
+   "addr": "not given in the source",
+   "evidence": "UCC 2026-02-19: compressor, welder | 2026 FORD F-600 CHASSIS VIN:1FDFF6LT6TDA09070 WITH SUMMIT MODEL 7 SERIES TRUCK BODY S/N:STE12117, VANAIR AIR C || UCC 2026-09-21 initial filing, secured party VFS US LLC; VFS Leasing Co.: Debtor's equipment and/or vehicles and inventory, more specifically described as (support: generic or blanket lien) [same name, different address: possible match] || UCC 2026-09-09 initial filing, secured party VFS Leasing Co.; VFS US LLC: Debtor's equipment and/or vehicles and inventory, more specifically described as (support: generic or blanket lien) [same name, different address: possible match] || Points: signal 30 (Colorado UCC filings: 30); sources 0; recency 15; stage 12; fit 6",
+   "fit": "moderate: Heavy construction equipment sales and rental dealer with a service operation at 2114 E I-25 Frontage Rd, Erie (east of I-25, Weld side), financing a service truck with a Vanair compressor; NAICS directory and company site (web check 2026-11-06).",
+   "name": "Performance Equipment Sales LLC",
+   "r5": "",
+   "r5b": "",
+   "rank": 30,
+   "score": 63.0,
+   "sources": 1,
+   "stage": "buying equipment",
+   "tier": "A"
+  },
+  {
+   "addr": "31005 GREAT WESTERN DRIVE",
+   "evidence": "Air permit 26WE0424 (Initial Application) received 2026-04-17: WINDSOR TERMINAL CONCRETE PLANT AT 31005 GREAT WESTERN DRIVE; AIRS 123-A2EE || Air permit 19WE0616F (IA, Modification) received 2024-07-13: EWING GRAVEL MINE FACILITY WIDE; AIRS 123-A055 || Water permit row COG502238 (COG500000) received 2024-12-09: facility Ewing Gravel Mine, permittee BURNCO Colorado LLC, SIC 1442, status Admin continued (cut as noise or not flagged; support only) || Points: signal 30 (APCD air permit status: 25+3 repeat; State water permits: 2); sources 3; recency 15; stage 8; fit 6",
+   "fit": "moderate: Ready-mix concrete and aggregates producer (Westminster HQ) with a Windsor terminal concrete batch plant at 31005 Great Western Drive per the state air permit; Blue Book profile (web check 2026-11-06).",
+   "name": "BURNCO COLORADO LLC",
+   "r5": "",
+   "r5b": "",
+   "rank": 31,
+   "score": 62.0,
+   "sources": 2,
+   "stage": "operating and expanding",
+   "tier": "A"
+  },
+  {
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "evidence": "UCC 2025-07-15: lathe, conveyor | PURCHASE MONEY SECURITY INTEREST IN ALL ONE (1) TSUAGAMI SS327-5AX 2017 SWISS LATHE MODEL #SS327-5AX-SERIAL #1 || UCC 2025-07-15 initial filing [tier B B1c], secured party FIRST FARMBANK: All Inventory, Chattel Paper, Accounts, Equipment and General Intangibles; whether any of the foregoing is owned now or  [same name, different address: possible match] || UCC 2025-01-15 initial filing, secured party J&B Machine LLC: 2 20 Containers 1 2001 Daewoo Forklift Truck D2-01992 1 2001 Ford F250 Powerstro (support: flagged filing that was cut as noise or sits outside the Weld test) || Points: signal 28 (Colorado UCC filings: 25; Colorado business registrations: 3); sources 3; recency 8; stage 8; fit 15",
+   "fit": "strong: finances production machinery in a UCC filing (lathe)",
+   "name": "J&B MANUFACTURING LLC",
+   "r5": "",
+   "r5b": "",
+   "rank": 32,
+   "score": 62.0,
+   "sources": 2,
+   "stage": "operating and expanding",
+   "tier": "A+B"
+  },
+  {
+   "addr": "629 Gyrfalcon Ct., Ste. A",
+   "evidence": "UCC 2026-02-09: cnc | ONE (1) ARCLIGHT DYNAMICS ARC MAX ULTRA 6'X12' CNC PLASMA SYSTEM WITH HYPERTHERM POWERMAX125 MACHINE TORCH SET || UCC 2025-07-11: press brake | Accurpress 725014 - s/n: 7226; Press Brake with Ram Clamp Adapter, Clamp Bars, and Additional Tooling. || UCC 2026-01-29 initial filing, secured party LEASE FINANCE PARTNER INC: 2025 BOBCAT G45S-7 FORKLIFT - S/N: FGB0T-4590-02154 (support: generic or blanket lien) || Points: signal 28 (Colorado UCC filings: 25+3 repeat); sources 0; recency 15; stage 12; fit 6",
+   "fit": "moderate: Oil and gas pipeline and related structures construction contractor (about 88 staff) with its own fabrication yard at 629 Gyrfalcon Ct, Windsor, financing a CNC plasma table and press brake; NAICS directory (web check 2026-11-06).",
+   "name": "BLACK LABEL SERVICES, INC",
+   "r5": "",
+   "r5b": "",
+   "rank": 33,
+   "score": 61.0,
+   "sources": 1,
+   "stage": "buying equipment (repeat buyer; operating and expanding)",
+   "tier": "A"
+  },
+  {
+   "addr": "1338 COUNTY RD 39",
+   "evidence": "Water permit COR901718 (COR900000) received 2025-12-10: facility The Scotts Miracle-Gro Company, permittee Hyponex Corporation, SIC 2875 Chemicals and allied products, status Effective || Air permit 24WE0921.XP (Permit Exempt, APEN Only) received 2024-09-10: BRIGHTON FACILITY FUGITIVES RELATED TO HAUL ROADS @ MULCH/SOIL PROCESSING & PACK; AIRS 123-A29F || Water permit row COR900688 (COR900000) received 2024-06-26: Hyponex Corp, Fountain (not a scoring signal; support only) [same name, different address: possible match] || Points: signal 24 (State water permits: 12; APCD air permit status: 12); sources 8; recency 15; stage 8; fit 6",
+   "fit": "moderate: Hyponex (Scotts) mulch and soil processing and bagging plant at County Road 39, Hudson, per the state air and water permits; web search found no page for this plant (web check 2026-11-06).",
+   "name": "HYPONEX CORPORATION",
+   "r5": "",
+   "r5b": "",
+   "rank": 34,
+   "score": 61.0,
+   "sources": 2,
+   "stage": "operating and expanding",
+   "tier": "A"
+  },
+  {
+   "addr": "400 PLATTE ST",
+   "evidence": "Air permit 90WE022 (To Be Determined) received 2025-08-29: Grain handling / storage / cleaning / milling / bagging / shipping operations. C; AIRS 123-0194 || Water permit row COR900454 (COR900000) received 2024-06-21: facility Platteville Elevator, permittee Bay State Milling Co, SIC 2041, status Effective (cut as noise or not flagged; support only) || Water permit row COR901330 (COR900000) received 2024-07-10: Bay State Milling Co Sterling, Sterling (not a scoring signal; support only) [same name, different address: possible match] || Points: signal 27 (APCD air permit status: 25; State water permits: 2); sources 3; recency 8; stage 8; fit 15",
+   "fit": "strong: Flour mill and grain elevator at Platteville with shift miller and grain handler jobs; job postings and state air permit for milling and bagging (web check 2026-11-06).",
+   "name": "BAY STATE MILLING COMPANY",
+   "r5": "",
+   "r5b": "",
+   "rank": 35,
+   "score": 61.0,
+   "sources": 2,
+   "stage": "operating and expanding",
+   "tier": "A"
+  },
+  {
+   "addr": "3005 W. 29th Street, Unit G2",
+   "evidence": "UCC 2024-05-14 initial filing [tier B B1a], secured party First National Bank of Omaha: Purchase Money Security Interest in SprayPoxy MiniSpray + Pro Set, flexible static mixers, Y hose connector and spray co || UCC 2025-04-08 initial filing, secured party First National Bank of Omaha: All inventory, equipment, accounts (including but not limited to all health-care (support: generic or blanket lien) || Points: signal 30 (Colorado UCC filings: 30); sources 0; recency 8; stage 8; fit 15",
+   "fit": "strong: finances process equipment in a UCC filing (mixer)",
+   "name": "Keibon, Inc.",
+   "r5": "",
+   "r5b": "",
+   "rank": 36,
+   "score": 61.0,
+   "sources": 1,
+   "stage": "operating and expanding",
+   "tier": "B"
+  },
+  {
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "evidence": "UCC 2026-06-05: welder | Wegner International GmbH Model: ST425 Serial Number: #65202832 Mfg Date: 2021 Description: Plastic Sheet Butt || Points: signal 25 (Colorado UCC filings: 25); sources 0; recency 15; stage 12; fit 6",
+   "fit": "moderate: Product development and consulting firm in Greeley with light fabrication on site (metal bending machine, plastic sheet butt welder in the UCC); City of Greeley business news and NAICS directory (web check 2026-11-06).",
+   "name": "CNE Creative Enterprises, LLC",
+   "r5": "",
+   "r5b": "",
+   "rank": 37,
+   "score": 58.0,
+   "sources": 1,
+   "stage": "buying equipment",
+   "tier": "A"
+  },
+  {
+   "addr": "1519 EAST 8TH STREET",
+   "evidence": "Air permit 24WE0737 (Final Approval) received 2024-06-25: SUNSET INDUSTRIAL PIT; AIRS 123-A28D || Water permit COG502252 (COG500000) received 2026-05-08: facility Sunset Industrial Pit, permittee J-2 Contracting Co, SIC 1442 Nonmetallic minerals mining, except fuels, status Admin continued || UCC 2026-06-30 initial filing, secured party Power Equipment Company: Customer hereby grants to Seller a security interest in the goods sold, which se (support: generic or blanket lien) [same name, different address: possible match] || Points: signal 39 (APCD air permit status: 25; State water permits: 12; Colorado UCC filings: 2); sources 11; recency 15; stage 8; fit -15",
+   "fit": "weak: Sand and gravel pit operated by J-2 Contracting adjacent to Greeley city limits and 8th Street in Weld County, no plant described; state DRMS permit file M2023001 (web check 2026-11-06).",
+   "name": "J-2 CONTRACTING COMPANY",
+   "r5": "",
+   "r5b": "",
+   "rank": 38,
+   "score": 58.0,
+   "sources": 3,
+   "stage": "operating and expanding",
+   "tier": "A"
+  },
+  {
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "evidence": "UCC 2026-01-02: robot | 2025 Carbon Robotics G2-600 LaserWeeder SN: LW2-0600-00163-R || UCC 2026-01-21 initial filing, secured party DFS FINANCE, A DIVISION OF FIRST NATIONAL BANK OF : 1 USED 2024 MODEL 453004 ECOROBOTIX SPRAYER S/N 233481, ARA ULTRA HIGH PRECISION (support: generic or blanket lien) [same name, different address: possible match] || UCC 2025-02-14 initial filing, secured party JCB FINANCE: The Collateral includes the Debtor's items of equipment, inventory, software, an (support: generic or blanket lien) [same name, different address: possible match] || Points: signal 25 (Colorado UCC filings: 25); sources 0; recency 15; stage 12; fit 6",
+   "fit": "moderate: Carrot, cabbage and onion grower-packer in Greeley (about 4,000 acres) processing cello and baby carrots with on-site packing; produce trade press (web check 2026-11-06).",
+   "name": "Hungenberg Produce, Inc.",
+   "r5": "",
+   "r5b": "",
+   "rank": 39,
+   "score": 58.0,
+   "sources": 1,
+   "stage": "buying equipment",
+   "tier": "A"
+  },
+  {
+   "addr": "140 COMMERCE RD",
+   "evidence": "Air permit 98WE0023 (FA, Modification) received 2023-03-21 (received before 2024; still in the six-month processing window): Wood surface sanding and surface coating equipment and operations.; AIRS 123-0533 || UCC 2026-06-03 initial filing, secured party Wilmington Trust, National Association, as Collate: All assets now owned or hereafter acquired by debtor or in which debtor otherwis (support: generic or blanket lien) [same name, different address: possible match] || UCC 2026-06-03 initial filing, secured party Citibank, N.A., as Collateral Agent: All assets now owned or hereafter acquired by debtor or in which debtor otherwis (support: generic or blanket lien) [same name, different address: possible match] || Points: signal 29 (APCD air permit status: 25; State water permits: 2; Colorado UCC filings: 2); sources 6; recency 0; stage 8; fit 15",
+   "fit": "strong: Custom wood door manufacturing plant at 140 Commerce Drive, Berthoud, with a state air permit for wood sanding and coating; manufacturer facility record (BuildingClean) (web check 2026-11-06).",
+   "name": "SUN MOUNTAIN, INC.",
+   "r5": "",
+   "r5b": "",
+   "rank": 40,
+   "score": 58.0,
+   "sources": 3,
+   "stage": "operating and expanding",
+   "tier": "A"
+  },
+  {
+   "addr": "4125 US-85",
+   "evidence": "Air permit 25WE0055 (To Be Determined) received 2024-09-20: SAND/GRAVEL PIT MARCOVICH MINING RESOURCE; AIRS 123-A2A6 || UCC 2025-11-12: conveyor | ONE (1) JCI 8203LPPM SCREEN AGGREGATE EQUIPMENT, S/N# P242244, 8203LPPM Blending Chutes in lieu of standard; M [same name, different address: possible match] || UCC 2026-03-12 initial filing, secured party Komatsu Financial Limited Partnership: ONE (1) JCI 8203LPPM, S/N# P262319, CONFIGURATION: 8203-38LP SCREEN - Horizontal (support: generic or blanket lien) || Points: signal 38.5 (APCD air permit status: 25; Colorado UCC filings: 12.5; State water permits: 1); sources 11; recency 15; stage 8; fit -15",
+   "fit": "weak: Family-owned heavy highway paving contractor; the ranked site is its Marcovich sand and gravel pit on US-85 and no asphalt plant at that site was confirmed; government vendor profile plus state air permit text (web check 2026-11-06).",
+   "name": "ASPHALT SPECIALTIES CO, INC",
+   "r5": "",
+   "r5b": "",
+   "rank": 41,
+   "score": 57.5,
+   "sources": 3,
+   "stage": "operating and expanding",
+   "tier": "A"
+  },
+  {
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "evidence": "UCC 2026-09-30: compressor, atlas copco | ATLAS-COPCO XAS1 XAS-185 Compressor S/N: 207348;ATLAS-COPCO XAS1 XAS-185 Compressor S/N: 207349;together with  || UCC 2025-11-05 initial filing, secured party Corporation Service Company, as Representative [lender not named: filed through an agent]: Schedule No. 01 THIS IS AN ASSET SPECIFIC FILING, NOT AN ALL ASSET FILING. All o (support: generic or blanket lien) || UCC 2025-11-03 initial filing, secured party CNH Industrial Capital America LLC: 2021, John Deere, 9620R, Serial No.: 1RW9620RLMP067403, Tractor 4WD. 2019, John  (support: generic or blanket lien) || Points: signal 30 (Colorado UCC filings: 30); sources 0; recency 15; stage 12; fit 0",
+   "fit": "unknown: nothing in the records says what the company makes",
+   "name": "C. SIMPSON FARMS, LLC",
+   "r5": "",
+   "r5b": "",
+   "rank": 42,
+   "score": 57.0,
+   "sources": 1,
+   "stage": "buying equipment",
+   "tier": "A"
+  },
+  {
+   "addr": "7040 County Road 20",
+   "evidence": "Water permit CONOX0942 (CONOX000) received 2026-02-06: facility ARC Colorado Inc, permittee ARC Colorado Inc, SIC 3444 Fabricated metal products, status Effective || UCC 2025-05-20 initial filing, secured party LEAF CAPITAL FUNDING LLC: no collateral text (support: generic or blanket lien) || Points: signal 16 (State water permits: 12; Colorado UCC filings: 4); sources 3; recency 15; stage 8; fit 15",
+   "fit": "strong: manufacturing SIC 3444 on a state water permit",
+   "name": "ARC Colorado Inc",
+   "r5": "",
+   "r5b": "",
+   "rank": 43,
+   "score": 57.0,
+   "sources": 2,
+   "stage": "operating and expanding",
+   "tier": "A"
+  },
+  {
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "evidence": "UCC 2026-02-04: compressor, air dryer | 2025 Hammerhead Blue Light Cure in Place Sewer Repair Lining Package SN: BLSX00326 With (1) New 2026 Vanair Co || Points: signal 30 (Colorado UCC filings: 30); sources 0; recency 15; stage 12; fit 0",
+   "fit": "unknown: nothing in the records says what the company makes",
+   "name": "Master Plumbing Solutions LLC",
+   "r5": "",
+   "r5b": "",
+   "rank": 44,
+   "score": 57.0,
+   "sources": 1,
+   "stage": "buying equipment",
+   "tier": "A"
+  },
+  {
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "evidence": "UCC 2025-12-10: compressor | ne (1) Bratney Companies Cimbria Bean Processing Equipment together with all attachments, components and acces || UCC 2026-02-12 initial filing, secured party FARMERS & MERCHANTS BANK OF COLBY: SEE ATTACHED COLLATERAL DESCRIPTION (support: generic or blanket lien) [same name, different address: possible match] || Points: signal 30 (Colorado UCC filings: 30); sources 0; recency 15; stage 12; fit 0",
+   "fit": "unknown: nothing in the records says what the company makes",
+   "name": "Northern Feed & Bean, Inc.",
+   "r5": "",
+   "r5b": "",
+   "rank": 45,
+   "score": 57.0,
+   "sources": 1,
+   "stage": "buying equipment",
+   "tier": "A"
+  },
+  {
+   "addr": "11140 Eastman Park Dr.",
+   "evidence": "Water permit COR426407 (COR400000) received 2025-01-22: facility Vestas Blades America, Inc, permittee Vestas Blades America, Inc., SIC 3999 Miscellaneous manufacturing industries, status Effective || Water permit COR426068 (COR400000) received 2024-12-03: facility Vestas Blades America, Inc, permittee Vestas Blades America, Inc., SIC 3999 Miscellaneous manufacturing industries, status Effective || Water permit COR423549 (COR400000) received 2024-04-10: facility Vestas Blades America, Inc, permittee Vestas Blades America, Inc, SIC 3999 Miscellaneous manufacturing industries, status Terminated || Points: signal 26 (State water permits: 20+6 repeat); sources 0; recency 8; stage 8; fit 15",
+   "fit": "strong: manufacturing SIC 3999 on a state water permit",
+   "name": "Vestas Blades America, Inc",
+   "r5": "",
+   "r5b": "",
+   "rank": 46,
+   "score": 57.0,
+   "sources": 1,
+   "stage": "under construction",
+   "tier": "A"
+  },
+  {
+   "addr": "10001 COUNTY RD 55",
+   "evidence": "Air permit 23WE0543 (Final Approval) received 2023-07-14 (received before 2024; still in the six-month processing window): KEENESBURG PLANT PEAKING POWER PLANT: ELECTRICITY GENERATION USING NATURAL GAS-F; AIRS 123-A25D || UCC 2024-10-28 initial filing, secured party First-Citizens Bank & Trust Company, as Collateral: All assets. (support: generic or blanket lien) [same name, different address: possible match] || Water permit row COR423671 (COR400000) received 2024-05-01 at this address: project or facility 'Mountain Peak Power Station' (support only) [joined by street address only] [possible match] || Points: signal 28 (APCD air permit status: 25; Colorado UCC filings: 2; State water permits: 1); sources 6; recency 0; stage 8; fit 15",
+   "fit": "strong: process emission units on an air permit",
+   "name": "MOUNTAIN PEAK POWER, LLC",
+   "r5": "",
+   "r5b": "",
+   "rank": 47,
+   "score": 57.0,
+   "sources": 3,
+   "stage": "operating and expanding",
+   "tier": "A"
+  },
+  {
+   "addr": "19500 WELD COUNTY RD 7",
+   "evidence": "Air permit 15WE1395 (IA, Modification) received 2022-11-16 (received before 2024; still in the six-month processing window): BIOCHAR PRODUCTION FACILITY FACILITY WIDE PERMIT; AIRS 123-9E2C || UCC 2025-10-31 initial filing, secured party CNH Industrial Capital America LLC: 2019, Caterpillar, th357d, Serial No.: TD600663, Telehandler SECURED CREDITOR AS (support: generic or blanket lien) [same name, different address: possible match] || UCC 2025-07-24 initial filing, secured party CNH Industrial Capital America LLC: 2022, Case, 621GXR, Serial No.: JEEN0621LNF254848, Wheel Loader. 2025, Werk-Brau (support: generic or blanket lien) [same name, different address: possible match] || Points: signal 28 (APCD air permit status: 25; Colorado UCC filings: 2; State water permits: 1); sources 6; recency 0; stage 8; fit 15",
+   "fit": "strong: process emission units on an air permit",
+   "name": "BIOCHAR NOW, LLC",
+   "r5": "",
+   "r5b": "",
+   "rank": 48,
+   "score": 57.0,
+   "sources": 3,
+   "stage": "operating and expanding",
+   "tier": "A"
+  },
+  {
+   "addr": "590 N BALSAM AVE",
+   "evidence": "Air permit 23WE0088 (Final Approval) received 2022-09-28 (received before 2024; still in the six-month processing window): MILL IRON PIT SCREEN (S/N: P222155); AIRS 123-7423 || UCC 2025-04-08 initial filing, secured party Faris Machinery Co: VOLVO PNUEMATIC ROLLER MODEL: PT-125C S/N: VCET125CT0S327378 (support: generic or blanket lien) [same name, different address: possible match] || Air permit row 08PO0429 (FA, Transfer Plant Ownership) received 2025-03-24: PORTABLE CONCRETE BATCH PLANT (ID: 73-6008) (not a scoring signal; support only) [same name, different address: possible match] || Points: signal 28 (APCD air permit status: 25; Colorado UCC filings: 2; State water permits: 1); sources 6; recency 0; stage 8; fit 15",
+   "fit": "strong: process emission units on an air permit",
+   "name": "W.W. CLYDE & CO.",
+   "r5": "",
+   "r5b": "",
+   "rank": 49,
+   "score": 57.0,
+   "sources": 3,
+   "stage": "operating and expanding",
+   "tier": "A"
+  },
+  {
+   "addr": "1822 SKYWAY DR UNIT P",
+   "evidence": "UCC 2025-08-28: cnc, lathe, okuma | ONE NEW OKUMA GENOS L3000MYW-E X 400 HORIZONTAL LATHE WITH OKUMA CNC CONTROL, PARTS CATCHER, BARFEEDER INTERFA || UCC 2025-09-02 initial filing, secured party Hartwig Inc: MACHINE TOOL: GENOS L3000MYW-E X 400 (24.08 STD) CN: T5E60795 AND ACCESSORIES AS (support: generic or blanket lien) || UCC 2024-06-26 initial filing, secured party Independent Bank, doing business as Independent FI: See Exhibit A Attached Hereto And Made Part hereof For All Purposes (support: generic or blanket lien) || Points: signal 25 (Colorado UCC filings: 25); sources 0; recency 8; stage 8; fit 15",
+   "fit": "strong: finances production machinery in a UCC filing (cnc)",
+   "name": "Kam Precision Machining LLC",
+   "r5": "",
+   "r5b": "",
+   "rank": 50,
+   "score": 56.0,
+   "sources": 1,
+   "stage": "operating and expanding",
+   "tier": "A"
+  },
+  {
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "evidence": "UCC 2025-08-15: amada | ONE(1) 2014 Amada Model AE-2510NT Manufacturing S/N 22510355 together with all substitutions, replacements, pa || UCC 2025-08-28 initial filing, secured party Wells Fargo Equipment Finance, Inc.: All assets now owned or hereafter acquired. (support: generic or blanket lien) || UCC 2025-11-06 initial filing, secured party Wells Fargo Bank, National Association: no collateral text (support: generic or blanket lien) [same name, different address: possible match] || Points: signal 25 (Colorado UCC filings: 25); sources 0; recency 8; stage 8; fit 15",
+   "fit": "strong: finances production machinery in a UCC filing (amada)",
+   "name": "Elite Technologies, Inc.",
+   "r5": "",
+   "r5b": "",
+   "rank": 51,
+   "score": 56.0,
+   "sources": 1,
+   "stage": "operating and expanding",
+   "tier": "A"
+  },
+  {
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "evidence": "UCC 2024-10-11: machining center, dmg mori | ( 1 ) NEW 2024 DMG MORI DMU75 MonoBlock 5 Axis Machining Center. The equipment and inventory financed and/or l || UCC 2025-08-04 initial filing, secured party DMG MORI USA INC: Model *DMU 75 monoBLOCK (2nd Gen)* SN: *10000003347* Inclusive of all accessorie (support: generic or blanket lien) || UCC 2025-03-24 initial filing, secured party DMG MORI USA INC: 1 x DMU 75 machine, SN 10000003347, inclusive of all accessories & components (support: generic or blanket lien) || Points: signal 25 (Colorado UCC filings: 25); sources 0; recency 8; stage 8; fit 15",
+   "fit": "strong: finances production machinery in a UCC filing (machining center)",
+   "name": "Black Mountain Manufacturing Inc",
+   "r5": "",
+   "r5b": "",
+   "rank": 52,
+   "score": 56.0,
+   "sources": 1,
+   "stage": "operating and expanding",
+   "tier": "A"
+  },
+  {
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "evidence": "UCC 2025-05-05: laser cutter, mazak | Mazak Optonics Optiplex 4020 Fiber III 10000W Laser w/ Liberty Higher Performance Air System (D7O-V100M). High || UCC 2025-07-07 initial filing, secured party Canadian Imperial Bank of Commerce: All assets of the Debtor, wherever located, whether now owned or existing or her (support: generic or blanket lien) || UCC 2025-05-06 initial filing, secured party Canadian Imperial Bank of Commerce: All assets of the Debtor, wherever located, whether now owned or existing or her (support: generic or blanket lien) || Points: signal 25 (Colorado UCC filings: 25); sources 0; recency 8; stage 8; fit 15",
+   "fit": "strong: finances production machinery in a UCC filing (laser cutter)",
+   "name": "Merritt Aluminum Products Company",
+   "r5": "",
+   "r5b": "",
+   "rank": 53,
+   "score": 56.0,
+   "sources": 1,
+   "stage": "operating and expanding",
+   "tier": "A"
+  },
+  {
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "evidence": "UCC 2025-07-02: packaging machine | To the extent any portion of the purchase price of the Goods is not paid in full prior to delivery of such Goo || UCC 2024-08-20 initial filing [tier B B1b], secured party Multivac, Inc.: Please see the attached. || UCC 2025-04-23 initial filing, secured party Wells Fargo Vendor Financial Services, LLC: \"This Financing Statement covers the equipment and other assets described below  (support: generic or blanket lien) || Points: signal 25 (Colorado UCC filings: 25); sources 0; recency 8; stage 8; fit 15",
+   "fit": "strong: finances production machinery in a UCC filing (packaging machine)",
+   "name": "Colorado Custom Meat Company, LLC",
+   "r5": "",
+   "r5b": "",
+   "rank": 54,
+   "score": 56.0,
+   "sources": 1,
+   "stage": "operating and expanding",
+   "tier": "A+B"
+  },
+  {
+   "addr": "9418, 36259 COUNTY RD 16",
+   "evidence": "Air permit 25WE0335 (To Be Determined) received 2025-04-17: LOST CREEK DAIRY BIOGAS RECOVERY FLARE; AIRS 123-A156 || Air permit 25WE0336 (To Be Determined) received 2025-04-17: PROSPECT VALLEY DAIRY BIOGAS RECOVERY FLARE; AIRS 123-A157 || Points: signal 25 (APCD air permit status: 25); sources 0; recency 8; stage 8; fit 15",
+   "fit": "strong: process emission units on an air permit",
+   "name": "GREENGAS COLORADO, LLC",
+   "r5": "",
+   "r5b": "",
+   "rank": 55,
+   "score": 56.0,
+   "sources": 1,
+   "stage": "operating and expanding",
+   "tier": "A"
+  },
+  {
+   "addr": "1201 CORNERSTONE DR",
+   "evidence": "Air permit 13WE2277 (To Be Determined) received 2025-02-27: FACILITY-WIDE CONSTRUCTION PERMIT. PHARMACEUTICAL MANUFACTURING AND DEVELOPMENT.; AIRS 123-9B90 || Points: signal 25 (APCD air permit status: 25); sources 0; recency 8; stage 8; fit 15",
+   "fit": "strong: process emission units on an air permit",
+   "name": "TOLMAR, INC.",
+   "r5": "",
+   "r5b": "",
+   "rank": 56,
+   "score": 56.0,
+   "sources": 1,
+   "stage": "operating and expanding",
+   "tier": "A"
+  },
+  {
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "evidence": "UCC 2024-02-13: robot | (24) 2018 Lely Robotic Milking Units together with all fixtures, attachments, components, and accessories, all || UCC 2025-02-13 initial filing, secured party Caterpillar Financial Services Corporation: no collateral text (support: generic or blanket lien) || UCC 2024-10-21 initial filing, secured party AGCO Finance LLC: FENDT FT724G6 Tractor (support: generic or blanket lien) [same name, different address: possible match] || Points: signal 25 (Colorado UCC filings: 25); sources 0; recency 8; stage 8; fit 15",
+   "fit": "strong: finances production machinery in a UCC filing (robot)",
+   "name": "Icon Holsteins, LLC",
+   "r5": "",
+   "r5b": "",
+   "rank": 57,
+   "score": 56.0,
+   "sources": 1,
+   "stage": "operating and expanding",
+   "tier": "A"
+  },
+  {
+   "addr": "9067 US HIGHWAY 85",
+   "evidence": "Air permit 20WE0914F (To Be Determined) received 2025-01-20: RAGSDALE RESERVOIRS - SAND / GRAVEL MINING OPERATIONS; AIRS 123-A120 || Air permit 20WE0918 (To Be Determined) received 2025-01-20: RAGSDALE RESERVOIRS - CONE CRUSHER ID: (LGE # ); AIRS 123-A120 || Points: signal 25 (APCD air permit status: 25); sources 0; recency 8; stage 8; fit 15",
+   "fit": "strong: process emission units on an air permit",
+   "name": "L. G. EVERIST. INC.",
+   "r5": "",
+   "r5b": "",
+   "rank": 58,
+   "score": 56.0,
+   "sources": 1,
+   "stage": "operating and expanding",
+   "tier": "A"
+  },
+  {
+   "addr": "19179 COUNTY ROA 49",
+   "evidence": "Air permit 12WE3172 (IA, Modification) received 2024-11-18: WELD COUNTY HEARTLAND ANAEROBIC DIGESTER PROJECT FACILITY WIDE; AIRS 123-9A94 || Points: signal 25 (APCD air permit status: 25); sources 0; recency 8; stage 8; fit 15",
+   "fit": "strong: process emission units on an air permit",
+   "name": "PLATTE RIVER BIOGAS, LLC",
+   "r5": "",
+   "r5b": "",
+   "rank": 59,
+   "score": 56.0,
+   "sources": 1,
+   "stage": "operating and expanding",
+   "tier": "A"
+  },
+  {
+   "addr": "15002 BARLEY AVE/CR 16",
+   "evidence": "Air permit 25WE0084 (Final Approval) received 2024-11-18: FT LUPTON COMBUSTION TURBINES NATURAL GAS TURBINE; AIRS 123-0014 || Air permit row 23MR0495 (Final Approval) received 2023-06-09: PAWNEE STATION NATURAL GAS FIRED HEATER (not a scoring signal; support only) [same name, different address: possible match] || Points: signal 25 (APCD air permit status: 25); sources 0; recency 8; stage 8; fit 15",
+   "fit": "strong: process emission units on an air permit",
+   "name": "PUBLIC SERVICE CO - ELECTRIC GENERATION.",
+   "r5": "",
+   "r5b": "",
+   "rank": 60,
+   "score": 56.0,
+   "sources": 1,
+   "stage": "operating and expanding",
+   "tier": "A"
+  }
+ ],
+ "top50_named_without_web_check": [
+  {
+   "name": "UNDERGROUND MANUFACTURING, LLC",
+   "rank": 6
+  },
+  {
+   "name": "Quantum J's Canning LLC",
+   "rank": 7
+  },
+  {
+   "name": "5507 Distilling, LLC",
+   "rank": 8
+  },
+  {
+   "name": "LOUDWIRE DIESEL LLC",
+   "rank": 9
+  },
+  {
+   "name": "JIM'S AUTOMOTIVE MACHINE SHOP, INC.",
+   "rank": 10
+  },
+  {
+   "name": "Impact Equipment Rentals, LLC",
+   "rank": 12
+  },
+  {
+   "name": "T&T GRINDERS, LLC",
+   "rank": 15
+  },
+  {
+   "name": "Legacy Pie Co., LLC",
+   "rank": 22
+  },
+  {
+   "name": "Absolute Countertops & More, Inc.",
+   "rank": 23
+  },
+  {
+   "name": "BIG THOMPSON COMPOST LLC",
+   "rank": 24
+  },
+  {
+   "name": "LIVE SHARP INDUSTRIES, LLC",
+   "rank": 25
+  },
+  {
+   "name": "Schott Manufacturing Solutions LLC",
+   "rank": 27
+  },
+  {
+   "name": "FOUR C SONS INC",
+   "rank": 29
+  },
+  {
+   "name": "J&B MANUFACTURING LLC",
+   "rank": 32
+  },
+  {
+   "name": "Keibon, Inc.",
+   "rank": 36
+  },
+  {
+   "name": "C. SIMPSON FARMS, LLC",
+   "rank": 42
+  },
+  {
+   "name": "ARC Colorado Inc",
+   "rank": 43
+  },
+  {
+   "name": "Master Plumbing Solutions LLC",
+   "rank": 44
+  },
+  {
+   "name": "Northern Feed & Bean, Inc.",
+   "rank": 45
+  },
+  {
+   "name": "Vestas Blades America, Inc",
+   "rank": 46
+  },
+  {
+   "name": "MOUNTAIN PEAK POWER, LLC",
+   "rank": 47
+  },
+  {
+   "name": "BIOCHAR NOW, LLC",
+   "rank": 48
+  },
+  {
+   "name": "W.W. CLYDE & CO.",
+   "rank": 49
+  },
+  {
+   "name": "Kam Precision Machining LLC",
+   "rank": 50
+  }
+ ],
+ "v2_rows_not_in_v3": [],
+ "v3_rows_not_in_v2": [
+  {
+   "addr": "7051 EAGLE BLVD",
+   "name": "AGILENT TECHNOLOGIES US, INC.",
+   "rank": 1,
+   "score": 91.0,
+   "tier": "A+B"
+  },
+  {
+   "addr": "4161 SPECIALTY PL",
+   "name": "BOULDER SCIENTIFIC COMPANY, LLC",
+   "rank": 2,
+   "score": 78.0,
+   "tier": "A"
+  },
+  {
+   "addr": "19750 COUNTY ROAD 7",
+   "name": "URSA MAJOR TECHNOLOGIES, INC.",
+   "rank": 3,
+   "score": 75.0,
+   "tier": "A"
+  },
+  {
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "name": "OLD SCHOOL INDUSTRIES, INC.",
+   "rank": 4,
+   "score": 73.0,
+   "tier": "A"
+  },
+  {
+   "addr": "2055 Howard Smith Ave E",
+   "name": "HIGH PLAINS STEEL SERVICES, LLC",
+   "rank": 5,
+   "score": 73.0,
+   "tier": "B"
+  },
+  {
+   "addr": "2950 COLORFUL AVE",
+   "name": "UNDERGROUND MANUFACTURING, LLC",
+   "rank": 6,
+   "score": 72.5,
+   "tier": "A"
+  },
+  {
+   "addr": "1725 Skyway Dr Unit 150",
+   "name": "Quantum J's Canning LLC",
+   "rank": 7,
+   "score": 72.0,
+   "tier": "A"
+  },
+  {
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "name": "5507 Distilling, LLC",
+   "rank": 8,
+   "score": 72.0,
+   "tier": "B"
+  },
+  {
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "name": "LOUDWIRE DIESEL LLC",
+   "rank": 9,
+   "score": 71.0,
+   "tier": "A"
+  },
+  {
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "name": "JIM'S AUTOMOTIVE MACHINE SHOP, INC.",
+   "rank": 10,
+   "score": 70.0,
+   "tier": "A"
+  },
+  {
+   "addr": "2965 S 27TH AVE",
+   "name": "PIONEER PRESS OF GREELEY",
+   "rank": 11,
+   "score": 70.0,
+   "tier": "A"
+  },
+  {
+   "addr": "8127 W I-25 Frontage Rd",
+   "name": "Impact Equipment Rentals, LLC",
+   "rank": 12,
+   "score": 69.0,
+   "tier": "A"
+  },
+  {
+   "addr": "800 N 8TH AVE",
+   "name": "SWIFT BEEF COMPANY",
+   "rank": 13,
+   "score": 69.0,
+   "tier": "A"
+  },
+  {
+   "addr": "31815 GREAT WESTERN DRIVE",
+   "name": "SCHLOSSER SIGNS, INC.",
+   "rank": 14,
+   "score": 68.5,
+   "tier": "A"
+  },
+  {
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "name": "T&T GRINDERS, LLC",
+   "rank": 15,
+   "score": 68.0,
+   "tier": "B"
+  },
+  {
+   "addr": "8490 HIGHWAY 66",
+   "name": "RAPTOR MATERIALS LLC",
+   "rank": 16,
+   "score": 68.0,
+   "tier": "A"
+  },
+  {
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "name": "JW Fabrication LLC",
+   "rank": 17,
+   "score": 68.0,
+   "tier": "B"
+  },
+  {
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "name": "DESIGNLOGIC, INC.",
+   "rank": 18,
+   "score": 67.0,
+   "tier": "A"
+  },
+  {
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "name": "Cutting Edge Steel, Inc.",
+   "rank": 19,
+   "score": 67.0,
+   "tier": "A"
+  },
+  {
+   "addr": "2881 31ST AVE, STE 5",
+   "name": "PNEU LINE SUPPLY, INC.",
+   "rank": 20,
+   "score": 67.0,
+   "tier": "A"
+  },
+  {
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "name": "ECLIPSE ENGINEERING, INC.",
+   "rank": 21,
+   "score": 67.0,
+   "tier": "A"
+  },
+  {
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "name": "Legacy Pie Co., LLC",
+   "rank": 22,
+   "score": 67.0,
+   "tier": "A"
+  },
+  {
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "name": "Absolute Countertops & More, Inc.",
+   "rank": 23,
+   "score": 67.0,
+   "tier": "A"
+  },
+  {
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "name": "BIG THOMPSON COMPOST LLC",
+   "rank": 24,
+   "score": 67.0,
+   "tier": "A"
+  },
+  {
+   "addr": "13782 E I-25 Frontage Rd Unit B4",
+   "name": "LIVE SHARP INDUSTRIES, LLC",
+   "rank": 25,
+   "score": 67.0,
+   "tier": "A"
+  },
+  {
+   "addr": "230 COMMERCE DRIVE",
+   "name": "BLACK EAGLE ENERGY SERVICES",
+   "rank": 26,
+   "score": 67.0,
+   "tier": "A"
+  },
+  {
+   "addr": "9250 Bruin Blvd, Suite A",
+   "name": "Schott Manufacturing Solutions LLC",
+   "rank": 27,
+   "score": 66.0,
+   "tier": "A+B"
+  },
+  {
+   "addr": "8440 RASPBERRY WAY",
+   "name": "Unattached address (no company attached)",
+   "rank": 28,
+   "score": 65.0,
+   "tier": "A"
+  },
+  {
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "name": "FOUR C SONS INC",
+   "rank": 29,
+   "score": 63.0,
+   "tier": "A"
+  },
+  {
+   "addr": "not given in the source",
+   "name": "Performance Equipment Sales LLC",
+   "rank": 30,
+   "score": 63.0,
+   "tier": "A"
+  },
+  {
+   "addr": "31005 GREAT WESTERN DRIVE",
+   "name": "BURNCO COLORADO LLC",
+   "rank": 31,
+   "score": 62.0,
+   "tier": "A"
+  },
+  {
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "name": "J&B MANUFACTURING LLC",
+   "rank": 32,
+   "score": 62.0,
+   "tier": "A+B"
+  },
+  {
+   "addr": "629 Gyrfalcon Ct., Ste. A",
+   "name": "BLACK LABEL SERVICES, INC",
+   "rank": 33,
+   "score": 61.0,
+   "tier": "A"
+  },
+  {
+   "addr": "1338 COUNTY RD 39",
+   "name": "HYPONEX CORPORATION",
+   "rank": 34,
+   "score": 61.0,
+   "tier": "A"
+  },
+  {
+   "addr": "400 PLATTE ST",
+   "name": "BAY STATE MILLING COMPANY",
+   "rank": 35,
+   "score": 61.0,
+   "tier": "A"
+  },
+  {
+   "addr": "3005 W. 29th Street, Unit G2",
+   "name": "Keibon, Inc.",
+   "rank": 36,
+   "score": 61.0,
+   "tier": "B"
+  },
+  {
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "name": "CNE Creative Enterprises, LLC",
+   "rank": 37,
+   "score": 58.0,
+   "tier": "A"
+  },
+  {
+   "addr": "1519 EAST 8TH STREET",
+   "name": "J-2 CONTRACTING COMPANY",
+   "rank": 38,
+   "score": 58.0,
+   "tier": "A"
+  },
+  {
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "name": "Hungenberg Produce, Inc.",
+   "rank": 39,
+   "score": 58.0,
+   "tier": "A"
+  },
+  {
+   "addr": "140 COMMERCE RD",
+   "name": "SUN MOUNTAIN, INC.",
+   "rank": 40,
+   "score": 58.0,
+   "tier": "A"
+  },
+  {
+   "addr": "4125 US-85",
+   "name": "ASPHALT SPECIALTIES CO, INC",
+   "rank": 41,
+   "score": 57.5,
+   "tier": "A"
+  },
+  {
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "name": "C. SIMPSON FARMS, LLC",
+   "rank": 42,
+   "score": 57.0,
+   "tier": "A"
+  },
+  {
+   "addr": "7040 County Road 20",
+   "name": "ARC Colorado Inc",
+   "rank": 43,
+   "score": 57.0,
+   "tier": "A"
+  },
+  {
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "name": "Master Plumbing Solutions LLC",
+   "rank": 44,
+   "score": 57.0,
+   "tier": "A"
+  },
+  {
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "name": "Northern Feed & Bean, Inc.",
+   "rank": 45,
+   "score": 57.0,
+   "tier": "A"
+  },
+  {
+   "addr": "11140 Eastman Park Dr.",
+   "name": "Vestas Blades America, Inc",
+   "rank": 46,
+   "score": 57.0,
+   "tier": "A"
+  },
+  {
+   "addr": "10001 COUNTY RD 55",
+   "name": "MOUNTAIN PEAK POWER, LLC",
+   "rank": 47,
+   "score": 57.0,
+   "tier": "A"
+  },
+  {
+   "addr": "19500 WELD COUNTY RD 7",
+   "name": "BIOCHAR NOW, LLC",
+   "rank": 48,
+   "score": 57.0,
+   "tier": "A"
+  },
+  {
+   "addr": "590 N BALSAM AVE",
+   "name": "W.W. CLYDE & CO.",
+   "rank": 49,
+   "score": 57.0,
+   "tier": "A"
+  },
+  {
+   "addr": "1822 SKYWAY DR UNIT P",
+   "name": "Kam Precision Machining LLC",
+   "rank": 50,
+   "score": 56.0,
+   "tier": "A"
+  },
+  {
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "name": "Elite Technologies, Inc.",
+   "rank": 51,
+   "score": 56.0,
+   "tier": "A"
+  },
+  {
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "name": "Black Mountain Manufacturing Inc",
+   "rank": 52,
+   "score": 56.0,
+   "tier": "A"
+  },
+  {
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "name": "Merritt Aluminum Products Company",
+   "rank": 53,
+   "score": 56.0,
+   "tier": "A"
+  },
+  {
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "name": "Colorado Custom Meat Company, LLC",
+   "rank": 54,
+   "score": 56.0,
+   "tier": "A+B"
+  },
+  {
+   "addr": "9418, 36259 COUNTY RD 16",
+   "name": "GREENGAS COLORADO, LLC",
+   "rank": 55,
+   "score": 56.0,
+   "tier": "A"
+  },
+  {
+   "addr": "1201 CORNERSTONE DR",
+   "name": "TOLMAR, INC.",
+   "rank": 56,
+   "score": 56.0,
+   "tier": "A"
+  },
+  {
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "name": "Icon Holsteins, LLC",
+   "rank": 57,
+   "score": 56.0,
+   "tier": "A"
+  },
+  {
+   "addr": "9067 US HIGHWAY 85",
+   "name": "L. G. EVERIST. INC.",
+   "rank": 58,
+   "score": 56.0,
+   "tier": "A"
+  },
+  {
+   "addr": "19179 COUNTY ROA 49",
+   "name": "PLATTE RIVER BIOGAS, LLC",
+   "rank": 59,
+   "score": 56.0,
+   "tier": "A"
+  },
+  {
+   "addr": "15002 BARLEY AVE/CR 16",
+   "name": "PUBLIC SERVICE CO - ELECTRIC GENERATION.",
+   "rank": 60,
+   "score": 56.0,
+   "tier": "A"
+  },
+  {
+   "addr": "23273 47th Avenue",
+   "name": "NORCO Terminal",
+   "rank": 61,
+   "score": 55.0,
+   "tier": "A"
+  },
+  {
+   "addr": "27486 WELD COUNTY RD 13",
+   "name": "ROCK & RAIL, LLC",
+   "rank": 62,
+   "score": 54.0,
+   "tier": "A"
+  },
+  {
+   "addr": "2001 Lch Ave",
+   "name": "USRL HUDSON CO LLC",
+   "rank": 63,
+   "score": 53.0,
+   "tier": "A"
+  },
+  {
+   "addr": "2221 Clayton Pl South Bldg Lot 2",
+   "name": "MAPEI Corporation",
+   "rank": 64,
+   "score": 53.0,
+   "tier": "A"
+  },
+  {
+   "addr": "2900 PEAK AVE",
+   "name": "JM SMUCKER, LLC",
+   "rank": 65,
+   "score": 53.0,
+   "tier": "A"
+  },
+  {
+   "addr": "23273 47TH AVENUE",
+   "name": "MOUNTAIN CEMENT CO",
+   "rank": 66,
+   "score": 52.0,
+   "tier": "A"
+  },
+  {
+   "addr": "1490 E 8TH ST",
+   "name": "ALTER TRADING CORP DBA ANDERSON'S SALES AND SALVAGE",
+   "rank": 67,
+   "score": 52.0,
+   "tier": "A"
+  },
+  {
+   "addr": "450 N FRONT ST",
+   "name": "TEXAS FARM PRODUCTS COMPANY",
+   "rank": 68,
+   "score": 52.0,
+   "tier": "A"
+  },
+  {
+   "addr": "25930 WCR 13",
+   "name": "Johnstown Ready-Mix",
+   "rank": 69,
+   "score": 51.0,
+   "tier": "A"
+  },
+  {
+   "addr": "41220 Ryland Ave",
+   "name": "Ault Asphalt Plant Site",
+   "rank": 70,
+   "score": 50.0,
+   "tier": "A"
+  },
+  {
+   "addr": "427 North Front Street",
+   "name": "Oldcastle Infrastructure",
+   "rank": 71,
+   "score": 50.0,
+   "tier": "A"
+  },
+  {
+   "addr": "3752 IMPERIAL ST UNIT D",
+   "name": "Unattached address (possible occupier: Kingdom Glass Creations, LLC)",
+   "rank": 72,
+   "score": 49.5,
+   "tier": "A+B"
+  },
+  {
+   "addr": "4250 Salazar Way",
+   "name": "Unattached address (possible occupier: Saimor sofa inc)",
+   "rank": 73,
+   "score": 49.5,
+   "tier": "A+B"
+  },
+  {
+   "addr": "4881 EAGLE PL",
+   "name": "Unattached address (no company attached)",
+   "rank": 74,
+   "score": 49.0,
+   "tier": "A+B"
+  },
+  {
+   "addr": "40.43 DEG N, 104.40 DEG W",
+   "name": "CO SAND COMPANY II, LLC",
+   "rank": 75,
+   "score": 48.0,
+   "tier": "A"
+  },
+  {
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "name": "Northern Colorado Driveline Service, Inc.",
+   "rank": 76,
+   "score": 48.0,
+   "tier": "A"
+  },
+  {
+   "addr": "13782 E I-25 Frontage Rd Unit B4",
+   "name": "Revoindie, LLC",
+   "rank": 77,
+   "score": 48.0,
+   "tier": "A"
+  },
+  {
+   "addr": "4076 SPECIALTY PLACE",
+   "name": "CWKA, LLC",
+   "rank": 78,
+   "score": 48.0,
+   "tier": "A"
+  },
+  {
+   "addr": "1500 B EAST CROWN PRINCE BLVD",
+   "name": "VESTAS-AMERICAN WIND TECHNOLOGY, INC",
+   "rank": 79,
+   "score": 48.0,
+   "tier": "A"
+  },
+  {
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "name": "Colorado Cornhole Connection LLC",
+   "rank": 80,
+   "score": 48.0,
+   "tier": "A"
+  },
+  {
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "name": "Mauka Roots Wood Co. LLC",
+   "rank": 81,
+   "score": 48.0,
+   "tier": "A"
+  },
+  {
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "name": "V & S MOLDING, INC.",
+   "rank": 82,
+   "score": 48.0,
+   "tier": "A"
+  },
+  {
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "name": "Boyd Motor Company, LLC",
+   "rank": 83,
+   "score": 48.0,
+   "tier": "A"
+  },
+  {
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "name": "AdditiveXTech LLC",
+   "rank": 84,
+   "score": 48.0,
+   "tier": "A"
+  },
+  {
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "name": "Enyart Forge and Fabrication, LLC",
+   "rank": 85,
+   "score": 48.0,
+   "tier": "A"
+  },
+  {
+   "addr": "13855 Deere Ct.",
+   "name": "InnoGraf, LLC",
+   "rank": 86,
+   "score": 48.0,
+   "tier": "A"
+  },
+  {
+   "addr": "13855 Deere Ct.",
+   "name": "S&DC Corp. dba MBK Machine",
+   "rank": 87,
+   "score": 48.0,
+   "tier": "A"
+  },
+  {
+   "addr": "10765 Turner Blvd Unit E",
+   "name": "SteelGen LLC",
+   "rank": 88,
+   "score": 48.0,
+   "tier": "A"
+  },
+  {
+   "addr": "5186 Longs Peak Road Unit F",
+   "name": "Colorado WaterJet, LLC",
+   "rank": 89,
+   "score": 48.0,
+   "tier": "A"
+  },
+  {
+   "addr": "39390 WELD COUNTY ROAD 39",
+   "name": "CEA DAIRY RNG COLORADO, LLC",
+   "rank": 90,
+   "score": 48.0,
+   "tier": "A"
+  },
+  {
+   "addr": "7950 MILLER DR",
+   "name": "Unattached address (no company attached)",
+   "rank": 91,
+   "score": 47.0,
+   "tier": "A+B"
+  },
+  {
+   "addr": "450 Front Street",
+   "name": "J.D. Heiskell & Co.",
+   "rank": 92,
+   "score": 47.0,
+   "tier": "A"
+  },
+  {
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "name": "Pathfinder Pressure Testing, LLC",
+   "rank": 93,
+   "score": 46.0,
+   "tier": "A"
+  },
+  {
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "name": "Lawn Care of the Rockies, LLC",
+   "rank": 94,
+   "score": 46.0,
+   "tier": "A"
+  },
+  {
+   "addr": "5520 Iris Parkway",
+   "name": "Unattached address (no company attached)",
+   "rank": 95,
+   "score": 45.0,
+   "tier": "A+B"
+  },
+  {
+   "addr": "14520 CR 64",
+   "name": "Loveland Products",
+   "rank": 96,
+   "score": 45.0,
+   "tier": "A"
+  },
+  {
+   "addr": "376852 HWY 52 Way",
+   "name": "Unattached address (no company attached)",
+   "rank": 97,
+   "score": 45.0,
+   "tier": "A"
+  },
+  {
+   "addr": "7245 Johnson Drive",
+   "name": "Unattached address (possible occupier: Transwest)",
+   "rank": 98,
+   "score": 45.0,
+   "tier": "A+B"
+  },
+  {
+   "addr": "4210 BRUIN ST",
+   "name": "Unattached address (no company attached)",
+   "rank": 99,
+   "score": 45.0,
+   "tier": "A+B"
+  },
+  {
+   "addr": "1767 Vista View Drive",
+   "name": "Henry Frank, LLC",
+   "rank": 100,
+   "score": 44.0,
+   "tier": "A"
+  },
+  {
+   "addr": "19521 COUNTY ROAD 29",
+   "name": "SVW FARMS LLLP",
+   "rank": 101,
+   "score": 43.5,
+   "tier": "A"
+  },
+  {
+   "addr": "13100 WCR 8",
+   "name": "Fort Lupton Field Camp",
+   "rank": 102,
+   "score": 43.0,
+   "tier": "A"
+  },
+  {
+   "addr": "100 Forest Avenue",
+   "name": "Glen Heather Fittness Pad",
+   "rank": 103,
+   "score": 43.0,
+   "tier": "A"
+  },
+  {
+   "addr": "19999 CO RD 28",
+   "name": "CEA GREELY, LLC",
+   "rank": 104,
+   "score": 42.0,
+   "tier": "A"
+  },
+  {
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "name": "Covenant Plumbing & Heating LLC",
+   "rank": 105,
+   "score": 42.0,
+   "tier": "A"
+  },
+  {
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "name": "Eaton Fire Protection District",
+   "rank": 106,
+   "score": 42.0,
+   "tier": "A"
+  },
+  {
+   "addr": "31794 CR 23 3/4",
+   "name": "Cando Rail & Terminals (U.S.) LLC",
+   "rank": 107,
+   "score": 41.5,
+   "tier": "A"
+  },
+  {
+   "addr": "4185 SALAZAR WAY",
+   "name": "Unattached address (possible occupier: TESLA)",
+   "rank": 108,
+   "score": 41.0,
+   "tier": "A+B"
+  },
+  {
+   "addr": "3610 W 35th Ave Unit 2",
+   "name": "Precision Industries LLC. CO",
+   "rank": 109,
+   "score": 41.0,
+   "tier": "A"
+  },
+  {
+   "addr": "7504 Highway 85",
+   "name": "Triple P Services, LLC",
+   "rank": 110,
+   "score": 41.0,
+   "tier": "A"
+  },
+  {
+   "addr": "5294 GRANDVIEW BLVD",
+   "name": "LINDSAY PRECAST LLC",
+   "rank": 111,
+   "score": 40.0,
+   "tier": "A"
+  },
+  {
+   "addr": "7701 Miller Dr.",
+   "name": "4Gs Investments-F, LLC",
+   "rank": 112,
+   "score": 39.0,
+   "tier": "A+B"
+  },
+  {
+   "addr": "2825 1st Avenue",
+   "name": "Inland Truck Parts Company",
+   "rank": 113,
+   "score": 39.0,
+   "tier": "A"
+  },
+  {
+   "addr": "7097 COLORADO BLVD",
+   "name": "Unattached address (possible occupier: 7097, LLC)",
+   "rank": 114,
+   "score": 38.5,
+   "tier": "A"
+  },
+  {
+   "addr": "435 N 35th Ave #367",
+   "name": "LM Metal Works, LLC",
+   "rank": 115,
+   "score": 38.0,
+   "tier": "B"
+  },
+  {
+   "addr": "40000 COUNTY ROAD 25",
+   "name": "WASTE MANAGEMENT DISPOSAL SERVICES OF COLORADO, INC.",
+   "rank": 116,
+   "score": 38.0,
+   "tier": "A"
+  },
+  {
+   "addr": "11588 COUNTY ROAD 59",
+   "name": "COLORADO SAND COMPANY LLC",
+   "rank": 117,
+   "score": 38.0,
+   "tier": "A"
+  },
+  {
+   "addr": "5355 COLORADO BLVD",
+   "name": "STERICYCLE, INC.",
+   "rank": 118,
+   "score": 38.0,
+   "tier": "A"
+  },
+  {
+   "addr": "32461 COUNTY ROAD 39",
+   "name": "AGFINITY, INC.",
+   "rank": 119,
+   "score": 38.0,
+   "tier": "A"
+  },
+  {
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "name": "Atlas Energy Services, LLC",
+   "rank": 120,
+   "score": 38.0,
+   "tier": "A"
+  },
+  {
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "name": "Stoker Foods, LLC",
+   "rank": 121,
+   "score": 38.0,
+   "tier": "B"
+  },
+  {
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "name": "CWM Woodworks LLC",
+   "rank": 122,
+   "score": 38.0,
+   "tier": "B"
+  },
+  {
+   "addr": "3773 Monarch Street, Unit A, B, & C",
+   "name": "Unattached address (no company attached)",
+   "rank": 123,
+   "score": 38.0,
+   "tier": "A+B"
+  },
+  {
+   "addr": "5964 IRIS PKWY",
+   "name": "Unattached address (no company attached)",
+   "rank": 124,
+   "score": 38.0,
+   "tier": "A+B"
+  },
+  {
+   "addr": "6160 Silverstone",
+   "name": "Unattached address (possible occupier: UPS Store)",
+   "rank": 125,
+   "score": 38.0,
+   "tier": "A+B"
+  },
+  {
+   "addr": "8521 CR 5",
+   "name": "Unattached address (no company attached)",
+   "rank": 126,
+   "score": 38.0,
+   "tier": "A"
+  },
+  {
+   "addr": "8127 W I-25 FRONTAGE RD",
+   "name": "INTERSTATE RENTAL AND SALES, INC.",
+   "rank": 127,
+   "score": 38.0,
+   "tier": "A"
+  },
+  {
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "name": "TV Dairy, LLC",
+   "rank": 128,
+   "score": 37.0,
+   "tier": "A"
+  },
+  {
+   "addr": "20684 NIOBRARA BLVD",
+   "name": "Unattached address (possible occupier: North American Machines of Colorado, Inc.)",
+   "rank": 129,
+   "score": 36.0,
+   "tier": "A"
+  },
+  {
+   "addr": "500 6th Ave",
+   "name": "NOFFSINGER MANUFACTURING CO., INC.",
+   "rank": 130,
+   "score": 36.0,
+   "tier": "B"
+  },
+  {
+   "addr": "33796 County Road 57",
+   "name": "CEA Greely, LLC - Summit Manure Receiving Pit",
+   "rank": 131,
+   "score": 36.0,
+   "tier": "A"
+  },
+  {
+   "addr": "19 and 26 LLC 11737 Locust St",
+   "name": "19 and 26 LLC",
+   "rank": 132,
+   "score": 36.0,
+   "tier": "A"
+  },
+  {
+   "addr": "16706 BAKERS WAY",
+   "name": "Unattached address (possible occupier: Secure Site Storage LLC)",
+   "rank": 133,
+   "score": 35.5,
+   "tier": "A"
+  },
+  {
+   "addr": "1416 CIMARRON CT",
+   "name": "Unattached address (possible occupier: TK Truck Lot LLC)",
+   "rank": 134,
+   "score": 35.5,
+   "tier": "A"
+  },
+  {
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "name": "Keshar Foods, LLC",
+   "rank": 135,
+   "score": 35.5,
+   "tier": "B"
+  },
+  {
+   "addr": "101 E 4TH STREET RD",
+   "name": "Unattached address (no company attached)",
+   "rank": 136,
+   "score": 35.0,
+   "tier": "A"
+  },
+  {
+   "addr": "208 GATEWAY DRIVE",
+   "name": "BACKBONE FIBER SYSTEMS, LLC",
+   "rank": 137,
+   "score": 35.0,
+   "tier": "A"
+  },
+  {
+   "addr": "7300 Miller Dr",
+   "name": "Star Precision Manufacturing, Inc.",
+   "rank": 138,
+   "score": 35.0,
+   "tier": "A"
+  },
+  {
+   "addr": "5701 SILVERSTONE DR",
+   "name": "Unattached address (possible occupier: Lowes)",
+   "rank": 139,
+   "score": 34.0,
+   "tier": "B"
+  },
+  {
+   "addr": "630 MAIN ST UNIT D",
+   "name": "Unattached address (no company attached)",
+   "rank": 140,
+   "score": 34.0,
+   "tier": "A"
+  },
+  {
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "name": "SSM mechanical welding & fabrication LLC",
+   "rank": 141,
+   "score": 33.0,
+   "tier": "B"
+  },
+  {
+   "addr": "1299 H ST",
+   "name": "Unattached address (no company attached)",
+   "rank": 142,
+   "score": 31.0,
+   "tier": "A"
+  },
+  {
+   "addr": "2301 1ST AVE",
+   "name": "Unattached address (no company attached)",
+   "rank": 143,
+   "score": 31.0,
+   "tier": "A"
+  },
+  {
+   "addr": "701 5th Street",
+   "name": "Unattached address (no company attached)",
+   "rank": 144,
+   "score": 31.0,
+   "tier": "A"
+  },
+  {
+   "addr": "240 5TH ST",
+   "name": "Unattached address (no company attached)",
+   "rank": 145,
+   "score": 31.0,
+   "tier": "A"
+  },
+  {
+   "addr": "4700, 4606 Falcon Place",
+   "name": "Unattached address (no company attached)",
+   "rank": 146,
+   "score": 31.0,
+   "tier": "A"
+  },
+  {
+   "addr": "3759 Puritan Way",
+   "name": "Unattached address (no company attached)",
+   "rank": 147,
+   "score": 31.0,
+   "tier": "A"
+  },
+  {
+   "addr": "3763 Puritan Way",
+   "name": "Unattached address (no company attached)",
+   "rank": 148,
+   "score": 31.0,
+   "tier": "A"
+  },
+  {
+   "addr": "12524 COUNTY ROAD 25 1/2",
+   "name": "Unattached address (no company attached)",
+   "rank": 149,
+   "score": 31.0,
+   "tier": "A"
+  },
+  {
+   "addr": "22303 INTERSTATE 76 FRONTAGE RD",
+   "name": "Unattached address (no company attached)",
+   "rank": 150,
+   "score": 31.0,
+   "tier": "A"
+  },
+  {
+   "addr": "12679 COUNTY ROAD 4",
+   "name": "Unattached address (no company attached)",
+   "rank": 151,
+   "score": 31.0,
+   "tier": "A"
+  },
+  {
+   "addr": "4501 Salazar Lane",
+   "name": "Unattached address (no company attached)",
+   "rank": 152,
+   "score": 31.0,
+   "tier": "A"
+  },
+  {
+   "addr": "975 HIGHWAY 85",
+   "name": "Unattached address (no company attached)",
+   "rank": 153,
+   "score": 31.0,
+   "tier": "A"
+  },
+  {
+   "addr": "2393 27th st, unit 520",
+   "name": "Tortilleria la Esmeralda llc.",
+   "rank": 154,
+   "score": 31.0,
+   "tier": "B"
+  },
+  {
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "name": "C&T CUSTOM FABRICATION INC",
+   "rank": 155,
+   "score": 31.0,
+   "tier": "B"
+  },
+  {
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "name": "Identity Pet Nutrition, LLC",
+   "rank": 156,
+   "score": 31.0,
+   "tier": "B"
+  },
+  {
+   "addr": "14331 Hilltop Rd.",
+   "name": "Niwot Corporation",
+   "rank": 157,
+   "score": 31.0,
+   "tier": "B"
+  },
+  {
+   "addr": "40.335428 -104.745161",
+   "name": "WESTERN PROPPANTS, LLC",
+   "rank": 158,
+   "score": 31.0,
+   "tier": "A"
+  },
+  {
+   "addr": "4300 GODDING HOLLOW PKWY",
+   "name": "Unattached address (possible occupier: HIRSH PRECISION PRODUCTS, INC.)",
+   "rank": 159,
+   "score": 30.0,
+   "tier": "B"
+  },
+  {
+   "addr": "3761 MONARCH ST",
+   "name": "Unattached address (possible occupier: AUTO CYCLE EXCHANGE SERVICES, INC.)",
+   "rank": 160,
+   "score": 30.0,
+   "tier": "B"
+  },
+  {
+   "addr": "9250 BRUIN BLVD UNIT C",
+   "name": "Unattached address (possible occupier: Schott Manufacturing Solutions LLC)",
+   "rank": 161,
+   "score": 30.0,
+   "tier": "B"
+  },
+  {
+   "addr": "1859 2ND AVE",
+   "name": "Unattached address (possible occupier: Buck & Doe Auto, LLC)",
+   "rank": 162,
+   "score": 30.0,
+   "tier": "A"
+  },
+  {
+   "addr": "5901 SILVERSTONE DR",
+   "name": "Unattached address (possible occupier: WINGSTOP)",
+   "rank": 163,
+   "score": 30.0,
+   "tier": "A"
+  },
+  {
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "name": "Excalibur Welding LLC",
+   "rank": 164,
+   "score": 29.0,
+   "tier": "B"
+  },
+  {
+   "addr": "6300 WHEATLAND BLVD",
+   "name": "Unattached address (possible occupier: Spindle BESS)",
+   "rank": 165,
+   "score": 29.0,
+   "tier": "B"
+  },
+  {
+   "addr": "4701 FALCON PL",
+   "name": "Unattached address (possible occupier: St. Vrain Sanitation District)",
+   "rank": 166,
+   "score": 29.0,
+   "tier": "B"
+  },
+  {
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "name": "HOTSHOT MOBILE WELDING INC",
+   "rank": 167,
+   "score": 29.0,
+   "tier": "B"
+  },
+  {
+   "addr": "4040 SALAZAR WAY",
+   "name": "Unattached address (possible occupier: Trailer Source)",
+   "rank": 168,
+   "score": 29.0,
+   "tier": "B"
+  },
+  {
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "name": "Manufacturing & Industrial Sourcing & Solutions LLC",
+   "rank": 169,
+   "score": 29.0,
+   "tier": "B"
+  },
+  {
+   "addr": "1660 COUNTY ROAD 27",
+   "name": "Unattached address (possible occupier: Aslan Schools L.L.C.)",
+   "rank": 170,
+   "score": 28.5,
+   "tier": "A"
+  },
+  {
+   "addr": "not given in the source",
+   "name": "Weld Bess Storage",
+   "rank": 171,
+   "score": 28.0,
+   "tier": "A"
+  },
+  {
+   "addr": "12496 County Road 8",
+   "name": "Aurora Water North Campus",
+   "rank": 172,
+   "score": 28.0,
+   "tier": "A"
+  },
+  {
+   "addr": "23205 Co Rd 13",
+   "name": "Johnstown Water Treatment Plant",
+   "rank": 173,
+   "score": 28.0,
+   "tier": "A"
+  },
+  {
+   "addr": "23016 WCR 74",
+   "name": "Johnson Dairy - CEA Greely, LLC",
+   "rank": 174,
+   "score": 28.0,
+   "tier": "A"
+  },
+  {
+   "addr": "45490 WCR 39",
+   "name": "Longs Peak Dairy Pierce - CEA Greely, LLC",
+   "rank": 175,
+   "score": 28.0,
+   "tier": "A"
+  },
+  {
+   "addr": "39306 WCR 59",
+   "name": "Longs Peak Galeton - CEA Greely LLC",
+   "rank": 176,
+   "score": 28.0,
+   "tier": "A"
+  },
+  {
+   "addr": "not given in the source",
+   "name": "Monarch Mountain Minerals & Aggregates - DENM Facility",
+   "rank": 177,
+   "score": 28.0,
+   "tier": "A"
+  },
+  {
+   "addr": "0 CR 80",
+   "name": "Wolf Creek Dairy Silage Pad",
+   "rank": 178,
+   "score": 28.0,
+   "tier": "A"
+  },
+  {
+   "addr": "215 117th Ave",
+   "name": "Chevron Midstream Services LLC",
+   "rank": 179,
+   "score": 28.0,
+   "tier": "A"
+  },
+  {
+   "addr": "15121 COUNTY ROAD 32",
+   "name": "MORNING FRESH FARMS INC",
+   "rank": 180,
+   "score": 27.0,
+   "tier": "A"
+  },
+  {
+   "addr": "6335 CR 19",
+   "name": "Unattached address (no company attached)",
+   "rank": 181,
+   "score": 25.0,
+   "tier": "B"
+  },
+  {
+   "addr": "8019 RASPBERRY WAY",
+   "name": "Unattached address (possible occupier: Stapp Interstate Toyota)",
+   "rank": 182,
+   "score": 25.0,
+   "tier": "B"
+  },
+  {
+   "addr": "3540 HWY 52 UNIT H3",
+   "name": "Unattached address (no company attached)",
+   "rank": 183,
+   "score": 25.0,
+   "tier": "B"
+  },
+  {
+   "addr": "5814 IDEAL DR",
+   "name": "Unattached address (no company attached)",
+   "rank": 184,
+   "score": 25.0,
+   "tier": "B"
+  },
+  {
+   "addr": "3770 EUREKA WAY UNIT C",
+   "name": "Unattached address (no company attached)",
+   "rank": 185,
+   "score": 25.0,
+   "tier": "B"
+  },
+  {
+   "addr": "9051 BRUIN BLVD",
+   "name": "Unattached address (no company attached)",
+   "rank": 186,
+   "score": 25.0,
+   "tier": "B"
+  },
+  {
+   "addr": "7990 E I-25 FRONTAGE RD",
+   "name": "Unattached address (no company attached)",
+   "rank": 187,
+   "score": 25.0,
+   "tier": "B"
+  },
+  {
+   "addr": "7500 JOHNSON DR",
+   "name": "Unattached address (no company attached)",
+   "rank": 188,
+   "score": 25.0,
+   "tier": "B"
+  },
+  {
+   "addr": "10706 7 CR",
+   "name": "Unattached address (no company attached)",
+   "rank": 189,
+   "score": 25.0,
+   "tier": "B"
+  },
+  {
+   "addr": "3763 IMPERIAL ST UNIT D",
+   "name": "Unattached address (no company attached)",
+   "rank": 190,
+   "score": 25.0,
+   "tier": "B"
+  },
+  {
+   "addr": "3470 HWY 52",
+   "name": "Unattached address (possible occupier: Christian Brothers Automotive)",
+   "rank": 191,
+   "score": 25.0,
+   "tier": "B"
+  },
+  {
+   "addr": "3761 EUREKA WAY",
+   "name": "Unattached address (no company attached)",
+   "rank": 192,
+   "score": 25.0,
+   "tier": "B"
+  },
+  {
+   "addr": "4030 BRUIN BLVD UNIT A",
+   "name": "Unattached address (no company attached)",
+   "rank": 193,
+   "score": 25.0,
+   "tier": "B"
+  },
+  {
+   "addr": "8123 W I-25 FRONTAGE RD",
+   "name": "Unattached address (no company attached)",
+   "rank": 194,
+   "score": 25.0,
+   "tier": "B"
+  },
+  {
+   "addr": "10580 CR 7",
+   "name": "Unattached address (no company attached)",
+   "rank": 195,
+   "score": 25.0,
+   "tier": "B"
+  },
+  {
+   "addr": "3762 PURITAN WAY",
+   "name": "Unattached address (no company attached)",
+   "rank": 196,
+   "score": 25.0,
+   "tier": "B"
+  },
+  {
+   "addr": "5969 IRIS PKWY UNIT B",
+   "name": "Unattached address (possible occupier: Mirror Image)",
+   "rank": 197,
+   "score": 25.0,
+   "tier": "B"
+  },
+  {
+   "addr": "3756 EUREKA WAY",
+   "name": "Unattached address (no company attached)",
+   "rank": 198,
+   "score": 25.0,
+   "tier": "B"
+  },
+  {
+   "addr": "4112 KODIAK CT UNIT D",
+   "name": "Unattached address (no company attached)",
+   "rank": 199,
+   "score": 25.0,
+   "tier": "B"
+  },
+  {
+   "addr": "3504 Hwy 52",
+   "name": "Unattached address (no company attached)",
+   "rank": 200,
+   "score": 25.0,
+   "tier": "B"
+  },
+  {
+   "addr": "4040 CORIOLIS WAY",
+   "name": "Unattached address (possible occupier: Longs Peak Learning Center)",
+   "rank": 201,
+   "score": 25.0,
+   "tier": "B"
+  },
+  {
+   "addr": "3771 MONARCH ST UNIT D",
+   "name": "Unattached address (no company attached)",
+   "rank": 202,
+   "score": 25.0,
+   "tier": "B"
+  },
+  {
+   "addr": "4001 COMMERCE DR",
+   "name": "Unattached address (possible occupier: UNITED POWER)",
+   "rank": 203,
+   "score": 25.0,
+   "tier": "B"
+  },
+  {
+   "addr": "451 OAK ST",
+   "name": "Unattached address (no company attached)",
+   "rank": 204,
+   "score": 25.0,
+   "tier": "B"
+  },
+  {
+   "addr": "8274 RASPBERRY WAY",
+   "name": "Unattached address (no company attached)",
+   "rank": 205,
+   "score": 25.0,
+   "tier": "B"
+  },
+  {
+   "addr": "6477 COUNTY ROAD 25",
+   "name": "MILL IRON MINING, LLC",
+   "rank": 206,
+   "score": 25.0,
+   "tier": "A"
+  },
+  {
+   "addr": "2334 117TH AVE",
+   "name": "Unattached address (no company attached)",
+   "rank": 207,
+   "score": 24.0,
+   "tier": "A"
+  },
+  {
+   "addr": "1760 COUNTY ROAD 27",
+   "name": "Unattached address (no company attached)",
+   "rank": 208,
+   "score": 24.0,
+   "tier": "A"
+  },
+  {
+   "addr": "1422 CIMARRON CT",
+   "name": "Unattached address (no company attached)",
+   "rank": 209,
+   "score": 24.0,
+   "tier": "A"
+  },
+  {
+   "addr": "not given in the source",
+   "name": "RUSTY RENTAL LLC",
+   "rank": 210,
+   "score": 23.0,
+   "tier": "A"
+  },
+  {
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "name": "COLORADO PIPE AND EXCAVATION LLC",
+   "rank": 211,
+   "score": 23.0,
+   "tier": "A"
+  },
+  {
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "name": "MOLTZ CONSTRUCTION",
+   "rank": 212,
+   "score": 23.0,
+   "tier": "A"
+  },
+  {
+   "addr": "4015 CORIOLIS WAY",
+   "name": "Unattached address (no company attached)",
+   "rank": 213,
+   "score": 22.0,
+   "tier": "B"
+  },
+  {
+   "addr": "4109 BRUIN BLVD",
+   "name": "Unattached address (no company attached)",
+   "rank": 214,
+   "score": 22.0,
+   "tier": "B"
+  },
+  {
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "name": "H&m Welding Llc",
+   "rank": 215,
+   "score": 22.0,
+   "tier": "B"
+  },
+  {
+   "addr": "9367 cr20",
+   "name": "Reno Holdings LLC",
+   "rank": 216,
+   "score": 21.0,
+   "tier": "A"
+  },
+  {
+   "addr": "10481 County Rd 66",
+   "name": "Front Range Energy & Carbon Storage Solutions",
+   "rank": 217,
+   "score": 21.0,
+   "tier": "A"
+  },
+  {
+   "addr": "360 E 8TH ST",
+   "name": "Unattached address (possible occupier: BUCKEYE WELDING SUPPLY COMPANY, LLC)",
+   "rank": 218,
+   "score": 21.0,
+   "tier": "A"
+  },
+  {
+   "addr": "23005 COUNTY ROAD 30",
+   "name": "Unattached address (possible occupier: High Country Sales Incorporated)",
+   "rank": 219,
+   "score": 20.5,
+   "tier": "A"
+  },
+  {
+   "addr": "2200 Weld County Rd 6",
+   "name": "Timberline Energy LLC",
+   "rank": 220,
+   "score": 20.0,
+   "tier": "A"
+  },
+  {
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "name": "MAD G Manufacturing and Machine L.L.C",
+   "rank": 221,
+   "score": 18.0,
+   "tier": "B"
+  },
+  {
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "name": "DANIEL CHAPARRO WELDING & FABRICATION LLC",
+   "rank": 222,
+   "score": 18.0,
+   "tier": "B"
+  },
+  {
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "name": "Iron Vision Fabrication LLC",
+   "rank": 223,
+   "score": 18.0,
+   "tier": "B"
+  },
+  {
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "name": "Hammer Down Manufacturing LLC",
+   "rank": 224,
+   "score": 18.0,
+   "tier": "B"
+  },
+  {
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "name": "Hill's Manufacturing LLC",
+   "rank": 225,
+   "score": 18.0,
+   "tier": "B"
+  },
+  {
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "name": "World Aerospace Industry Alliance",
+   "rank": 226,
+   "score": 18.0,
+   "tier": "B"
+  },
+  {
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "name": "Calibrated Fabrication LLC",
+   "rank": 227,
+   "score": 18.0,
+   "tier": "B"
+  },
+  {
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "name": "Elevation Welding & Fabrication, LLC",
+   "rank": 228,
+   "score": 18.0,
+   "tier": "B"
+  },
+  {
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "name": "N&D Welding&fabrication LLC",
+   "rank": 229,
+   "score": 18.0,
+   "tier": "B"
+  },
+  {
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "name": "ACE WEDLING & FABRICATION LLC",
+   "rank": 230,
+   "score": 18.0,
+   "tier": "B"
+  },
+  {
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "name": "Shattered Pheasant Brewing Co, LLC",
+   "rank": 231,
+   "score": 18.0,
+   "tier": "B"
+  },
+  {
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "name": "LeFebvre Fabrication LLC",
+   "rank": 232,
+   "score": 18.0,
+   "tier": "B"
+  },
+  {
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "name": "PlainsEdge Precision Machining, LLC",
+   "rank": 233,
+   "score": 18.0,
+   "tier": "B"
+  },
+  {
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "name": "CMK Fabrication Limited",
+   "rank": 234,
+   "score": 18.0,
+   "tier": "B"
+  },
+  {
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "name": "Prestige Fabrication LLP",
+   "rank": 235,
+   "score": 18.0,
+   "tier": "B"
+  },
+  {
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "name": "Ciro's Fabrication Services LLC",
+   "rank": 236,
+   "score": 18.0,
+   "tier": "B"
+  },
+  {
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "name": "Off White Brewing Group LLC",
+   "rank": 237,
+   "score": 18.0,
+   "tier": "B"
+  },
+  {
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "name": "PIPs-Fabrication LLC",
+   "rank": 238,
+   "score": 18.0,
+   "tier": "B"
+  },
+  {
+   "addr": "4001 SALAZAR WAY",
+   "name": "Unattached address (no company attached)",
+   "rank": 239,
+   "score": 18.0,
+   "tier": "B"
+  },
+  {
+   "addr": "3901 GODDING HOLLOW PKWY",
+   "name": "Unattached address (no company attached)",
+   "rank": 240,
+   "score": 18.0,
+   "tier": "B"
+  },
+  {
+   "addr": "4037 SALAZAR WAY",
+   "name": "Unattached address (no company attached)",
+   "rank": 241,
+   "score": 18.0,
+   "tier": "B"
+  },
+  {
+   "addr": "3930 LARKSPUR CT",
+   "name": "Unattached address (no company attached)",
+   "rank": 242,
+   "score": 18.0,
+   "tier": "B"
+  },
+  {
+   "addr": "13782 E I25 Frontage Rd, Unit B6",
+   "name": "Midnight Machining LLC",
+   "rank": 243,
+   "score": 18.0,
+   "tier": "B"
+  },
+  {
+   "addr": "7550 E I-25 FRONTAGE RD",
+   "name": "Unattached address (possible occupier: UNITED POWER)",
+   "rank": 244,
+   "score": 18.0,
+   "tier": "B"
+  },
+  {
+   "addr": "8245 W INTERSTATE 25 FRONTAGE RD",
+   "name": "Unattached address (no company attached)",
+   "rank": 245,
+   "score": 18.0,
+   "tier": "B"
+  },
+  {
+   "addr": "8127 W I-25 FRONTAGE RD",
+   "name": "Unattached address (no company attached)",
+   "rank": 246,
+   "score": 18.0,
+   "tier": "B"
+  },
+  {
+   "addr": "9180 BRUIN BLVD",
+   "name": "Unattached address (no company attached)",
+   "rank": 247,
+   "score": 18.0,
+   "tier": "B"
+  },
+  {
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "name": "Rebel Run Fabrication LLC",
+   "rank": 248,
+   "score": 18.0,
+   "tier": "B"
+  },
+  {
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "name": "Tailored Welding and Fabrication LLC",
+   "rank": 249,
+   "score": 18.0,
+   "tier": "B"
+  },
+  {
+   "addr": "3771 EUREKA WAY",
+   "name": "Unattached address (no company attached)",
+   "rank": 250,
+   "score": 18.0,
+   "tier": "B"
+  },
+  {
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "name": "Mayo Mechanical & Fabrication LLC",
+   "rank": 251,
+   "score": 18.0,
+   "tier": "B"
+  },
+  {
+   "addr": "3540 HWY 52 A2",
+   "name": "Unattached address (no company attached)",
+   "rank": 252,
+   "score": 18.0,
+   "tier": "B"
+  },
+  {
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "name": "Rocky Mountain Defense Manufacturing L.L.C",
+   "rank": 253,
+   "score": 18.0,
+   "tier": "B"
+  },
+  {
+   "addr": "7700 MILLER DR",
+   "name": "Unattached address (no company attached)",
+   "rank": 254,
+   "score": 18.0,
+   "tier": "B"
+  },
+  {
+   "addr": "3540 HWY 52 E3",
+   "name": "Unattached address (no company attached)",
+   "rank": 255,
+   "score": 18.0,
+   "tier": "B"
+  },
+  {
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "name": "RAYO WELDING AND FABRICATION LLC",
+   "rank": 256,
+   "score": 18.0,
+   "tier": "B"
+  },
+  {
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "name": "Deep Rooted Fabrication LLC",
+   "rank": 257,
+   "score": 18.0,
+   "tier": "B"
+  },
+  {
+   "addr": "8245 W I-25 FRONTAGE RD UNIT 3",
+   "name": "Unattached address (no company attached)",
+   "rank": 258,
+   "score": 18.0,
+   "tier": "B"
+  },
+  {
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "name": "Freedom Fabrications LLC",
+   "rank": 259,
+   "score": 18.0,
+   "tier": "B"
+  },
+  {
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "name": "Raptor Welding & Fabrication LLC",
+   "rank": 260,
+   "score": 18.0,
+   "tier": "B"
+  },
+  {
+   "addr": "4160 BUSCH PL",
+   "name": "Unattached address (no company attached)",
+   "rank": 261,
+   "score": 18.0,
+   "tier": "B"
+  },
+  {
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "name": "American Spirit Welding and Fabrication, LLC",
+   "rank": 262,
+   "score": 18.0,
+   "tier": "B"
+  },
+  {
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "name": "EPM Machining LLC",
+   "rank": 263,
+   "score": 18.0,
+   "tier": "B"
+  },
+  {
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "name": "ENVISION PLASTICS LLC",
+   "rank": 264,
+   "score": 18.0,
+   "tier": "B"
+  },
+  {
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "name": "Front Range 3D Fabrication LLC",
+   "rank": 265,
+   "score": 18.0,
+   "tier": "B"
+  },
+  {
+   "addr": "214 5TH ST",
+   "name": "Unattached address (no company attached)",
+   "rank": 266,
+   "score": 18.0,
+   "tier": "B"
+  },
+  {
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "name": "Huffaker Manufacturing Limited",
+   "rank": 267,
+   "score": 18.0,
+   "tier": "B"
+  },
+  {
+   "addr": "8105 W I-25 FRONTAGE RD UNIT 5",
+   "name": "Unattached address (no company attached)",
+   "rank": 268,
+   "score": 18.0,
+   "tier": "B"
+  },
+  {
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "name": "Colorado Brewery Engineering LLC",
+   "rank": 269,
+   "score": 18.0,
+   "tier": "B"
+  },
+  {
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "name": "EMC manufacturing LLC",
+   "rank": 270,
+   "score": 18.0,
+   "tier": "B"
+  },
+  {
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "name": "Just Right Solutions Manufacturing LLC",
+   "rank": 271,
+   "score": 18.0,
+   "tier": "B"
+  },
+  {
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "name": "Frontier Welding and Fabrication LLC",
+   "rank": 272,
+   "score": 18.0,
+   "tier": "B"
+  },
+  {
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "name": "Bosshogg Fabrication LLC",
+   "rank": 273,
+   "score": 18.0,
+   "tier": "B"
+  },
+  {
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "name": "Total Fabrication Services LLC",
+   "rank": 274,
+   "score": 18.0,
+   "tier": "B"
+  },
+  {
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "name": "Transformium-Robotics LLC",
+   "rank": 275,
+   "score": 18.0,
+   "tier": "B"
+  },
+  {
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "name": "Butter Cut Brewing LLC",
+   "rank": 276,
+   "score": 18.0,
+   "tier": "B"
+  },
+  {
+   "addr": "1725 Skyway Dr Unit 150",
+   "name": "MIDAS Manufacturing Inc.",
+   "rank": 277,
+   "score": 18.0,
+   "tier": "B"
+  },
+  {
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "name": "JL welding and Fabrication L.L.C.",
+   "rank": 278,
+   "score": 18.0,
+   "tier": "B"
+  },
+  {
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "name": "Quality Steel Fabrication llc",
+   "rank": 279,
+   "score": 18.0,
+   "tier": "B"
+  },
+  {
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "name": "Westbound Fabrication Ltd.",
+   "rank": 280,
+   "score": 18.0,
+   "tier": "B"
+  },
+  {
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "name": "Coyote Welding and Fabrication LLC",
+   "rank": 281,
+   "score": 18.0,
+   "tier": "B"
+  },
+  {
+   "addr": "7440 E I-25 Frontage Road",
+   "name": "McDonald Farms Enterprises Inc",
+   "rank": 282,
+   "score": 17.0,
+   "tier": "B"
+  },
+  {
+   "addr": "11737 County Road 19",
+   "name": "SWABB CO. II, LLC",
+   "rank": 283,
+   "score": 16.0,
+   "tier": "A"
+  },
+  {
+   "addr": "20679 NIOBRARA BLVD",
+   "name": "Unattached address (no company attached)",
+   "rank": 284,
+   "score": 16.0,
+   "tier": "A"
+  },
+  {
+   "addr": "1623 VISTA VIEW DR",
+   "name": "Unattached address (no company attached)",
+   "rank": 285,
+   "score": 16.0,
+   "tier": "A"
+  },
+  {
+   "addr": "3696 1ST AVE",
+   "name": "Unattached address (no company attached)",
+   "rank": 286,
+   "score": 16.0,
+   "tier": "A"
+  },
+  {
+   "addr": "1412 VISTA VIEW DR",
+   "name": "Unattached address (no company attached)",
+   "rank": 287,
+   "score": 16.0,
+   "tier": "A"
+  },
+  {
+   "addr": "1461 VISTA VIEW DR",
+   "name": "Unattached address (no company attached)",
+   "rank": 288,
+   "score": 16.0,
+   "tier": "A"
+  },
+  {
+   "addr": "7755 MILLER DR",
+   "name": "Unattached address (possible occupier: PREMIER MANUFACTURING AND SUPPLY CHAIN SERVICES INC PREMIER MANUFACTURING AND SUPPLY CHAIN SERVICES)",
+   "rank": 289,
+   "score": 15.0,
+   "tier": "B"
+  },
+  {
+   "addr": "3774 ROWE ST",
+   "name": "Unattached address (possible occupier: John Tapia LLC)",
+   "rank": 290,
+   "score": 14.5,
+   "tier": "B"
+  },
+  {
+   "addr": "4041 BRUIN BLVD UNIT 1",
+   "name": "Unattached address (possible occupier: fleet EFORCE, Inc.)",
+   "rank": 291,
+   "score": 14.5,
+   "tier": "B"
+  },
+  {
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "name": "Loudwire Materials LLC",
+   "rank": 292,
+   "score": 14.0,
+   "tier": "A"
+  },
+  {
+   "addr": "5978 IRIS PKWY",
+   "name": "Unattached address (no company attached)",
+   "rank": 293,
+   "score": 14.0,
+   "tier": "B"
+  },
+  {
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "name": "Subsurface Energy Services LLC",
+   "rank": 294,
+   "score": 13.0,
+   "tier": "A"
+  },
+  {
+   "addr": "3772 PURITAN WAY UNIT B-3",
+   "name": "Unattached address (no company attached)",
+   "rank": 295,
+   "score": 10.0,
+   "tier": "B"
+  },
+  {
+   "addr": "9251 BRUIN BLVD",
+   "name": "Unattached address (no company attached)",
+   "rank": 296,
+   "score": 10.0,
+   "tier": "B"
+  },
+  {
+   "addr": "8426 KOSMERL PL",
+   "name": "Unattached address (no company attached)",
+   "rank": 297,
+   "score": 10.0,
+   "tier": "B"
+  },
+  {
+   "addr": "5801 HWY 52",
+   "name": "Unattached address (no company attached)",
+   "rank": 298,
+   "score": 10.0,
+   "tier": "B"
+  },
+  {
+   "addr": "5681 IRIS PKWY",
+   "name": "Unattached address (no company attached)",
+   "rank": 299,
+   "score": 10.0,
+   "tier": "B"
+  },
+  {
+   "addr": "3833 TIPPLE PKWY",
+   "name": "Unattached address (no company attached)",
+   "rank": 300,
+   "score": 10.0,
+   "tier": "B"
+  },
+  {
+   "addr": "6180 SILVERSTONE DR",
+   "name": "Unattached address (no company attached)",
+   "rank": 301,
+   "score": 10.0,
+   "tier": "B"
+  },
+  {
+   "addr": "201 5TH ST",
+   "name": "Unattached address (no company attached)",
+   "rank": 302,
+   "score": 10.0,
+   "tier": "B"
+  },
+  {
+   "addr": "5641 IRIS PKWY",
+   "name": "Unattached address (no company attached)",
+   "rank": 303,
+   "score": 10.0,
+   "tier": "B"
+  },
+  {
+   "addr": "3540 HWY 52 E1",
+   "name": "Unattached address (no company attached)",
+   "rank": 304,
+   "score": 10.0,
+   "tier": "B"
+  },
+  {
+   "addr": "7600 MILLER CT",
+   "name": "Unattached address (no company attached)",
+   "rank": 305,
+   "score": 10.0,
+   "tier": "B"
+  },
+  {
+   "addr": "4880 EAGLE PL",
+   "name": "Unattached address (no company attached)",
+   "rank": 306,
+   "score": 10.0,
+   "tier": "B"
+  },
+  {
+   "addr": "8177 RASPBERRY WAY",
+   "name": "Unattached address (possible occupier: Stevinson Hyundai)",
+   "rank": 307,
+   "score": 10.0,
+   "tier": "B"
+  },
+  {
+   "addr": "7200 MILLER PL",
+   "name": "Unattached address (no company attached)",
+   "rank": 308,
+   "score": 10.0,
+   "tier": "B"
+  },
+  {
+   "addr": "8253 RASPBERRY WAY",
+   "name": "Unattached address (no company attached)",
+   "rank": 309,
+   "score": 10.0,
+   "tier": "B"
+  },
+  {
+   "addr": "7450 JOHNSON DR UNIT A",
+   "name": "Unattached address (no company attached)",
+   "rank": 310,
+   "score": 10.0,
+   "tier": "B"
+  },
+  {
+   "addr": "8337 RASPBERRY WAY",
+   "name": "Unattached address (no company attached)",
+   "rank": 311,
+   "score": 10.0,
+   "tier": "B"
+  },
+  {
+   "addr": "8208 RASPBERRY WAY",
+   "name": "Unattached address (no company attached)",
+   "rank": 312,
+   "score": 10.0,
+   "tier": "B"
+  },
+  {
+   "addr": "7990 MILLER DR",
+   "name": "Unattached address (no company attached)",
+   "rank": 313,
+   "score": 10.0,
+   "tier": "B"
+  },
+  {
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "name": "RENTAL VENTURES, LLC",
+   "rank": 314,
+   "score": 8.0,
+   "tier": "A"
+  },
+  {
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "name": "Strait Mechanical LLC",
+   "rank": 315,
+   "score": 8.0,
+   "tier": "A"
+  },
+  {
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "name": "PRECISION MAID SERVICES, LLC",
+   "rank": 316,
+   "score": 8.0,
+   "tier": "B"
+  },
+  {
+   "addr": "16959 CR44 Unit A",
+   "name": "Barth Enterprises, Inc.",
+   "rank": 317,
+   "score": 8.0,
+   "tier": "B"
+  },
+  {
+   "addr": "995 N 5 Ave",
+   "name": "Anchor Drilling Fluids USA, LLC - Brighton, CO",
+   "rank": 318,
+   "score": 7.5,
+   "tier": "A"
+  },
+  {
+   "addr": "131 ASPEN DR",
+   "name": "Unattached address (no company attached)",
+   "rank": 319,
+   "score": 7.0,
+   "tier": "B"
+  },
+  {
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "name": "High Country Energy LLC",
+   "rank": 320,
+   "score": 6.0,
+   "tier": "A"
+  },
+  {
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "name": "Axion Systems LLC (DE)",
+   "rank": 321,
+   "score": 6.0,
+   "tier": "A"
+  },
+  {
+   "addr": "1770 Promontory Circle",
+   "name": "JBS USA Foods Group Holdings, Inc.",
+   "rank": 322,
+   "score": 3.0,
+   "tier": "A"
+  },
+  {
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "name": "Aquatic Designs and Construction LLC",
+   "rank": 323,
+   "score": 1.0,
+   "tier": "A"
+  },
+  {
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "name": "RAIN-WAY SPRINKLER AND LANDSCAPE, INC",
+   "rank": 324,
+   "score": -7.0,
+   "tier": "A"
+  },
+  {
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "name": "DMD Fabrication Investments LLC",
+   "rank": 325,
+   "score": -12.0,
+   "tier": "B"
+  },
+  {
+   "addr": "4300 GODDING HOLLOW PKWY",
+   "name": "Hirsh Precision Products, Inc.",
+   "rank": 326,
+   "score": 73.0,
+   "tier": "A+B"
+  },
+  {
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "name": "Cherry Creek Recycling, LLC",
+   "rank": 327,
+   "score": 72.0,
+   "tier": "B"
+  },
+  {
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "name": "ARC Acquisition Corp.",
+   "rank": 328,
+   "score": 67.0,
+   "tier": "A"
+  },
+  {
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "name": "County Road Fabrication, LLC",
+   "rank": 329,
+   "score": 67.0,
+   "tier": "A"
+  },
+  {
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "name": "GreenLeaf Acres, LLC",
+   "rank": 330,
+   "score": 63.0,
+   "tier": "A"
+  },
+  {
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "name": "RIEDER BROTHER FARMS, LLC",
+   "rank": 331,
+   "score": 53.0,
+   "tier": "A"
+  },
+  {
+   "addr": "3000 Airport Drive, Unit 203",
+   "name": "Flight Fabrication & Iron LLC",
+   "rank": 332,
+   "score": 48.0,
+   "tier": "A"
+  },
+  {
+   "addr": "9586 E 1-25 FRONTAGE ROAD SUITE B",
+   "name": "WARD ELECTRIC COMPANY, INC.",
+   "rank": 333,
+   "score": 46.0,
+   "tier": "A"
+  },
+  {
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "name": "Arcwest Fabrication LLC",
+   "rank": 334,
+   "score": 40.0,
+   "tier": "B"
+  },
+  {
+   "addr": "4480 Elevation Dr Ste 100",
+   "name": "Premier Manufacturing, Inc.",
+   "rank": 335,
+   "score": 38.0,
+   "tier": "B"
+  },
+  {
+   "addr": "not given in the source",
+   "name": "SGM Fabrication Company DBA Lyons Filter Company, INC",
+   "rank": 336,
+   "score": 31.0,
+   "tier": "B"
+  },
+  {
+   "addr": "4940 COUNTY ROAD 46",
+   "name": "HIGH MARK MANUFACTURING, INC.",
+   "rank": 337,
+   "score": 23.0,
+   "tier": "B"
+  },
+  {
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "name": "Paravel Aerospace LLC",
+   "rank": 338,
+   "score": 18.0,
+   "tier": "B"
+  },
+  {
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "name": "Lunox Robotics LLC",
+   "rank": 339,
+   "score": 18.0,
+   "tier": "B"
+  },
+  {
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "name": "NENJ CUSTOM RODS AND FABRICATION llc",
+   "rank": 340,
+   "score": 18.0,
+   "tier": "B"
+  },
+  {
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "name": "Albizia Brewing LLC",
+   "rank": 341,
+   "score": 18.0,
+   "tier": "B"
+  },
+  {
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "name": "Mountain Metal Manufacturing, LLC",
+   "rank": 342,
+   "score": 18.0,
+   "tier": "B"
+  },
+  {
+   "addr": "4940 County Road 46",
+   "name": "Ashee Welding and Fabrication, LLC",
+   "rank": 343,
+   "score": 18.0,
+   "tier": "B"
+  },
+  {
+   "addr": "withheld (not confirmed as a business premises; see source record)",
+   "name": "5280 Advanced Manufacturing LLC",
+   "rank": 344,
+   "score": 18.0,
+   "tier": "B"
+  },
+  {
+   "addr": "6196 East Bridge Street",
+   "name": "Unattached address (possible occupier: AUTOMOBILE KLEIN LLC)",
+   "rank": 345,
+   "score": 17.5,
+   "tier": "A"
+  },
+  {
+   "addr": "6425 Byrd Drive",
+   "name": "Unattached address (no company attached)",
+   "rank": 346,
+   "score": 13.0,
+   "tier": "A"
+  },
+  {
+   "addr": "4460 Elevation Drive",
+   "name": "Unattached address (possible occupier: LEANIN' TREE INC.)",
+   "rank": 347,
+   "score": 10.0,
+   "tier": "A"
+  },
+  {
+   "addr": "1171 West Dillion Rd",
+   "name": "Unattached address (no company attached)",
+   "rank": 348,
+   "score": 5.0,
+   "tier": "A"
+  },
+  {
+   "addr": "3841 Vander Meer Drive",
+   "name": "Unattached address (no company attached)",
+   "rank": 349,
+   "score": 5.0,
+   "tier": "A"
+  },
+  {
+   "addr": "not given in the source (code name only)",
+   "name": "Project Blaze",
+   "rank": 350,
+   "score": 24.0,
+   "tier": "A"
+  },
+  {
+   "addr": "not given in the source (code name only)",
+   "name": "Project Swift",
+   "rank": 351,
+   "score": 24.0,
+   "tier": "A"
+  },
+  {
+   "addr": "not given in the source (code name only)",
+   "name": "Project Rhein",
+   "rank": 352,
+   "score": 24.0,
+   "tier": "A"
+  },
+  {
+   "addr": "not given in the source (code name only)",
+   "name": "Project Carbon",
+   "rank": 353,
+   "score": 17.0,
+   "tier": "A"
+  },
+  {
+   "addr": "not given in the source (code name only)",
+   "name": "Project Catch",
+   "rank": 354,
+   "score": 17.0,
+   "tier": "A"
+  },
+  {
+   "addr": "not given in the source (code name only)",
+   "name": "Project Kelly",
+   "rank": 355,
+   "score": 17.0,
+   "tier": "A"
+  },
+  {
+   "addr": "not given in the source (code name only)",
+   "name": "Project Superdrive",
+   "rank": 356,
+   "score": 17.0,
+   "tier": "A"
+  },
+  {
+   "addr": "not given in the source (code name only)",
+   "name": "Project Dragon",
+   "rank": 357,
+   "score": 17.0,
+   "tier": "A"
+  }
+ ],
+ "web_drops": []
+}

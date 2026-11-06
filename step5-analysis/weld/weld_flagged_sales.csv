@@ -9,12 +9,12 @@ record_date,grantee,grantor,site_address,city,zip,sale_price,occupancy,building_
 2026-08-19,PROSPECT VALLEY DAIRY LLC,MIDNIGHT SUN INC IV,6331 COUNTY ROAD 65,Unincorporated Weld County,,10025000,Quonset,2800,275.4500,Y,
 2026-08-19,PROSPECT VALLEY DAIRY LLC,MIDNIGHT SUN INC IV,32663 COUNTY ROAD 16,Unincorporated Weld County,,10025000,Quonset; Utility Building; Grain Bin,3754,305.0000,Y,
 2026-08-14,VARRA COMPANIES INC,,,Unincorporated Weld County,,9172500,Warehouse; Office Building,4935,36.2800,Y,
-2026-08-10,PATHFINDER PROPERTIES CO1 LLC,CKS LAND LLC,23295 HIGHWAY 85,La Salle,,2640000,Warehouse,9200,8.3800,Y,"rank 107 Pathfinder Pressure Testing, LLC (possible: shares the lead word)"
+2026-08-10,PATHFINDER PROPERTIES CO1 LLC,CKS LAND LLC,23295 HIGHWAY 85,La Salle,,2640000,Warehouse,9200,8.3800,Y,"rank 93 Pathfinder Pressure Testing, LLC (possible: shares the lead word)"
 2026-07-28,70TH AVE STORAGE LLC,ZUNDEL LLC,4059 CAMELOT CIR,Unincorporated Weld County,,6550000,Warehouse,79100,4.6730,Y,
 2026-07-15,DIAMOND VALLEY 1070 LLC,TATMAN PROPERTIES LLC,1070 DIAMOND VALLEY DR,Windsor,,7100000,Warehouse,40416,4.3436,Y,
 2026-06-30,1650 SKYWAY DRIVE LONGMONT LLC,1650 SKYWAY DRIVE LLC,1650 SKYWAY DR,Unincorporated Weld County,,3070000,Warehouse,16500,1.3500,Y,
-2026-06-26,KAPUAHELANI CENTENNIAL LLC,NOVIUS PROPERTIES LLC (10% INT); AK CONSOLIDATED 17 LLC (90% INT),4185 SALAZAR WAY,Frederick,,24133700,Warehouse,227793,12.4649,Y,rank 117 Unattached address (possible occupier: TESLA) (confirmed: exact address (occupier may differ))
-2026-06-25,KAPUAHELANI CENTENNIAL LLC,7950 MILLER OWNER LLC,7950 MILLER DR UNIT A,Frederick,,9800000,Warehouse,33644,3.9552,Y,rank 105 Unattached address (no company attached) (confirmed: exact address (occupier may differ))
+2026-06-26,KAPUAHELANI CENTENNIAL LLC,NOVIUS PROPERTIES LLC (10% INT); AK CONSOLIDATED 17 LLC (90% INT),4185 SALAZAR WAY,Frederick,,24133700,Warehouse,227793,12.4649,Y,rank 108 Unattached address (possible occupier: TESLA) (confirmed: exact address (occupier may differ))
+2026-06-25,KAPUAHELANI CENTENNIAL LLC,7950 MILLER OWNER LLC,7950 MILLER DR UNIT A,Frederick,,9800000,Warehouse,33644,3.9552,Y,rank 91 Unattached address (no company attached) (confirmed: exact address (occupier may differ))
 2026-06-18,MAVERICK RE HOLDINGS LLC,WEED PRODUCTIONS CORP,540 ENERGY PARK DR,Platteville,,4865000,Warehouse,18375,3.3400,Y,
 2026-06-10,EAS TIRE & AUTO LLC,,3803 10TH ST,Greeley,,2250000,Car Sales Lot,8190,1.0300,Y,
 2026-06-10,RNL 2025G OWNER LLC,EAS TIRE & AUTO LLC,3803 10TH ST,Greeley,,2381800,Car Sales Lot,8190,1.0300,Y,
@@ -37,7 +37,7 @@ record_date,grantee,grantor,site_address,city,zip,sale_price,occupancy,building_
 2026-01-07,GRELLE PROPERTIES LLC,,8475 W INTERSTATE 25 FRONTAGE RD,Frederick,,3500000,Warehouse,23043,1.8200,Y,
 2026-01-02,TUFFLI FAMILY FOUNDATION,VECCHIARELLI HOLDINGS LLC,1426 CIMARRON CT,Unincorporated Weld County,,2775000,Warehouse,9600,4.1740,Y,
 2025-12-31,WELD COUNTY PARTNERS LLC,A TO Z STORAGE LLC,511 MCKINLEY AVE,Fort Lupton,,6665000,Warehouse,106150,7.9900,Y,
-2025-12-30,TRICYCLE LANE TEXAS LLC,HALLIBURTON ENERGY SERVICES INC,31005 GREAT WESTERN DR,Windsor,,5500000,Office Building; Warehouse,6773,53.7954,Y,rank 18 BURNCO COLORADO LLC (confirmed: exact address (occupier may differ))
+2025-12-30,TRICYCLE LANE TEXAS LLC,HALLIBURTON ENERGY SERVICES INC,31005 GREAT WESTERN DR,Windsor,,5500000,Office Building; Warehouse,6773,53.7954,Y,rank 31 BURNCO COLORADO LLC (confirmed: exact address (occupier may differ))
 2025-12-30,2600 2ND AVE INC,TRIMAC TRANSPORTATION INC,2600 2ND AVE,Greeley,,3850000,Warehouse,24767,7.2589,Y,
 2025-12-23,5220 BELLA ROSA LLC,JAASO INVESTMENTS LLC,,Firestone,,2300000,Horse Arena; Quonset,53564,11.6259,Y,
 2025-12-17,WCH BIGHORN STATE LLC,OIL STATES ENERGY SERVICES LLC,245 BASHER DR,Johnstown,,3350000,Warehouse,14000,1.6000,Y,
@@ -63,7 +63,7 @@ record_date,grantee,grantor,site_address,city,zip,sale_price,occupancy,building_
 2025-07-17,DGEB MANAGEMENT LLC,4160 BUSCH OWNER LLC (85.87% INT); 4160 BUSCH BP LLC (14.13% INT),4160 BUSCH PL,Frederick,,11425000,Warehouse,27627,5.0236,Y,rank 261 Unattached address (no company attached) (confirmed: exact address (occupier may differ))
 2025-06-28,WWW PROPERTIES GREELY CDJR LLC,ASBURY CO CDJR LLC,2501 35TH AVE,Greeley,,16875000,Outdoor Storage *Code,1,1.6200,Y,
 2025-06-28,WWW PROPERTIES GREELY CDJR LLC,ASBURY CO CDJR LLC,2701 36TH AVE,Greeley,,16875000,Retail,12467,8.3810,Y,
-2025-06-18,EM PROPERTY LLC,TIRES CENTERS WEST LLC,22303 INTERSTATE 76 FRONTAGE RD,Unincorporated Weld County,,3250000,Warehouse; Mini Warehouse,64120,8.3510,Y,rank 154 Unattached address (no company attached) (confirmed: exact address (occupier may differ))
+2025-06-18,EM PROPERTY LLC,TIRES CENTERS WEST LLC,22303 INTERSTATE 76 FRONTAGE RD,Unincorporated Weld County,,3250000,Warehouse; Mini Warehouse,64120,8.3510,Y,rank 150 Unattached address (no company attached) (confirmed: exact address (occupier may differ))
 2025-06-17,M4 ELEVATION 25 I LLC,ELEVATION 25 INDUSTRIAL OWNER LLC,4480 ELEVATION DR,Mead,,43533000,Warehouse,94076,6.0378,Y,"rank 335 Premier Manufacturing, Inc. (confirmed: exact address (occupier may differ))"
 2025-06-17,M4 ELEVATION 25 I LLC,ELEVATION 25 INDUSTRIAL OWNER LLC,4460 ELEVATION DR,Mead,,43533000,Warehouse,109676,6.3691,Y,rank 347 Unattached address (possible occupier: LEANIN' TREE INC.) (confirmed: exact address (occupier may differ))
 2025-06-17,EASTMAN PARK INDUSTRIAL LLC,KODAK ALARIS LLC,9952 EASTMAN PARK DR,Unincorporated Weld County,,23000000,Warehouse,297753,40.0200,Y,
@@ -72,7 +72,7 @@ record_date,grantee,grantor,site_address,city,zip,sale_price,occupancy,building_
 2025-05-30,VIMA OZ LLC,CARESTREAM HEALTH INC,2000 W HOWARD SMITH AVE,Unincorporated Weld County,,3500000,Warehouse,861494,70.7750,Y,
 2025-05-30,VIMA OZ LLC,CARESTREAM HEALTH INC,2000 W HOWARD SMITH AVE,Unincorporated Weld County,,3500000,Warehouse; Light Commercial Utility,76059,327.0520,Y,
 2025-04-30,PARIS FAMILY LLC,4049 LLC,4049 CARSON AVE,Evans,,3500000,Warehouse,15000,3.7332,Y,
-2025-04-21,,THE BAR S U INC,31815 GREAT WESTERN DR,Windsor,,14200000,Warehouse,99536,5.3235,Y,"rank 6 SCHLOSSER SIGNS, INC. (confirmed: exact address (occupier may differ))"
+2025-04-21,,THE BAR S U INC,31815 GREAT WESTERN DR,Windsor,,14200000,Warehouse,99536,5.3235,Y,"rank 14 SCHLOSSER SIGNS, INC. (confirmed: exact address (occupier may differ))"
 2025-04-10,8 1/2 ENTERPRISES LLC,,12739 COUNTY ROAD 8 1/2,Unincorporated Weld County,,2200000,Warehouse,1071,43.0000,Y,
 2025-04-01,BGDA REAL ESTATE LLC,,8127 W INTERSTATE 25 FRONTAGE RD,Frederick,,4500000,Warehouse,6250,1.6000,Y,
 2025-04-01,BGDA REAL ESTATE LLC,,8120 INDIAN PEAKS AVE,Frederick,,4500000,Outdoor Storage *Code,1,2.2400,Y,
@@ -84,7 +84,7 @@ record_date,grantee,grantor,site_address,city,zip,sale_price,occupancy,building_
 2025-03-13,PREMIERE REAL ESTATE HOLDINGS I LLC,FRAC SHACK AMERICA INC,4037 SALAZAR WAY,Frederick,,4600000,Warehouse,7000,6.7028,Y,rank 241 Unattached address (no company attached) (confirmed: exact address (occupier may differ))
 2025-02-28,MERITAGE HOMES OF COLORADO INC,,,Firestone,,5640000,Equipment Building; Utility Building,2480,36.7200,Y,
 2025-02-27,1427 SKYWAY DR LLC,RUSSELL COBURN LLC,1427 SKYWAY DR,Unincorporated Weld County,,10133600,Warehouse,49600,4.6331,Y,
-2025-02-12,12524 WELD COUNTY ROAD REALTY 1 LLC; 12524 WELD COUNTY ROAD REALTY 2 LLC,,12524 COUNTY ROAD 25 1/2,Unincorporated Weld County,,3400000,Warehouse; Single Family Residential,23760,2.7800,Y,rank 153 Unattached address (no company attached) (confirmed: exact address (occupier may differ))
+2025-02-12,12524 WELD COUNTY ROAD REALTY 1 LLC; 12524 WELD COUNTY ROAD REALTY 2 LLC,,12524 COUNTY ROAD 25 1/2,Unincorporated Weld County,,3400000,Warehouse; Single Family Residential,23760,2.7800,Y,rank 149 Unattached address (no company attached) (confirmed: exact address (occupier may differ))
 2025-01-30,DMD FABRICATION INVESTMENTS LLC,CHINOOK WINDS LLC,360 O ST,Unincorporated Weld County,,2825000,Warehouse,16462,5.0470,Y,rank 325 DMD Fabrication Investments LLC (confirmed: exact name)
 2024-12-10,550 DISCOVERY PLACE LLC; 104TH AVENUE PARTNERSHIP LLC,BA LEASING BSC LLC,1571 COUNTY ROAD 27,Brighton,,15000000,Warehouse,52000,19.1226,Y,
 2024-11-12,KS INDUSTRIES LLC,SERENDIPITY VINEYARD LLC,804 GRAND AVE,Platteville,,2250000,Office Building; Warehouse,26753,7.4600,Y,
@@ -94,20 +94,20 @@ record_date,grantee,grantor,site_address,city,zip,sale_price,occupancy,building_
 2024-11-07,1888 REAL ESTATE LLC,CR 33 LLC,16183 HIGHLAND ST,Ault,,7400000,Arch-Rib Quonset Utility,45000,9.7600,Y,
 2024-11-04,PKST FORT LUPTON COUNTY ROAD 27 LLC,2550 DENVER PARTNERS LLC,2550 S DENVER AVE,Fort Lupton,,8520000,Warehouse,51577,15.0000,Y,
 2024-10-31,303 E 16TH STREET LLC,1113 SOUTHGATE FLEX LLC,300 E 16TH ST,Greeley,,6300000,Warehouse,39168,4.3597,Y,
-2024-09-06,OLDCASTLE INFRASTRUCTURE INC,RF STEWART LLC,12560 COUNTY ROAD 34,Platteville,,3653000,Warehouse; Utility Building,2570,30.6800,Y,rank 85 Oldcastle Infrastructure (confirmed: exact name)
+2024-09-06,OLDCASTLE INFRASTRUCTURE INC,RF STEWART LLC,12560 COUNTY ROAD 34,Platteville,,3653000,Warehouse; Utility Building,2570,30.6800,Y,rank 71 Oldcastle Infrastructure (confirmed: exact name)
 2024-09-03,YESONG INC,,3820 HIGHWAY 119,Unincorporated Weld County,,2920000,Hospitality; Warehouse,18089,1.4000,Y,
-2024-08-29,THE BAR S U INC,MICROVAST INC,31815 GREAT WESTERN DR,Windsor,,10200000,Warehouse,99536,5.3235,Y,"rank 6 SCHLOSSER SIGNS, INC. (confirmed: exact address (occupier may differ))"
-2024-08-01,ALTER TRADING CORPORATION,KS PROPERTIES LLC,1490 E 8TH ST,Greeley,,10630000,Warehouse,80134,28.3046,Y,rank 82 ALTER TRADING CORP DBA ANDERSON'S SALES AND SALVAGE (confirmed: exact address (occupier may differ))
-2024-08-01,ALTER TRADING CORPORATION,203 5TH AVENUE LLC,8405 HIGHWAY 34,Unincorporated Weld County,,3530000,Office Building; Warehouse,13222,17.7600,Y,rank 82 ALTER TRADING CORP DBA ANDERSON'S SALES AND SALVAGE (possible: shares the lead word)
+2024-08-29,THE BAR S U INC,MICROVAST INC,31815 GREAT WESTERN DR,Windsor,,10200000,Warehouse,99536,5.3235,Y,"rank 14 SCHLOSSER SIGNS, INC. (confirmed: exact address (occupier may differ))"
+2024-08-01,ALTER TRADING CORPORATION,KS PROPERTIES LLC,1490 E 8TH ST,Greeley,,10630000,Warehouse,80134,28.3046,Y,rank 67 ALTER TRADING CORP DBA ANDERSON'S SALES AND SALVAGE (confirmed: exact address (occupier may differ))
+2024-08-01,ALTER TRADING CORPORATION,203 5TH AVENUE LLC,8405 HIGHWAY 34,Unincorporated Weld County,,3530000,Office Building; Warehouse,13222,17.7600,Y,rank 67 ALTER TRADING CORP DBA ANDERSON'S SALES AND SALVAGE (possible: shares the lead word)
 2024-08-01,PATRIOT ENERGY LLC,,29005 131ST AVE,Greeley,,3900000,Quonset,2040,160.0000,Y,
 2024-07-08,STRATUS DELANTERO LLC,APEX VISTA LLC,13359 28TH ST,Greeley,,17977700,Outdoor Storage *Code,,288.9700,Y,
-2024-06-27,BLACK KNIGHT 24 LLC,POULSEN LLC,151 S OAK AVE,Eaton,,7500000,Retail; Warehouse,20897,2.0300,Y,"rank 22 BLACK LABEL SERVICES, INC (possible: shares the lead word); rank 43 BLACK EAGLE ENERGY SERVICES (possible: shares the lead word); rank 69 Black Mountain Manufacturing Inc (possible: shares the lead word)"
+2024-06-27,BLACK KNIGHT 24 LLC,POULSEN LLC,151 S OAK AVE,Eaton,,7500000,Retail; Warehouse,20897,2.0300,Y,"rank 26 BLACK EAGLE ENERGY SERVICES (possible: shares the lead word); rank 33 BLACK LABEL SERVICES, INC (possible: shares the lead word); rank 52 Black Mountain Manufacturing Inc (possible: shares the lead word)"
 2024-06-24,RES REAL ESTATE LLC,FIRST ARMORED SERVICES LLC,303 MAIN ST,Platteville,,2000000,Warehouse,12608,0.6784,Y,
-2024-06-03,EWING IRRIGATION PRODUCTS INC,RF HOLDINGS LLC,7458 COUNTY ROAD 42,Unincorporated Weld County,,3250000,Other OB,1,5.8600,Y,rank 18 BURNCO COLORADO LLC (possible: shares the lead word)
+2024-06-03,EWING IRRIGATION PRODUCTS INC,RF HOLDINGS LLC,7458 COUNTY ROAD 42,Unincorporated Weld County,,3250000,Other OB,1,5.8600,Y,rank 31 BURNCO COLORADO LLC (possible: shares the lead word)
 2024-05-31,FRIEDL HOLDINGS LLC,,21662 COUNTY ROAD 52 UNIT 2,Greeley,,2000000,Warehouse; Arch-Rib Quonset Utility,26162,4.1769,Y,
 2024-05-31,SCHLAGEL PROPERTIES LLC,GTR REAL ESTATE HOLDINGS LLC,4112 KODIAK CT,Frederick,,2650000,Warehouse,15400,1.1418,Y,rank 199 Unattached address (no company attached) (confirmed: exact address (occupier may differ))
 2024-05-20,WAGNER EQUIPMENT CO,ASPHALT SPECIALTIES CO INC,2425 W INTERSTATE 25 FRONTAGE RD,Unincorporated Weld County,,5500000,Warehouse; Office Building,10860,16.3400,Y,
-2024-05-10,IA MILLER DRIVE LLC,MILLER DRIVE HOLDINGS INC,7300 MILLER DR,Frederick,,14200000,Warehouse,109252,8.7004,Y,"rank 142 Star Precision Manufacturing, Inc. (confirmed: exact address (occupier may differ))"
+2024-05-10,IA MILLER DRIVE LLC,MILLER DRIVE HOLDINGS INC,7300 MILLER DR,Frederick,,14200000,Warehouse,109252,8.7004,Y,"rank 138 Star Precision Manufacturing, Inc. (confirmed: exact address (occupier may differ))"
 2024-05-06,SUNFLOWER FARMS LLC (22.4%); TRADER ROAD LIMITED PARTNERSHIP (8.8%),BASELINE PLACE LLC,812 BASELINE PL UNIT 1-5,Brighton,,2150000,Warehouse,14800,1.0000,Y,
 2024-05-01,BOWEN JURY LEGACY LLC,SECO MANAGEMENT CO LLC,13850 DEERE CT,Mead,,2047000,Warehouse,12600,0.8600,Y,
 2024-04-25,UNITED POWER INC,,,Unincorporated Weld County,,5119900,,,21.6070,Y,
@@ -127,12 +127,12 @@ record_date,grantee,grantor,site_address,city,zip,sale_price,occupancy,building_
 2024-01-18,ART GUTTERSEN LLC,LARSEN HOLDINGS LLC,306 16TH ST,Greeley,,2379000,Warehouse,9738,2.4700,Y,
 2024-01-18,KNAPHEIDE LONGMONT LLC,APOLLO 2 LLC; APOLLO LLC,4055 KINGS CT,Unincorporated Weld County,,7500000,Outdoor Storage *Code,,3.4920,Y,
 2024-01-18,KNAPHEIDE LONGMONT LLC,APOLLO 2 LLC; APOLLO LLC,4051 CAMELOT CIR,Unincorporated Weld County,,7500000,Warehouse,38993,3.3020,Y,
-2024-01-17,PROEQUITY TRADEMARK INVESTORS LLC,SC GROUP LTD,1299 H ST,Greeley,,2750000,Warehouse,14800,3.2400,Y,rank 146 Unattached address (no company attached) (confirmed: exact address (occupier may differ))
-2024-01-12,AGFINITY INC,LLDR PROPERTIES LLC,95 FACTORY RD,Eaton,,2400000,Warehouse; Office Building,16398,3.6113,Y,"rank 30 AGFINITY, INC. (confirmed: exact name)"
-2024-01-12,ARC COLORADO INC,QUADRANT MANAGEMENT LLC,7040 COUNTY ROAD 20,Firestone,,11400000,Warehouse,94332,86.3695,Y,rank 60 ARC Colorado Inc (confirmed: exact name)
-2024-01-12,ARC COLORADO INC,QUADRANT MANAGEMENT LLC,8906 FRONTIER ST,Firestone,,11400000,Warehouse,21924,4.4286,Y,rank 60 ARC Colorado Inc (confirmed: exact name)
+2024-01-17,PROEQUITY TRADEMARK INVESTORS LLC,SC GROUP LTD,1299 H ST,Greeley,,2750000,Warehouse,14800,3.2400,Y,rank 142 Unattached address (no company attached) (confirmed: exact address (occupier may differ))
+2024-01-12,AGFINITY INC,LLDR PROPERTIES LLC,95 FACTORY RD,Eaton,,2400000,Warehouse; Office Building,16398,3.6113,Y,"rank 119 AGFINITY, INC. (confirmed: exact name)"
+2024-01-12,ARC COLORADO INC,QUADRANT MANAGEMENT LLC,7040 COUNTY ROAD 20,Firestone,,11400000,Warehouse,94332,86.3695,Y,rank 43 ARC Colorado Inc (confirmed: exact name)
+2024-01-12,ARC COLORADO INC,QUADRANT MANAGEMENT LLC,8906 FRONTIER ST,Firestone,,11400000,Warehouse,21924,4.4286,Y,rank 43 ARC Colorado Inc (confirmed: exact name)
 2024-01-10,CATARACT CAPITAL LLC (62% INT); TALONS CAPITAL 2 LLC (38% INT),KS ENTERPRISES I LLC,1760 COUNTY ROAD 27,Unincorporated Weld County,,4044100,Warehouse,26040,5.5300,Y,rank 208 Unattached address (no company attached) (confirmed: exact address (occupier may differ))
-2024-01-10,CATARACT CAPITAL LLC (62% INT); TALONS CAPITAL 2 LLC (38% INT),KS ENTERPRISES II LLC,1660 COUNTY ROAD 27,Unincorporated Weld County,,3380900,Warehouse; Office Building,15440,4.0100,Y,rank 172 Unattached address (possible occupier: Aslan Schools L.L.C.) (confirmed: exact address (occupier may differ))
+2024-01-10,CATARACT CAPITAL LLC (62% INT); TALONS CAPITAL 2 LLC (38% INT),KS ENTERPRISES II LLC,1660 COUNTY ROAD 27,Unincorporated Weld County,,3380900,Warehouse; Office Building,15440,4.0100,Y,rank 170 Unattached address (possible occupier: Aslan Schools L.L.C.) (confirmed: exact address (occupier may differ))
 2023-12-15,CONCRETE PUMPING PROPERTY HOLDINGS LLC,,100 GATEWAY CIR,Johnstown,,2000000,Warehouse,9000,2.8100,Y,
 2023-12-11,STORE MASTER FUNDING XXXIII LLC,WHITE PEAKS PROPERTY II LLC,4226 COUNTY ROAD 22,Unincorporated Weld County,,9000000,Warehouse,55134,4.0000,Y,
 2023-12-01,NORTH SLOPE LLC,,250 PERRY LN,Dacono,,2335000,Warehouse,9831,2.2828,Y,
@@ -166,14 +166,14 @@ record_date,grantee,grantor,site_address,city,zip,sale_price,occupancy,building_
 2023-08-22,DUFF REAL ESTATE LLC,AGFINITY INC,1641 2ND AVE,Greeley,,3500000,Warehouse,36500,4.4942,Y,
 2023-08-16,TENBAR INC,MILLSELL PROPERTIES LLC,425 BONNELL AVE,Erie,,5623500,Warehouse,18810,0.9600,Y,
 2023-08-16,TENBAR INC,MILLSELL PROPERTIES LLC,475 BONNELL AVE,Erie,,5623500,Warehouse,12506,0.9600,Y,
-2023-07-06,MICROVAST INC,HEXCEL CORPORATION,31815 GREAT WESTERN DR,Windsor,,11000000,Warehouse,99536,5.3235,Y,"rank 6 SCHLOSSER SIGNS, INC. (confirmed: exact address (occupier may differ))"
-2023-06-30,BACKBONE PROPERTIES LLC,B E RE HOLDINGS LLC; KLX ENERGY SERVICES LLC; KLX ENERGY SERVICES LLC,208 GATEWAY DR,Johnstown,,2664500,Warehouse,14800,1.6600,Y,"rank 141 BACKBONE FIBER SYSTEMS, LLC (confirmed: exact address (occupier may differ))"
-2023-06-30,BACKBONE PROPERTIES LLC,B E RE HOLDINGS LLC; KLX ENERGY SERVICES LLC; KLX ENERGY SERVICES LLC,,Johnstown,,2664500,Outdoor Storage *Code,1,1.2897,Y,"rank 141 BACKBONE FIBER SYSTEMS, LLC (possible: shares the lead word)"
+2023-07-06,MICROVAST INC,HEXCEL CORPORATION,31815 GREAT WESTERN DR,Windsor,,11000000,Warehouse,99536,5.3235,Y,"rank 14 SCHLOSSER SIGNS, INC. (confirmed: exact address (occupier may differ))"
+2023-06-30,BACKBONE PROPERTIES LLC,B E RE HOLDINGS LLC; KLX ENERGY SERVICES LLC; KLX ENERGY SERVICES LLC,208 GATEWAY DR,Johnstown,,2664500,Warehouse,14800,1.6600,Y,"rank 137 BACKBONE FIBER SYSTEMS, LLC (confirmed: exact address (occupier may differ))"
+2023-06-30,BACKBONE PROPERTIES LLC,B E RE HOLDINGS LLC; KLX ENERGY SERVICES LLC; KLX ENERGY SERVICES LLC,,Johnstown,,2664500,Outdoor Storage *Code,1,1.2897,Y,"rank 137 BACKBONE FIBER SYSTEMS, LLC (possible: shares the lead word)"
 2023-06-20,GRAND K LLC,1113 SOUTHGATE FLEX LLC,1107 SOUTH GATE DR,Windsor,,6930000,Warehouse,24080,5.5743,Y,
 2023-06-20,1113 SOUTHGATE FLEX LLC,GRAND K LLC,300 E 16TH ST,Greeley,,5500000,Warehouse,39168,4.3597,Y,
 2023-06-16,SOLID CONCRETE PROPERTIES LLC,HILLTOP ROAD PROPERTIES LLC,4462 HILLTOP RD,Mead,,3200000,Warehouse,16265,3.5953,Y,
 2023-06-12,ANGIES PLACE LLC,,15450 COUNTY ROAD 16,Fort Lupton,,3200000,Outdoor Storage *Code,1,22.9600,Y,
-2023-06-09,,JD HEISKELL HOLDINGS LLC,450 FRONT ST,Platteville,,4118000,Warehouse; Grain Elevator Concrete,97502,3.5000,Y,rank 83 TEXAS FARM PRODUCTS COMPANY (confirmed: exact address (occupier may differ)); rank 106 J.D. Heiskell & Co. (confirmed: exact address (occupier may differ))
+2023-06-09,,JD HEISKELL HOLDINGS LLC,450 FRONT ST,Platteville,,4118000,Warehouse; Grain Elevator Concrete,97502,3.5000,Y,rank 68 TEXAS FARM PRODUCTS COMPANY (confirmed: exact address (occupier may differ)); rank 92 J.D. Heiskell & Co. (confirmed: exact address (occupier may differ))
 2023-05-22,601 EAST COLLINS LLC,RF HOLDINGS LLC,,Eaton,,2000000,,,0.7943,Y,
 2023-05-22,601 EAST COLLINS LLC,RF HOLDINGS LLC,601 E COLLINS ST,Eaton,,2000000,Warehouse; Office Building,5300,6.9047,Y,
 2023-05-18,IA GATEWAY LLC,KEDERIKE LEMAY LLC,320 GATEWAY DR,Johnstown,,4000000,Warehouse,27379,2.0000,Y,
