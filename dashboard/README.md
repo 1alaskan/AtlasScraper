@@ -2,6 +2,12 @@
 
 `streamlit_app.py` (repo root) shows every finished county: ranked accounts, the evidence rows behind each account with source links, the run notes, and a cross-county view. It is deployed on Streamlit Community Cloud from the `main` branch and redeploys on every push.
 
+## The "What the signal shows" column
+
+`dashboard/blurbs.py` builds a plain-English sentence for every ranked row at load time from `stage`, `top_evidence` and `match_confidence`: what the records show (permit type and value, air or water permit, equipment financed, planning case, registration), roughly when, and a caveat when the company is not a confirmed match for the address. It is shown in the ranked list, the account detail panel and the cross-county top 25, included in the CSV download, and searched by the sidebar search box.
+
+It parses the fixed phrasing the analysis step writes into `top_evidence`. If a county run introduces a new phrasing, the item falls back to its raw text; check with `python3 dashboard/blurbs.py step5-analysis/{county}/{county}_ranked_accounts_v3.csv` and add a parser if needed.
+
 ## Register a county after its analysis step
 
 Run from the repo root, pointing at the final build of the run (the one the notes describe):

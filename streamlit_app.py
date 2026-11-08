@@ -7,6 +7,7 @@ Register a new county with dashboard/register_county.py and push to main.
 from __future__ import annotations
 
 import json
+import sys
 from pathlib import Path
 
 import pandas as pd
@@ -14,6 +15,9 @@ import streamlit as st
 
 ROOT = Path(__file__).resolve().parent
 REGISTRY = ROOT / "dashboard" / "counties.json"
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
+from dashboard.blurbs import signal_blurb  # noqa: E402
 
 st.set_page_config(
     page_title="Atlas lead pipeline",
@@ -23,7 +27,7 @@ st.set_page_config(
 )
 
 RANKED_COLS = [
-    "rank", "company_name", "site_address", "zip", "score", "tier", "stage",
+    "rank", "company_name", "site_address", "zip", "score", "tier", "stage", "signal_blurb",
     "sources_count", "latest_signal_date", "first_signal_date", "match_confidence",
     "compressed_air_fit", "next_step", "in_ground_truth",
 ]
@@ -55,6 +59,10 @@ def load_ranked(path: str) -> pd.DataFrame:
         if c in df:
             df[c] = pd.to_datetime(df[c], errors="coerce").dt.date
     df["gt_hit"] = df["in_ground_truth"].str.startswith("yes") if "in_ground_truth" in df else False
+    df["signal_blurb"] = [
+        signal_blurb(st_, te, mc)
+        for st_, te, mc in zip(df["stage"], df["top_evidence"], df["match_confidence"])
+    ]
     return df
 
 
@@ -133,7 +141,8 @@ if gt_only:
 if q:
     ql = q.lower()
     hay = (f["company_name"] + " | " + f["name_variants"] + " | " + f["site_address"] + " | "
-           + f["top_evidence"] + " | " + f["compressed_air_fit"] + " | " + f["zip"]).str.lower()
+           + f["top_evidence"] + " | " + f["compressed_air_fit"] + " | " + f["zip"] + " | "
+           + f["signal_blurb"]).str.lower()
     f = f[hay.str.contains(ql, regex=False)]
 f = f.sort_values("rank")
 if top_n:
@@ -165,6 +174,7 @@ with tab_list:
                        file_name=f"{county['slug']}_ranked_filtered.csv", mime="text/csv")
     show = f[RANKED_COLS].rename(columns={
         "company_name": "Company / site", "site_address": "Address", "sources_count": "Src",
+        "signal_blurb": "What the signal shows",
         "latest_signal_date": "Latest signal", "first_signal_date": "First signal",
         "match_confidence": "Confidence", "compressed_air_fit": "Air fit",
         "next_step": "Next step", "in_ground_truth": "Ground truth",
@@ -180,6 +190,10 @@ with tab_list:
             "rank": st.column_config.NumberColumn("#", width="small"),
             "score": st.column_config.ProgressColumn("Score", min_value=0, max_value=float(smax), format="%.0f"),
             "tier": st.column_config.TextColumn("Tier", width="small"),
+            "What the signal shows": st.column_config.TextColumn(
+                "What the signal shows", width="large",
+                help="Plain-English reading of the records behind this row: what kind of activity, when, "
+                     "and how sure we are the company named is the one at the address. Hover a cell for the full text."),
             "zip": st.column_config.TextColumn("ZIP", width="small"),
             "Src": st.column_config.NumberColumn("Src", width="small"),
             "Air fit": st.column_config.TextColumn("Air fit", width="large"),
@@ -210,6 +224,7 @@ with tab_detail:
         row = ranked[ranked["rank"] == rank_sel].iloc[0]
 
         st.subheader(row["company_name"])
+        st.info(row["signal_blurb"])
         c1, c2, c3, c4 = st.columns(4)
         c1.metric("Score", f"{row['score']:.0f}")
         c2.metric("Tier", row["tier"])
@@ -305,8 +320,12 @@ with tab_compare:
         d.insert(0, "county", c["name"])
         frames.append(d)
     allr = pd.concat(frames).sort_values("score", ascending=False).head(25)
-    st.dataframe(allr[["county", "rank", "company_name", "site_address", "score", "tier", "stage", "latest_signal_date"]],
-                 width="stretch", hide_index=True)
+    st.dataframe(
+        allr[["county", "rank", "company_name", "site_address", "score", "tier", "stage", "signal_blurb", "latest_signal_date"]]
+        .rename(columns={"signal_blurb": "What the signal shows"}),
+        width="stretch", hide_index=True,
+        column_config={"What the signal shows": st.column_config.TextColumn("What the signal shows", width="large")},
+    )
 
     st.markdown("**Score distribution**")
     bins = [-20, 0, 20, 40, 60, 80, 100, 200]
