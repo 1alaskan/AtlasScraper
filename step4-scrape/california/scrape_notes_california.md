@@ -20,7 +20,7 @@ Run 2026-11-10. Part of the state foundation in the `california-county-runner` s
 
 | Source | File | Rows | Flagged | Date range | Company name blank | Address blank |
 |---|---|---|---|---|---|---|
-| SMARTS industrial stormwater | scrape_smarts_industrial.csv | 5,811 | 3,513 | 2024-01 to 2026-10 | 79 | low |
+| SMARTS industrial stormwater | scrape_smarts_industrial.csv | 5,811 | 3,513 | 2024-01 to 2026-10 | 81 | 3 |
 | SMARTS construction stormwater | scrape_smarts_construction.csv | 12,681 | 825 | 2024-01-03 to 2026-10-30 | 150 | 16 |
 | California Competes awards | scrape_calcompetes_awards.csv | 58 | 47 | 2024-04-25 to 2026-06-18 | 0 | 58 (city only) |
 | CAEATFA STE awards | scrape_caeatfa_ste_awards.csv | 65 | 65 | 2024-07-16 to 2025-12-09 | 0 | 65 |
