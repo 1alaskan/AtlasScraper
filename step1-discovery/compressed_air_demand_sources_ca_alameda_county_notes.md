@@ -1,6 +1,6 @@
 # Alameda County, California: local-tier discovery notes (PARTIAL)
 
-Run 2026-11-10 as part of the first California county run. **This discovery is not finished.** 9 sources are listed in `compressed_air_demand_sources_ca_alameda_county.csv`; 3 are fully verified. A Colorado county run found 50 or more local sources. Most of this session went to the state foundation.
+Run 2026-11-10 as part of the first California county run. **Second pass added 2026-11-10 (same day): 14 sources are now listed; 7 are fully verified.** The machine-readable routes have been tried for Fremont, Hayward, Oakland, Berkeley, San Leandro and Alameda city; see `step3-validation/california/alameda/validation_alameda_notes.md` for verdicts. Still unexplored: Newark, Union City, Livermore, Pleasanton, Dublin, Emeryville, Albany, Piedmont, county planning, utilities, wastewater agencies, the port, assessor and recorder, local press. A Colorado county run found 50 or more local sources. Most of this session went to the state foundation.
 
 ## Jurisdiction map (from prior knowledge, to be confirmed city by city)
 

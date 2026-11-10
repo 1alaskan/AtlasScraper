@@ -1,0 +1,3 @@
+rank,company_name,site_address,match,licence_name,licence_start,naics,employees,status
+31,RW Metal Spinning,2222 Davis St,exact name,RW METAL SPINNING INC,2020-09-23,332215,3,Inactive
+36,Columbus Manufacturing Inc,3190 Corporate Place,exact name,"COLUMBUS MANUFACTURING, INC.",2007-04-03,311612,231,Active
