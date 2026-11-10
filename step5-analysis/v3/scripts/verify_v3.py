@@ -28,8 +28,10 @@ def main():
         # county permit and planning files keep their own source names in the evidence file; they are one layer each for the source bonus
         if src in known:
             return src
-        if "incentive" in src.lower():
+        if "incentive" in src.lower() or src in ("California Competes Tax Credit awards", "CAEATFA Sales and Use Tax Exclusion awards"):
             return INC
+        if src.startswith("California SMARTS"):
+            return WAT
         return PER if "permit" in src.lower() else SDP
     for e in ev:
         e["source"] = canon(e["source"])

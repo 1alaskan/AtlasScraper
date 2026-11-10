@@ -37,6 +37,16 @@
         "step5-analysis/weld/web_checks_weld.md",
         "step5-analysis/weld/review_findings.md"
       ]
+    },
+    {
+      "slug": "ca_alameda",
+      "name": "Alameda County, CA (first pass, state sources only)",
+      "version": "v3",
+      "run_date": "2026-11-10",
+      "ranked": "step5-analysis/california/alameda/ca_alameda_ranked_accounts_v3.csv",
+      "evidence": "step5-analysis/california/alameda/ca_alameda_evidence_v3.csv",
+      "notes": "step5-analysis/california/alameda/alameda_analysis_notes.md",
+      "extra_notes": []
     }
   ]
 }

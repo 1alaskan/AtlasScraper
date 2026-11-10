@@ -1,6 +1,6 @@
 # California state pulls: notes
 
-Run 2026-11-10. Part of the state foundation in the `california-county-runner` skill. **The foundation is not complete, so `STATE_FOUNDATION.md` has not been written.** Status at the bottom.
+Run 2026-11-10. Part of the state foundation in the `california-county-runner` skill. Status and open items are in `STATE_FOUNDATION.md`.
 
 ## Assumptions
 
@@ -43,8 +43,4 @@ What each one turned out to hold:
 
 ## Foundation status
 
-| Part | Status |
-|---|---|
-| 1. Validate state candidates | Five sources opened on real data and spot-checked (table above). CEQAnet export confirmed and pulled for Alameda. Not done: ETP packets, CAEATFA 2026 agendas, California Competes December agenda, EDD WARN, Regulated Site Portal, CEC, IBank, pressure vessel database terms. Blocked on Matthew: bizfile login for UCC and business entity bulk data. |
-| 2. Statewide pulls | Done for the five sources above. CEQAnet is pulled per county. |
-| 3. State-aware v3 scripts | Not started. Denver rebuilt byte for byte at the start of this session, before any change. No script under `step5-analysis/v3/scripts/` was edited. |
+See `STATE_FOUNDATION.md` (written 2026-11-10 after the v3 adapter was built and the three Colorado counties were confirmed unchanged).

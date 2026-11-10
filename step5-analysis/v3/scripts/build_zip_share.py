@@ -63,6 +63,7 @@ def zip_share(county_geoid):
 
 def main(argv):
     args = [a for a in argv if not a.startswith("--")]
+    state = next((a.split("=", 1)[1] for a in argv if a.startswith("--state=")), STATE_FIPS)   # e.g. --state=06 for California; default Colorado
     check = "--check" in argv
     if not args:
         sys.exit(__doc__)
@@ -70,12 +71,12 @@ def main(argv):
     fips3 = args[1] if len(args) > 1 else COLORADO_FIPS.get(county)
     if not fips3:
         sys.exit("unknown county slug %r; pass the 3-digit county FIPS as the second argument" % county)
-    shares = zip_share(STATE_FIPS + fips3)
+    shares = zip_share(state + fips3)
     if not shares:
-        sys.exit("no ZCTA rows found for county GEOID %s" % (STATE_FIPS + fips3))
+        sys.exit("no ZCTA rows found for county GEOID %s" % (state + fips3))
     out_path = os.path.join(HERE, "%s_zip_share.json" % county)
     whole = sum(1 for v in shares.values() if v >= 0.999)
-    print("%s (FIPS %s%s): %d zips, %d wholly inside the county" % (county, STATE_FIPS, fips3, len(shares), whole))
+    print("%s (FIPS %s%s): %d zips, %d wholly inside the county" % (county, state, fips3, len(shares), whole))
     if check:
         if not os.path.exists(out_path):
             sys.exit("nothing to check: %s does not exist" % out_path)

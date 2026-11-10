@@ -348,7 +348,38 @@ def _incentive(item: str) -> str | None:
     return f"a {m.group('juris')} County tax-incentive agreement ({_mon(m.group('date'))}){where}"
 
 
-_PARSERS = (_permit, _air, _ucc, _water, _registration, _planning, _cre, _oedit, _incentive)
+# California (added 2026-11-10): SMARTS stormwater enrolments and state incentive awards
+_CA_WATER_RE = re.compile(r"^Water permit(?: row)? (?P<id>.+?) \((?P<prog>CA (?:IGP|NEC|CGP))\) processed (?P<date>\d{4}-\d{2}-\d{2}): facility (?P<fac>.+?), permittee ,? ?SIC (?P<sic>\S+) ?(?P<desc>.*?), status (?P<status>[^|(]*)")
+_CA_KIND = {"CA IGP": "a new industrial stormwater enrolment with the state", "CA NEC": "a new no-exposure stormwater certification (indoor industrial site)",
+            "CA CGP": "a construction stormwater enrolment marked industrial"}
+_CA_AWARD_RE = re.compile(r"^California state incentive award (?P<date>\d{4}-\d{2}-\d{2}) \((?P<prog>[^)]+) award\): (?:\[[^\]]*\] )?(?P<desc>.*)")
+
+
+def _ca_water(item: str) -> str | None:
+    m = _CA_WATER_RE.match(item)
+    if not m:
+        return None
+    out = f"{_CA_KIND[m.group('prog')]} ({_mon(m.group('date'))})"
+    sic, desc = m.group("sic").strip(), m.group("desc").strip(" ,")
+    if sic.lower() != "none" and desc:
+        out += f", listing the site as SIC {sic} ({desc.lower()})"
+    return out
+
+
+def _ca_award(item: str) -> str | None:
+    m = _CA_AWARD_RE.match(item)
+    if not m:
+        return None
+    d = m.group("desc")
+    what = re.search(r"(?:Use of proceeds|Industry): ([^;]+)", d)
+    amt = re.search(r"qualified property approved \$([\d.]+)|investment (\$[\d,]+)", d)
+    money = ""
+    if amt:
+        money = (", $%.1fM of equipment approved tax-free" % (float(amt.group(1)) / 1e6)) if amt.group(1) else (", %s committed investment" % amt.group(2))
+    return f"a {m.group('prog')} state award ({_mon(m.group('date'))})" + (f" for {what.group(1).strip().lower()}" if what else "") + money
+
+
+_PARSERS = (_ca_water, _ca_award, _permit, _air, _ucc, _water, _registration, _planning, _cre, _oedit, _incentive)
 
 
 def describe_item(item: str) -> str:

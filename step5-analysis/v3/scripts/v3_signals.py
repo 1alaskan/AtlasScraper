@@ -428,7 +428,7 @@ def build_signals(S4, zshare, geocoder):
         out["address"].append(sig(SDP, r, kind, "A", text, grade="address", stage="planned", info=dict(zone=r["zone_district"])))
 
     # ------------------------------------------------------------------ water permits
-    src = "State water permits (WQCD)"
+    src = C.SRC_LABEL.get(WAT, "State water permits (WQCD)")
     fl = [r for r in water if r["flag"] == "Y"]
     cuts.add(src, "flagged rows statewide", len(fl))
     den = [r for r in fl if r["county"].strip().upper() == C.COUNTY_UP]
@@ -468,8 +468,8 @@ def build_signals(S4, zshare, geocoder):
             cuts.add(src, "transit, public works, retail and contractor-coded sites with no manufacturing SIC")
             continue
         kind = "water_construction" if construction else "water_new"
-        text = "Water permit %s (%s) received %s: facility %s, permittee %s, SIC %s %s, status %s" % (
-            r["record_id"], rt.split("-")[0].strip(), r["record_date"], r["company_name"], r.get("permittee", ""), sic or "none", r.get("sic_description", ""), r.get("permit_status", ""))
+        text = "Water permit %s (%s) %s %s: facility %s, permittee %s, SIC %s %s, status %s" % (
+            r["record_id"], rt.split("-")[0].strip(), C.WAT_DATE_WORD, r["record_date"], r["company_name"], r.get("permittee", ""), sic or "none", r.get("sic_description", ""), r.get("permit_status", ""))
         names = [r["company_name"]] + ([r["permittee"]] if (not construction and r.get("permittee")) else [])
         cuts.add(src, "rows kept as signals")
         kept_water.add(r["record_id"])
@@ -483,8 +483,8 @@ def build_signals(S4, zshare, geocoder):
         construction = rt.startswith(C.CONSTRUCTION_WATER)
         sics = [x for x in re.split(r"[/;, ]+", r.get("sic_code", "") + "/" + r.get("other_sic_codes", "")) if x]
         mfg = [x for x in sics if x.isdigit() and 2000 <= int(x) <= 3999]
-        text = "Water permit row %s (%s) received %s: facility %s, permittee %s, SIC %s, status %s (cut as noise or not flagged; support only)" % (
-            r["record_id"], rt.split("-")[0].strip(), r["record_date"], r["company_name"], r.get("permittee", ""), r.get("sic_code", "") or "none", r.get("permit_status", ""))
+        text = "Water permit row %s (%s) %s %s: facility %s, permittee %s, SIC %s, status %s (cut as noise or not flagged; support only)" % (
+            r["record_id"], rt.split("-")[0].strip(), C.WAT_DATE_WORD, r["record_date"], r["company_name"], r.get("permittee", ""), r.get("sic_code", "") or "none", r.get("permit_status", ""))
         names = [r["company_name"]] + ([r["permittee"]] if (not construction and r.get("permittee")) else [])
         s = sig(WAT, r, "noise", "A" if r["flag"] == "Y" else "", text, grade="operator" if not construction else "project", flagged=False,
                 basis="county field in state water permit record", seq="", names=names, info=dict(sic="" if construction else fit_sic(r), sic_desc=r.get("sic_description", ""), construction=construction))
@@ -582,7 +582,7 @@ def build_signals(S4, zshare, geocoder):
 
     # ------------------------------------------------------------------ county incentive agreements (named, addressed; added 2026-11-06)
     for f in getattr(C, "LOCAL_INCENTIVE_FILES", []) or []:
-        src = "County incentive agreements"
+        src = C.SRC_LABEL.get(INC, "County incentive agreements")
         rows = [r for r in csv.DictReader(open(os.path.join(S4, f), newline="", encoding="utf-8")) if r.get("flag") == "Y" and r.get("company_name", "").strip()]
         cuts.add(src, "flagged rows", len(rows))
         for r in rows:
@@ -596,12 +596,21 @@ def build_signals(S4, zshare, geocoder):
                 continue
             rtype = r.get("record_type", "")
             cap = r.get("phase_1_cap", "")
-            text = "%s %s (%s): %s%s" % (C.COUNTY + " County tax incentive agreement", r["record_date"], rtype or "agreement", r["description"][:150], (" | phase 1 cap %s" % cap) if cap else "")
+            text = "%s %s (%s): %s%s" % (C.INCENTIVE_WORDING or (C.COUNTY + " County tax incentive agreement"), r["record_date"], rtype or "agreement", r["description"][:150], (" | phase 1 cap %s" % cap) if cap else "")
             basis = "%s County incentive agreement names the facility at %s (county record, %s only)" % (C.COUNTY, r["site_address"][:60] or "an address the OCR did not give", C.COUNTY)
             stage = "planned" if r["record_date"] >= D24 else None
             cuts.add(src, "rows kept as signals")
-            out["named"].append(sig(INC, r, "incentive_named", "A", text, grade="equipment", stage=stage, section="denver" if r["site_address"].strip() else "unconfirmed",
-                                    basis=basis if r["site_address"].strip() else "%s County incentive agreement without a parsed facility address" % C.COUNTY, names=[r["company_name"]]))
+            sect = "denver" if r["site_address"].strip() else "unconfirmed"
+            if not r["site_address"].strip():
+                basis = "%s County incentive agreement without a parsed facility address" % C.COUNTY
+            if C.INCENTIVE_WORDING:
+                if r["site_address"].strip():
+                    basis = "%s names the facility at %s" % (C.INCENTIVE_WORDING, r["site_address"][:60])
+                elif C.INCENTIVE_CITY_ONLY_OK and r["city"].strip().upper() in C.MAIL_CITIES:
+                    sect, basis = "denver", "%s names the city (%s), which is wholly in %s; no street address in the award record" % (C.INCENTIVE_WORDING, r["city"].strip(), C.COUNTY_FULL)
+                else:
+                    basis = "%s without a street address; city %s" % (C.INCENTIVE_WORDING, r["city"].strip() or "not given")
+            out["named"].append(sig(INC, r, "incentive_named", "A", text, grade="equipment", stage=stage, section=sect, basis=basis, names=[r["company_name"]]))
 
     out["cuts"] = cuts.rows
     return out

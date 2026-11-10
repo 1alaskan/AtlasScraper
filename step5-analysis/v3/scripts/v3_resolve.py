@@ -488,6 +488,10 @@ def resolve(sg, S4, log=print):
             elif own:
                 best = max(own, key=lambda e: (e["ak"] == a.main_ak, e["date"]))
                 a.section, a.basis = best["section"], best["basis"]
+            elif C.INCENTIVE_WORDING and any(e["src"] == INC and e["flagged"] for e in a.sigs):
+                # A company known only from a state incentive award (California, 2026-11-10): the award row carries its own basis.
+                best = max((e for e in a.sigs if e["src"] == INC and e["flagged"]), key=lambda e: e["date"])
+                a.section, a.basis = best["section"], best["basis"]
             else:
                 a.section, a.basis = "denver", "%s permit layer (%s only)" % (C.COUNTY, C.COUNTY)
         elif a.kind == "address":

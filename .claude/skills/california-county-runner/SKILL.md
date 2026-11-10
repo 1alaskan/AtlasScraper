@@ -200,7 +200,7 @@ County config `county_configs/ca_{county}.py`, copied from `_template.py`:
 - **Entity merges and overrides.** Only ones backed by a document or an exact name plus address.
 - **Seed list.** The incentive-seeded projects from Step 2 go in `GROUND_TRUTH`, labelled as seeds.
 
-Run: zip share, build, verify, report, as in the scripts' README, writing to `step5-analysis/california/{county}/`.
+Run with the commands in `step4-scrape/california/STATE_FOUNDATION.md`: the adapter `build_v3_inputs.py` first (it writes `step4-scrape/california/v3_inputs/{county}/`), then zip share with `--state=06`, build with `--county ca_{county}`, verify and report, writing to `step5-analysis/california/{county}/`.
 
 The pressure vessel database is used here by hand only: for the top 25 ranked sites, look up the address and note how many air tanks are registered, their size and year built, in `next_step`. Skip this if DIR's terms were not cleared in the foundation.
 

@@ -88,6 +88,10 @@ LOCAL_PERMIT_LABEL = None                    # how the permit layer is named in 
 LOCAL_PLAN_LABEL = None                      # how the planning layer is named in the sources column; None = the Denver label
 LOCAL_INCENTIVE_FILES = []                   # county incentive agreement files (shared 17-column format, flag Y rows only); empty = no such layer (Denver, Adams)
 LOCAL_DESC_USE_HOLD = False                  # hold tier A permits whose description says retail, well pad etc. at B3a (layers with no valuation or use field)
+SOURCE_LABELS = {}                           # display names for sources, keyed by the v3_lib source constant; empty = the Colorado names (added 2026-11-10 for California)
+WAT_DATE_WORD = "received"                   # what the water file's record_date is, for the evidence text (California SMARTS dates are "processed")
+INCENTIVE_WORDING = None                     # evidence wording for the incentive layer; None = "<county> County tax incentive agreement"
+INCENTIVE_CITY_ONLY_OK = False               # an incentive row with no street address but a mailing city wholly inside the county counts as in the county
 WEB_DROPS_TIER_B = False                     # let WEB_DROPS also remove tier B UCC liens (off for Denver and Adams, whose lists were built without it)
 WAT_AIRPORT = re.compile(r"(?!x)x")          # never matches unless the county file sets a local airport or base cut
 WAT_AIRPORT_SIC = set()
@@ -115,5 +119,6 @@ SPLIT_CITIES = {c.upper() for c in SPLIT_CITIES} - MAIL_CITIES
 CITY_OK = MAIL_CITIES | SPLIT_CITIES
 from v3_lib import PER as _PER, SDP as _SDP
 SRC_LABEL = {_PER: LOCAL_PERMIT_LABEL or _PER, _SDP: LOCAL_PLAN_LABEL or _SDP}
+SRC_LABEL.update(SOURCE_LABELS)
 PERMIT_LABEL = SRC_LABEL[_PER]
 PLAN_LABEL = SRC_LABEL[_SDP]

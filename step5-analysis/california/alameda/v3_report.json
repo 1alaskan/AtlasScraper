@@ -1,0 +1,2014 @@
+{
+ "cuts": [
+  [
+   "Colorado UCC filings, tier A",
+   "flagged rows statewide",
+   0
+  ],
+  [
+   "Colorado UCC filings, tier B",
+   "flagged rows statewide",
+   0
+  ],
+  [
+   "Colorado business registrations, tier A",
+   "flagged rows statewide",
+   0
+  ],
+  [
+   "Colorado business registrations, tier B",
+   "flagged rows statewide",
+   0
+  ],
+  [
+   "Denver commercial construction permits, tier A",
+   "flagged rows",
+   0
+  ],
+  [
+   "Denver commercial construction permits, tier A",
+   "zero-valuation permits in the full layer (never flagged in tier A; listed for the record)",
+   0
+  ],
+  [
+   "Denver commercial construction permits, tier A",
+   "flagged rows in the DIA neighborhood (all)",
+   0
+  ],
+  [
+   "Denver commercial construction permits, tier A",
+   "of the kept rows, received in the last 90 days (kept at full weight; the layer undercounts this window)",
+   0
+  ],
+  [
+   "Denver commercial construction permits, tier B",
+   "flagged rows",
+   0
+  ],
+  [
+   "Denver concept and site plans",
+   "flagged rows (every row is flagged)",
+   0
+  ],
+  [
+   "California stormwater enrolments (SMARTS)",
+   "flagged rows statewide",
+   4293
+  ],
+  [
+   "California stormwater enrolments (SMARTS)",
+   "flagged rows with county Alameda",
+   148
+  ],
+  [
+   "California stormwater enrolments (SMARTS)",
+   "flagged rows with a Alameda mailing city but another county in the source (left out: the source states the county)",
+   0
+  ],
+  [
+   "California stormwater enrolments (SMARTS)",
+   "rows kept as signals",
+   122
+  ],
+  [
+   "California stormwater enrolments (SMARTS)",
+   "flagged on acreage alone (no manufacturing SIC, no company-named facility): schools, parks, housing, roads, pipelines",
+   26
+  ],
+  [
+   "APCD air permit status",
+   "flagged rows statewide (not oil and gas)",
+   0
+  ],
+  [
+   "APCD air permit status",
+   "rows whose county column says Alameda but AIRS prefix is not 001 (left out; office address in place of the site)",
+   0
+  ],
+  [
+   "APCD air permit status",
+   "flagged rows with AIRS prefix 001 (Alameda)",
+   0
+  ],
+  [
+   "Mile High CRE",
+   "flagged rows statewide (industrial category)",
+   0
+  ],
+  [
+   "Mile High CRE",
+   "flagged rows with city Alameda",
+   0
+  ],
+  [
+   "OEDIT EDC approvals",
+   "flagged rows (every row is flagged)",
+   0
+  ],
+  [
+   "California incentive awards (California Competes, CAEATFA)",
+   "flagged rows",
+   8
+  ],
+  [
+   "California incentive awards (California Competes, CAEATFA)",
+   "rows kept as signals",
+   8
+  ]
+ ],
+ "geocoder": {
+  "addresses": 0,
+  "results": {}
+ },
+ "ground_truth": {},
+ "moves": [],
+ "moves_over_10": {
+  "by_cause": {},
+  "count": 0
+ },
+ "resolve_counts": {
+  "accounts_address": 0,
+  "accounts_company": 116,
+  "accounts_oedit": 0,
+  "company_entities_with_a_flagged_signal": 116
+ },
+ "rows": {
+  "denver": 116,
+  "denver_50_plus": 53,
+  "denver_addresses": 0,
+  "denver_companies": 116,
+  "denver_fit": {
+   "strong": 107,
+   "unknown": 8,
+   "weak": 1
+  },
+  "denver_sources": {
+   "1": 113,
+   "2": 3
+  },
+  "denver_stage": {
+   "operating and expanding": 106,
+   "planned": 5,
+   "under construction": 5
+  },
+  "evidence_rows": 172,
+  "oedit": 0,
+  "support_rows_not_listed": 44,
+  "tier": {
+   "A": 116
+  },
+  "top100_tier": {
+   "A": 100
+  },
+  "total": 116,
+  "unconfirmed": 0,
+  "withheld": 0
+ },
+ "run_date": "2026-10-11",
+ "sensitivity": {
+  "recency doubled": {
+   "changed": 0,
+   "enter": [],
+   "leave": [],
+   "top10_same": true
+  },
+  "recency removed": {
+   "changed": 3,
+   "enter": [
+    "Bright Silicon Technologies @ 6920 Koll Center Pkwy Ste 213",
+    "Wisk Aero LLC @ 45861 Hotchkiss Street",
+    "Pentagon Technologies Inc @ 21053 ALexander Court"
+   ],
+   "leave": [
+    "Nitricity Inc @ 44530 S Grimmer Blvd",
+    "CalPortland Company @ 30100 Union City Boulevard",
+    "Leopard Imaging Incorporated @ 910 Auburn Ct"
+   ],
+   "top10_same": false
+  },
+  "source bonus doubled": {
+   "changed": 0,
+   "enter": [],
+   "leave": [],
+   "top10_same": true
+  },
+  "source bonus removed": {
+   "changed": 0,
+   "enter": [],
+   "leave": [],
+   "top10_same": true
+  },
+  "tier B points doubled": {
+   "changed": 0,
+   "enter": [],
+   "leave": [],
+   "top10_same": true
+  },
+  "tier B points halved": {
+   "changed": 0,
+   "enter": [],
+   "leave": [],
+   "top10_same": true
+  }
+ },
+ "top": [
+  {
+   "addr": "44036 Grimmer Blvd",
+   "evidence": "California state incentive award 2025-06-17 (CAEATFA award): [award names Fremont and Livermore, all in Alameda County; listed under the first] Use of proceeds: Semiconductor Fabrication Equipment Manufacturing; || California state incentive award 2024-07-16 (CAEATFA award): [award names Fremont and Livermore, all in Alameda County; listed under the first] Use of proceeds: Semiconductor Fabrication Equipment Manufacturing; || Water permit 2 01I031289 (CA IGP) processed 2025-10-03: facility Lam Research Corp, permittee , SIC 3559 Special Industry Machinery, NEC, status Active || Points: signal 35 (California incentive awards (California Competes, CAEATFA): 20+3 repeat; California stormwater enrolments (SMARTS): 12); sources 8; recency 8; stage 8; fit 15",
+   "fit": "strong: manufacturing SIC 3559 on a state water permit",
+   "name": "Lam Research Corp",
+   "r5": "",
+   "r5b": "",
+   "rank": 1,
+   "score": 74.0,
+   "sources": 2,
+   "stage": "operating and expanding",
+   "tier": "A"
+  },
+  {
+   "addr": "2705 Merced St",
+   "evidence": "California state incentive award 2025-06-17 (CAEATFA award): Use of proceeds: Power Modules Manufacturing; qualified property approved $1040162; reported purchased $0; share reported 0; status Active || Water permit 2 01NEC014916 (CA NEC) processed 2025-08-12: facility Fuse Energy Technologies Corp, permittee , SIC 3844 X-Ray Apparatus and Tubes and Related Irradiation Apparatus, status Active || Points: signal 32 (California incentive awards (California Competes, CAEATFA): 20; California stormwater enrolments (SMARTS): 12); sources 8; recency 8; stage 8; fit 15",
+   "fit": "strong: manufacturing SIC 3844 on a state water permit",
+   "name": "Fuse Energy Technologies Corp",
+   "r5": "",
+   "r5b": "",
+   "rank": 2,
+   "score": 71.0,
+   "sources": 2,
+   "stage": "operating and expanding",
+   "tier": "A"
+  },
+  {
+   "addr": "7380 Morton Ave",
+   "evidence": "Water permit 2 01C412898 (CA CGP) processed 2026-08-05: facility Quanta Manufacturing Nashville LLC, permittee , SIC none , status Active || Points: signal 20 (California stormwater enrolments (SMARTS): 20); sources 0; recency 15; stage 8; fit 15",
+   "fit": "strong: name suggests manufacturing or processing (Manufacturing); not confirmed",
+   "name": "Quanta Manufacturing Nashville LLC",
+   "r5": "",
+   "r5b": "",
+   "rank": 3,
+   "score": 58.0,
+   "sources": 1,
+   "stage": "under construction",
+   "tier": "A"
+  },
+  {
+   "addr": "5640 La Ribera Street",
+   "evidence": "Water permit 2 01NEC016434 (CA NEC) processed 2026-10-28: facility Caliber Cabinets Inc, permittee , SIC 2431 Millwork, status Active || Water permit 2 01NEC015157 (CA NEC) processed 2025-10-23: facility Caliber Cabinets Inc, permittee , SIC 2434 Wood Kitchen Cabinets, status Terminated || Points: signal 15 (California stormwater enrolments (SMARTS): 12+3 repeat); sources 0; recency 15; stage 8; fit 15",
+   "fit": "strong: manufacturing SIC 2434 on a state water permit",
+   "name": "Caliber Cabinets Inc",
+   "r5": "",
+   "r5b": "",
+   "rank": 4,
+   "score": 53.0,
+   "sources": 1,
+   "stage": "operating and expanding",
+   "tier": "A"
+  },
+  {
+   "addr": "35451 Dumbarton Court",
+   "evidence": "Water permit 2 01I031755 (CA IGP) processed 2026-09-28: facility Teledyne ETM Inc, permittee , SIC 3823 Industrial Instruments for Measurement, Display, and Control of Process Variables, status Active || Water permit 2 01I030583 (CA IGP) processed 2024-03-05: facility Teledyne ETM Inc, permittee , SIC 3699 Electrical Machinery, Equipment, and Supplies, NEC, status Active || Points: signal 15 (California stormwater enrolments (SMARTS): 12+3 repeat); sources 0; recency 15; stage 8; fit 15",
+   "fit": "strong: manufacturing SIC 3699 on a state water permit",
+   "name": "Teledyne ETM Inc",
+   "r5": "",
+   "r5b": "",
+   "rank": 5,
+   "score": 53.0,
+   "sources": 1,
+   "stage": "operating and expanding",
+   "tier": "A"
+  },
+  {
+   "addr": "41777 Boyce",
+   "evidence": "Water permit 2 01I031788 (CA IGP) processed 2026-10-30: facility Walters & Wolf, permittee , SIC 3231 Glass Products, Made of Purchased Glass, status Active || Points: signal 12 (California stormwater enrolments (SMARTS): 12); sources 0; recency 15; stage 8; fit 15",
+   "fit": "strong: manufacturing SIC 3231 on a state water permit",
+   "name": "Walters & Wolf",
+   "r5": "",
+   "r5b": "",
+   "rank": 6,
+   "score": 50.0,
+   "sources": 1,
+   "stage": "operating and expanding",
+   "tier": "A"
+  },
+  {
+   "addr": "7999 Athenour Way",
+   "evidence": "Water permit 2 01I031782 (CA IGP) processed 2026-10-27: facility ELITE READY MIX LLC, permittee , SIC 3273 Ready-Mixed Concrete, status Active || Points: signal 12 (California stormwater enrolments (SMARTS): 12); sources 0; recency 15; stage 8; fit 15",
+   "fit": "strong: manufacturing SIC 3273 on a state water permit",
+   "name": "ELITE READY MIX LLC",
+   "r5": "",
+   "r5b": "",
+   "rank": 7,
+   "score": 50.0,
+   "sources": 1,
+   "stage": "operating and expanding",
+   "tier": "A"
+  },
+  {
+   "addr": "1799 Factor Ave",
+   "evidence": "Water permit 2 01NEC016424 (CA NEC) processed 2026-10-26: facility Voxel Energy Inc, permittee , SIC 3699 Electrical Machinery, Equipment, and Supplies, NEC, status Active || Points: signal 12 (California stormwater enrolments (SMARTS): 12); sources 0; recency 15; stage 8; fit 15",
+   "fit": "strong: manufacturing SIC 3699 on a state water permit",
+   "name": "Voxel Energy Inc",
+   "r5": "",
+   "r5b": "",
+   "rank": 8,
+   "score": 50.0,
+   "sources": 1,
+   "stage": "operating and expanding",
+   "tier": "A"
+  },
+  {
+   "addr": "3130 Depot Road",
+   "evidence": "Water permit 2 01NEC016396 (CA NEC) processed 2026-10-19: facility Thermionics Laboratory Inc, permittee , SIC 3559 Special Industry Machinery, NEC, status Active || Points: signal 12 (California stormwater enrolments (SMARTS): 12); sources 0; recency 15; stage 8; fit 15",
+   "fit": "strong: manufacturing SIC 3559 on a state water permit",
+   "name": "Thermionics Laboratory Inc",
+   "r5": "",
+   "r5b": "",
+   "rank": 9,
+   "score": 50.0,
+   "sources": 1,
+   "stage": "operating and expanding",
+   "tier": "A"
+  },
+  {
+   "addr": "1267 14th Street",
+   "evidence": "Water permit 2 01NEC016393 (CA NEC) processed 2026-10-16: facility California Cereal Products Inc, permittee , SIC 2043 Cereal Breakfast Foods, status Active || Points: signal 12 (California stormwater enrolments (SMARTS): 12); sources 0; recency 15; stage 8; fit 15",
+   "fit": "strong: manufacturing SIC 2043 on a state water permit",
+   "name": "California Cereal Products Inc",
+   "r5": "",
+   "r5b": "",
+   "rank": 10,
+   "score": 50.0,
+   "sources": 1,
+   "stage": "operating and expanding",
+   "tier": "A"
+  },
+  {
+   "addr": "14226 Doolittle Dr",
+   "evidence": "Water permit 2 01NEC016390 (CA NEC) processed 2026-10-16: facility Oakland Puzzle Company, permittee , SIC 3944 Games, Toys, and Children's Vehicles, Except Dolls and Bicycles, status Active || Points: signal 12 (California stormwater enrolments (SMARTS): 12); sources 0; recency 15; stage 8; fit 15",
+   "fit": "strong: manufacturing SIC 3944 on a state water permit",
+   "name": "Oakland Puzzle Company",
+   "r5": "",
+   "r5b": "",
+   "rank": 11,
+   "score": 50.0,
+   "sources": 1,
+   "stage": "operating and expanding",
+   "tier": "A"
+  },
+  {
+   "addr": "7660 Amador Valley Blvd",
+   "evidence": "Water permit 2 01NEC016389 (CA NEC) processed 2026-10-16: facility Signfast Inc dba Fastsigns, permittee , SIC 3993 Signs and Advertising Specialties, status Active || Points: signal 12 (California stormwater enrolments (SMARTS): 12); sources 0; recency 15; stage 8; fit 15",
+   "fit": "strong: manufacturing SIC 3993 on a state water permit",
+   "name": "Signfast Inc dba Fastsigns",
+   "r5": "",
+   "r5b": "",
+   "rank": 12,
+   "score": 50.0,
+   "sources": 1,
+   "stage": "operating and expanding",
+   "tier": "A"
+  },
+  {
+   "addr": "1700 20th St",
+   "evidence": "Water permit 2 01NEC016349 (CA NEC) processed 2026-10-05: facility Lilac Solutions Inc, permittee , SIC 2819 Industrial Inorganic Chemicals, NEC, status Active || Points: signal 12 (California stormwater enrolments (SMARTS): 12); sources 0; recency 15; stage 8; fit 15",
+   "fit": "strong: manufacturing SIC 2819 on a state water permit",
+   "name": "Lilac Solutions Inc",
+   "r5": "",
+   "r5b": "",
+   "rank": 13,
+   "score": 50.0,
+   "sources": 1,
+   "stage": "operating and expanding",
+   "tier": "A"
+  },
+  {
+   "addr": "508 29th ave",
+   "evidence": "Water permit 2 01NEC016302 (CA NEC) processed 2026-09-21: facility diamond tool and die, permittee , SIC 3549 Metalworking Machinery, NEC, status Active || Points: signal 12 (California stormwater enrolments (SMARTS): 12); sources 0; recency 15; stage 8; fit 15",
+   "fit": "strong: manufacturing SIC 3549 on a state water permit",
+   "name": "diamond tool and die",
+   "r5": "",
+   "r5b": "",
+   "rank": 14,
+   "score": 50.0,
+   "sources": 1,
+   "stage": "operating and expanding",
+   "tier": "A"
+  },
+  {
+   "addr": "10001 Denny St",
+   "evidence": "Water permit 2 01NEC016255 (CA NEC) processed 2026-09-03: facility Garner Heat Treat Inc, permittee , SIC 3398 Metal Heat Treating, status Active || Points: signal 12 (California stormwater enrolments (SMARTS): 12); sources 0; recency 15; stage 8; fit 15",
+   "fit": "strong: manufacturing SIC 3398 on a state water permit",
+   "name": "Garner Heat Treat Inc",
+   "r5": "",
+   "r5b": "",
+   "rank": 15,
+   "score": 50.0,
+   "sources": 1,
+   "stage": "operating and expanding",
+   "tier": "A"
+  },
+  {
+   "addr": "945 Camelia Street",
+   "evidence": "Water permit 2 01NEC016185 (CA NEC) processed 2026-08-13: facility Autumn Press, permittee , SIC 2759 Commercial Printing, NEC, status Active || Points: signal 12 (California stormwater enrolments (SMARTS): 12); sources 0; recency 15; stage 8; fit 15",
+   "fit": "strong: manufacturing SIC 2759 on a state water permit",
+   "name": "Autumn Press",
+   "r5": "",
+   "r5b": "",
+   "rank": 16,
+   "score": 50.0,
+   "sources": 1,
+   "stage": "operating and expanding",
+   "tier": "A"
+  },
+  {
+   "addr": "8810 Macarthur Blvd 94605",
+   "evidence": "Water permit 2 01NEC016177 (CA NEC) processed 2026-08-11: facility Tacos Emanuel LLC, permittee , SIC 2099 Food Preparations, NEC, status Active || Points: signal 12 (California stormwater enrolments (SMARTS): 12); sources 0; recency 15; stage 8; fit 15",
+   "fit": "strong: manufacturing SIC 2099 on a state water permit",
+   "name": "Tacos Emanuel LLC",
+   "r5": "",
+   "r5b": "",
+   "rank": 17,
+   "score": 50.0,
+   "sources": 1,
+   "stage": "operating and expanding",
+   "tier": "A"
+  },
+  {
+   "addr": "812 49th ave",
+   "evidence": "Water permit 2 01NEC016129 (CA NEC) processed 2026-08-03: facility Advanced Grinding Incorporated, permittee , SIC 3541 Machine Tools, Metal Cutting Type, status Active || Points: signal 12 (California stormwater enrolments (SMARTS): 12); sources 0; recency 15; stage 8; fit 15",
+   "fit": "strong: manufacturing SIC 3541 on a state water permit",
+   "name": "Advanced Grinding Incorporated",
+   "r5": "",
+   "r5b": "",
+   "rank": 18,
+   "score": 50.0,
+   "sources": 1,
+   "stage": "operating and expanding",
+   "tier": "A"
+  },
+  {
+   "addr": "1266 45th St",
+   "evidence": "Water permit 2 01NEC016110 (CA NEC) processed 2026-07-27: facility Lucid Machine Art LLC, permittee , SIC 2431 Millwork, status Active || Points: signal 12 (California stormwater enrolments (SMARTS): 12); sources 0; recency 15; stage 8; fit 15",
+   "fit": "strong: manufacturing SIC 2431 on a state water permit",
+   "name": "Lucid Machine Art LLC",
+   "r5": "",
+   "r5b": "",
+   "rank": 19,
+   "score": 50.0,
+   "sources": 1,
+   "stage": "operating and expanding",
+   "tier": "A"
+  },
+  {
+   "addr": "122 Lindbergh Ave",
+   "evidence": "Water permit 2 01NEC016084 (CA NEC) processed 2026-07-20: facility Moz Designs Inc, permittee , SIC 3444 Sheet Metal Work, status Active || Points: signal 12 (California stormwater enrolments (SMARTS): 12); sources 0; recency 15; stage 8; fit 15",
+   "fit": "strong: manufacturing SIC 3444 on a state water permit",
+   "name": "Moz Designs Inc",
+   "r5": "",
+   "r5b": "",
+   "rank": 20,
+   "score": 50.0,
+   "sources": 1,
+   "stage": "operating and expanding",
+   "tier": "A"
+  },
+  {
+   "addr": "1111 Aladdin Avenue",
+   "evidence": "Water permit 2 01I031663 (CA IGP) processed 2026-07-08: facility ACCO Engineered Systems, permittee , SIC 3496 Miscellaneous Fabricated Wire Products, status Active || Water permit row 4 19I031655 (CA IGP) received 2026-07-01: ACCO Engineered Systems, Commerce (not a scoring signal; support only) [same name, different address: possible match] || Water permit row 4 19I031287 (CA IGP) received 2025-10-03: ACCO Engineered Systems, Commerce (not a scoring signal; support only) [same name, different address: possible match] || Points: signal 12 (California stormwater enrolments (SMARTS): 12); sources 0; recency 15; stage 8; fit 15",
+   "fit": "strong: manufacturing SIC 3496 on a state water permit",
+   "name": "ACCO Engineered Systems",
+   "r5": "",
+   "r5b": "",
+   "rank": 21,
+   "score": 50.0,
+   "sources": 1,
+   "stage": "operating and expanding",
+   "tier": "A"
+  },
+  {
+   "addr": "1190 W Tower Ave",
+   "evidence": "Water permit 2 01NEC016009 (CA NEC) processed 2026-06-25: facility Poseidon Tech Corporation, permittee , SIC 3721 Aircraft, status Active || Points: signal 12 (California stormwater enrolments (SMARTS): 12); sources 0; recency 15; stage 8; fit 15",
+   "fit": "strong: manufacturing SIC 3721 on a state water permit",
+   "name": "Poseidon Tech Corporation",
+   "r5": "",
+   "r5b": "",
+   "rank": 22,
+   "score": 50.0,
+   "sources": 1,
+   "stage": "operating and expanding",
+   "tier": "A"
+  },
+  {
+   "addr": "44530 S Grimmer Blvd",
+   "evidence": "Water permit 2 01I031645 (CA IGP) processed 2026-06-24: facility Nitricity Inc, permittee , SIC 2873 Nitrogenous Fertilizers, status Active || Points: signal 12 (California stormwater enrolments (SMARTS): 12); sources 0; recency 15; stage 8; fit 15",
+   "fit": "strong: manufacturing SIC 2873 on a state water permit",
+   "name": "Nitricity Inc",
+   "r5": "",
+   "r5b": "",
+   "rank": 23,
+   "score": 50.0,
+   "sources": 1,
+   "stage": "operating and expanding",
+   "tier": "A"
+  },
+  {
+   "addr": "30100 Union City Boulevard",
+   "evidence": "Water permit 2 01I031626 (CA IGP) processed 2026-06-17: facility CalPortland Company, permittee , SIC 3273 Ready-Mixed Concrete, status Active || Water permit 2 01I031602 (CA IGP) processed 2026-06-17: facility CalPortland Company, permittee , SIC 3273 Ready-Mixed Concrete, status Active || Water permit 2 01I031606 (CA IGP) processed 2026-06-17: facility CalPortland Company, permittee , SIC 3273 Ready-Mixed Concrete, status Active || Points: signal 12 (California stormwater enrolments (SMARTS): 12); sources 0; recency 15; stage 8; fit 15",
+   "fit": "strong: manufacturing SIC 3273 on a state water permit",
+   "name": "CalPortland Company",
+   "r5": "",
+   "r5b": "",
+   "rank": 24,
+   "score": 50.0,
+   "sources": 1,
+   "stage": "operating and expanding",
+   "tier": "A"
+  },
+  {
+   "addr": "910 Auburn Ct",
+   "evidence": "Water permit 2 01NEC015944 (CA NEC) processed 2026-06-08: facility Leopard Imaging Incorporated, permittee , SIC 3861 Photographic Equipment and Supplies, status Active || Points: signal 12 (California stormwater enrolments (SMARTS): 12); sources 0; recency 15; stage 8; fit 15",
+   "fit": "strong: manufacturing SIC 3861 on a state water permit",
+   "name": "Leopard Imaging Incorporated",
+   "r5": "",
+   "r5b": "",
+   "rank": 25,
+   "score": 50.0,
+   "sources": 1,
+   "stage": "operating and expanding",
+   "tier": "A"
+  },
+  {
+   "addr": "301 Whitney Pl",
+   "evidence": "Water permit 2 01NEC015931 (CA NEC) processed 2026-06-02: facility Clean Sciences LLC, permittee , SIC 3471 Electroplating, Plating, Polishing, Anodizing, and Coloring, status Active || Points: signal 12 (California stormwater enrolments (SMARTS): 12); sources 0; recency 15; stage 8; fit 15",
+   "fit": "strong: manufacturing SIC 3471 on a state water permit",
+   "name": "Clean Sciences LLC",
+   "r5": "",
+   "r5b": "",
+   "rank": 26,
+   "score": 50.0,
+   "sources": 1,
+   "stage": "operating and expanding",
+   "tier": "A"
+  },
+  {
+   "addr": "400 Wind River Way",
+   "evidence": "Water permit 2 01NEC015845 (CA NEC) processed 2026-05-11: facility Epia Neuro, permittee , SIC 3841 Surgical and Medical Instruments and Apparatus, status Active || Points: signal 12 (California stormwater enrolments (SMARTS): 12); sources 0; recency 15; stage 8; fit 15",
+   "fit": "strong: manufacturing SIC 3841 on a state water permit",
+   "name": "Epia Neuro",
+   "r5": "",
+   "r5b": "",
+   "rank": 27,
+   "score": 50.0,
+   "sources": 1,
+   "stage": "operating and expanding",
+   "tier": "A"
+  },
+  {
+   "addr": "2661 ALVARADO ST",
+   "evidence": "Water permit 2 01NEC015828 (CA NEC) processed 2026-05-04: facility Handidan LLC, permittee , SIC 2759 Commercial Printing, NEC, status Active || Points: signal 12 (California stormwater enrolments (SMARTS): 12); sources 0; recency 15; stage 8; fit 15",
+   "fit": "strong: manufacturing SIC 2759 on a state water permit",
+   "name": "Handidan LLC",
+   "r5": "",
+   "r5b": "",
+   "rank": 28,
+   "score": 50.0,
+   "sources": 1,
+   "stage": "operating and expanding",
+   "tier": "A"
+  },
+  {
+   "addr": "43960 Fremont Blvd",
+   "evidence": "Water permit 2 01I031533 (CA IGP) processed 2026-04-29: facility Reddy Ice LLC, permittee , SIC 2097 Manufactured Ice, status Active || Water permit row 6B36I031562 (CA IGP) received 2026-05-21: Reddy Ice LLC, Barstow (not a scoring signal; support only) [same name, different address: possible match] || Water permit row 7 33I031561 (CA IGP) received 2026-05-21: Reddy Ice LLC, Indio (not a scoring signal; support only) [same name, different address: possible match] || Points: signal 12 (California stormwater enrolments (SMARTS): 12); sources 0; recency 15; stage 8; fit 15",
+   "fit": "strong: manufacturing SIC 2097 on a state water permit",
+   "name": "Reddy Ice LLC",
+   "r5": "",
+   "r5b": "",
+   "rank": 29,
+   "score": 50.0,
+   "sources": 1,
+   "stage": "operating and expanding",
+   "tier": "A"
+  },
+  {
+   "addr": "15555 E 14th St",
+   "evidence": "Water permit 2 01NEC015804 (CA NEC) processed 2026-04-28: facility Vantage Robotics Inc, permittee , SIC 3721 Aircraft, status Active || Points: signal 12 (California stormwater enrolments (SMARTS): 12); sources 0; recency 15; stage 8; fit 15",
+   "fit": "strong: manufacturing SIC 3721 on a state water permit",
+   "name": "Vantage Robotics Inc",
+   "r5": "",
+   "r5b": "",
+   "rank": 30,
+   "score": 50.0,
+   "sources": 1,
+   "stage": "operating and expanding",
+   "tier": "A"
+  },
+  {
+   "addr": "2222 Davis St",
+   "evidence": "Water permit 2 01NEC015767 (CA NEC) processed 2026-04-15: facility RW Metal Spinning, permittee , SIC 3469 Metal Stamping, NEC, status Active || Points: signal 12 (California stormwater enrolments (SMARTS): 12); sources 0; recency 15; stage 8; fit 15",
+   "fit": "strong: manufacturing SIC 3469 on a state water permit",
+   "name": "RW Metal Spinning",
+   "r5": "",
+   "r5b": "",
+   "rank": 31,
+   "score": 50.0,
+   "sources": 1,
+   "stage": "operating and expanding",
+   "tier": "A"
+  },
+  {
+   "addr": "381 26th Street",
+   "evidence": "Water permit 2 01NEC015765 (CA NEC) processed 2026-04-14: facility The Best Shop Performance Inc, permittee , SIC 3714 Motor Vehicle Parts and Accessories, status Active || Points: signal 12 (California stormwater enrolments (SMARTS): 12); sources 0; recency 15; stage 8; fit 15",
+   "fit": "strong: manufacturing SIC 3714 on a state water permit",
+   "name": "The Best Shop Performance Inc",
+   "r5": "",
+   "r5b": "",
+   "rank": 32,
+   "score": 50.0,
+   "sources": 1,
+   "stage": "operating and expanding",
+   "tier": "A"
+  },
+  {
+   "addr": "2282 Davis Court",
+   "evidence": "Water permit 2 01NEC015718 (CA NEC) processed 2026-04-01: facility D & J International Inc, permittee , SIC 2673 Plastics, Foil, and Coated Paper Bags, status Active || Points: signal 12 (California stormwater enrolments (SMARTS): 12); sources 0; recency 15; stage 8; fit 15",
+   "fit": "strong: manufacturing SIC 2673 on a state water permit",
+   "name": "D & J International Inc",
+   "r5": "",
+   "r5b": "",
+   "rank": 33,
+   "score": 50.0,
+   "sources": 1,
+   "stage": "operating and expanding",
+   "tier": "A"
+  },
+  {
+   "addr": "2859 Bayview Drive",
+   "evidence": "Water permit 2 01NEC015700 (CA NEC) processed 2026-03-25: facility Tokyo Electron US Holdings Inc, permittee , SIC 3674 Semiconductors and Related Devices, status Active || Points: signal 12 (California stormwater enrolments (SMARTS): 12); sources 0; recency 15; stage 8; fit 15",
+   "fit": "strong: manufacturing SIC 3674 on a state water permit",
+   "name": "Tokyo Electron US Holdings Inc",
+   "r5": "",
+   "r5b": "",
+   "rank": 34,
+   "score": 50.0,
+   "sources": 1,
+   "stage": "operating and expanding",
+   "tier": "A"
+  },
+  {
+   "addr": "48401 Fremont Blvd",
+   "evidence": "Water permit 2 01NEC015685 (CA NEC) processed 2026-03-23: facility Tesla Inc, permittee , SIC 3679 Electronic Components, NEC, status Active || Water permit row 2 01C412692 (CA CGP) received 2026-07-08: Tesla Inc, Fremont (not a scoring signal; support only) [same name, different address: possible match] || Water permit row 5S39I031481 (CA IGP) received 2026-03-17: Tesla Inc, Lathrop (not a scoring signal; support only) [same name, different address: possible match] || Points: signal 12 (California stormwater enrolments (SMARTS): 12); sources 0; recency 15; stage 8; fit 15",
+   "fit": "strong: manufacturing SIC 3679 on a state water permit",
+   "name": "Tesla Inc",
+   "r5": "",
+   "r5b": "",
+   "rank": 35,
+   "score": 50.0,
+   "sources": 1,
+   "stage": "operating and expanding",
+   "tier": "A"
+  },
+  {
+   "addr": "3190 Corporate Place",
+   "evidence": "Water permit 2 01I031487 (CA IGP) processed 2026-03-20: facility Columbus Manufacturing Inc, permittee , SIC 2099 Food Preparations, NEC, status Active || Points: signal 12 (California stormwater enrolments (SMARTS): 12); sources 0; recency 15; stage 8; fit 15",
+   "fit": "strong: manufacturing SIC 2099 on a state water permit",
+   "name": "Columbus Manufacturing Inc",
+   "r5": "",
+   "r5b": "",
+   "rank": 36,
+   "score": 50.0,
+   "sources": 1,
+   "stage": "operating and expanding",
+   "tier": "A"
+  },
+  {
+   "addr": "2535 Williams Street",
+   "evidence": "Water permit 2 01NNA003527 (CA IGP) processed 2026-03-20: facility JVNS Corp, permittee , SIC 3599 Industrial and Commercial Machinery and Equipment, NEC, status NOI Required || Points: signal 12 (California stormwater enrolments (SMARTS): 12); sources 0; recency 15; stage 8; fit 15",
+   "fit": "strong: manufacturing SIC 3599 on a state water permit",
+   "name": "JVNS Corp",
+   "r5": "",
+   "r5b": "",
+   "rank": 37,
+   "score": 50.0,
+   "sources": 1,
+   "stage": "operating and expanding",
+   "tier": "A"
+  },
+  {
+   "addr": "45531 Northport Loop West",
+   "evidence": "Water permit 2 01NEC015668 (CA NEC) processed 2026-03-18: facility Viant Medical, permittee , SIC 3841 Surgical and Medical Instruments and Apparatus, status Active || Points: signal 12 (California stormwater enrolments (SMARTS): 12); sources 0; recency 15; stage 8; fit 15",
+   "fit": "strong: manufacturing SIC 3841 on a state water permit",
+   "name": "Viant Medical",
+   "r5": "",
+   "r5b": "",
+   "rank": 38,
+   "score": 50.0,
+   "sources": 1,
+   "stage": "operating and expanding",
+   "tier": "A"
+  },
+  {
+   "addr": "2095 North Loop Road",
+   "evidence": "Water permit 2 01NEC015655 (CA NEC) processed 2026-03-17: facility Anthro Energy Inc, permittee , SIC 3692 Primary Batteries, Dry and Wet, status Active || Points: signal 12 (California stormwater enrolments (SMARTS): 12); sources 0; recency 15; stage 8; fit 15",
+   "fit": "strong: manufacturing SIC 3692 on a state water permit",
+   "name": "Anthro Energy Inc",
+   "r5": "",
+   "r5b": "",
+   "rank": 39,
+   "score": 50.0,
+   "sources": 1,
+   "stage": "operating and expanding",
+   "tier": "A"
+  },
+  {
+   "addr": "930 DOOLITTLE DRIVE",
+   "evidence": "Water permit 2 01I031463 (CA IGP) processed 2026-02-27: facility CAL BAY STONE & TILE LLC, permittee , SIC 3281 Cut Stone and Stone Products, status Active || Points: signal 12 (California stormwater enrolments (SMARTS): 12); sources 0; recency 15; stage 8; fit 15",
+   "fit": "strong: manufacturing SIC 3281 on a state water permit",
+   "name": "CAL BAY STONE & TILE LLC",
+   "r5": "",
+   "r5b": "",
+   "rank": 40,
+   "score": 50.0,
+   "sources": 1,
+   "stage": "operating and expanding",
+   "tier": "A"
+  },
+  {
+   "addr": "47225 Fremont Blvd",
+   "evidence": "Water permit 2 01NEC015596 (CA NEC) processed 2026-02-26: facility Meraqi Viant Medical, permittee , SIC 3841 Surgical and Medical Instruments and Apparatus, status Active || Points: signal 12 (California stormwater enrolments (SMARTS): 12); sources 0; recency 15; stage 8; fit 15",
+   "fit": "strong: manufacturing SIC 3841 on a state water permit",
+   "name": "Meraqi Viant Medical",
+   "r5": "",
+   "r5b": "",
+   "rank": 41,
+   "score": 50.0,
+   "sources": 1,
+   "stage": "operating and expanding",
+   "tier": "A"
+  },
+  {
+   "addr": "15367 Beatty street",
+   "evidence": "Water permit 2 01NEC015527 (CA NEC) processed 2026-02-09: facility Nanis Treats, permittee , SIC 2052 Cookies and Crackers, status Active || Points: signal 12 (California stormwater enrolments (SMARTS): 12); sources 0; recency 15; stage 8; fit 15",
+   "fit": "strong: manufacturing SIC 2052 on a state water permit",
+   "name": "Nanis Treats",
+   "r5": "",
+   "r5b": "",
+   "rank": 42,
+   "score": 50.0,
+   "sources": 1,
+   "stage": "operating and expanding",
+   "tier": "A"
+  },
+  {
+   "addr": "14487 Griffith Street",
+   "evidence": "Water permit 2 01NEC015448 (CA NEC) processed 2026-01-16: facility Pro Colorflex Ink Corporation, permittee , SIC 2893 Printing Ink, status Active || Water permit row 2 01NEC013117 (CA NEC) received 2024-03-04 at this address: project or facility 'STEWART SUPERIOR CORPORATION' (support only) [joined by street address only] [possible match] || Points: signal 12 (California stormwater enrolments (SMARTS): 12); sources 0; recency 15; stage 8; fit 15",
+   "fit": "strong: manufacturing SIC 2893 on a state water permit",
+   "name": "Pro Colorflex Ink Corporation",
+   "r5": "",
+   "r5b": "",
+   "rank": 43,
+   "score": 50.0,
+   "sources": 1,
+   "stage": "operating and expanding",
+   "tier": "A"
+  },
+  {
+   "addr": "699 Montague Ave",
+   "evidence": "Water permit 2 01NEC015426 (CA NEC) processed 2026-01-08: facility MARS ENGINEERING COMPANY INC, permittee , SIC 3451 Screw Machine Products, status Active || Points: signal 12 (California stormwater enrolments (SMARTS): 12); sources 0; recency 15; stage 8; fit 15",
+   "fit": "strong: manufacturing SIC 3451 on a state water permit",
+   "name": "MARS ENGINEERING COMPANY INC",
+   "r5": "",
+   "r5b": "",
+   "rank": 44,
+   "score": 50.0,
+   "sources": 1,
+   "stage": "operating and expanding",
+   "tier": "A"
+  },
+  {
+   "addr": "644 Christie Avenue",
+   "evidence": "Water permit 2 01NEC015402 (CA NEC) processed 2025-12-30: facility Zylidac Bio LLC, permittee , SIC 2836 Biological Products, Except Diagnostic Substances, status Active || Points: signal 12 (California stormwater enrolments (SMARTS): 12); sources 0; recency 15; stage 8; fit 15",
+   "fit": "strong: manufacturing SIC 2836 on a state water permit",
+   "name": "Zylidac Bio LLC",
+   "r5": "",
+   "r5b": "",
+   "rank": 45,
+   "score": 50.0,
+   "sources": 1,
+   "stage": "operating and expanding",
+   "tier": "A"
+  },
+  {
+   "addr": "4832 Piper Glen Ter",
+   "evidence": "Water permit 2 01NEC015359 (CA NEC) processed 2025-12-22: facility Tri Valley Treats, permittee , SIC 2051 Bread and Other Bakery Products, Except Cookies and Crackers, status Active || Points: signal 12 (California stormwater enrolments (SMARTS): 12); sources 0; recency 15; stage 8; fit 15",
+   "fit": "strong: manufacturing SIC 2051 on a state water permit",
+   "name": "Tri Valley Treats",
+   "r5": "",
+   "r5b": "",
+   "rank": 46,
+   "score": 50.0,
+   "sources": 1,
+   "stage": "operating and expanding",
+   "tier": "A"
+  },
+  {
+   "addr": "557 McCormick St",
+   "evidence": "Water permit 2 01NEC015356 (CA NEC) processed 2025-12-18: facility Medical Instrument Development Labs, permittee , SIC 3841 Surgical and Medical Instruments and Apparatus, status Active || Points: signal 12 (California stormwater enrolments (SMARTS): 12); sources 0; recency 15; stage 8; fit 15",
+   "fit": "strong: manufacturing SIC 3841 on a state water permit",
+   "name": "Medical Instrument Development Labs",
+   "r5": "",
+   "r5b": "",
+   "rank": 47,
+   "score": 50.0,
+   "sources": 1,
+   "stage": "operating and expanding",
+   "tier": "A"
+  },
+  {
+   "addr": "1494 67th St",
+   "evidence": "Water permit 2 01I031373 (CA IGP) processed 2025-12-10: facility Coulter Forge LLC, permittee , SIC 3462 Iron and Steel Forgings, status Active || Points: signal 12 (California stormwater enrolments (SMARTS): 12); sources 0; recency 15; stage 8; fit 15",
+   "fit": "strong: manufacturing SIC 3462 on a state water permit",
+   "name": "Coulter Forge LLC",
+   "r5": "",
+   "r5b": "",
+   "rank": 48,
+   "score": 50.0,
+   "sources": 1,
+   "stage": "operating and expanding",
+   "tier": "A"
+  },
+  {
+   "addr": "6551 Sierra Lane",
+   "evidence": "Water permit 2 01NEC015274 (CA NEC) processed 2025-11-21: facility Onyx Optics Inc, permittee , SIC 3826 Laboratory Analytical Instruments, status Active || Points: signal 12 (California stormwater enrolments (SMARTS): 12); sources 0; recency 15; stage 8; fit 15",
+   "fit": "strong: manufacturing SIC 3826 on a state water permit",
+   "name": "Onyx Optics Inc",
+   "r5": "",
+   "r5b": "",
+   "rank": 49,
+   "score": 50.0,
+   "sources": 1,
+   "stage": "operating and expanding",
+   "tier": "A"
+  },
+  {
+   "addr": "729 Heinz Ave",
+   "evidence": "Water permit 2 01NEC015267 (CA NEC) processed 2025-11-20: facility Artworks Foundry LLC, permittee , SIC 3366 Copper Foundries, status Active || Points: signal 12 (California stormwater enrolments (SMARTS): 12); sources 0; recency 15; stage 8; fit 15",
+   "fit": "strong: manufacturing SIC 3366 on a state water permit",
+   "name": "Artworks Foundry LLC",
+   "r5": "",
+   "r5b": "",
+   "rank": 50,
+   "score": 50.0,
+   "sources": 1,
+   "stage": "operating and expanding",
+   "tier": "A"
+  },
+  {
+   "addr": "5210 bunche ave",
+   "evidence": "Water permit 2 01NEC015260 (CA NEC) processed 2025-11-17: facility HYC USA INC, permittee , SIC 3679 Electronic Components, NEC, status Active || Points: signal 12 (California stormwater enrolments (SMARTS): 12); sources 0; recency 15; stage 8; fit 15",
+   "fit": "strong: manufacturing SIC 3679 on a state water permit",
+   "name": "HYC USA INC",
+   "r5": "",
+   "r5b": "",
+   "rank": 51,
+   "score": 50.0,
+   "sources": 1,
+   "stage": "operating and expanding",
+   "tier": "A"
+  },
+  {
+   "addr": "499 Lesser St",
+   "evidence": "Water permit 2 01NEC015218 (CA NEC) processed 2025-11-06: facility American Cylinder Head, permittee , SIC 3714 Motor Vehicle Parts and Accessories, status Active || Points: signal 12 (California stormwater enrolments (SMARTS): 12); sources 0; recency 15; stage 8; fit 15",
+   "fit": "strong: manufacturing SIC 3714 on a state water permit",
+   "name": "American Cylinder Head",
+   "r5": "",
+   "r5b": "",
+   "rank": 52,
+   "score": 50.0,
+   "sources": 1,
+   "stage": "operating and expanding",
+   "tier": "A"
+  },
+  {
+   "addr": "1575 Alvarado St",
+   "evidence": "Water permit 2 01NEC015207 (CA NEC) processed 2025-11-05: facility Porifera Inc, permittee , SIC 3556 Food Products Machinery, status Active || Points: signal 12 (California stormwater enrolments (SMARTS): 12); sources 0; recency 15; stage 8; fit 15",
+   "fit": "strong: manufacturing SIC 3556 on a state water permit",
+   "name": "Porifera Inc",
+   "r5": "",
+   "r5b": "",
+   "rank": 53,
+   "score": 50.0,
+   "sources": 1,
+   "stage": "operating and expanding",
+   "tier": "A"
+  },
+  {
+   "addr": "6920 Koll Center Pkwy Ste 213",
+   "evidence": "Water permit 2 01NEC014861 (CA NEC) processed 2025-07-28: facility Bright Silicon Technologies, permittee , SIC 3674 Semiconductors and Related Devices, status Active || Water permit 2 01NEC013568 (CA NEC) processed 2024-07-15: facility Bright Silicon Technologies, permittee , SIC 3674 Semiconductors and Related Devices, status Terminated || Points: signal 15 (California stormwater enrolments (SMARTS): 12+3 repeat); sources 0; recency 8; stage 8; fit 15",
+   "fit": "strong: manufacturing SIC 3674 on a state water permit",
+   "name": "Bright Silicon Technologies",
+   "r5": "",
+   "r5b": "",
+   "rank": 54,
+   "score": 46.0,
+   "sources": 1,
+   "stage": "operating and expanding",
+   "tier": "A"
+  },
+  {
+   "addr": "45861 Hotchkiss Street",
+   "evidence": "Water permit 2 01NEC013991 (CA NEC) processed 2024-11-20: facility Wisk Aero LLC, permittee , SIC 3721 Aircraft, status Active || Water permit 2 01NEC013359 (CA NEC) processed 2024-05-02: facility Wisk Aero LLC, permittee , SIC 3721 Aircraft, status Active || Water permit row 3 35W006611 (CA CGP) received 2026-07-30: Wisk Aero LLC, Hollister (not a scoring signal; support only) [same name, different address: possible match] || Points: signal 15 (California stormwater enrolments (SMARTS): 12+3 repeat); sources 0; recency 8; stage 8; fit 15",
+   "fit": "strong: manufacturing SIC 3721 on a state water permit",
+   "name": "Wisk Aero LLC",
+   "r5": "",
+   "r5b": "",
+   "rank": 55,
+   "score": 46.0,
+   "sources": 1,
+   "stage": "operating and expanding",
+   "tier": "A"
+  },
+  {
+   "addr": "1952 Williams Streeet",
+   "evidence": "California state incentive award 2026-04-30 (California Competes award): Industry: Beverage Product Manufacturing; net new full-time employees 151; investment $67,700,000; credit $6,500,000 || Water permit row 2 01NEC013912 (CA NEC) processed 2024-10-21: facility R Torre & Company Inc, permittee , SIC 4226, status Active (cut as noise or not flagged; support only) || Water permit row 2 01NEC013558 (CA NEC) processed 2024-07-12: facility R Torre & Company Inc, permittee , SIC 4226, status Terminated (cut as noise or not flagged; support only) || Points: signal 22 (California incentive awards (California Competes, CAEATFA): 20; California stormwater enrolments (SMARTS): 2); sources 3; recency 15; stage 4; fit 0",
+   "fit": "unknown: nothing in the records says what the company makes",
+   "name": "R. Torre & Company, Inc.",
+   "r5": "",
+   "r5b": "",
+   "rank": 56,
+   "score": 44.0,
+   "sources": 2,
+   "stage": "planned",
+   "tier": "A"
+  },
+  {
+   "addr": "11711 Dublin Blvd",
+   "evidence": "Water permit 2 01C413054 (CA CGP) processed 2026-08-21: facility Dublin Boulevard Owner LP, permittee , SIC none , status Active || Points: signal 20 (California stormwater enrolments (SMARTS): 20); sources 0; recency 15; stage 8; fit 0",
+   "fit": "unknown: nothing in the records says what the company makes",
+   "name": "Dublin Boulevard Owner LP",
+   "r5": "",
+   "r5b": "",
+   "rank": 57,
+   "score": 43.0,
+   "sources": 1,
+   "stage": "under construction",
+   "tier": "A"
+  },
+  {
+   "addr": "7400 Gateway Blvd",
+   "evidence": "Water permit 2 01NEC015095 (CA NEC) processed 2025-10-02: facility Allogene Therapeutics, permittee , SIC 2834 Pharmaceutical Preparations, status Terminated || Points: signal 12 (California stormwater enrolments (SMARTS): 12); sources 0; recency 8; stage 8; fit 15",
+   "fit": "strong: manufacturing SIC 2834 on a state water permit",
+   "name": "Allogene Therapeutics",
+   "r5": "",
+   "r5b": "",
+   "rank": 58,
+   "score": 43.0,
+   "sources": 1,
+   "stage": "operating and expanding",
+   "tier": "A"
+  },
+  {
+   "addr": "6200 Village Parkway",
+   "evidence": "Water permit 2 01NEC015083 (CA NEC) processed 2025-09-30: facility Kensington Laboratories LLC, permittee , SIC 3672 Printed Circuit Boards, status Active || Points: signal 12 (California stormwater enrolments (SMARTS): 12); sources 0; recency 8; stage 8; fit 15",
+   "fit": "strong: manufacturing SIC 3672 on a state water permit",
+   "name": "Kensington Laboratories LLC",
+   "r5": "",
+   "r5b": "",
+   "rank": 59,
+   "score": 43.0,
+   "sources": 1,
+   "stage": "operating and expanding",
+   "tier": "A"
+  },
+  {
+   "addr": "385 Wright Brothers Ave",
+   "evidence": "Water permit 2 01NEC015063 (CA NEC) processed 2025-09-29: facility La Original Ice Cream Distributors Corp, permittee , SIC 2024 Ice Cream and Frozen Desserts, status Active || Points: signal 12 (California stormwater enrolments (SMARTS): 12); sources 0; recency 8; stage 8; fit 15",
+   "fit": "strong: manufacturing SIC 2024 on a state water permit",
+   "name": "La Original Ice Cream Distributors Corp",
+   "r5": "",
+   "r5b": "",
+   "rank": 60,
+   "score": 43.0,
+   "sources": 1,
+   "stage": "operating and expanding",
+   "tier": "A"
+  }
+ ],
+ "top50_named_without_web_check": [
+  {
+   "name": "Lam Research Corp",
+   "rank": 1
+  },
+  {
+   "name": "Fuse Energy Technologies Corp",
+   "rank": 2
+  },
+  {
+   "name": "Quanta Manufacturing Nashville LLC",
+   "rank": 3
+  },
+  {
+   "name": "Caliber Cabinets Inc",
+   "rank": 4
+  },
+  {
+   "name": "Teledyne ETM Inc",
+   "rank": 5
+  },
+  {
+   "name": "Walters & Wolf",
+   "rank": 6
+  },
+  {
+   "name": "ELITE READY MIX LLC",
+   "rank": 7
+  },
+  {
+   "name": "Voxel Energy Inc",
+   "rank": 8
+  },
+  {
+   "name": "Thermionics Laboratory Inc",
+   "rank": 9
+  },
+  {
+   "name": "California Cereal Products Inc",
+   "rank": 10
+  },
+  {
+   "name": "Oakland Puzzle Company",
+   "rank": 11
+  },
+  {
+   "name": "Signfast Inc dba Fastsigns",
+   "rank": 12
+  },
+  {
+   "name": "Lilac Solutions Inc",
+   "rank": 13
+  },
+  {
+   "name": "diamond tool and die",
+   "rank": 14
+  },
+  {
+   "name": "Garner Heat Treat Inc",
+   "rank": 15
+  },
+  {
+   "name": "Autumn Press",
+   "rank": 16
+  },
+  {
+   "name": "Tacos Emanuel LLC",
+   "rank": 17
+  },
+  {
+   "name": "Advanced Grinding Incorporated",
+   "rank": 18
+  },
+  {
+   "name": "Lucid Machine Art LLC",
+   "rank": 19
+  },
+  {
+   "name": "Moz Designs Inc",
+   "rank": 20
+  },
+  {
+   "name": "ACCO Engineered Systems",
+   "rank": 21
+  },
+  {
+   "name": "Poseidon Tech Corporation",
+   "rank": 22
+  },
+  {
+   "name": "Nitricity Inc",
+   "rank": 23
+  },
+  {
+   "name": "CalPortland Company",
+   "rank": 24
+  },
+  {
+   "name": "Leopard Imaging Incorporated",
+   "rank": 25
+  },
+  {
+   "name": "Clean Sciences LLC",
+   "rank": 26
+  },
+  {
+   "name": "Epia Neuro",
+   "rank": 27
+  },
+  {
+   "name": "Handidan LLC",
+   "rank": 28
+  },
+  {
+   "name": "Reddy Ice LLC",
+   "rank": 29
+  },
+  {
+   "name": "Vantage Robotics Inc",
+   "rank": 30
+  },
+  {
+   "name": "RW Metal Spinning",
+   "rank": 31
+  },
+  {
+   "name": "The Best Shop Performance Inc",
+   "rank": 32
+  },
+  {
+   "name": "D & J International Inc",
+   "rank": 33
+  },
+  {
+   "name": "Tokyo Electron US Holdings Inc",
+   "rank": 34
+  },
+  {
+   "name": "Tesla Inc",
+   "rank": 35
+  },
+  {
+   "name": "Columbus Manufacturing Inc",
+   "rank": 36
+  },
+  {
+   "name": "JVNS Corp",
+   "rank": 37
+  },
+  {
+   "name": "Viant Medical",
+   "rank": 38
+  },
+  {
+   "name": "Anthro Energy Inc",
+   "rank": 39
+  },
+  {
+   "name": "CAL BAY STONE & TILE LLC",
+   "rank": 40
+  },
+  {
+   "name": "Meraqi Viant Medical",
+   "rank": 41
+  },
+  {
+   "name": "Nanis Treats",
+   "rank": 42
+  },
+  {
+   "name": "Pro Colorflex Ink Corporation",
+   "rank": 43
+  },
+  {
+   "name": "MARS ENGINEERING COMPANY INC",
+   "rank": 44
+  },
+  {
+   "name": "Zylidac Bio LLC",
+   "rank": 45
+  },
+  {
+   "name": "Tri Valley Treats",
+   "rank": 46
+  },
+  {
+   "name": "Medical Instrument Development Labs",
+   "rank": 47
+  },
+  {
+   "name": "Coulter Forge LLC",
+   "rank": 48
+  },
+  {
+   "name": "Onyx Optics Inc",
+   "rank": 49
+  },
+  {
+   "name": "Artworks Foundry LLC",
+   "rank": 50
+  }
+ ],
+ "v2_rows_not_in_v3": [],
+ "v3_rows_not_in_v2": [
+  {
+   "addr": "44036 Grimmer Blvd",
+   "name": "Lam Research Corp",
+   "rank": 1,
+   "score": 74.0,
+   "tier": "A"
+  },
+  {
+   "addr": "2705 Merced St",
+   "name": "Fuse Energy Technologies Corp",
+   "rank": 2,
+   "score": 71.0,
+   "tier": "A"
+  },
+  {
+   "addr": "7380 Morton Ave",
+   "name": "Quanta Manufacturing Nashville LLC",
+   "rank": 3,
+   "score": 58.0,
+   "tier": "A"
+  },
+  {
+   "addr": "5640 La Ribera Street",
+   "name": "Caliber Cabinets Inc",
+   "rank": 4,
+   "score": 53.0,
+   "tier": "A"
+  },
+  {
+   "addr": "35451 Dumbarton Court",
+   "name": "Teledyne ETM Inc",
+   "rank": 5,
+   "score": 53.0,
+   "tier": "A"
+  },
+  {
+   "addr": "41777 Boyce",
+   "name": "Walters & Wolf",
+   "rank": 6,
+   "score": 50.0,
+   "tier": "A"
+  },
+  {
+   "addr": "7999 Athenour Way",
+   "name": "ELITE READY MIX LLC",
+   "rank": 7,
+   "score": 50.0,
+   "tier": "A"
+  },
+  {
+   "addr": "1799 Factor Ave",
+   "name": "Voxel Energy Inc",
+   "rank": 8,
+   "score": 50.0,
+   "tier": "A"
+  },
+  {
+   "addr": "3130 Depot Road",
+   "name": "Thermionics Laboratory Inc",
+   "rank": 9,
+   "score": 50.0,
+   "tier": "A"
+  },
+  {
+   "addr": "1267 14th Street",
+   "name": "California Cereal Products Inc",
+   "rank": 10,
+   "score": 50.0,
+   "tier": "A"
+  },
+  {
+   "addr": "14226 Doolittle Dr",
+   "name": "Oakland Puzzle Company",
+   "rank": 11,
+   "score": 50.0,
+   "tier": "A"
+  },
+  {
+   "addr": "7660 Amador Valley Blvd",
+   "name": "Signfast Inc dba Fastsigns",
+   "rank": 12,
+   "score": 50.0,
+   "tier": "A"
+  },
+  {
+   "addr": "1700 20th St",
+   "name": "Lilac Solutions Inc",
+   "rank": 13,
+   "score": 50.0,
+   "tier": "A"
+  },
+  {
+   "addr": "508 29th ave",
+   "name": "diamond tool and die",
+   "rank": 14,
+   "score": 50.0,
+   "tier": "A"
+  },
+  {
+   "addr": "10001 Denny St",
+   "name": "Garner Heat Treat Inc",
+   "rank": 15,
+   "score": 50.0,
+   "tier": "A"
+  },
+  {
+   "addr": "945 Camelia Street",
+   "name": "Autumn Press",
+   "rank": 16,
+   "score": 50.0,
+   "tier": "A"
+  },
+  {
+   "addr": "8810 Macarthur Blvd 94605",
+   "name": "Tacos Emanuel LLC",
+   "rank": 17,
+   "score": 50.0,
+   "tier": "A"
+  },
+  {
+   "addr": "812 49th ave",
+   "name": "Advanced Grinding Incorporated",
+   "rank": 18,
+   "score": 50.0,
+   "tier": "A"
+  },
+  {
+   "addr": "1266 45th St",
+   "name": "Lucid Machine Art LLC",
+   "rank": 19,
+   "score": 50.0,
+   "tier": "A"
+  },
+  {
+   "addr": "122 Lindbergh Ave",
+   "name": "Moz Designs Inc",
+   "rank": 20,
+   "score": 50.0,
+   "tier": "A"
+  },
+  {
+   "addr": "1111 Aladdin Avenue",
+   "name": "ACCO Engineered Systems",
+   "rank": 21,
+   "score": 50.0,
+   "tier": "A"
+  },
+  {
+   "addr": "1190 W Tower Ave",
+   "name": "Poseidon Tech Corporation",
+   "rank": 22,
+   "score": 50.0,
+   "tier": "A"
+  },
+  {
+   "addr": "44530 S Grimmer Blvd",
+   "name": "Nitricity Inc",
+   "rank": 23,
+   "score": 50.0,
+   "tier": "A"
+  },
+  {
+   "addr": "30100 Union City Boulevard",
+   "name": "CalPortland Company",
+   "rank": 24,
+   "score": 50.0,
+   "tier": "A"
+  },
+  {
+   "addr": "910 Auburn Ct",
+   "name": "Leopard Imaging Incorporated",
+   "rank": 25,
+   "score": 50.0,
+   "tier": "A"
+  },
+  {
+   "addr": "301 Whitney Pl",
+   "name": "Clean Sciences LLC",
+   "rank": 26,
+   "score": 50.0,
+   "tier": "A"
+  },
+  {
+   "addr": "400 Wind River Way",
+   "name": "Epia Neuro",
+   "rank": 27,
+   "score": 50.0,
+   "tier": "A"
+  },
+  {
+   "addr": "2661 ALVARADO ST",
+   "name": "Handidan LLC",
+   "rank": 28,
+   "score": 50.0,
+   "tier": "A"
+  },
+  {
+   "addr": "43960 Fremont Blvd",
+   "name": "Reddy Ice LLC",
+   "rank": 29,
+   "score": 50.0,
+   "tier": "A"
+  },
+  {
+   "addr": "15555 E 14th St",
+   "name": "Vantage Robotics Inc",
+   "rank": 30,
+   "score": 50.0,
+   "tier": "A"
+  },
+  {
+   "addr": "2222 Davis St",
+   "name": "RW Metal Spinning",
+   "rank": 31,
+   "score": 50.0,
+   "tier": "A"
+  },
+  {
+   "addr": "381 26th Street",
+   "name": "The Best Shop Performance Inc",
+   "rank": 32,
+   "score": 50.0,
+   "tier": "A"
+  },
+  {
+   "addr": "2282 Davis Court",
+   "name": "D & J International Inc",
+   "rank": 33,
+   "score": 50.0,
+   "tier": "A"
+  },
+  {
+   "addr": "2859 Bayview Drive",
+   "name": "Tokyo Electron US Holdings Inc",
+   "rank": 34,
+   "score": 50.0,
+   "tier": "A"
+  },
+  {
+   "addr": "48401 Fremont Blvd",
+   "name": "Tesla Inc",
+   "rank": 35,
+   "score": 50.0,
+   "tier": "A"
+  },
+  {
+   "addr": "3190 Corporate Place",
+   "name": "Columbus Manufacturing Inc",
+   "rank": 36,
+   "score": 50.0,
+   "tier": "A"
+  },
+  {
+   "addr": "2535 Williams Street",
+   "name": "JVNS Corp",
+   "rank": 37,
+   "score": 50.0,
+   "tier": "A"
+  },
+  {
+   "addr": "45531 Northport Loop West",
+   "name": "Viant Medical",
+   "rank": 38,
+   "score": 50.0,
+   "tier": "A"
+  },
+  {
+   "addr": "2095 North Loop Road",
+   "name": "Anthro Energy Inc",
+   "rank": 39,
+   "score": 50.0,
+   "tier": "A"
+  },
+  {
+   "addr": "930 DOOLITTLE DRIVE",
+   "name": "CAL BAY STONE & TILE LLC",
+   "rank": 40,
+   "score": 50.0,
+   "tier": "A"
+  },
+  {
+   "addr": "47225 Fremont Blvd",
+   "name": "Meraqi Viant Medical",
+   "rank": 41,
+   "score": 50.0,
+   "tier": "A"
+  },
+  {
+   "addr": "15367 Beatty street",
+   "name": "Nanis Treats",
+   "rank": 42,
+   "score": 50.0,
+   "tier": "A"
+  },
+  {
+   "addr": "14487 Griffith Street",
+   "name": "Pro Colorflex Ink Corporation",
+   "rank": 43,
+   "score": 50.0,
+   "tier": "A"
+  },
+  {
+   "addr": "699 Montague Ave",
+   "name": "MARS ENGINEERING COMPANY INC",
+   "rank": 44,
+   "score": 50.0,
+   "tier": "A"
+  },
+  {
+   "addr": "644 Christie Avenue",
+   "name": "Zylidac Bio LLC",
+   "rank": 45,
+   "score": 50.0,
+   "tier": "A"
+  },
+  {
+   "addr": "4832 Piper Glen Ter",
+   "name": "Tri Valley Treats",
+   "rank": 46,
+   "score": 50.0,
+   "tier": "A"
+  },
+  {
+   "addr": "557 McCormick St",
+   "name": "Medical Instrument Development Labs",
+   "rank": 47,
+   "score": 50.0,
+   "tier": "A"
+  },
+  {
+   "addr": "1494 67th St",
+   "name": "Coulter Forge LLC",
+   "rank": 48,
+   "score": 50.0,
+   "tier": "A"
+  },
+  {
+   "addr": "6551 Sierra Lane",
+   "name": "Onyx Optics Inc",
+   "rank": 49,
+   "score": 50.0,
+   "tier": "A"
+  },
+  {
+   "addr": "729 Heinz Ave",
+   "name": "Artworks Foundry LLC",
+   "rank": 50,
+   "score": 50.0,
+   "tier": "A"
+  },
+  {
+   "addr": "5210 bunche ave",
+   "name": "HYC USA INC",
+   "rank": 51,
+   "score": 50.0,
+   "tier": "A"
+  },
+  {
+   "addr": "499 Lesser St",
+   "name": "American Cylinder Head",
+   "rank": 52,
+   "score": 50.0,
+   "tier": "A"
+  },
+  {
+   "addr": "1575 Alvarado St",
+   "name": "Porifera Inc",
+   "rank": 53,
+   "score": 50.0,
+   "tier": "A"
+  },
+  {
+   "addr": "6920 Koll Center Pkwy Ste 213",
+   "name": "Bright Silicon Technologies",
+   "rank": 54,
+   "score": 46.0,
+   "tier": "A"
+  },
+  {
+   "addr": "45861 Hotchkiss Street",
+   "name": "Wisk Aero LLC",
+   "rank": 55,
+   "score": 46.0,
+   "tier": "A"
+  },
+  {
+   "addr": "1952 Williams Streeet",
+   "name": "R. Torre & Company, Inc.",
+   "rank": 56,
+   "score": 44.0,
+   "tier": "A"
+  },
+  {
+   "addr": "11711 Dublin Blvd",
+   "name": "Dublin Boulevard Owner LP",
+   "rank": 57,
+   "score": 43.0,
+   "tier": "A"
+  },
+  {
+   "addr": "7400 Gateway Blvd",
+   "name": "Allogene Therapeutics",
+   "rank": 58,
+   "score": 43.0,
+   "tier": "A"
+  },
+  {
+   "addr": "6200 Village Parkway",
+   "name": "Kensington Laboratories LLC",
+   "rank": 59,
+   "score": 43.0,
+   "tier": "A"
+  },
+  {
+   "addr": "385 Wright Brothers Ave",
+   "name": "La Original Ice Cream Distributors Corp",
+   "rank": 60,
+   "score": 43.0,
+   "tier": "A"
+  },
+  {
+   "addr": "23840 Foley Street",
+   "name": "Pacific Panels Inc",
+   "rank": 61,
+   "score": 43.0,
+   "tier": "A"
+  },
+  {
+   "addr": "6601 Owens Drive",
+   "name": "Noah Medical Corporation",
+   "rank": 62,
+   "score": 43.0,
+   "tier": "A"
+  },
+  {
+   "addr": "48119 Warm Springs Boulevard",
+   "name": "NEO Technology Solutions",
+   "rank": 63,
+   "score": 43.0,
+   "tier": "A"
+  },
+  {
+   "addr": "2700 Merced Street",
+   "name": "Fisica Applied Technologies Incorporation",
+   "rank": 64,
+   "score": 43.0,
+   "tier": "A"
+  },
+  {
+   "addr": "950 West Tower Avenue",
+   "name": "Pyka Inc",
+   "rank": 65,
+   "score": 43.0,
+   "tier": "A"
+  },
+  {
+   "addr": "2187 Alpine Way",
+   "name": "Arcadia Products LLC",
+   "rank": 66,
+   "score": 43.0,
+   "tier": "A"
+  },
+  {
+   "addr": "4211 Starboard Drive",
+   "name": "WisLab EMS Corporation",
+   "rank": 67,
+   "score": 43.0,
+   "tier": "A"
+  },
+  {
+   "addr": "1410 62nd Ave",
+   "name": "Atomic Machines",
+   "rank": 68,
+   "score": 43.0,
+   "tier": "A"
+  },
+  {
+   "addr": "2021 Alaska Packer Place Box 13",
+   "name": "Laney Canvas",
+   "rank": 69,
+   "score": 43.0,
+   "tier": "A"
+  },
+  {
+   "addr": "47757 Warm Springs Blvd",
+   "name": "MicroWave Technology Inc",
+   "rank": 70,
+   "score": 43.0,
+   "tier": "A"
+  },
+  {
+   "addr": "2500 Union Street",
+   "name": "Chris French Metal Inc",
+   "rank": 71,
+   "score": 43.0,
+   "tier": "A"
+  },
+  {
+   "addr": "2175 North Loop Rd",
+   "name": "Lighthouse for the blind",
+   "rank": 72,
+   "score": 43.0,
+   "tier": "A"
+  },
+  {
+   "addr": "2395 American Ave",
+   "name": "Harvest Food Products Inc",
+   "rank": 73,
+   "score": 43.0,
+   "tier": "A"
+  },
+  {
+   "addr": "48025 Fremont Blvd",
+   "name": "Mercury Systems",
+   "rank": 74,
+   "score": 43.0,
+   "tier": "A"
+  },
+  {
+   "addr": "2020 Williams Street",
+   "name": "Lyten",
+   "rank": 75,
+   "score": 43.0,
+   "tier": "A"
+  },
+  {
+   "addr": "4771 Arroyo Vista",
+   "name": "Del Cielo Brewing Co",
+   "rank": 76,
+   "score": 43.0,
+   "tier": "A"
+  },
+  {
+   "addr": "2810 Seventh St",
+   "name": "Form Energy Inc",
+   "rank": 77,
+   "score": 43.0,
+   "tier": "A"
+  },
+  {
+   "addr": "30987 San Clemente St",
+   "name": "Full Circle Electronics US LLC",
+   "rank": 78,
+   "score": 43.0,
+   "tier": "A"
+  },
+  {
+   "addr": "1301 66th St",
+   "name": "Wood Windows Warehouse",
+   "rank": 79,
+   "score": 43.0,
+   "tier": "A"
+  },
+  {
+   "addr": "1544 Stanley Blvd B",
+   "name": "Cemex Construction Materials Pacific LLC",
+   "rank": 80,
+   "score": 43.0,
+   "tier": "A"
+  },
+  {
+   "addr": "2485 Washington Ave",
+   "name": "Centeno Cabinets LLC",
+   "rank": 81,
+   "score": 43.0,
+   "tier": "A"
+  },
+  {
+   "addr": "47825 Warm Springs Blvd",
+   "name": "ReCarbon Inc",
+   "rank": 82,
+   "score": 43.0,
+   "tier": "A"
+  },
+  {
+   "addr": "7707 Gateway Boulevard",
+   "name": "Advanced Cell Diagnostics",
+   "rank": 83,
+   "score": 43.0,
+   "tier": "A"
+  },
+  {
+   "addr": "1101 Marina Village Parkway",
+   "name": "Reva Xray Systems Corporation",
+   "rank": 84,
+   "score": 43.0,
+   "tier": "A"
+  },
+  {
+   "addr": "1618 Doolittle Drive",
+   "name": "Charge Robotics",
+   "rank": 85,
+   "score": 43.0,
+   "tier": "A"
+  },
+  {
+   "addr": "601 Pinnacle Place",
+   "name": "CGA Packaging Inc",
+   "rank": 86,
+   "score": 43.0,
+   "tier": "A"
+  },
+  {
+   "addr": "536 Cleveland Ave",
+   "name": "Trans Bay Steel Corporation",
+   "rank": 87,
+   "score": 43.0,
+   "tier": "A"
+  },
+  {
+   "addr": "not given in the source",
+   "name": "Bright Machines, Inc.",
+   "rank": 88,
+   "score": 39.0,
+   "tier": "A"
+  },
+  {
+   "addr": "21053 ALexander Court",
+   "name": "Pentagon Technologies Inc",
+   "rank": 89,
+   "score": 38.0,
+   "tier": "A"
+  },
+  {
+   "addr": "1425 Maritime Street",
+   "name": "Eagle Rock Aggregates",
+   "rank": 90,
+   "score": 36.0,
+   "tier": "A"
+  },
+  {
+   "addr": "688 Sandoval Way",
+   "name": "ABC Technologies California LLC",
+   "rank": 91,
+   "score": 35.0,
+   "tier": "A"
+  },
+  {
+   "addr": "23953 Saklan Rd",
+   "name": "Marble & granite innovations inc",
+   "rank": 92,
+   "score": 35.0,
+   "tier": "A"
+  },
+  {
+   "addr": "2505 Monarch Street",
+   "name": "The Gold Bar Spirits Company Inc",
+   "rank": 93,
+   "score": 35.0,
+   "tier": "A"
+  },
+  {
+   "addr": "1500 Clay St",
+   "name": "Test Owner Co",
+   "rank": 94,
+   "score": 35.0,
+   "tier": "A"
+  },
+  {
+   "addr": "725 Taylor Ave",
+   "name": "Justan Cook Wood Furniture",
+   "rank": 95,
+   "score": 35.0,
+   "tier": "A"
+  },
+  {
+   "addr": "48580 Kato Road",
+   "name": "Essai",
+   "rank": 96,
+   "score": 35.0,
+   "tier": "A"
+  },
+  {
+   "addr": "46211 Research Ave",
+   "name": "Fralock",
+   "rank": 97,
+   "score": 35.0,
+   "tier": "A"
+  },
+  {
+   "addr": "727 Allston Way",
+   "name": "Raco Manufacturing & Engineering Co",
+   "rank": 98,
+   "score": 35.0,
+   "tier": "A"
+  },
+  {
+   "addr": "6550 Dumbarton Circle",
+   "name": "Alexza Pharmaceuticals Inc",
+   "rank": 99,
+   "score": 35.0,
+   "tier": "A"
+  },
+  {
+   "addr": "1501 Park Ave",
+   "name": "Motivate LLC",
+   "rank": 100,
+   "score": 35.0,
+   "tier": "A"
+  },
+  {
+   "addr": "855 MONTAGUE AVE",
+   "name": "ASHLOCK COMPANY DIV OF VISTAN CORP",
+   "rank": 101,
+   "score": 35.0,
+   "tier": "A"
+  },
+  {
+   "addr": "2425 Whipple Rd",
+   "name": "Morgan Advanced Materials",
+   "rank": 102,
+   "score": 35.0,
+   "tier": "A"
+  },
+  {
+   "addr": "47600 Westinghouse Dr",
+   "name": "Confluent Medical Technologies Inc",
+   "rank": 103,
+   "score": 35.0,
+   "tier": "A"
+  },
+  {
+   "addr": "225 Hammond Avenue",
+   "name": "R and M USA INC",
+   "rank": 104,
+   "score": 35.0,
+   "tier": "A"
+  },
+  {
+   "addr": "745 Heinz Ave",
+   "name": "Arris Composites",
+   "rank": 105,
+   "score": 35.0,
+   "tier": "A"
+  },
+  {
+   "addr": "14487 GRIFFITH STREET",
+   "name": "STEWART SUPERIOR CORPORATION",
+   "rank": 106,
+   "score": 35.0,
+   "tier": "A"
+  },
+  {
+   "addr": "2020 National Ave",
+   "name": "Bell Plastics",
+   "rank": 107,
+   "score": 35.0,
+   "tier": "A"
+  },
+  {
+   "addr": "31500 Hayman",
+   "name": "Yanfeng",
+   "rank": 108,
+   "score": 35.0,
+   "tier": "A"
+  },
+  {
+   "addr": "870 Doolittle Drive",
+   "name": "Bayfab Metals Inc",
+   "rank": 109,
+   "score": 35.0,
+   "tier": "A"
+  },
+  {
+   "addr": "41315 Albrae St",
+   "name": "Fremont Cycle Salvage & Accessories",
+   "rank": 110,
+   "score": 35.0,
+   "tier": "A"
+  },
+  {
+   "addr": "591 Montague Street",
+   "name": "Sinto Gourmet LLC",
+   "rank": 111,
+   "score": 35.0,
+   "tier": "A"
+  },
+  {
+   "addr": "not given in the source",
+   "name": "Tandem PV, Inc.",
+   "rank": 112,
+   "score": 32.0,
+   "tier": "A"
+  },
+  {
+   "addr": "not given in the source",
+   "name": "Nextracker LLC",
+   "rank": 113,
+   "score": 32.0,
+   "tier": "A"
+  },
+  {
+   "addr": "151 Greenville Road",
+   "name": "FM Greenville LLC",
+   "rank": 114,
+   "score": 28.0,
+   "tier": "A"
+  },
+  {
+   "addr": "1815 Manning Road",
+   "name": "IP Aramis LLC",
+   "rank": 115,
+   "score": 28.0,
+   "tier": "A"
+  },
+  {
+   "addr": "not given in the source",
+   "name": "Noon Energy Inc.",
+   "rank": 116,
+   "score": 24.0,
+   "tier": "A"
+  }
+ ],
+ "web_drops": []
+}
