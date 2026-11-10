@@ -1,0 +1,113 @@
+{
+ "smarts_industrial": {
+  "names_blanked": 79,
+  "rows": 5811,
+  "flag_Y": 3513,
+  "by_rule": {
+   "A: new No Exposure Certification, manufacturing SIC 20-39": 2484,
+   "not flagged: non-manufacturing SIC (42)": 1314,
+   "A: new Industrial General Permit enrolment, manufacturing SIC 20-39": 1029,
+   "not flagged: non-manufacturing SIC (50)": 401,
+   "not flagged: non-manufacturing SIC (blank)": 146,
+   "not flagged: non-manufacturing SIC (41)": 118,
+   "not flagged: non-manufacturing SIC (99)": 79,
+   "not flagged: non-manufacturing SIC (14)": 63,
+   "not flagged: non-manufacturing SIC (49)": 37,
+   "not flagged: non-manufacturing SIC (51)": 24,
+   "not flagged: non-manufacturing SIC (44)": 20,
+   "not flagged: non-manufacturing SIC (45)": 16,
+   "not flagged: non-manufacturing SIC (13)": 16,
+   "not flagged: non-manufacturing SIC (73)": 11,
+   "not flagged: non-manufacturing SIC (02)": 9,
+   "not flagged: non-manufacturing SIC (47)": 7,
+   "not flagged: non-manufacturing SIC (10)": 7,
+   "not flagged: non-manufacturing SIC (76)": 5,
+   "not flagged: non-manufacturing SIC (17)": 4,
+   "not flagged: non-manufacturing SIC (40)": 4,
+   "not flagged: non-manufacturing SIC (65)": 3,
+   "not flagged: non-manufacturing SIC (75)": 2,
+   "not flagged: non-manufacturing SIC (87)": 2,
+   "not flagged: non-manufacturing SIC (43)": 2,
+   "not flagged: non-manufacturing SIC (07)": 2,
+   "not flagged: non-manufacturing SIC (59)": 1,
+   "not flagged: non-manufacturing SIC (89)": 1,
+   "not flagged: non-manufacturing SIC (72)": 1,
+   "not flagged: non-manufacturing SIC (79)": 1,
+   "not flagged: non-manufacturing SIC (15)": 1,
+   "not flagged: non-manufacturing SIC (54)": 1
+  },
+  "null_company_name": 81,
+  "null_site_address": 3,
+  "null_record_date": 0,
+  "date_range": [
+   "2024-01-02",
+   "2026-10-30"
+  ]
+ },
+ "smarts_construction": {
+  "names_blanked": 141,
+  "developer_names_blanked": 118,
+  "rows": 12681,
+  "flag_Y": 825,
+  "by_rule": {
+   "not flagged: linear, utility, transportation or other": 5383,
+   "not flagged: residential": 3762,
+   "not flagged: commercial only": 2711,
+   "A: construction stormwater enrolment marked industrial": 825
+  },
+  "null_company_name": 150,
+  "null_site_address": 16,
+  "null_record_date": 0,
+  "date_range": [
+   "2024-01-03",
+   "2026-10-30"
+  ]
+ },
+ "calcompetes_awards": {
+  "rows": 58,
+  "flag_Y": 47,
+  "by_rule": {
+   "A: named award, industry text names manufacturing or production": 47,
+   "not flagged: industry text does not name manufacturing": 11
+  },
+  "null_company_name": 0,
+  "null_site_address": 58,
+  "null_record_date": 0,
+  "date_range": [
+   "2024-04-25",
+   "2026-06-18"
+  ]
+ },
+ "caeatfa_ste_awards": {
+  "rows": 65,
+  "flag_Y": 65,
+  "by_rule": {
+   "A: named equipment tax exclusion award": 65
+  },
+  "null_company_name": 0,
+  "null_site_address": 65,
+  "null_record_date": 0,
+  "date_range": [
+   "2024-07-16",
+   "2025-12-09"
+  ]
+ },
+ "abc_manufacturer_licences": {
+  "names_blanked": 1,
+  "rows": 3905,
+  "flag_Y": 2440,
+  "by_rule": {
+   "B: manufacturer licence first issued 2024 or later": 1901,
+   "not flagged: application record with status active (meaning of a non-pending application record not confirmed)": 1464,
+   "A: pending licence application, manufacturer type": 539,
+   "not flagged: application record with status surend (meaning of a non-pending application record not confirmed)": 1
+  },
+  "null_company_name": 0,
+  "null_site_address": 7,
+  "null_record_date": 2004,
+  "date_range": [
+   "2024-01-02",
+   "2026-11-05"
+  ]
+ }
+}
