@@ -139,7 +139,7 @@ Outputs: `adams_top25_contacts.csv` and `weld_top25_contacts.csv` (25 rows each,
 - **Adams rank 12 (1631 Manilla Rd):** the only permit is a 2021 pipeline hydrostatic test for an oil and gas gathering line.
 - **Adams rank 5 (Ardent Mills) and rank 14 (Copeland Precast East):** each holds its own live construction stormwater permit (received 2025-10 and 2024-04), which supports the expansion signal.
 - **Weld rank 3 (Texas Farm Products):** The Weitz Company holds a live construction permit at the address under the project name "J.D. Heiskell & Co."
-- **Weld is thin by nature:** 16 of its 25 rows are UCC machinery buyers with no state permit and, in 12 cases, a withheld address. For those a phone number plus ZoomInfo is the only route.
+- **Weld is thin by nature:** 16 of its 25 rows have no state water permit at their address, and 10 have a withheld address. Most are UCC machinery buyers. For those a phone number plus ZoomInfo is the only route.
 
 ## Re-running a county
 
