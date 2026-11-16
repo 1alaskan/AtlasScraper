@@ -1,6 +1,6 @@
 # Step 6: contact enrichment, Denver top accounts
 
-Run 2026-11-16. Output: `denver_top25_contacts.csv` (32 rows, 22 columns). Scripts: `scripts/wq_contact_roles.py`, `scripts/build_contacts.py`.
+Run 2026-11-16. Output: `denver_top25_contacts.csv` (32 rows, 22 columns). Scripts: `scripts/wq_contact_roles.py`, `scripts/build_contacts.py`. Adams and Weld were added the same day; their section is at the end of this file.
 
 **Status: the phone task is mostly not done.** Only 2 of 27 company rows have a checked phone. The other 25 could not be checked because opening company websites needed an approval that went unanswered during the run. Permit contacts and contractors are complete for what the records hold.
 
@@ -98,3 +98,51 @@ Run 2026-11-16. Output: `denver_top25_contacts.csv` (32 rows, 22 columns). Scrip
 | 30 | 23 | Intertech Plastics |
 | 31 | 25 | Never Summer Industries |
 | 32 | 24 | Starko Gear |
+
+---
+
+# Adams and Weld top 25 (added 2026-11-16, second run)
+
+Outputs: `adams_top25_contacts.csv` and `weld_top25_contacts.csv` (25 rows each, same 22 columns), from `step5-analysis/adams/adams_ranked_accounts_v3.csv` and `step5-analysis/weld/weld_ranked_accounts_v3.csv`, ranks 1 to 25. Denver stays as the 32-row file above, which holds its top 25.
+
+**Status: no phones for either county.** The page fetches were tried again and again went unanswered, so every company row says "Phone not checked". Permit contacts and contractors are done by rule from the state water sheet.
+
+## Assumptions for these two files
+
+1. **Built by rule, not by hand.** `scripts/wq_cache.py` turns the sheet into a cache with no personal fields; `scripts/enrich_county.py` matches each account to permits by house number and street inside the county (or the same zip), plus any water permit already in the county's evidence file.
+2. **A permit at the address held by a different name is not used.** Three cases: RK Industries (permit held by Creative Touch Interiors), Hirsh Precision (Spartronics Frederick), Schlosser Signs (Hexcel). Each is named in `coverage_note`. They may be earlier occupiers or neighbours; nothing here settles which.
+3. **Which permit supplies the contact:** a live operating permit first (industrial stormwater, then no-exposure, individual, pretreatment), then an ended one, then a construction permit.
+4. **On-site** means a company contact whose listed city is the facility's city, or whose title names the plant, site or facility. A company contact at another city is `unknown`. A contractor's contact on a construction permit is `third_party`.
+5. **Contractors come only from construction stormwater permits** (permittee and property owner organisation), with the project name, status and received month in the role text. The role is left as "construction stormwater permittee" because the sheet does not say general or civil. The Adams and Weld permit files carry no contractor column, so there is no equivalent of the Denver permit layer.
+6. **A company that holds its own construction permit** is noted as a sign of site work, not listed as its own contractor.
+7. **Organisation names with no business word are dropped** from the contractor lists, to keep private individuals out.
+8. `match_confidence` is carried from the ranking: confirmed where the ranking says so or a matching state permit sits at the address, otherwise possible, blank for an address with no company.
+
+## Coverage, all three counties
+
+| | Denver (32) | Adams (25) | Weld (25) |
+|---|---|---|---|
+| Site phone found | 2 | 0 | 0 |
+| HQ-only number | 0 | 0 | 0 |
+| Phone not checked (blocked) | 25 | 19 | 25 |
+| Phone skipped (no company to call) | 5 | 6 | 0 |
+| Permit contact recorded | 14 | 14 | 7 |
+| of which on-site | 12 | 9 | 5 |
+| of which third party | 1 | 4 | 0 |
+| of which unknown | 1 | 1 | 2 |
+| At least one contractor | 14 | 6 | 3 |
+
+## What the permit records say about some rows
+
+- **Adams rank 16 (6300 N Powhaton Rd, "Project Chorro"):** the construction permit's project name is "AMZ IXD BJC1", built by Graycor Construction for Ambrose Property Group. That reads as a logistics building, not a plant.
+- **Adams rank 18 (16000 E 32nd Ave):** the construction permit is the Aurora Animal Shelter, owner City of Aurora. Not a compressed-air lead.
+- **Adams rank 12 (1631 Manilla Rd):** the only permit is a 2021 pipeline hydrostatic test for an oil and gas gathering line.
+- **Adams rank 5 (Ardent Mills) and rank 14 (Copeland Precast East):** each holds its own live construction stormwater permit (received 2025-10 and 2024-04), which supports the expansion signal.
+- **Weld rank 3 (Texas Farm Products):** The Weitz Company holds a live construction permit at the address under the project name "J.D. Heiskell & Co."
+- **Weld is thin by nature:** 16 of its 25 rows are UCC machinery buyers with no state permit and, in 12 cases, a withheld address. For those a phone number plus ZoomInfo is the only route.
+
+## Re-running a county
+
+`python3 -I step6-contacts/scripts/wq_cache.py active_permits.xlsx wq_cache.json`, then from the repo root
+`python3 -I step6-contacts/scripts/enrich_county.py <County> <ranked.csv> <evidence.csv> wq_cache.json <out.csv> 25 [overrides.json]`.
+It prints one review line per account and the coverage counts. Phones go in `overrides.json`, keyed by rank: `{"2": {"phone": "...", "ptype": "site", "purl": "...", "checked": "2026-11-16"}}`. `"accept_permit": true` keeps a permit whose holder does not match by name.
