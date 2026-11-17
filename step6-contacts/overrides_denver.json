@@ -1,0 +1,152 @@
+{
+ "1": {
+  "ptype": "none_found",
+  "purl": "https://www.prnewswire.com/news-releases/pepsico-beverages-north-america-acquires-nearly-152-acres-of-land-for-construction-of-1-2-million-square-foot-manufacturing-facility-in-high-point-development-district-expands-denver-footprint-301585644.html",
+  "checked": "2026-11-16",
+  "phone_note": "No phone found: the company's press release on the plant lists only individual media contacts, no main line; no pepsico.com page surfaced."
+ },
+ "2": {
+  "phone": "303-843-7600",
+  "ptype": "hq_only",
+  "purl": "https://www.albertsonscompanies.com/suppliers/overview/default.aspx",
+  "checked": "2026-11-16",
+  "phone_note": "Only a number for another office or line was found: main line of the Albertsons Mountain West Division office in Englewood, not the milk plant."
+ },
+ "3": {
+  "phone": "312-549-5000",
+  "ptype": "hq_only",
+  "purl": "https://www.conagrabrands.com/investor-relations/contact-information",
+  "checked": "2026-11-16",
+  "phone_note": "Only a number for another office or line was found: Chicago head office. Conagra's careers page prints the Florence St plant address but no phone."
+ },
+ "4": {
+  "phone": "303-778-3100",
+  "ptype": "hq_only",
+  "purl": "https://www.thekrogerco.com/contact-us/our-divisions/",
+  "checked": "2026-11-16",
+  "phone_note": "Only a number for another office or line was found: King Soopers division office at 65 Tejon St, Denver, not the Yuma St bakery."
+ },
+ "5": {
+  "purl": "",
+  "phone_note": "Phone not checked: no company-owned page surfaced in search."
+ },
+ "6": {
+  "ptype": "none_found",
+  "purl": "https://www.nestlejobs.com/nestle-purina/locations/denver",
+  "checked": "2026-11-16",
+  "phone_note": "No phone found: the Nestle careers page for Denver shows only a recruiting help line."
+ },
+ "8": {
+  "purl": "https://www.dawnfoods.com/distribution",
+  "phone_note": "Phone not checked: the Dawn Foods page returned no readable content."
+ },
+ "9": {
+  "purl": "",
+  "phone_note": "Phone not checked: no Lakin Tire page surfaced in search, so no company page was read."
+ },
+ "10": {
+  "ptype": "none_found",
+  "purl": "",
+  "checked": "2026-11-16",
+  "phone_note": "No phone found: no official company website turned up in two searches (only directories, which are not allowed sources)."
+ },
+ "11": {
+  "purl": "https://verdepricklypear.com/",
+  "phone_note": "Phone not checked: the company's site refused the fetch under its robots rule; not worked around."
+ },
+ "13": {
+  "phone": "720-222-3663",
+  "ptype": "site",
+  "purl": "https://blazysusan.com/resources/",
+  "checked": "2026-11-16",
+  "phone_note": "Phone from the company's own site or release: footer number beside the 10660 E 51st Ave address."
+ },
+ "14": {
+  "phone": "800-227-4455",
+  "ptype": "hq_only",
+  "purl": "https://www.cargill.com/page/cargill-contact-us",
+  "checked": "2026-11-16",
+  "phone_note": "Only a number for another office or line was found: Minneapolis head office line. The page lists no Denver feed mill number."
+ },
+ "16": {
+  "ptype": "none_found",
+  "purl": "",
+  "checked": "2026-11-16",
+  "phone_note": "No phone found: no official company website turned up in two searches (only directories, which are not allowed sources)."
+ },
+ "17": {
+  "ptype": "none_found",
+  "purl": "https://www.hearthdenver.com/",
+  "checked": "2026-11-16",
+  "phone_note": "No phone found: a Denver bakery site under the Hearth name lists four shops and no phone; it does not show the LLC name, so the match is likely, not confirmed."
+ },
+ "18": {
+  "purl": "",
+  "phone_note": "Phone not checked: no fritolay.com page surfaced in search."
+ },
+ "20": {
+  "purl": "",
+  "phone_note": "Phone not checked: no amcor.com page surfaced in search."
+ },
+ "21": {
+  "phone": "720-539-9212",
+  "ptype": "site",
+  "purl": "https://co-innovate.com/",
+  "checked": "2026-11-16",
+  "phone_note": "Phone from the company's own site or release: footer contact number with the company's only listed address.",
+  "addr": "5326 Tennyson St"
+ },
+ "23": {
+  "ptype": "none_found",
+  "purl": "",
+  "checked": "2026-11-16",
+  "phone_note": "No phone found: no official company website turned up in two searches (only directories, which are not allowed sources)."
+ },
+ "25": {
+  "phone": "720-933-0094",
+  "ptype": "hq_only",
+  "purl": "https://pacificairdenver.com/",
+  "checked": "2026-11-16",
+  "phone_note": "Only a number for another office or line was found: labelled office. The site shows a shop at 6160 W 55th Ave, Arvada, not W 2nd Ave, so the company may have moved. A second number labelled cell was skipped."
+ },
+ "26": {
+  "phone": "303-632-6100",
+  "ptype": "site",
+  "purl": "https://rbmachine.biz/contact-us/",
+  "checked": "2026-11-16",
+  "phone_note": "Phone from the company's own site or release: contact page number with the company's only listed address.",
+  "addr": "1100 W. Louisiana Avenue"
+ },
+ "27": {
+  "ptype": "none_found",
+  "purl": "https://www.customstonecolorado.com/",
+  "checked": "2026-11-16",
+  "phone_note": "No phone found: a Custom Stone LLC site in Littleton could not be tied to the 4398 Broadway company, so nothing was recorded."
+ },
+ "28": {
+  "phone": "303-371-0515",
+  "ptype": "site",
+  "purl": "https://bigmetaladditive.com/",
+  "checked": "2026-11-16",
+  "phone_note": "Phone from the company's own site or release: header and contact section number with the company's only listed address.",
+  "addr": "3891 Paris St."
+ },
+ "29": {
+  "ptype": "none_found",
+  "purl": "",
+  "checked": "2026-11-16",
+  "phone_note": "No phone found: no official company website turned up in two searches (only directories, which are not allowed sources)."
+ },
+ "30": {
+  "ptype": "none_found",
+  "purl": "https://sunflower-emu-fa7s.squarespace.com/industrial-plastics-manufacturing",
+  "checked": "2026-11-16",
+  "phone_note": "No phone found: two pages of a Squarespace-hosted copy of the Intertech site show no phone; the main domain did not surface."
+ },
+ "32": {
+  "ptype": "none_found",
+  "purl": "https://starkogear.com/privacypolicy",
+  "checked": "2026-11-16",
+  "phone_note": "No phone found: the company's site shows no phone and no street address."
+ }
+}

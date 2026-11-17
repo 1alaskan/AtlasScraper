@@ -2,7 +2,7 @@
 
 Run 2026-11-16. Output: `denver_top25_contacts.csv` (32 rows, 22 columns). Scripts: `scripts/wq_contact_roles.py`, `scripts/build_contacts.py`. Adams and Weld were added the same day; their section is at the end of this file.
 
-**Status: the phone task is mostly not done.** Only 2 of 27 company rows have a checked phone. The other 25 could not be checked because opening company websites needed an approval that went unanswered during the run. Permit contacts and contractors are complete for what the records hold.
+**Status: complete for all three counties.** The phone columns were filled in a later pass the same day; the final counts are in the last section, "Phone pass", and they replace the phone rows of the two coverage tables above it.
 
 ## Assumptions (read first)
 
@@ -105,7 +105,7 @@ Run 2026-11-16. Output: `denver_top25_contacts.csv` (32 rows, 22 columns). Scrip
 
 Outputs: `adams_top25_contacts.csv` and `weld_top25_contacts.csv` (25 rows each, same 22 columns), from `step5-analysis/adams/adams_ranked_accounts_v3.csv` and `step5-analysis/weld/weld_ranked_accounts_v3.csv`, ranks 1 to 25. Denver stays as the 32-row file above, which holds its top 25.
 
-**Status: no phones for either county.** The page fetches were tried again and again went unanswered, so every company row says "Phone not checked". Permit contacts and contractors are done by rule from the state water sheet.
+Permit contacts and contractors are done by rule from the state water sheet. Phones were added in the phone pass (last section).
 
 ## Assumptions for these two files
 
@@ -146,3 +146,35 @@ Outputs: `adams_top25_contacts.csv` and `weld_top25_contacts.csv` (25 rows each,
 `python3 -I step6-contacts/scripts/wq_cache.py active_permits.xlsx wq_cache.json`, then from the repo root
 `python3 -I step6-contacts/scripts/enrich_county.py <County> <ranked.csv> <evidence.csv> wq_cache.json <out.csv> 25 [overrides.json]`.
 It prints one review line per account and the coverage counts. Phones go in `overrides.json`, keyed by rank: `{"2": {"phone": "...", "ptype": "site", "purl": "...", "checked": "2026-11-16"}}`. `"accept_permit": true` keeps a permit whose holder does not match by name.
+
+---
+
+# Phone pass (added 2026-11-16, third run)
+
+The direct page fetches never got their approval, so three search agents (one per county) looked up each company row instead. Their results are typed into `overrides_denver.json`, `overrides_adams.json` and `overrides_weld.json`, which the build scripts read.
+
+## Rules the agents worked to
+
+1. Sources: the company's own website or its own press release only. A number seen only on a listing or data site was never recorded. No Google Maps or Places.
+2. Method: a web search to find the official site, then a read of a page that the search returned. At most two searches and two page reads per company. A page that refused the fetch (robots) was left alone.
+3. `site` means the company's page ties the number to this facility, or shows this as its only location. `hq_only` means the company's page gives only a head office, division office, national line or other location. `none_found` means a company page was read and shows no phone, or no official website turned up at all. Blank with "Phone not checked" means the company has a site that the search did not surface or that could not be read.
+4. Numbers labelled as a cell, and numbers that sit only beside a named person, were not recorded (Pacific Air's cell line, Pioneer Press's release contact).
+5. Where a same-named business could not be tied to the ranked company, nothing was recorded (Custom Stone, Valhalla Industries, Legacy Pie, Quantum J's Canning, Hearth Baking's address).
+6. Four withheld addresses are now shown because the company's own website prints them: Never Summer, CO-Innovate, R B Machine, Big Metal Additive.
+
+## Final phone coverage
+
+| | Denver (32) | Adams (25) | Weld (25) |
+|---|---|---|---|
+| Site phone | 6 | 2 | 2 |
+| HQ-only or other-office number | 5 | 2 | 3 |
+| None found | 10 | 12 | 15 |
+| Not checked | 6 | 3 | 5 |
+| Skipped (no company to call) | 5 | 6 | 0 |
+
+- **Site phone and an on-site permit role together:** Ardent Mills (Commerce City mill) and Swarco Colorado Paint, both Adams. No Denver or Weld row has both.
+- **Site phones:** Denver: Titan Fittings, Never Summer, Blazy Susan, CO-Innovate, R B Machine, Big Metal Additive. Adams: Ardent Mills, Swarco Colorado Paint. Weld: TruLog Siding, Pneu Line Supply.
+- **HQ-only (ZoomInfo or front-desk route):** Denver: Safeway milk plant, Conagra, King Soopers bakery, Cargill, Pacific Air. Adams: Shamrock Foods, Pretred. Weld: Texas Farm Products, Swift Beef (JBS), Schlosser Signs.
+- **Three numbers to verify before relying on them:** Pretred (from a copy of its site on a Squarespace default address, beside a different Aurora address), Schlosser Signs (2020 release, former Loveland address), Pacific Air (site shows an Arvada shop, not the W 2nd Ave address in the lien).
+- **Not checked, still open:** Denver: Quality Linings, Dawn Foods, Lakin Tire, Verde Prickly Pear, Frito-Lay, Amcor. Adams: Philip Morris ZYN plant, RK Industries, D-A Packaging. Weld: Agilent, Hirsh Precision, Boulder Scientific, Pioneer Press, Raptor Materials. Each has a website that either did not surface in search, returned nothing readable, or refused the fetch.
+- **Most "none found" rows are small shops with no website.** That is a finding about the company, not a gap in the search.

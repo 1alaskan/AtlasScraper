@@ -1,0 +1,114 @@
+{
+ "1": {
+  "purl": "",
+  "phone_note": "Phone not checked: no Philip Morris page surfaced in search, so no company page was read."
+ },
+ "2": {
+  "ptype": "none_found",
+  "purl": "https://www.forgenano.com/about-us/",
+  "checked": "2026-11-16",
+  "phone_note": "No phone found: the company's site prints this address as its headquarters but shows no phone."
+ },
+ "3": {
+  "purl": "",
+  "phone_note": "Phone not checked: no RK-owned page surfaced in search, so no company page was read."
+ },
+ "4": {
+  "phone": "720-583-4088",
+  "ptype": "hq_only",
+  "purl": "https://buttercup-sphere-5glj.squarespace.com",
+  "checked": "2026-11-16",
+  "phone_note": "Only a number for another office or line was found: footer number on a copy of the Pretred site that sits on a Squarespace default address, beside 3700 Salida St Unit 20, Aurora, not the Denali St plant. Verify before use."
+ },
+ "5": {
+  "phone": "720-225-9484",
+  "ptype": "site",
+  "purl": "https://ardentmills.com/our-facilities/colorado/commerce-city-mill",
+  "checked": "2026-11-16",
+  "phone_note": "Phone from the company's own site or release: the Commerce City Mill page lists it with the mill address. The corporate line is 800-851-9618."
+ },
+ "6": {
+  "ptype": "none_found",
+  "purl": "https://www.trustile.com/dealers/dealers",
+  "checked": "2026-11-16",
+  "phone_note": "No phone found: the TruStile page read shows no company phone and points to dealers."
+ },
+ "7": {
+  "ptype": "none_found",
+  "purl": "https://andrew-maxey.squarespace.com/products",
+  "checked": "2026-11-16",
+  "phone_note": "No phone found: the Vartega site footer prints the Pecos St address (Suite 203) but no phone."
+ },
+ "8": {
+  "purl": "",
+  "phone_note": "Phone not checked: no company-owned page surfaced in search (the plant was formerly Crystal Packaging, owned by D-A Lubricant, per search results)."
+ },
+ "10": {
+  "phone": "303-388-9265",
+  "ptype": "site",
+  "purl": "https://www.swarco.com/companies/colorado-paint-company",
+  "checked": "2026-11-16",
+  "phone_note": "Phone from the company's own site or release: the Swarco Colorado Paint page lists it and names 2851 Walden St as the manufacturing facility."
+ },
+ "11": {
+  "ptype": "none_found",
+  "purl": "https://www.quikrete.com/ContactUs/Main.asp",
+  "checked": "2026-11-16",
+  "phone_note": "No phone found: the Quikrete contact page shows only the Atlanta head office address and no phone or Denver plant listing."
+ },
+ "13": {
+  "ptype": "none_found",
+  "purl": "",
+  "checked": "2026-11-16",
+  "phone_note": "No phone found: no official company website turned up in two searches (only directories, which are not allowed sources)."
+ },
+ "14": {
+  "ptype": "none_found",
+  "purl": "",
+  "checked": "2026-11-16",
+  "phone_note": "No phone found: no official company website turned up in two searches (only directories, which are not allowed sources)."
+ },
+ "15": {
+  "phone": "855-397-4255",
+  "ptype": "hq_only",
+  "purl": "https://www.shamrockfoodservice.com/?p=15861",
+  "checked": "2026-11-16",
+  "phone_note": "Only a number for another office or line was found: national customer care line. The company's Colorado page lists this address as delivery and receiving only, with no phone."
+ },
+ "17": {
+  "ptype": "none_found",
+  "purl": "",
+  "checked": "2026-11-16",
+  "phone_note": "No phone found: a similarly named telecom contractor in Thornton has a site, but it could not be tied to this machinery buyer, so nothing was recorded."
+ },
+ "19": {
+  "ptype": "none_found",
+  "purl": "",
+  "checked": "2026-11-16",
+  "phone_note": "No phone found: no official company website turned up in two searches (only directories, which are not allowed sources)."
+ },
+ "20": {
+  "ptype": "none_found",
+  "purl": "",
+  "checked": "2026-11-16",
+  "phone_note": "No phone found: no official company website turned up in two searches (only directories, which are not allowed sources)."
+ },
+ "21": {
+  "ptype": "none_found",
+  "purl": "",
+  "checked": "2026-11-16",
+  "phone_note": "No phone found: no official company website turned up in two searches (only directories, which are not allowed sources)."
+ },
+ "22": {
+  "ptype": "none_found",
+  "purl": "",
+  "checked": "2026-11-16",
+  "phone_note": "No phone found: no official company website turned up in two searches (only directories, which are not allowed sources)."
+ },
+ "23": {
+  "ptype": "none_found",
+  "purl": "https://www.nosh.com/pr/2026/02/19/izzio-artisan-bakery-fuels-next-chapter-of-growth-with-firstever-integrated-marketing-campaign-and-new-sourdough-innovation",
+  "checked": "2026-11-16",
+  "phone_note": "No phone found: no Izzio-owned page surfaced; a company press release shows no phone."
+ }
+}

@@ -92,6 +92,17 @@ D = {
    note="Address was withheld in the ranking; shown here because the company's own website prints it in its footer with this phone. No air or water permit record, so no permit contact. No contractor found."),
 32: dict(match="confirmed", note=BLOCKED+" Site address withheld in the ranking. No permit record. No contractor found."),
 }
+import json
+PH = json.load(open("step6-contacts/overrides_denver.json"))  # phone pass, typed from the search agents' reports
+WITHHELD_FIX = "Site address withheld in the ranking; a business address shows on third-party listings of its federal contractor registration but was not recorded from those."
+for k, o in PH.items():
+    d = D[int(k)]
+    d["note"] = d["note"].replace(BLOCKED, o["phone_note"])
+    if o.get("addr"):
+        d["addr"] = o["addr"]
+        d["note"] = d["note"].replace(WITHHELD_FIX, "Site address withheld in the ranking.").replace("Site address withheld in the ranking.", "Address was withheld in the ranking; shown here because the company's own website prints it.")
+    for a_, b_ in (("phone", "phone"), ("ptype", "ptype"), ("purl", "purl"), ("checked", "checked")):
+        if o.get(a_): d[b_] = o[a_]
 rows = list(csv.DictReader(open(RANKED, encoding="utf-8-sig")))[:N]
 out = []
 for r in rows:
@@ -101,7 +112,7 @@ for r in rows:
     out.append({
         "rank": k, "company_name": r["company_name"], "site_address": d.get("addr", r["site_address"]), "zip": r["zip"],
         "match_confidence": d["match"], "site_phone": d.get("phone", ""), "phone_type": d.get("ptype", ""),
-        "phone_source_url": d.get("purl", ""), "phone_checked_date": CHECKED if d.get("phone") else "",
+        "phone_source_url": d.get("purl", ""), "phone_checked_date": d.get("checked", CHECKED if d.get("phone") else ""),
         "permit_contact_role": d.get("role", ""), "permit_contact_org": d.get("org", ""),
         "permit_contact_relation": d.get("rel", ""), "permit_contact_source": d.get("src", ""),
         "contractors": "; ".join(c[0] for c in con), "contractor_roles": "; ".join(c[1] for c in con),
@@ -112,7 +123,7 @@ with open(OUT, "w", newline="", encoding="utf-8") as f:
 c = lambda fn: sum(1 for o in out if fn(o))
 print("rows", len(out))
 print("site", c(lambda o: o["phone_type"] == "site"), "hq_only", c(lambda o: o["phone_type"] == "hq_only"), "none_found", c(lambda o: o["phone_type"] == "none_found"),
-      "not checked (blocked)", c(lambda o: o["coverage_note"].startswith("Phone not checked")), "skipped", c(lambda o: o["coverage_note"].startswith("Phone lookup skipped")))
+      "not checked", c(lambda o: o["coverage_note"].startswith("Phone not checked")), "skipped", c(lambda o: o["coverage_note"].startswith("Phone lookup skipped")))
 print("permit contact", c(lambda o: o["permit_contact_role"]), "on_site", c(lambda o: o["permit_contact_relation"] == "on_site"),
       "third_party", c(lambda o: o["permit_contact_relation"] == "third_party"), "unknown", c(lambda o: o["permit_contact_relation"] == "unknown"))
 print("contractor", c(lambda o: o["contractors"]))

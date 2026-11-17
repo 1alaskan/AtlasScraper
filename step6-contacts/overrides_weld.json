@@ -1,0 +1,147 @@
+{
+ "1": {
+  "purl": "https://www.agilent.com/en-us/contact-us/united-states",
+  "phone_note": "Phone not checked: the Agilent contact page refused the fetch under its robots rule; not worked around."
+ },
+ "2": {
+  "purl": "",
+  "phone_note": "Phone not checked: no company-owned page surfaced in search, so no company page was read."
+ },
+ "3": {
+  "phone": "936-564-3711",
+  "ptype": "hq_only",
+  "purl": "https://tfpnutrition.com/node/74343",
+  "checked": "2026-11-16",
+  "phone_note": "Only a number for another office or line was found: main line printed with the Nacogdoches TX head office. No Platteville number on the site."
+ },
+ "4": {
+  "purl": "",
+  "phone_note": "Phone not checked: no company-owned page surfaced in search, so no company page was read."
+ },
+ "5": {
+  "ptype": "none_found",
+  "purl": "https://ursamajor.com/?p=2556",
+  "checked": "2026-11-16",
+  "phone_note": "No phone found: two company pages print the County Road 7 address but no phone; the contact page did not surface."
+ },
+ "6": {
+  "ptype": "none_found",
+  "purl": "",
+  "checked": "2026-11-16",
+  "phone_note": "No phone found: no official company website turned up in two searches (only directories, which are not allowed sources)."
+ },
+ "7": {
+  "ptype": "none_found",
+  "purl": "",
+  "checked": "2026-11-16",
+  "phone_note": "No phone found: no official company website turned up in two searches (only directories, which are not allowed sources)."
+ },
+ "8": {
+  "ptype": "none_found",
+  "purl": "",
+  "checked": "2026-11-16",
+  "phone_note": "No phone found: no official company website turned up in two searches (only directories, which are not allowed sources)."
+ },
+ "9": {
+  "ptype": "none_found",
+  "purl": "",
+  "checked": "2026-11-16",
+  "phone_note": "No phone found: no official site found; a differently named canning firm in the same zip could not be tied to this company."
+ },
+ "10": {
+  "ptype": "none_found",
+  "purl": "",
+  "checked": "2026-11-16",
+  "phone_note": "No phone found: no official company website turned up in two searches (only directories, which are not allowed sources)."
+ },
+ "11": {
+  "ptype": "none_found",
+  "purl": "",
+  "checked": "2026-11-16",
+  "phone_note": "No phone found: no official company website turned up in two searches (only directories, which are not allowed sources)."
+ },
+ "12": {
+  "purl": "",
+  "phone_note": "Phone not checked: a company press release prints a number beside a named contact (https://prnewswire.com/news-releases/pioneer-press-installs-8-color-rmgt-9-series-led-uv-perfecting-press-301653247.html). It could not be confirmed as the main line, so it is not recorded."
+ },
+ "13": {
+  "ptype": "none_found",
+  "purl": "",
+  "checked": "2026-11-16",
+  "phone_note": "No phone found: no official company website turned up in two searches (only directories, which are not allowed sources)."
+ },
+ "14": {
+  "phone": "970-506-8000",
+  "ptype": "hq_only",
+  "purl": "https://jbsfoodsgroup.com/businesses/jbs-foods-usa",
+  "checked": "2026-11-16",
+  "phone_note": "Only a number for another office or line was found: JBS Foods USA head office, 1770 Promontory Circle, Greeley. The site lists no number for the beef plant."
+ },
+ "15": {
+  "phone": "970-593-1334",
+  "ptype": "hq_only",
+  "purl": "https://prnewswire.com/news-releases/schlosser-signs-inc-is-celebrating-20-years-in-business-with-a-new-logo-301033121.html",
+  "checked": "2026-11-16",
+  "phone_note": "Only a number for another office or line was found: company number from a 2020 release that gives its former Loveland address (an individual extension was dropped). Verify it still rings the Windsor plant."
+ },
+ "16": {
+  "ptype": "none_found",
+  "purl": "",
+  "checked": "2026-11-16",
+  "phone_note": "No phone found: no official company website turned up in two searches (only directories, which are not allowed sources)."
+ },
+ "17": {
+  "purl": "",
+  "phone_note": "Phone not checked: no company-owned page surfaced in search, so no company page was read."
+ },
+ "18": {
+  "phone": "970-646-4490",
+  "ptype": "site",
+  "purl": "https://d28bev1ppoxa3f.cloudfront.net/wp-content/uploads/2026/02/23211100/TruLog-2026-Catalog.pdf",
+  "checked": "2026-11-16",
+  "phone_note": "Phone from the company's own site or release: TruLog's 2026 catalog prints it with 20684 Niobrara Blvd, LaSalle, under a free-estimate heading, so it may ring sales."
+ },
+ "19": {
+  "ptype": "none_found",
+  "purl": "",
+  "checked": "2026-11-16",
+  "phone_note": "No phone found: no official company website turned up in two searches (only directories, which are not allowed sources)."
+ },
+ "20": {
+  "ptype": "none_found",
+  "purl": "",
+  "checked": "2026-11-16",
+  "phone_note": "No phone found: no official company website turned up in two searches (only directories, which are not allowed sources)."
+ },
+ "21": {
+  "ptype": "none_found",
+  "purl": "",
+  "checked": "2026-11-16",
+  "phone_note": "No phone found: no official company website turned up in two searches (only directories, which are not allowed sources)."
+ },
+ "22": {
+  "phone": "970-506-9670",
+  "ptype": "site",
+  "purl": "https://pneulinesupply.com/company/",
+  "checked": "2026-11-16",
+  "phone_note": "Phone from the company's own site or release: the one number on the company's page; the page prints no address, so single-site status is assumed."
+ },
+ "23": {
+  "ptype": "none_found",
+  "purl": "",
+  "checked": "2026-11-16",
+  "phone_note": "No phone found: no official company website turned up in two searches (only directories, which are not allowed sources)."
+ },
+ "24": {
+  "ptype": "none_found",
+  "purl": "",
+  "checked": "2026-11-16",
+  "phone_note": "No phone found: only press coverage of a Denver bakery of this name surfaced; it could not be tied to this Windsor-area company."
+ },
+ "25": {
+  "ptype": "none_found",
+  "purl": "",
+  "checked": "2026-11-16",
+  "phone_note": "No phone found: no official company website turned up in two searches (only directories, which are not allowed sources)."
+ }
+}
