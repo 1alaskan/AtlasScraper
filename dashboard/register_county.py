@@ -32,9 +32,11 @@ def main() -> int:
     p.add_argument("--version", default="v3", help="pipeline version label, e.g. v3, v3b")
     p.add_argument("--run-date", required=True, help="YYYY-MM-DD the ranking was built")
     p.add_argument("--extra-notes", nargs="*", default=[], help="other markdown files to show under Notes")
+    p.add_argument("--contacts", default="", help="step 6 contacts CSV for the Contacts tab (optional; kept from the old entry if omitted)")
+    p.add_argument("--contacts-notes", default="", help="step 6 notes markdown (optional; kept from the old entry if omitted)")
     a = p.parse_args()
 
-    missing = [f for f in [a.ranked, a.evidence, a.notes, *a.extra_notes] if not (ROOT / f).exists()]
+    missing = [f for f in [a.ranked, a.evidence, a.notes, *a.extra_notes, a.contacts, a.contacts_notes] if f and not (ROOT / f).exists()]
     if missing:
         print("These files do not exist in the repo:", *missing, sep="\n  ", file=sys.stderr)
         return 1
@@ -50,6 +52,10 @@ def main() -> int:
         "notes": a.notes,
         "extra_notes": a.extra_notes,
     }
+    old = next((c for c in reg["counties"] if c["slug"] == a.slug), {})
+    for key, val in (("contacts", a.contacts), ("contacts_notes", a.contacts_notes)):
+        if val or old.get(key):
+            entry[key] = val or old[key]
     counties = [c for c in reg["counties"] if c["slug"] != a.slug]
     counties.append(entry)
     reg["counties"] = counties

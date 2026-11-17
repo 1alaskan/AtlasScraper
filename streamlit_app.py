@@ -81,6 +81,13 @@ def load_text(path: str) -> str:
     return p.read_text(encoding="utf-8", errors="replace") if p.exists() else f"_{path} not found_"
 
 
+@st.cache_data(show_spinner="Loading contacts…")
+def load_contacts(path: str) -> pd.DataFrame:
+    df = pd.read_csv(ROOT / path, dtype=str, keep_default_na=False)
+    df["rank"] = pd.to_numeric(df["rank"], errors="coerce").astype("Int64")
+    return df
+
+
 def csv_bytes(df: pd.DataFrame) -> bytes:
     return df.to_csv(index=False).encode("utf-8")
 
@@ -162,8 +169,8 @@ k3.metric("Named companies", f"{int((~f['match_confidence'].str.contains('not at
 k4.metric("Latest signal", str(f["latest_signal_date"].max()) if len(f) else "—")
 k5.metric("Ground-truth hits", f"{int(f['gt_hit'].sum())} / {int(ranked['gt_hit'].sum())}")
 
-tab_list, tab_detail, tab_evidence, tab_notes, tab_compare = st.tabs(
-    ["Ranked list", "Account detail", "Evidence", "Run notes", "Across counties"]
+tab_list, tab_detail, tab_evidence, tab_contacts, tab_notes, tab_compare = st.tabs(
+    ["Ranked list", "Account detail", "Evidence", "Contacts", "Run notes", "Across counties"]
 )
 
 # ----------------------------------------------------------------------------
@@ -287,6 +294,62 @@ with tab_evidence:
     )
     st.markdown("**Records by source**")
     st.bar_chart(ev_all.groupby("source").size().sort_values(ascending=False), horizontal=True)
+
+# ----------------------------------------------------------------------------
+# Contacts (step 6: site phone, permit contact role, contractors)
+# ----------------------------------------------------------------------------
+CONTACT_COLS = ["rank", "company_name", "site_address", "site_phone", "phone_type", "permit_contact_role",
+                "permit_contact_org", "permit_contact_relation", "contractors", "contractor_roles",
+                "coverage_note", "phone_source_url", "match_confidence"]
+with tab_contacts:
+    if not county.get("contacts"):
+        st.info("No contact file for this county yet. Step 6 (contact enrichment) has not been run for it.")
+    else:
+        con = load_contacts(county["contacts"])
+        st.caption("Top-ranked accounts only. Roles and organisations, never people's names. "
+                   "The sidebar filters do not apply to this tab.")
+        c1, c2, c3, c4, c5 = st.columns(5)
+        c1.metric("Accounts", f"{len(con):,}")
+        c2.metric("Site phone", f"{int((con['phone_type'] == 'site').sum()):,}")
+        c3.metric("HQ-only number", f"{int((con['phone_type'] == 'hq_only').sum()):,}")
+        c4.metric("On-site permit role", f"{int((con['permit_contact_relation'] == 'on_site').sum()):,}")
+        c5.metric("With a contractor", f"{int((con['contractors'] != '').sum()):,}")
+        d1, d2, d3 = st.columns(3)
+        only_phone = d1.checkbox("Has a phone number", value=False)
+        only_onsite = d2.checkbox("Has an on-site permit role", value=False)
+        only_contractor = d3.checkbox("Has a contractor", value=False)
+        con_f = con
+        if only_phone:
+            con_f = con_f[con_f["site_phone"] != ""]
+        if only_onsite:
+            con_f = con_f[con_f["permit_contact_relation"] == "on_site"]
+        if only_contractor:
+            con_f = con_f[con_f["contractors"] != ""]
+        st.write(f"{len(con_f):,} accounts")
+        st.download_button("Download contacts (CSV)", csv_bytes(con_f),
+                           file_name=f"{county['slug']}_contacts.csv", mime="text/csv")
+        st.dataframe(
+            con_f[[c for c in CONTACT_COLS if c in con_f.columns]].sort_values("rank"),
+            width="stretch", hide_index=True, height=600,
+            column_config={
+                "rank": st.column_config.NumberColumn("Rank", width="small"),
+                "company_name": "Company",
+                "site_address": "Site",
+                "site_phone": "Phone",
+                "phone_type": st.column_config.TextColumn("Phone type", help="site = this facility; hq_only = head office or other location; none_found = checked, none shown"),
+                "permit_contact_role": "Permit contact role",
+                "permit_contact_org": "Organisation",
+                "permit_contact_relation": st.column_config.TextColumn("Relation", help="on_site, third_party or unknown"),
+                "contractors": "Contractors",
+                "contractor_roles": "Contractor roles",
+                "coverage_note": st.column_config.TextColumn("Coverage note", width="large"),
+                "phone_source_url": st.column_config.LinkColumn("Phone source", display_text="open"),
+                "match_confidence": "Match",
+            },
+        )
+        if county.get("contacts_notes"):
+            with st.expander("How this was built (contact notes)"):
+                st.markdown(load_text(county["contacts_notes"]))
 
 # ----------------------------------------------------------------------------
 # Run notes
